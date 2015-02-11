@@ -20,7 +20,7 @@ final class IPHP
         Application::run();
     }
     static private function load_core_file() {
-        $files = array(IPHP_PATH . "Application.class.php", IPHP_PATH . "functions/functions.php", IPHP_SMARTY_PATH . "smarty.class.php");
+        $files = array(IPHP_PATH . "Application.class.php", IPHP_PATH . "functions/functions.php", IPHP_SMARTY_PATH . "Smarty.class.php");
         foreach ($files as $v) {
             require $v;
         }
