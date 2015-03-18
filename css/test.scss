@@ -1,0 +1,9 @@
+$blue : #1875e7;
+div{
+    color:$blue; 
+    height: 100px;
+    width:200px;
+    span{
+        color:$blue;
+    }
+}
