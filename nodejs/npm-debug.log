@@ -1,0 +1,283 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'mongodb' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.25
+4 verbose node symlink /usr/bin/node
+5 warn package.json nodejs@1.0.0 No description
+6 warn package.json nodejs@1.0.0 No repository field.
+7 warn package.json nodejs@1.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'mongodb@^1.4.33', null ]
+10 verbose cache add name=undefined spec="mongodb@^1.4.33" args=["mongodb@^1.4.33",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'mongodb@^1.4.33',
+11 verbose parsed url   path: 'mongodb@^1.4.33',
+11 verbose parsed url   href: 'mongodb@^1.4.33' }
+12 verbose cache add name="mongodb" spec="^1.4.33" args=["mongodb","^1.4.33"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '^1.4.33',
+13 verbose parsed url   path: '^1.4.33',
+13 verbose parsed url   href: '^1.4.33' }
+14 verbose addNamed [ 'mongodb', '^1.4.33' ]
+15 verbose addNamed [ null, '>=1.4.33-0 <2.0.0-0' ]
+16 silly lockFile 1400f507-mongodb-1-4-33 mongodb@^1.4.33
+17 verbose lock mongodb@^1.4.33 /home/mzr/.npm/1400f507-mongodb-1-4-33.lock
+18 silly addNameRange { name: 'mongodb', range: '>=1.4.33-0 <2.0.0-0', hasData: false }
+19 verbose request where is /mongodb
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 74c377c7e0d98c80
+22 verbose url raw /mongodb
+23 verbose url resolving [ 'https://registry.npmjs.org/', './mongodb' ]
+24 verbose url resolved https://registry.npmjs.org/mongodb
+25 verbose request where is https://registry.npmjs.org/mongodb
+26 info trying registry request attempt 1 at 18:07:09
+27 verbose etag "DNJ2Y6F4KU4QBX1AG51YBDZNN"
+28 http GET https://registry.npmjs.org/mongodb
+29 http 200 https://registry.npmjs.org/mongodb
+30 silly registry.get cb [ 200,
+30 silly registry.get   { date: 'Tue, 10 Mar 2015 10:04:23 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     etag: '"1PNL253E45Q0FVCYZCZYBQOQ7"',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=60',
+30 silly registry.get     'content-length': '439530',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '17',
+30 silly registry.get     'x-served-by': 'cache-lhr6328-LHR',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1425981863.858132,VS0,VE4',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 silly addNameRange number 2 { name: 'mongodb', range: '>=1.4.33-0 <2.0.0-0', hasData: true }
+32 silly addNameRange versions [ 'mongodb',
+32 silly addNameRange   [ '0.9.4',
+32 silly addNameRange     '0.9.4-4',
+32 silly addNameRange     '0.9.3',
+32 silly addNameRange     '0.9.1',
+32 silly addNameRange     '0.9.2',
+32 silly addNameRange     '0.9.6-7',
+32 silly addNameRange     '0.9.6-8',
+32 silly addNameRange     '0.9.6-9',
+32 silly addNameRange     '0.9.6-10',
+32 silly addNameRange     '0.9.6-11',
+32 silly addNameRange     '0.9.6-12',
+32 silly addNameRange     '0.9.6-13',
+32 silly addNameRange     '0.9.6-14',
+32 silly addNameRange     '0.9.6-15',
+32 silly addNameRange     '0.9.6-16',
+32 silly addNameRange     '0.9.6-17',
+32 silly addNameRange     '0.9.6-18',
+32 silly addNameRange     '0.9.6-19',
+32 silly addNameRange     '0.9.6-20',
+32 silly addNameRange     '0.9.6-21',
+32 silly addNameRange     '0.9.6-22',
+32 silly addNameRange     '0.9.6-23',
+32 silly addNameRange     '0.9.7',
+32 silly addNameRange     '0.9.7-0',
+32 silly addNameRange     '0.9.7-1',
+32 silly addNameRange     '0.9.7-1.1',
+32 silly addNameRange     '0.9.7-1.2',
+32 silly addNameRange     '0.9.7-1.3',
+32 silly addNameRange     '0.9.7-1.4',
+32 silly addNameRange     '0.9.7-2',
+32 silly addNameRange     '0.9.7-2-1',
+32 silly addNameRange     '0.9.7-2-2',
+32 silly addNameRange     '0.9.7-2-3',
+32 silly addNameRange     '0.9.7-2-4',
+32 silly addNameRange     '0.9.7-2-5',
+32 silly addNameRange     '0.9.7-3',
+32 silly addNameRange     '0.9.7-3-1',
+32 silly addNameRange     '0.9.7-3-2',
+32 silly addNameRange     '0.9.7-3-3',
+32 silly addNameRange     '0.9.7-3-4',
+32 silly addNameRange     '0.9.7-3-5',
+32 silly addNameRange     '0.9.8',
+32 silly addNameRange     '0.9.8-1',
+32 silly addNameRange     '0.9.8-2',
+32 silly addNameRange     '0.9.8-3',
+32 silly addNameRange     '0.9.8-4',
+32 silly addNameRange     '0.9.8-5',
+32 silly addNameRange     '0.9.8-6',
+32 silly addNameRange     '0.9.8-7',
+32 silly addNameRange     '0.9.9',
+32 silly addNameRange     '0.9.9-1',
+32 silly addNameRange     '0.9.9-2',
+32 silly addNameRange     '0.9.9-3',
+32 silly addNameRange     '0.9.9-4',
+32 silly addNameRange     '0.9.9-5',
+32 silly addNameRange     '0.9.9-6',
+32 silly addNameRange     '0.9.9-7',
+32 silly addNameRange     '0.9.9-8',
+32 silly addNameRange     '1.0.0',
+32 silly addNameRange     '1.0.1',
+32 silly addNameRange     '1.0.2',
+32 silly addNameRange     '1.1.0-beta',
+32 silly addNameRange     '1.1.0',
+32 silly addNameRange     '1.1.1',
+32 silly addNameRange     '1.1.2',
+32 silly addNameRange     '1.1.3',
+32 silly addNameRange     '1.1.4',
+32 silly addNameRange     '1.1.5',
+32 silly addNameRange     '1.1.6',
+32 silly addNameRange     '1.1.7',
+32 silly addNameRange     '1.1.8',
+32 silly addNameRange     '1.1.9',
+32 silly addNameRange     '1.1.10',
+32 silly addNameRange     '1.1.11',
+32 silly addNameRange     '1.2.0',
+32 silly addNameRange     '1.2.1',
+32 silly addNameRange     '1.2.2',
+32 silly addNameRange     '1.2.3',
+32 silly addNameRange     '1.2.4',
+32 silly addNameRange     '1.2.5',
+32 silly addNameRange     '1.2.6',
+32 silly addNameRange     '1.2.7',
+32 silly addNameRange     '1.2.8',
+32 silly addNameRange     '1.2.9',
+32 silly addNameRange     '1.2.10',
+32 silly addNameRange     '1.2.11',
+32 silly addNameRange     '1.2.12',
+32 silly addNameRange     '1.2.13',
+32 silly addNameRange     '1.2.14',
+32 silly addNameRange     '1.3.0',
+32 silly addNameRange     '1.3.1',
+32 silly addNameRange     '1.3.2',
+32 silly addNameRange     '1.3.3',
+32 silly addNameRange     '1.3.4',
+32 silly addNameRange     '1.3.5',
+32 silly addNameRange     '1.3.6',
+32 silly addNameRange     '1.3.7',
+32 silly addNameRange     '1.3.8',
+32 silly addNameRange     '1.3.9',
+32 silly addNameRange     '1.3.10',
+32 silly addNameRange     '1.3.11',
+32 silly addNameRange     '1.3.12',
+32 silly addNameRange     '1.3.14',
+32 silly addNameRange     '1.3.15',
+32 silly addNameRange     '1.3.17',
+32 silly addNameRange     '1.3.18',
+32 silly addNameRange     '1.3.19',
+32 silly addNameRange     '1.4.0-rc2',
+32 silly addNameRange     '1.3.20',
+32 silly addNameRange     '1.4.0-rc3',
+32 silly addNameRange     '1.3.21',
+32 silly addNameRange     '1.3.22',
+32 silly addNameRange     '1.3.23',
+32 silly addNameRange     '1.4.0-rc4',
+32 silly addNameRange     '1.4.0-rc5',
+32 silly addNameRange     '1.4.0-rc6',
+32 silly addNameRange     '1.4.0-rc7',
+32 silly addNameRange     '1.4.0-rc8',
+32 silly addNameRange     '1.4.0-rc9',
+32 silly addNameRange     '1.4.0-rc10',
+32 silly addNameRange     '1.4.0',
+32 silly addNameRange     '1.4.1',
+32 silly addNameRange     '1.4.2',
+32 silly addNameRange     '1.4.3',
+32 silly addNameRange     '1.4.4',
+32 silly addNameRange     '1.4.5',
+32 silly addNameRange     '1.4.6',
+32 silly addNameRange     '1.4.7',
+32 silly addNameRange     '1.4.8',
+32 silly addNameRange     '1.4.9',
+32 silly addNameRange     '1.4.10',
+32 silly addNameRange     '2.0.0-alpha1',
+32 silly addNameRange     '1.4.11',
+32 silly addNameRange     '1.4.12',
+32 silly addNameRange     '1.4.14',
+32 silly addNameRange     '1.4.15',
+32 silly addNameRange     '1.4.16',
+32 silly addNameRange     '1.4.17',
+32 silly addNameRange     '2.0.0-alpha2',
+32 silly addNameRange     '1.4.18',
+32 silly addNameRange     '2.0.0',
+32 silly addNameRange     '2.0.1',
+32 silly addNameRange     '2.0.2',
+32 silly addNameRange     '1.4.19',
+32 silly addNameRange     '2.0.3',
+32 silly addNameRange     '2.0.4',
+32 silly addNameRange     '2.0.5',
+32 silly addNameRange     '2.0.6',
+32 silly addNameRange     '1.4.20',
+32 silly addNameRange     '1.4.22',
+32 silly addNameRange     '2.0.7',
+32 silly addNameRange     '2.0.8',
+32 silly addNameRange     '2.0.9',
+32 silly addNameRange     '1.4.23',
+32 silly addNameRange     '2.0.10',
+32 silly addNameRange     '1.4.24',
+32 silly addNameRange     '2.0.11',
+32 silly addNameRange     '1.4.25',
+32 silly addNameRange     '2.0.12',
+32 silly addNameRange     '1.4.26',
+32 silly addNameRange     '1.4.27',
+32 silly addNameRange     '1.4.28',
+32 silly addNameRange     '2.0.13',
+32 silly addNameRange     '2.0.14',
+32 silly addNameRange     '1.4.29',
+32 silly addNameRange     '2.0.15',
+32 silly addNameRange     '1.4.30',
+32 silly addNameRange     '2.0.16',
+32 silly addNameRange     '1.4.31',
+32 silly addNameRange     '2.0.17',
+32 silly addNameRange     '1.4.32',
+32 silly addNameRange     '2.0.18',
+32 silly addNameRange     '2.0.19',
+32 silly addNameRange     '1.4.33',
+32 silly addNameRange     '2.0.20',
+32 silly addNameRange     '2.0.21',
+32 silly addNameRange     '1.4.34' ] ]
+33 verbose addNamed [ 'mongodb', '1.4.34' ]
+34 verbose addNamed [ '1.4.34', '1.4.34' ]
+35 silly lockFile ee43449c-mongodb-1-4-34 mongodb@1.4.34
+36 verbose lock mongodb@1.4.34 /home/mzr/.npm/ee43449c-mongodb-1-4-34.lock
+37 silly lockFile b7cc85f3-s-org-mongodb-mongodb-1-4-34-tgz https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz
+38 verbose lock https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz /home/mzr/.npm/b7cc85f3-s-org-mongodb-mongodb-1-4-34-tgz.lock
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz',
+39 verbose addRemoteTarball   'fc17b11eea384e7e68c749b6e57e230429ec42dd' ]
+40 info retry fetch attempt 1 at 18:07:49
+41 verbose fetch to= /tmp/npm-25565-MiMsvBzZ/registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz
+42 http GET https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz
+43 http 200 https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz
+44 silly lockFile b7cc85f3-s-org-mongodb-mongodb-1-4-34-tgz https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz
+45 silly lockFile b7cc85f3-s-org-mongodb-mongodb-1-4-34-tgz https://registry.npmjs.org/mongodb/-/mongodb-1.4.34.tgz
+46 silly lockFile ee43449c-mongodb-1-4-34 mongodb@1.4.34
+47 silly lockFile ee43449c-mongodb-1-4-34 mongodb@1.4.34
+48 silly lockFile 1400f507-mongodb-1-4-33 mongodb@^1.4.33
+49 silly lockFile 1400f507-mongodb-1-4-33 mongodb@^1.4.33
+50 error Error: EACCES, mkdir '/home/mzr/.npm/mongodb/1.4.34'
+50 error  { [Error: EACCES, mkdir '/home/mzr/.npm/mongodb/1.4.34']
+50 error   errno: 3,
+50 error   code: 'EACCES',
+50 error   path: '/home/mzr/.npm/mongodb/1.4.34',
+50 error   parent: 'nodejs' }
+51 error Please try running this command again as root/Administrator.
+52 error System Linux 3.13.0-44-generic
+53 error command "/usr/bin/node" "/usr/bin/npm" "install" "mongodb"
+54 error cwd /www/miaozhirui/linux-local-test/nodejs
+55 error node -v v0.10.25
+56 error npm -v 1.4.28
+57 error path /home/mzr/.npm/mongodb/1.4.34
+58 error code EACCES
+59 error errno 3
+60 error stack Error: EACCES, mkdir '/home/mzr/.npm/mongodb/1.4.34'
+61 verbose exit [ 3, true ]

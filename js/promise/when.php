@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+<<<<<<< HEAD
 </head>
 <body>
     <script type="text/javascript" src="../when.js"></script>
@@ -44,5 +45,11 @@
         console.log(e)
     })
     </script>
+=======
+    <script type="text/javascript" src="../when.js"></script>
+</head>
+<body>
+    
+>>>>>>> 9b5a2418ef3f277eb94b966e868f1f4fe1f08517
 </body>
 </html>
