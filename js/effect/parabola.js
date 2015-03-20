@@ -74,10 +74,11 @@ var funParabola = function(element, target, options) {
         exports.position = function() {
             if (flagMove == false) return this;
             
+            //这里是为了兼容火狐和chrom的
             var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft,
                 scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             
-            // 初始位置
+            // 初始位置(设置元素的初始位置)
             if (moveStyle == "margin") {
                 element.style.marginLeft = element.style.marginTop = "0px";
             } else {
@@ -106,6 +107,7 @@ var funParabola = function(element, target, options) {
                 y: 0    
             };
             coordTarget = {
+                // 这里的-1是将为正的数据转化成负的,把负的数据转换成正的
                 x: -1 * (centerElement.x - centerTarget.x),
                 y:  -1 * (centerElement.y - centerTarget.y) 
             };
@@ -119,7 +121,7 @@ var funParabola = function(element, target, options) {
              * 利用第二个坐标：
              * b = (y2+ a*x2*x2) / x2
             */
-            // 于是
+            // 于是(这里b就得到了)
             b = (coordTarget.y - a * coordTarget.x * coordTarget.x) / coordTarget.x;    
             
             return this;
@@ -180,6 +182,11 @@ var funParabola = function(element, target, options) {
     
     return exports;
 };
+
+
+
+
+
 
 
 
