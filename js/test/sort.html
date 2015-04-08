@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function sort(arr, desc){
+
+            for(var i=0; i<arr.length; i++) {
+                for(var j=i+1;j<arr.length;j++) {
+                    if(arr[i]<arr[j]){
+                        var tem = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = tem;
+                    }
+                }
+            }
+            return arr;
+        }
+
+    var result = sort([5,48,5,4,2,19,0,1,2,4,5]);
+        console.log(result,true)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
