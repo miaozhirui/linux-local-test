@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>日期对象</title>
+  <script type="text/javascript">
+  window.onload = function() {
+      // console.log(myDate.getFullYear())得到当前年
+      // console.log(myDate.getMonth())得到当前月month是从0开始的，如果得到的是3，说明现在就是4月份
+      // console.log(myDate.getDate())得到当前日
+      // console.log(myDate.getDay())（0~6）得到当前是星期几，0是星期日，6是星期六
+      // console.log(myDate.getHours())//得到小时（0~23）
+      // console.log(myDate.getMinutes())//得到当前分钟
+      // console.log(myDate.getSeconds())//得到当前秒
+        function getDate() {
+            var myDate = new Date()//拿到的永远都是当时的时间
+            var year = myDate.getFullYear(),
+            month = myDate.getMonth(),
+            date = myDate.getDate(),
+            week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+            day = week[myDate.getDay()],
+            hours = myDate.getHours(),
+            minutes = myDate.getMinutes(),
+            seconds = myDate.getSeconds();
+
+            var showDate = document.getElementById('show');
+            showDate.innerHTML = year +'年'+ month +'月'+ date +'日' + day+hours+'时'+minutes+'分'+'<span style="color:red; font-size:18px;font-weight:700">'+seconds+'</span>'+'秒';
+        }
+          setInterval(getDate, 1000)
+          getDate()
+
+  }
+
+  </script>
+</head>
+<body>
+    <div id="show"></div>
+</body>
+</html>
