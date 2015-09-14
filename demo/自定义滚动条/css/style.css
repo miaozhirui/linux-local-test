@@ -1,0 +1,50 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, em, p, font, img, small, strong, center, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tr, th, td {margin:0;padding:0;border:0;outline:0;font-size:12px;vertical-align:baseline} 
+ol, ul {list-style:none} :focus {outline:none; } 
+table {border-collapse:collapse;border-spacing: 0} 
+caption, th, td { text-align: left; font-weight: normal} 
+strong {font-weight:600} 
+a{font:12px Arial;text-decoration:none;color:#404040;cursor:pointer;} 
+a:hover{text-decoration:underline;color:#FF3300} 
+h1{font-size:16px;font-weight:600;color:#666} .left{float:left} .right{float:right} .clear{clear:both}
+/*重置样式*/
+
+
+
+
+/*志愿者招募-自定义滚动条*/
+.dumascroll {width:300px; height:190px; padding:5px; border:1px solid #f00;overflow:hidden; margin:50px auto;line-height:30px;}		
+/*只需对需要渲染滚动条的div设置该class即可*/
+.dumascroll_area {height:100%;overflow:hidden;}
+/*内容区域设置*/
+.dumascroll_bar,.dumascroll_handle,.dumascroll_handle_a,.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {background:url(../images/un_bg_bar.png);}
+/*滚动条和箭头背景图设置*/
+.dumascroll_bar {position:absolute;top:0;right:0;z-index:9;width:16px;height:100%;cursor:default;-moz-user-select:none;-khtml-user-select:none;user-select:none;background-repeat:repeat-y;background-position:-48px 0;float:left;}
+/*箭头和滚动条容器宽高设置定位设置*/
+.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_handle,.dumascroll_handle_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {position:absolute;left:0;}
+/*箭头和滚动条初步定位*/
+.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {width:100%;height:16px;color:#fff;text-align:center;}
+/*上拉箭头和触发上拉箭头以及下拉箭头和触发下拉箭头宽高设置颜色设置*/
+.dumascroll_arrow_up,.dumascroll_arrow_up_a { top:0; }
+/*上拉箭头和触发上拉箭头顶部定位*/
+.dumascroll_arrow_down,.dumascroll_arrow_down_a { bottom:0; }
+/*下拉箭头和触发下拉箭头底部定位*/
+.dumascroll_handle,.dumascroll_handle_a { width:100%; background-repeat:no-repeat;}
+/*滚动条和触发滚动条背景图循环*/
+.dumascroll_arrow_up { background-position:0 0; }
+/*上拉箭头*/
+.dumascroll_arrow_up_a { background-position:-16px 0; }
+/*触发上拉箭头*/
+.dumascroll_handle { background-position:-32px 0; }
+/*滚动条*/
+.dumascroll_handle_a { background-position:-64px 0; }
+/*触发滚动条*/
+.dumascroll_arrow_down { background-position:-80px 0; }
+/*下拉箭头*/
+.dumascroll_arrow_down_a { background-position:-96px 0; }
+/*触发下拉箭头*/
+/*********************************************************************/

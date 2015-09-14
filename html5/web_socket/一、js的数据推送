@@ -1,0 +1,29 @@
+一、js的数据的推送
+1.commet:基于http长连接的服务器的推送技术
+2.基于websocket的推送方案
+3.sse(server-send event):服务器推送数据的新方式
+
+二、comet:基于http长连接的服务器推送方式（ps:前端发一个ajax请求到后端的某个接口，后端不释放，就是一个死循环，然后不断的往前端输出内容，然后对于前端来说就不是死的，前端的数据就是变化的）
+1.data.php
+<?php
+//这句话是告诉浏览器输出json
+header("Context-type:application/json;charset=urf8");
+header("Cache-Control:max-age=0");//让后端没有缓存的输出
+$res = array('success'=>'ok', 'text'=>'测试的内容');
+echo json_encode($res);
+
+
+
+
+2.index.html
+<meta charset = "utr-8"/>
+<script  src="jquery.min.js"></script>
+  <script>
+    $.ajax({
+      url:'data.php',
+      dataType: 'json',
+      success: function(data){
+      console.log(data);
+      }
+    })
+  </script>

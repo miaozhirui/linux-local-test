@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自由落体运动</title>
+  <style type="text/css">
+    #yundong{
+      width:100px;
+      height:100px;
+      background: red;
+      position: absolute;
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript">
+  window.onload = function() {
+      var oBtn = document.getElementById('btn');
+      var yundong = document.getElementById('yundong');
+      oBtn.onclick = function() {
+        startMove();
+      }
+      var timer = null;
+      var speed = 0;
+      function startMove(){
+
+        clearInterval(timer);
+        timer = setInterval(function() {
+          console.log(yundong.offsetTop)
+
+          speed += 3;
+          var T =  yundong.offsetTop + speed;
+          if(T > document.documentElement.clientHeight-yundong.offsetHeight){
+            T= document.documentElement.clientHeight-yundong.offsetHeight;
+            speed = speed *-1
+        }
+          yundong.style.top = T + 'px';
+
+        }, 30)
+      }
+  }
+  </script>
+</head>
+<body>
+  <button id="btn">开始运动</button>
+  <div id="yundong"></div>
+</body>
+</html>

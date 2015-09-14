@@ -17,7 +17,7 @@
     error: function(XHR){
       console.log(XHR)
     },
-    header: {
+    headers: {
       name: 'miaozhiuri'
     }
   })

@@ -1,0 +1,5 @@
+style.left和offsetLeft
+js里面的小数存储的是近似值=可能比正确值小，也可能比正正确值大
+近似值 进行四舍五入以后就可以得到 正确值
+计算里面的小数存储的都是近似值
+currentStyle和getComputeStyle

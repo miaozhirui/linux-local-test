@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+  
+ var myObj = {
+  name: 'miaozhirui',
+  obj: {
+    name: 'miaozhirui1'
+  },
+  arr: ['miaozhirui2']
+ }
+ //浅克隆，新的对象包含原来对象里面的所有的属性和方法，但是如果对象里面的属性值是引用类型，他还是指向原来对象里面所对应的属性的引用，相当于只复制了第一围的数据，第二围的数据还是用之前对象的（如果对象里面的数据类型都是原始值，可以用浅克隆）
+ function clone(obj) {
+  var tem = {}, i=0;
+  for(i in obj) {
+    tem[i] = obj[i]
+  }
+  return tem;
+ }
+ var result = clone(myObj);
+ result.obj.name="honghong"
+ console.log(result)
+ console.log(myObj)
+</script>

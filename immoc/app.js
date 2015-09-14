@@ -28,7 +28,8 @@ app.get('/admin/movie', function(req, res) {
          title: 'imooc 后台登录页'
      })
 })
-//     //detail page
+
+//detail page
 app.get('/admin/list', function(req, res) {
      res.render('list', {
          title: 'imooc 列表页'

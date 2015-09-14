@@ -1,0 +1,52 @@
+一、jsx的语法
+1.首字母大小写，如果是自定组件的话，一定要首字母大写
+2.嵌套
+3.求值表达式
+4.驼峰命名
+5.htmlFor和className
+二、注释、css样式以及嵌套
+// /**/
+
+var style = {
+  color:"red",
+  border: "1px solid red;"
+}
+<div style={style}><Hello></Hello></div>
+三、在求值表达式中使用条件判断的四种写法
+1.三元表达式 return <h1>hello {this.props.name ? this.props.name : 'word'}</h1>
+2.定义一个函数，然后函数用if语句，然后在render里面调用这个函数，最后在表达式中用这个变量
+3.在大括号中直接调用这个函数
+4.用比较运算符
+四、万能的函数表达式
+五、非dom属性
+1.非dom属性：dangerouslySetInnerHTML、ref、key
+dangerouslySetInnerHTML: 在JSX中直接插入HTML代码
+2.ref: 父组件引用子组件
+3.key: 提高渲染性能
+注意： 
+1.类似的内容的组件一定要合并成一个组件
+2.列表类型的组件一定要加上唯一的组件
+
+六、jsx解析器架构介绍
+1.源码阅读方法
+七、属性和状态详解
+1.属性的含义和用法
+    属性的含义：props=properties,属性：一个事物的性质与关系，属性往往是与生俱来的，自己无法改变
+    使用方式：
+    1.<HelloWorld name= ? /> （?可以是"Tim",{123},{"Tim"},{[1,2,3]},{variable}）
+    2.var props={
+    one: "123",
+    two: 123
+    }
+    <HelloWorld {...props} />
+    3.var instance = React.reander(<HelloWorld></HelloWorld>,document.body)
+    instance.setPdrops({name:"Time"});第三种方式我们一般不去使用
+2.状态的含义和用法
+    状态的含义：state
+    状态：事物所处的状况，状态是由事物自行处理，不断变化的
+    使用方法：
+        1.getInitialState: 初始化每个实例特有的状态
+        2.setState: 更新组件状态
+        setState->diff算法(会判断当前state变化之后数据的变化，和页面dom的数据有什么不同)
+3.属性和状态对比
+4.属性和状态实战
