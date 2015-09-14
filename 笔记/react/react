@@ -1,0 +1,102 @@
+一、react 概述
+	1.什么是react
+		开发背景：构建数据不断变化的大型应用；
+			数据变化：1.大量dom操作（自动dom操作）
+					2.逻辑及其的复杂（状态对应内容）
+		特点： 简单，声明式
+		组件：所谓组件即封装起来的具有独立功能的UI部件
+		核心： 核心是组件，组件的设计目的是提高大码复用率、降低测试难度和代买复杂度
+			提高代码复用率：组件将数据和逻辑封装，类似面向对象中的类
+			降低测试难度： 组件高内聚低耦合，很同意对单个组件进行测试
+			降低代码复杂度: 直观的语法可以极大提高可读性
+		发展：2013.6 发布、2013.9热度开始上涨、 2015.3 React Native发布
+		现状： 20000+，380位代码的贡献者，国内（淘宝，豆瓣，tb, 支付宝），国外都有用
+	2.react开发环境搭建
+		下载facebook官方提供的基础代码
+		常用的编辑器及插件的配置
+		Emmet语法介绍
+		使用浏览器查看效果
+	3.编写第一个react程序
+		var Hellowrold = React.createClass({
+			render: function(){//渲染返回的内容
+				return <p>hello, world</p>
+			}
+		})创建一个标签
+		React.rander(<Helloworld></Helloworld>, document.body)把生成的组件渲染到页面当中去
+
+二、组件的生命周期（初始化->运行中->销毁）
+	1.什么是生命周期
+		组件本质上是状态机，输入确定，输出一定确定
+		状态发生转换时会触发不同的钩子函数，从而让开发者有机会做出响应
+		可以使用事件的思路来理解状态
+		事件与事件是独立的，状态于状态不是独立的，他们组合起来就是组件的生命周期
+	2.各个阶段可以使用的函数的介绍
+		初始化阶段可以使用的钩子函数：
+			1.getDefaultProps组件初始化属性的钩子
+			2.getInitialState组件初始化状态的钩子
+			3.componentWillMount组件即将被渲染到页面中的回调
+			4.render组件渲染成虚拟dom的回调
+			5.componentDidMount组件真正被渲染之后的回调
+		运行中阶段可以使用的钩子函数：
+			1.componentWillReactiveProps组将将要接收到属性之前的钩子
+			2.shouldComponentUpdate组件接收到新属性的钩子
+			3.componentWillUpdate
+			4.render
+			5.componentDidUpdate组件渲染之后的钩子
+		销毁阶段可以使用的钩子函数：
+			1.componentWillUnmount组件最后回收之前的钩子，供开发者最后处理
+	2.初始化阶段可以使用的函数
+		1.getDefaultProps: 只调用一次，实例之间共享引用
+		2.getInitialState: 初始化每个实例特有的状态
+		3.componentWillMount: render之前最后一次修改状态的机会
+		4.render: 只能访问this.props和this.state,只有一个顶层组件，不允许修改状态和dom输出
+		5.componentDidMount: 成功rendere并渲染完成真实DOM之后触发，可以修改DOM
+	3.运行中阶段介绍
+			
+	4.销毁阶段介绍
+			
+
+setState
+ref表单的值的获取
+
+三、
+	1.react认为一个组件该有的特征是：可组合，可重用，可测试，可维护
+	2.react只处理结构，逻辑，不管资源，依赖都不管，几万行的代码干什么了，它为什么这么的强大，就是因为他实现了虚拟dom,组件的html结构并不会直接生成dom,而是生成了虚拟的dom,然后通过diff算法，算出最小的变更，把他渲染到页面中去，这就是他牛逼的地方
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

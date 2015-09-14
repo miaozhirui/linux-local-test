@@ -1,0 +1,143 @@
+一、认识node.js 基础
+1.诞生
+	实时通信
+	高并发
+	api
+	i/o阻塞
+2.国内外的应用情况
+3.主要的应用领域
+	生于社区
+	社区推进
+	github
+	国内
+4.社区于生态圈
+	以npm为中心，现在已有专门的公司
+	基础服务提供商的支持
+	周边服务提供商的支持
+5.知名度较高的node.js开源项目
+	express
+	pm2
+	jade
+	coffescript
+	itom
+	socket.io
+	mongoose
+	mocha js的测试框架
+6.io.js
+	joyent的目标：兼容性、性能
+	社区：New features
+	io.js的发展速度
+	关系：全面兼容，二者依然有可能合并
+
+二、node.js和javascript的关系
+	javascript的诞生
+	ECMAScript与DOM/BOM
+		Javascript=ECMAjavascript+BOM+DOM
+	Gmial与Google v8
+		2004 Gmail发布
+		google Map发布，
+		2008 google chrome 发布 ，一同面世的还是有v8
+	新浪潮中的前端框架
+		DOM操作：jquery/ExtJs/Yui
+		结构化前端框架:angularjs /backbone
+	Fibjs
+
+	全栈语言：javascript(花了10天时间)
+		前端 angularjs mvvm
+		后端	nodejs fibjs
+		移动端 cordava phonegap react native
+	node
+		原生支持异步
+		历史包袱
+		开发门槛
+
+三、nodejs的特点
+	部署简单方便
+		环境配置简单，只需要安装nodejs即可
+		注重约定
+		项目所需要扩展、插件、资源相对独立
+	事件驱动
+		根据当前出现的事件、调动资源进行相关的处理
+	异步编程
+		同步（大多数的语言都是同步执行脚本，按顺序从上到下执行脚本，因数据库操作有一步失败就失败了）
+		异步（不会等io执行完成才执行下面的操作，而是直接执行下面的操作，io执行完成之后再以事件的方式进行回调）
+		实现方式：
+			1.回调函数
+			2.事件监听
+			3.订阅/发布
+
+
+	高效与性能
+	  	单个操作的性能并不优于其他解决方案
+	  	通过优化资源调配和i/o操作来实现高效
+	  	其他语言对i/o的处理：
+	  		php:原地等待，开多进程
+	  		c++:利用线程
+	v8是单线程的，所以nodejs同样是单进程的，为了更好的利用cpu资源
+	可以利用子进程和多进程
+		子进程：nodejs的child_process模块
+		多进程：pm2等第三方工具
+
+	nodejs的缺点：
+		大量采用匿名函数，使得抛出的异常不易阅读
+		try/catch限于同步代码，使得异步捕获较为复杂
+		单线程：可靠性
+		不适合cpu密集的场景
+		回调的代码习惯影响阅读
+nodejs应用的领域
+nodejs的优点和缺点
+
+四、nodejs开发环境的搭建
+	MEAN Stack
+		什么是全栈？
+		web全栈
+			html/css页面的构建
+			浏览器端的开发
+			服务器端的开发
+			数据库管理
+			服务器运维
+		javascript可以开发哪些栈
+			Javascript web全栈的最佳组合MEAN stack(mogodb express node angular)都是用javascript语言实现
+		mongodb express angularjs nodejs 
+	Node.js的执行环境
+		google v8使用c++编写，主要编译和执行js脚本
+		文件系统
+		网络功能(HTTP/TCP/UDP/DNS/TLS/SSL)
+		二进制数据 buffer
+		数据流
+	开发环境
+	调试工具
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

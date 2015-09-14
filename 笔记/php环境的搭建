@@ -1,0 +1,16 @@
+二、php,nginx,mysql开发环境的搭建
+1.php搭建的前奏：1.libiconv 2.mhash 3.libmcrypt 4.mcrypt 5.nginx 
+2.php-fpm php-fpm就是对php主程序的管理的
+3.php 就是运行php的主程序
+4.tar -jxvf xxx.tar.br2
+5../configure —-prefix=/usr/local/php —-enable-fastcgi —-enable-fpm
+
+
+
+
+
+
+1.配置nginx+php(让php和nginx关联起来)
+2.实战配置nginx+php
+php-fpm
+
