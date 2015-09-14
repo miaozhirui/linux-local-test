@@ -1,0 +1,6 @@
+{
+    "GLOBAL": ["reset"],
+    "index": ["index"],
+    "transition": ["transition"],
+    "prompt": ["prompt"]
+}

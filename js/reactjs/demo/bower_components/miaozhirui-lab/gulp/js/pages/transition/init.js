@@ -1,0 +1,1 @@
+define(function(){$(".box div").each(function(n,i){var a=$(i);a.addClass("transition")})});

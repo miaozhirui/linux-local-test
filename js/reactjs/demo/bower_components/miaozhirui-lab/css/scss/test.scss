@@ -1,0 +1,124 @@
+//数组
+$linkColor: red blue;
+a{
+  color:nth($linkColor,1);
+  &:hover{
+    color:nth($linkColor,2);
+  }
+}
+
+//对象
+$headering:(h1:2em,h2:1.5em,h3:1.2em);
+@each $header, $size in $headering{
+  #{$header}{
+    font-size: $size;
+  }
+}
+
+
+//选择器定义的变量覆盖全局变量(scss没有全局变量)
+$fontSize:14px;
+body{
+  //局部变量(如果后面加上 !global的话,就变成了定义全局的变量了)
+  $fontSize:12px;
+  font-size:$fontSize;
+}
+p{
+  font-size:$fontSize;
+}
+
+//嵌套(选择器嵌套)
+
+＃top_nav{
+  line-height:40px;
+  li{
+    float: left;
+  }
+  a{
+    display: block;
+    color:red;
+    &:hover{
+      color:blue;
+    }
+  }
+
+}
+
+//属性嵌套（有些属性是拥有同一个开始单词，如border-width，border-color）
+.fakeShadow{
+  border:{
+    style: solid;
+    left:{
+      color:blue;
+      width:4px;
+    };
+    right:{
+      width:2px;
+      color:red;
+    }
+  }
+}
+
+//@at-root用来跳出选择器嵌套
+//没有跳出
+.parent-1{
+  color:red;
+  .child{
+    width:100px;
+  }
+}
+//单个选择器跳出
+.parent-2{
+  color:red;
+  @at-root .child{
+    width:200px;
+  }
+}
+//多个选择器跳出
+.parent-3{
+  background: red;
+  @at-root {
+    .child1 {
+      width:300px;
+    }
+    .child2 {
+      width:600px;
+    }
+  }
+}
+
+//混合(mixin)
+@mixin center-block{
+  margin-left:auto;
+  marign-right:auto;
+}
+
+.demo{
+  @include center-block;
+}
+
+//有参数mixin
+@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

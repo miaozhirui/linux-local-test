@@ -1,0 +1,14 @@
+{
+  "name": "miaozhirui-lab",
+  "homepage": "https://github.com/miaozhirui/miaozhirui-lab",
+  "_release": "00453dea69",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "00453dea691f3d3532226eb4f0fcb7a48760f27b"
+  },
+  "_source": "git://github.com/miaozhirui/miaozhirui-lab.git",
+  "_target": "*",
+  "_originalSource": "miaozhirui-lab",
+  "_direct": true
+}

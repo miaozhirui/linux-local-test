@@ -1,0 +1,61 @@
+@charset "UTF-8";
+a {
+  color: red; }
+  a:hover {
+    color: blue; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+body {
+  font-size: 12px; }
+
+p {
+  font-size: 14px; }
+
+＃top_nav {
+  line-height: 40px; }
+  ＃top_nav li {
+    float: left; }
+  ＃top_nav a {
+    display: block;
+    color: red; }
+    ＃top_nav a:hover {
+      color: blue; }
+
+.fakeShadow {
+  border-style: solid;
+  border-left-color: blue;
+  border-left-width: 4px;
+  border-right-width: 2px;
+  border-right-color: red; }
+
+.parent-1 {
+  color: red; }
+  .parent-1 .child {
+    width: 100px; }
+
+.parent-2 {
+  color: red; }
+  .child {
+    width: 200px; }
+
+.parent-3 {
+  background: red; }
+  .child1 {
+    width: 300px; }
+
+  .child2 {
+    width: 600px; }
+
+.demo {
+  margin-left: auto;
+  marign-right: auto; }
+
+@m;

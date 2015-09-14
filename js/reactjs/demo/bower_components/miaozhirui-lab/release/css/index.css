@@ -1,0 +1,28 @@
+div.all a, div.all a span {
+  width: 200px;
+  height: 50px;
+  display: block
+}
+div.all {
+  width: 960px;
+  height: 1000px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 -10px 0 #eee inset, 0 10px 0 #eee inset;
+  padding-top: 30px
+}
+div.all a {
+  line-height: 50px;
+  text-align: center;
+  background: grey;
+  overflow: hidden;
+  float: left;
+  margin: 5px
+}
+div.all a span {
+  transition: all 2s
+}
+div.all a span:hover {
+  transform: scale(2);
+  background: red
+}

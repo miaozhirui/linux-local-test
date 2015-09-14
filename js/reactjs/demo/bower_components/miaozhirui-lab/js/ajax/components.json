@@ -1,0 +1,30 @@
+{
+    "name": "my-component",
+    "params": [
+    {
+        "name": "miaozhirui",
+        "age": "23",
+        "hight": "175cm"
+    },
+      {
+        "name": "miaozhirui",
+        "age": "23",
+        "hight": "175cm"
+    },
+      {
+        "name": "miaozhirui",
+        "age": "12",
+        "hight": "175cm"
+    },
+       {
+        "name": "miaozhirui",
+        "age": "23",
+        "hight": "175cm"
+    },
+       {
+        "name": "miaozhirui",
+        "age": "23",
+        "hight": "175cm"
+    }
+    ]
+}

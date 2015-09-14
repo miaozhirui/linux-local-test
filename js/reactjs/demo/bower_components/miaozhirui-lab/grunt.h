@@ -1,0 +1,2 @@
+grunt clean;
+grunt

@@ -1,0 +1,19 @@
+.box{
+    width:500px;
+    margin:0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+.box a{
+    display: block;
+    width:200px;
+    height:30px;
+    margin:0 auto;
+}
+body{
+    height:1500px;
+}
+.miao{
+    position: absolute;
+    bottom:0px;
+}

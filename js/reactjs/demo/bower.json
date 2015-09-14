@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/miaozhirui/linux-local-test",
+  "authors": [
+    "miaozhirui <miaozhirui@ziseyiliao.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "miaozhirui-lab": "*",
+    "react": "~0.13.3"
+  }
+}
