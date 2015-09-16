@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex布局</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style type="text/css">
+    body{
+      padding:0;
+      margin:0;
+    }
+    .wrap{
+      width:100%;
+      height:150px;
+      background: blue;
+      display: box;
+      display: -webkit-flex;
+      justify-content:  center;
+      align-items:center;
+    }
+    .wrap div{
+      background: red;
+      height:75px;
+      width:75px;
+      margin-left: 10px;
+      border-radius: 50%;
+    }
+    .wrap .center{
+      width:140px;
+      height:140px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

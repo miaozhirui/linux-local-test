@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="../../js/jquery-1.8.3.js"></script>
+  <script type="text/javascript">
+  // www.a.com/b.js
+  // www.a.com/a.js
+
+  // www.a.com
+  // www.b.com
+
+  // www.a.com
+  // b.a.com
+
+
+  // ajax: XMLHttpRequest()；不能跨域
+  // 1.document.domain = 'a.com';
+  // 2.服务器代理：XMLHttpRequest代理文件
+  // 3.script标签：jsonp(单域，原理就是利用script可以跨域的问题, jsonp等于json+padding,就是说第三方返回的是盒子包装的json)js中的script是按照顺序执行的
+// 4.location.hash(双域，通过iframe来实现的，跨域无非就是通过请求去另一个页面拿数据)
+// 5.window.name(是比较安全的一种方式)
+// 6.html5 postMessage
+// 7.flash
+  </script>
+  <script type="text/javascript">
+  // $.ajax('http://miaozhirui-lab.com/ajax/1.php',{
+
+  // })
+  </script>
+  <script type="text/javascript">
+  // function box(id){
+    // alert(id)
+  // }
+  </script>
+  <!-- // <script type="text/javascript" src="http://miaozhirui-lab.com/ajax/1.php"></script> -->
+  <script type="text/javascript">
+  function createJs (url){
+    var script = document.createElement('script');
+    script.type="text/javascript";
+    script.src = url;
+    document.querySelector('head').appendChild(script);
+  }
+  function box(id){
+    console.log(id)
+  }
+  createJs('http://miaozhirui-lab.com/ajax/1.php?callback=box');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

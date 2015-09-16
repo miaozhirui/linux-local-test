@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hello</title>
+  <script type="text/javascript" src="../react-0.13.3/build/react.js"></script>
+  <script type="text/javascript" src="../react-0.13.3/build/JSXTransformer.js"></script>
+    <script type="text/jsx">
+  var style = {
+    color:"red",
+    border: "1px solid red"
+  }
+  var html = {
+    __html: "<h1>miaozhirui</h1>"
+  }
+  var Hello = React.createClass({
+      getName: function() {
+        if(this.props.name){
+          return this.props.name
+        } else {
+          return 'word'
+        }
+      },
+    render: function() {
+      // 不能在求值表达式中使用if语句
+      // 三元表达式
+      // return <h1>hello{if(this.props.name){this.props.name}else{'word'}</h1>
+      // return <h1>hello {this.props.name ? this.props.name : 'word'}</h1>
+      // 定义一个函数
+      var name = this.getName()
+      // 定义成标量，然后再大括号中使用
+      // return <h1>hello {name}</h1>
+      //直接在大括号中使用
+      // return <h1>hello {this.getName()}</h1>
+      //使用比较运算符
+      // return <h1>hello {this.props.name || 'word'}</h1>
+      return <h1>hello {
+        (function(obj){
+          if(obj.props.name){
+            return obj.props.name
+          } else {
+            return 'word'
+          }
+        })(this)
+      }</h1>
+    }
+  })
+  // React.render(<div style={style}><Hello name="hh"></Hello></div>, document.querySelector('body'));
+    React.render(<div style={style} dangerouslySetInnerHTML={html}></div>, document.querySelector('body'));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

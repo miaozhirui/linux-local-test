@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Test Runner</title>
+<link rel="stylesheet" href="../../../tools/jasmine/jasmine.css"/>
+<script src="../../../tools/jasmine/console.js"></script>
+
+<script src="../module.js"></script>
+
+</head>
+<body>
+
+<script>
+  (function() {
+
+    var tests = [
+      'modules/math'
+      ,'modules/cyclic'
+      ,'modules/relative'
+      ,'modules/determinism'
+      ,'modules/exactExports'
+      ,'modules/hasOwnProperty'
+      ,'modules/method'
+      ,'modules/missing'
+      ,'modules/monkeys'
+      ,'modules/nested'
+      ,'modules/transitive'
+      ,'modules/prefix'
+      ,'modules/version'
+      ,'modules/load'
+      ,'modules/metadata'
+      ,'modules/exports'
+
+      ,'packages/math'
+    ];
+//    tests = ['modules/exports'];
+
+    var reporter;
+    var testFrame, currentTest = 0;
+    var count = { pass: 0, fail: 0, error: 0 };
+    var summary;
+
+    window.onload = function() {
+      var container = document.getElementById('loader-container');
+      reporter = document.getElementById('loader-reporter');
+      summary = document.getElementById('loader-summary');
+
+      testFrame = document.createElement('iframe');
+      testFrame.id = 'test-frame-' + (new Date()).getTime();
+      testFrame.src = 'about:blank';
+      container.appendChild(testFrame);
+
+      // start first test
+      testNext();
+    };
+
+    function printHeader(test) {
+      var h = document.createElement('h3');
+      h.appendChild(document.createTextNode(test));
+      reporter.appendChild(h);
+    }
+
+    function printSummary() {
+      summary.innerHTML =
+          'Passed: <span class="pass">' + count.pass + '<' + '/span> ' +
+              'Failed: <span class="fail">' + count.fail + '<' + '/span> ' +
+              'Errors: <span class="error">' + count.error + '<' + '/span>';
+    }
+
+    window.testNext = function() {
+      var test = tests[currentTest++];
+      if (test) {
+        printHeader(test);
+        testFrame.src = 'sandbox.html?' + encodeURIComponent(test);
+        summary.innerHTML = 'Running ' + test + ' ...';
+      } else {
+        printSummary();
+      }
+    };
+
+    window.printResults = function(txt, style) {
+      var d = document.createElement('div');
+      d.appendChild(document.createTextNode(txt));
+      d.className = style;
+      reporter.appendChild(d);
+      reporter.scrollTop = reporter.scrollHeight;
+      if (style in count) count[style] += 1;
+    }
+  })();
+</script>
+
+<style>
+  #loader-container {
+    margin: 0 5px;
+  }
+
+  #loader-container iframe {
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  #loader-reporter {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    height: 360px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+  }
+
+  #loader-reporter h3 {
+    font: bold 15px Arial;
+  }
+
+  #loader-container .pass {
+    color: green;
+  }
+
+  #loader-container .fail,
+  #loader-container .error {
+    color: red;
+  }
+
+  #loader-container .banner {
+    position: relative;
+    border: 1px solid #ddd;
+    border-bottom: none;
+  }
+
+  #loader-container .banner .logo {
+    float: none;
+  }
+
+  #loader-summary {
+    position: absolute;
+    left: 300px;
+    top: 8px;
+    font: 15px Arial;
+  }
+
+  #loader-summary span {
+    font-weight: bold;
+    padding-right: 10px;
+  }
+</style>
+
+<div id="loader-container">
+  <div class="banner">
+    <div class="logo">Test Suite for module.js</div>
+    <div id="loader-summary"></div>
+  </div>
+  <div id="loader-reporter"></div>
+</div>
+
+</body>
+</html>

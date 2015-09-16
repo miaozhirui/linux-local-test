@@ -1,0 +1,89 @@
+body {
+  font: 16px/1.5 verdana, tahoma, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-size: 18px;
+  margin: 30px 0 10px 0;
+}
+
+h1 {
+  font: 40px georgia, "times new roman", times, serif;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1 .byline {
+  font: italic 18px verdana, tahoma, arial, sans-serif;
+  margin: 3px 0;
+  position: relative;
+  top: 0;
+  left: 5px;
+}
+
+h2 { font-size: 28px; }
+h3 { font-size: 22px; }
+
+#content {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+pre {
+  font-family: "Bitstream Vera Sans Mono", courier, monospace;
+  background: #f6f6f6;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+}
+
+#menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin: 0 0 0 123px;
+  width: 700px;
+  text-align: right;
+  padding: 0;
+  list-style-type: none;
+}
+
+#menu li {
+  display: inline;
+  margin: 0;
+  padding: 0 4px;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+p.next-page {
+  padding-top: 15px;
+  text-align: right;
+}
+
+p.copyright {
+  border-top: solid 1px #ccc;
+  margin-top: 20px;
+  padding-top: 5px;
+  color: #999;
+  text-align: center;
+}

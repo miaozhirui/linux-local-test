@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css"> 
+    li{
+      list-style:none;
+    }
+    li{
+      float: left;
+    }
+    li{
+      width:300px;
+      height:200px;
+      margin:20px 10px 0px 0px;
+    }
+    li img{
+      width:300px;
+      height:200px;
+
+    }
+  </style>
+  <script type="text/javascript">
+  // 1.图片的存储
+  //2.图片何时开始加载，算出图片加载的位置
+  window.onload = getImg;
+  window.onscroll = getImg;
+  // // 图片延迟加载的
+  function getImg() {
+    var oImg = document.getElementsByTagName('img');
+
+    for(var i=0; i<oImg.length; i++) {
+      if(!oImg[i].isLoad) {//这个地方算是优化
+          var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          var clientHeight = document.documentElement.clientHeight;
+          if(scrollTop+clientHeight+200> getTop(oImg[i])) {
+            oImg[i].setAttribute('src', oImg[i].getAttribute('_src'));
+            oImg[i].isLoad = true;
+          }
+      }
+    }
+
+      function getTop(obj) {
+        var top = 0;
+        while(obj) {
+          top += obj.offsetTop;
+          obj = obj.offsetParent;
+        }
+        return top;
+      }
+
+      
+  }
+    
+  </script>
+</head>
+<body>
+  <ul>
+    <li>
+      <img src="img/loading.gif" _src="img/1.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/2.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/3.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/4.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/5.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/6.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/7.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/8.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/9.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/10.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/11.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/12.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/13.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/14.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/15.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/16.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/17.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/18.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/19.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/20.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/21.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/22.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/23.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/24.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/25.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/26.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/27.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/28.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/29.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/30.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/31.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/32.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/33.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/34.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/35.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/36.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/37.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/38.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/39.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/40.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/41.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/42.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/43.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/44.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/45.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/46.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/47.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/48.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/49.jpg"></li>
+    <li>
+      <img src="img/loading.gif" _src="img/50.jpg"></li>
+  </ul>
+</body>
+  <script type="text/javascript">
+//   lazyLoad = (function() {
+//     var map_element = {};
+//     var element_obj = [];
+//     var download_count = 0;
+//     var last_offset = -1;
+//     var doc_body;
+//     var doc_element;
+//     var lazy_load_tag;
+//     function initVar(tags) {
+//         doc_body = document.body;
+//         doc_element = document.compatMode == 'BackCompat' ? doc_body : document.documentElement;
+//         lazy_load_tag = tags || ["img", "iframe"];
+//     };
+//     function initElementMap() {
+//         var all_element = [];
+//         //从所有相关元素中找出需要延时加载的元素 
+//         for (var i = 0, len = lazy_load_tag.length; i < len; i++) {
+//             var el = document.getElementsByTagName(lazy_load_tag[i]);
+//             for (var j = 0, len2 = el.length; j < len2; j++) {
+//                 if (typeof (el[j]) == "object" && el[j].getAttribute("_src")) {
+//                     element_obj.push(all_element[key]);
+//                 }
+//             }
+//         }
+//  
+//         for (var i = 0,len = element_obj.length; i < len; i++) {
+//             var o_img = element_obj[i];
+//             var t_index = getAbsoluteTop(o_img); //得到图片相对document的距上距离 
+//             if (map_element[t_index]) {
+//                 map_element[t_index].push(i);
+//             } else {
+//                 //按距上距离保存一个队列 
+//                 var t_array = [];
+//                 t_array[0] = i;
+//                 map_element[t_index] = t_array;
+//                 download_count++; //需要延时加载的图片数量 
+//             }
+//         }
+//  
+//     };
+//     function initDownloadListen() {
+//         if (!download_count) return;
+//         var offset = (window.MessageEvent && !document.getBoxObjectFor) ? doc_body.scrollTop : doc_element.scrollTop;
+//         //可视化区域的offtset=document的高+ 
+//         var visio_offset = offset + doc_element.clientHeight;
+//         if (last_offset == visio_offset) {
+//             setTimeout(initDownloadListen, 200);
+//             return;
+//         }
+//         last_offset = visio_offset;
+//         var visio_height = doc_element.clientHeight;
+//         var img_show_height = visio_height + offset;
+//         for (var key in map_element) {
+//             if (img_show_height > key) {
+//                 var t_o = map_element[key];
+//                 var img_vl = t_o.length;
+//                 for (var l = 0; l < img_vl; l++) {
+//                     element_obj[t_o[l]].src = element_obj[t_o[l]].getAttribute("_src");
+//                 }
+//                 delete map_element[key];
+//                 download_count--;
+//             }
+//         }
+//         setTimeout(initDownloadListen, 200);
+//     };
+//     function getAbsoluteTop(element) {
+//         if (arguments.length != 1 || element == null) {
+//             return null;
+//         }
+//         var offsetTop = element.offsetTop;
+//         while (element = element.offsetParent) {
+//             offsetTop += element.offsetTop;
+//         }
+//         return offsetTop;
+//     }
+//     function init(tags) {
+//         initVar(tags);
+//         initElementMap();
+//         initDownloadListen();
+//     };
+//     return {
+//         init: init
+//     }
+// })();
+
+// lazyLoad.init('img');
+</script></html>

@@ -1,0 +1,24 @@
+一、sse服务端数据推送的方式
+1.data.php
+header('Content-type:text/event-stream;charset=utf-8');
+header('Access-Control-Allow-Origin:http://127.0.0.1');
+//每个事件是用空行分隔开的
+echo "data:现在北京时间是".date('H:i:s')."\n\n";
+2.index.js
+var source;
+function init(argument){
+  source = new EventSource(http://localhost/sse/data.php);
+  source.onopen = function(){
+      console.log('连接已建立',this.readyState);
+  }
+  source.onmessage = function(event){
+    console.log('从服务器时时获取的数据',event.data);
+  }
+  source.onerror = function(){
+
+  }
+}
+init();
+3.index.html
+<meta charset=utf-8>
+<script type='text/javascript' src="index.js"></script>
