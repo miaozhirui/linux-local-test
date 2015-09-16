@@ -1,0 +1,26 @@
+表达式: 1.使用表达式把数据绑定到html
+	   2.与ng-bind类似
+
+指令:  1.angular通过指令的方式来扩展html  
+	  2.angular指令就是扩展html的属性
+
+控制器:1.angularjs控制器 控制着应用程序的数据
+	  2.控制器就是js里面常规的对象
+	  3.angular应用程序被控制器控制着
+	  4.ng-controller指令定义了应用了应用程序的控制器
+	  5.控制器是js对象，由js构造函数创建的
+	  6.angular通过$scope来调用对象,$scope相当于作用域，控制范围，保存着模型的数据
+
+过滤器:1.过滤器可以使用一个管道字符（|）添加到表达式或指令当中去
+
+$http:1.$http是Angularjs中的一个核心服务，用于读取远程服务器的数据
+
+表格: ne-repeat用来显示表格是非常的完美的
+
+模块: 1.定义了应用程序
+	 2.模块是应用程序中不同部分的容器
+
+表单: angular表单是输入输入控件的集合（input,button,select,textarea）
+
+输入验证: 1.angular表单和控件可以验证输入的数据
+		2.novalidate是禁止浏览器默认的验证
