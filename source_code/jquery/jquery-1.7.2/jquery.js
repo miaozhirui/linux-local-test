@@ -26,7 +26,6 @@ var jQuery = function( selector, context ) {
 		// The jQuery object is actually just the init constructor 'enhanced'
 		return new jQuery.fn.init( selector, context, rootjQuery );
 	},
-
 	// Map over jQuery in case of overwrite
 	_jQuery = window.jQuery,
 
@@ -96,15 +95,24 @@ var jQuery = function( selector, context ) {
 
 jQuery.fn = jQuery.prototype = {
 	constructor: jQuery,
+
+	// selector可以是任意类型的值，但是只有undefined,DOM元素，字符串，函数，jQuery对象、普通javascript对象这几种类型是有效的,其他类型的值也可以接受但没有意义
+
+	// 参数context:可以不传入，或者传入dom元素，jQuery对象，普通javascript对象之一
+
+	// 参数rootjQuery:包含了document对象的jQuery对象，用于document.getElementById()查找失败、selector是选择器表达式并且未指定context、selector是函数的情况。rootjQuery的定义和应用场景的代码如下
 	init: function( selector, context, rootjQuery ) {
 		var match, elem, ret, doc;
 
 		// Handle $(""), $(null), or $(undefined)
+		// 可以转化为false示例：$()
 		if ( !selector ) {
 			return this;
 		}
 
 		// Handle $(DOMElement)
+		// dom元素$(document.body)
+		// 如果selector有nodeType说明是dom元素
 		if ( selector.nodeType ) {
 			this.context = this[0] = selector;
 			this.length = 1;
@@ -112,6 +120,7 @@ jQuery.fn = jQuery.prototype = {
 		}
 
 		// The body element only exists once, optimize finding it
+
 		if ( selector === "body" && !context && document.body ) {
 			this.context = document;
 			this[0] = document.body;
@@ -121,6 +130,17 @@ jQuery.fn = jQuery.prototype = {
 		}
 
 		// Handle HTML strings
+		// 字符串
+		// "body" $('body')
+		// 单独标签 $('<div>') $('<div>', {'class','test'})
+		// 复杂html代码 $('<div>abc</div>')
+		// "#id" $('#id')
+		// 选择器表达式  $('div p');
+		//选择器表达式   $('div p', $('#id'));
+		// 选择器表达式  $('div.foo').click(function(){
+				// $('span', this).addClass('bat');
+		// })
+		
 		if ( typeof selector === "string" ) {
 			// Are we dealing with HTML string or an ID?
 			if ( selector.charAt(0) === "<" && selector.charAt( selector.length - 1 ) === ">" && selector.length >= 3 ) {
@@ -194,10 +214,13 @@ jQuery.fn = jQuery.prototype = {
 
 		// HANDLE: $(function)
 		// Shortcut for document ready
+		// 函数  $(function(){})
 		} else if ( jQuery.isFunction( selector ) ) {
+			// rootjQuery是jQuery(document)返回的是一个实例
 			return rootjQuery.ready( selector );
 		}
 
+		// 其他任意类型的选择器
 		if ( selector.selector !== undefined ) {
 			this.selector = selector.selector;
 			this.context = selector.context;
@@ -416,6 +439,7 @@ jQuery.extend({
 
 	// Handle when the DOM is ready
 	ready: function( wait ) {
+		// console.log(1)
 		// Either a released hold or an DOMready/load event and not yet ready
 		if ( (wait === true && !--jQuery.readyWait) || (wait !== true && !jQuery.isReady) ) {
 			// Make sure body exists, at least, in case IE gets a little overzealous (ticket #5443).

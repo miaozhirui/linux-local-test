@@ -1,0 +1,81 @@
+<!-- 
+	一、
+	ngAnimate
+		css3的方式
+		ng-enter
+		ng-enter-active
+		ng-leave
+		ng-leave-active
+		支持的指令(以上class支持的指令)
+			if,view,repeat,include,switch
+			repeat
+				ng-enter-stagger(让元素按照一定的顺序淡入淡出)
+				animation-delay
+
+	二、
+	ngAnimate
+		ng-hide-add
+		ng-hide-add-active
+		ng-hide-remove
+		ng-hide-remove-active
+		支持的指令
+			class show hide model等
+		js方式
+			animate()
+				enter/leave
+				removeclass/addClass
+ -->
+ 
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="../../bower_components/angular-animate/angular-animate.js"></script> 
+	<style type="text/css">
+		.box{
+			width:200px;
+			height:200px;
+			background: red;
+			transition:1s all;
+		}
+		.box.ng-hide-remove{opacity: 0;}
+		.box.ng-hide-remove-active{opacity: 1;}
+		.box.ng-hide-add{opacity: 1}
+		.box.ng-hide-add-active{opacity: 0}
+		/*.box.ng-enter{opacity: 0;}
+		.box.ng-enter-active{opacity: 1;}
+		.box.ng-leave{opacity: 1}
+		.box.ng-leave-active{opacity: 0}*/
+	</style>
+	<script type="text/javascript">
+
+	var myApp = angular.module('myApp', ['ngAnimate'])
+	.controller('myController', function($scope){
+		$scope.btn = true;
+	})
+
+	</script>
+</head>
+<body ng-controlelr="myController">
+	<input type="checkbox" ng-model="btn">
+	<div class="box" ng-show="btn"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

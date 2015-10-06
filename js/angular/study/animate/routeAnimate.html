@@ -1,0 +1,100 @@
+<!-- 
+ngRoute
+	$routeProvider
+		when
+			controller
+		otherwise
+	$routeParams
+	事件
+		$on
+		$routeChangeStart
+		$routeChangeSuccess/Error
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<style>
+		.box{transition:1s all; position: absolute;}
+		.box.ng-enter{opacity: 0;}
+		.box.ng-enter-active{opacity: 1;}
+		.box.ng-leave{opacity: 1}
+		.box.ng-leave-active{opacity: 0}
+	</style>
+	<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="../../bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="../../bower_components/angular-animate/angular-animate.js"></script> 
+	<script type="text/javascript">
+	var myApp = angular.module('myApp',['ngRoute', 'ngAnimate']);
+
+	myApp.config(['$routeProvider', function($routeProvider){
+
+		$routeProvider
+			.when('/Aaa', {
+				template: '<p >ppppppp</p>{{name}}',
+				controller: 'Aaa'
+			})
+			.when('/bbb',{
+				template: '学员的内容{{name}}',
+				controller: 'bbb'
+			})
+			.when('/ccc',{
+				template: '课程的内容{{name}}',
+				controller: 'ccc'
+			})
+			.otherwise({
+				redirectTo:'/Aaa'
+			})
+
+	}])
+myApp.controller('myController', ['$scope', '$location', '$routeParams','$route',function($scope,$location, $routeParams, $route){
+
+			// $scope.name = 'aaa';
+			$scope.$location = $location;
+
+	}]);
+
+	
+	myApp.run(['$rootScope', function($rootScope){
+		// $rootScope.$on('$routeChangeStart', function(enent, current,pre){
+		// 	console.log('start');
+		// 	console.log(current);
+		// 	console.log(pre)
+		// })
+	}])
+
+	myApp.controller('Aaa', ['$scope','$routeParams' ,'$location',function($scope,$routeParams, $location){
+
+			$scope.name = 'aaa';
+			$scope.$location = $location;
+
+			console.log($routeParams);
+
+		}]);
+
+	myApp.controller('bbb', ['$scope' ,function($scope){
+			$scope.name = 'bbb'
+		}]);
+
+	myApp.controller('ccc', ['$scope' ,function($scope){
+			$scope.name = 'ccc'
+		}]);
+
+
+	</script>
+
+</head>
+<body ng-controller="myController">
+	<!-- <a href="#/aaa">首页</a>
+    <a href="#/bbb">学员</a>
+    <a href="#/ccc">课程</a> -->
+    <a href="" ng-click="$location.path('Aaa')">首页</a>
+    <a href="" ng-click="$location.path('bbb')">学员</a>
+    <a href="" ng-click="$location.path('ccc')">课程</a>
+	<div class="box" ng-view ></div>
+</body>
+</html>

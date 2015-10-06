@@ -1,0 +1,47 @@
+<!-- for in 循环的时候顺序的不是按照之前的顺序的，这是之前的一个小坑 -->
+<script type="text/javascript">
+	// console.log(decodeURIComponent(location.href))
+	var myObj = {
+		str: 'myString',
+		num:1,
+		myarr:[1,2,'缪志瑞'],
+		myobj:{
+			innerObj :{
+				test:25
+			},
+			innerStr: {
+				test:'innerStr'
+			}
+		}
+	};
+
+	// 浅克隆
+	// function clone(obj){
+	// 	var ret = {},k;
+	// 	for(k in obj){
+	// 		ret[k]=obj[k];
+	// 	}
+	// 	return ret;
+	// }
+
+	// 浅克隆
+	// var result = clone(myObj);
+	// result.myobj.innerStr = 'outStr';
+	// console.log(myObj)
+	// console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
