@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时分秒倒计时</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 将秒数转化为时分秒的脚本: 将5432秒转化为时分秒
+		function formateDate(time){
+
+			var h = m = s = 0, time = +time;
+
+			if(time > 3600){
+
+				h = parseInt(time/3600);
+				if(time%3600 > 60){
+					m = parseInt((time%3600)/60);
+					s = time - h*3600 - m*60
+				} else {
+					s = time%3600;
+				} 
+
+			} else if(time > 60){
+
+				m = parseInt(time/60);
+				s = time - m*60;
+
+			} else {
+				s = time;
+			}
+
+			h = m.toString().length > 1 ? h : '0' + h;
+			m = m.toString().length > 1 ? m : '0' + m;
+			s = s.toString().length > 1 ? s : '0' + s;
+
+
+			return {
+				h: h,
+				m: m,
+				s: s
+			}	
+		}
+
+		// formateDate(5432);
+		var date = formateDate("420");
+		console.log(date)
+	</script>
+</body>
+</html>

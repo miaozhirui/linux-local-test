@@ -1,0 +1,36 @@
+<!-- 
+	angularJs的服务
+		$anchorScroll
+			例子：锚点跳转
+ -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		margin-bottom: 500px;
+	}
+		ul{position: fixed;top:0px; right:0px;}
+		div{height:300px; border:1px solid red;width:300px;}
+	</style>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp', [])
+	.controller('myCtrl', function($scope,$location,$anchorScroll
+){
+		$scope.goTo = function(id){
+			$location.hash(id);
+			$anchorScroll()//自动调用滚动
+		}
+	})
+	</script>
+</head>
+<body ng-controller="myCtrl">
+	<ul>
+		<li ng-repeat="id in [1,2,3,4,5]" ng-click="goTo(id)">{{id}}aaaa</li>
+	</ul>
+	<div ng-repeat="id in [1,2,3,4,5]" id='{{id}}'>{{id}}</div>
+</body>
+</html>

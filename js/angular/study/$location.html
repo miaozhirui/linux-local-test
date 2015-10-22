@@ -1,0 +1,45 @@
+<!-- 
+	angulrJs的服务
+		$location(对原始的location的封装)
+			absUrl()
+			path()
+			replace()
+			hash()
+			search()
+			url()
+			host()
+			port()
+			protocol()
+ -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+		angular.module('myApp', [])
+		.controller('myCtrl', function($location){
+			$location.hash('hello')
+			$location.search({name:'miaozhirui'})
+			console.log($location.search())
+			console.log($location.hash())
+			console.log($location.url())
+			console.log($location.host())
+			console.log($location.port())
+			console.log($location.protocol())
+
+			// $location.path('aa/bb').replace()//replace可以去掉历史管理记录
+			// var path = $location.path();//主要是用来处理路由的
+			// console.log(path)
+
+			// console.log($location)
+			// var a = decodeURIComponent($location.absUrl());
+			// console.log(a)
+		})
+	</script>
+</head>
+<body ng-controller="myCtrl">
+	
+</body>
+</html>

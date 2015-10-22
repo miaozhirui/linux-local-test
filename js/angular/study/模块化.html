@@ -1,0 +1,63 @@
+<!-- 
+	一、angularJs的模块化	
+		angular.module('myApp',[])第一个参数定义模块的名称，第二个参数是指定依赖的模块，类似于seajs中依赖的其他的模块
+		压缩的问题
+
+	二、angularJs的工具方法
+		angular.bind
+		angular.copy
+		angular.extend
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+
+	// angular.bind
+	/*function show(a){
+		console.log(this)
+		console.log(a)
+	}
+	angular.bind(document, show,{name:'miao',age:11})()*/
+
+	// angular.copy
+
+	/*var a = {
+		name:'miaozhirui'
+	}
+	var b = {
+		age:21
+	}
+
+	var c = angular.copy(a,b);//a把b的值完全覆盖了，并且返回了b的值
+	c.name=11
+	console.log(a,b,c)*/
+
+	var a = {
+		name: 'miaozhirui'
+	}
+	var b = {
+		age:21
+	}
+
+	var c = angular.extend(a,b);//b把值合并给a,并且返回a的值
+	var c = angular.extend({}, a,b)
+
+	console.log(a,b,c)
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -26,7 +26,7 @@ ngRoute
 	myApp.config(['$routeProvider', function($routeProvider){
 
 		$routeProvider
-			.when('/Aaa/:num', {
+			.when('/Aaa/:num/:questionId', {
 				template: '<p >ppppppp</p>{{name}}',
 				controller: 'Aaa'
 			})
@@ -38,9 +38,9 @@ ngRoute
 				template: '课程的内容{{name}}',
 				controller: 'ccc'
 			})
-			.otherwise({
-				redirectTo:'/Aaa/1'
-			})
+			// .otherwise({
+			// 	redirectTo:'/Aaa/1'
+			// })
 
 	}])
 myApp.controller('myController', ['$scope', '$location', '$routeParams','$route',function($scope,$location, $routeParams, $route){
@@ -60,11 +60,10 @@ myApp.controller('myController', ['$scope', '$location', '$routeParams','$route'
 	}])
 
 	myApp.controller('Aaa', ['$scope','$routeParams' ,'$location',function($scope,$routeParams, $location){
-
 			$scope.name = 'aaa';
-			$scope.$location = $location;
-
+			console.log($location.search())
 			console.log($routeParams);
+
 
 		}]);
 

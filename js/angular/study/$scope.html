@@ -1,0 +1,59 @@
+<!-- 
+$scope是局部作用域，只会在控制器对应的作用域里面去作用
+依赖注入：
+ -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+	// function Add($scope){
+	// 	$scope.name="miaozhirui"
+	// }
+	angular.module('myApp',[])
+	.controller('myController',function($scope,$rootScope, $timeout){
+		$scope.name="miaozhirui";
+		$scope.age = 111;
+		$rootScope.age=222;
+
+		// $timeout(function(){
+		// 	$scope.age =33;
+		// },1000)
+
+		// setTimeout(function(){
+		// 	$scope.$apply(function(){
+		// 		$scope.age=333;
+		// 	})
+		// },1000)
+		console.log($scope)
+		setInterval(function(){
+			$scope.$apply(function(){
+				$scope.age++;
+			})
+		},1000)
+	})
+	.controller('bb', function($scope){
+
+	})
+	</script>
+	<script type="text/javascript">
+		var test = {
+			say: function(){
+				console.log(11)
+			}
+		}
+		console.log(test)
+	</script>
+</head>
+<body>
+	<div ng-controller="myController">
+		{{name}}
+		{{age}}
+	</div>
+	<p ng-controller="bb">
+		{{age}}
+	</p>
+</body>
+</html>

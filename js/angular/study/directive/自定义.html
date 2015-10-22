@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+		angular.module('myapp', [])
+
+		.controller('my', function(){})
+
+		.directive('require', function(){
+			return {
+				restrict: 'E',
+				template: '<div>{{name}}</div>',
+				link: function(scope,ele,attrs){
+					
+					scope.name="miaozhirui"
+				}
+			}
+		})
+		.directive('hello', function(){
+			return {
+				restrict: 'ACE',
+				template: '<h3>hello world</h3>'
+			}
+		})
+		.directive('tsLink', function(){
+			return {
+				restrict: "E",
+				replace:true,
+				template: '<button>确定{{name}}<a>我是链接</a></button>',
+				link: function(scope,ele,attrs){
+					ele.bind('click', function(){
+						scope.$apply(function(){
+							scope.name="miaozhirui"
+						})
+						console.dir(this)
+						// ele.addClass('name')
+						// ele.css('disabled','disabled')
+						// attrs.$$element[0].disabled = true;
+						// ele.css('disabled','disabled');
+					})
+
+					
+					// console.log(scope)
+					// console.log(ele)
+					// console.log(attrs)
+				}
+			}
+		})
+    
+		.directive('tsMessage',function(){
+			return {
+				restrict: "E",
+				scope:true,//这个值默认是false的，就是父作用域和子作用域是双向同步的，如果设置成true的话，指令数据发生变化只会刷新组件，并不会刷新父作用域
+				transclude:true,
+				template: "<div>{{message}}</div><button ng-transclude></button>",
+				link: function(scope, ele, attrs){
+					ele.bind('click', function(){
+						scope.$apply(function(){
+							scope.message = 'miaozhirui'
+						})
+					})
+				}
+			}
+		})
+	</script>
+</head>
+<body ng-controller="my">
+	<require></require>
+	<hello></hello>
+	<ts-link></ts-link>
+	<input type="text" ng-model="message">
+	<ts-message>确定</ts-message>
+</body>
+</html>

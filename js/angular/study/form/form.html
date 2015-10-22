@@ -1,0 +1,49 @@
+<!-- 
+	angularJs的表单验证
+		type
+			email
+			number
+			url
+		required 必须项
+		ng-minlength 最小长度
+		ng-maxlength 最大长度
+		ng-pattern 正则
+
+		class
+			.ng-valid{}
+			.ng-invalid{}
+			.ng-pristine{}
+			.ng-dirty{}
+
+		实例
+			实战中的表单验证方式
+ -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input.ng-valid{border:1px solid green; background: green}
+		input.ng-invalid{border:1px solid red; background: red;}
+	</style>
+	<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+	<script>
+		angular.module('myApp',[])
+		.controller('myCtrl', function(){
+
+		})
+	</script>
+</head>
+<body ng-controller="myCtrl">
+	<form novalidate name="myForm">
+		<input type="text" name="myText" ng-model="text" required ng-minlength=5 ng-maxlength=10 ng-pattern="/^[a-zA-Z]+$/">
+		<p>{{myForm.myText.$valid}}</p>
+		<p>{{myForm.myText.$invalid}}</p>
+		<p>{{myForm.myText.$pristine}}</p>
+		<p>{{myForm.myText.$dirty}}</p>
+		<p>{{myForm.myText.$error}}</p>
+	</form>
+</body>
+</html>

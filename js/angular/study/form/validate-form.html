@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input.ng-valid{border:1px solid green; background: green}
+		input.ng-invalid{border:1px solid red; background: red;}
+		input.ng-pristine{border:1px solid #eee;background: none;}
+	</style>
+	<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+	<script>
+		angular.module('myApp',[])
+		.controller('myCtrl', function($scope){
+			$scope.regText = {
+				regVal: 'default',
+				regList: [
+					{name: 'default', tips: '请输入用户名'},
+					{name: 'required', tips: '用户名不能为空'},
+					{name: 'pattern', tips: '用户名必须是字母'},
+					{name: 'pass', tips: '通过'}
+				],
+				change: function(error){
+					// console.log(error)这个对象如果有true这个值的话，那就说明验证失败了，然后对应的去给出提示信息
+					for(var attr in error){
+						if(error[attr] == true){
+							this.regVal = attr;
+							return ;
+						}
+					}
+
+					this.regVal = 'pass';
+
+				},
+				huifu: function(e){
+					// var target = angular.element(e.target);
+					// target.addClass('ng-pristine')
+					// console.log(target)
+				}
+			}
+
+
+
+
+
+			$scope.regPassword = {
+
+			}
+
+		})
+	</script>
+</head>
+<body ng-controller="myCtrl">
+	<form novalidate name="nForm">
+		<div>
+			<label for="">
+			用户名: <input type="text" name="nText" ng-model="regText.name" required ng-pattern="/^[a-zA-Z]+$/" ng-focus="regText.huifu($event)" ng-blur="regText.change(nForm.nText.$error)">
+			<span ng-repeat="re in regText.regList | filter : regText.regVal">{{re.tips}}</span>
+			</label>
+		</div>
+
+		<div>
+			<label for="">
+			密码: <input type="password" name="nPassword">
+			<span>请输入密码</span>
+			</label>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+ 
+<!-- 主要讲解的是$scope.$watch -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+	angular.module('myApp', []).
+
+	controller('myController', function($scope){
+		console.log($scope)
+		$scope.goods = {
+			money:5,
+			count:2,
+			pre: 10
+		}
+
+		$scope.sum = function(){
+			return $scope.goods.money * $scope.goods.count;
+		}
+
+		// $scope.$watch('goods', function(){
+		// 	console.log(2)
+		// },true)//如果不加ture的话，只能监听单个属性值，加了ture就可以监听多个属性值了
+
+		// 监听函数
+		$scope.$watch($scope.sum, function(newVal, oldVal){
+			console.log(newVal, oldVal)
+			$scope.goods.pre = newVal > 100 ? 0 : 10;
+		})
+	})
+	</script>
+</head>
+<body ng-controller="myController">
+	<p>单价: <input type="text" ng-model="goods.money"></p>
+	<p>数量: <input type="text" ng-model="goods.count"></p>
+	<p>总价: {{sum() | currency: '￥'}}</p>
+	<p>运费: {{goods.pre}}</p>
+</body>
+</html>
