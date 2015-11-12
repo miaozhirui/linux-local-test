@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var obj = {
+            add: function(){
+                console.log(this)
+            }
+        }
+        obj.add.call(this)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "underscore",
+  "homepage": "https://github.com/miaozhirui/linux-local-test",
+  "authors": [
+    "miaozhirui <miaozhirui@ziseyiliao.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "underscore": "0.1.0"
+  }
+}
