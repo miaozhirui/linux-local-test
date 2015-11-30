@@ -1,0 +1,54 @@
+<style type="text/css">
+#afui #J_scoreorder_wall_wrap {top:0; bottom:45px; }
+
+#score_orders .navorder_head .timesec, #score_orders .navorder_head .toexch {width: 50%;}
+#score_orders .navorder_head .toexch  a{color:#00b000;}
+
+#score_orders .score_order { border-bottom: 1px solid #dfdfdf; padding:10px 10px; height:130px; background:#fff;}
+#afui.fandroid #score_orders .score_order {height:130.3px; border-bottom:1px solid #e8e8e8;}
+#score_orders .score_order p > * {display:inline-block; margin-bottom:2px;}
+#score_orders .score_order .title {color:#00b000;font-weight:bold;}
+#score_orders .score_order .label {width:80px; margin-right:3px; text-align:right; color:#aaa; }
+
+#afui #J_scoreorder_timesec.showed {
+    transform: translate3d(0, -171px, 0); 
+    -webkit-transform: translate3d(0, -171px, 0); 
+    -ms-transform: translate3d(0, -171px, 0);
+    -o-transform: translate3d(0, -171px, 0);
+}
+
+#afui.ios8 #score_orders .score_order {border-width: 0.5px; border-color:#ccc;}
+</style>
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">馋豆订单</h1>
+</header>
+
+<div id="J_scoreorder_wall_wrap" class="scroll_wrap">
+    <ul id="J_scoreorder_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_scoreorder_wall_triggerBar' pageBar ="#J_scoreorder_wall_pageBar"  
+         relWrap='#J_scoreorder_wall_wrap' feedRcd='score_order' renderFunc='$.scoreOrders.renderScoreOrders'
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="1"  wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0"
+    >
+    </ul>
+    
+    <div id="J_scoreorder_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_scoreorder_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="timesec" id="J_scoreorder_timesec_tri" reltgt="#J_scoreorder_timesec"><span>全部</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="totop toexch"><a href="#sitem_book">兑换礼品<i class="fa fa-chevron-right"></i></a></li>
+    </ul>
+    <div id="J_scoreorder_timesec" relTri="#J_scoreorder_timesec_tri" class="listbtn" trans3d="true">
+        <a period="week">最近一周</a>
+        <a period="month">最近一个月</a>
+        <a period="month6">最近半年</a>
+        <a class="active" period="all">全部</a>
+    </div>
+</div>

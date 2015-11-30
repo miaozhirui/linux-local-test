@@ -1,0 +1,15 @@
+{
+  "name": "seajs",
+  "homepage": "https://github.com/seajs/seajs",
+  "version": "1.2.0",
+  "_release": "1.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.0",
+    "commit": "5844564b06d7a61c329f279e60e69a8f5f51a865"
+  },
+  "_source": "git://github.com/seajs/seajs.git",
+  "_target": "v1.2.0",
+  "_originalSource": "seajs",
+  "_direct": true
+}

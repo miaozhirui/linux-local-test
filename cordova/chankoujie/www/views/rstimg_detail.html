@@ -1,0 +1,82 @@
+<style type="text/css">
+#rstimg_detail .ri_dt_top{width:100%; text-align:center; font-size:0;}
+#rstimg_detail .ri_dt_top img{max-width:100%; margin:auto;}
+
+#rstimg_detail .ri_dt_top .tipops {border-top:1px solid #dfdfdf; box-shadow:0 1px 1px #aaa; background:#ffebe0; padding:8px 0; text-align:center; font-size:14px;}
+#rstimg_detail .ri_dt_top .tipops > * {display:inline-block; border-right:1px solid #dfdfdf; overflow:hidden; color:#333;}
+#rstimg_detail .ri_dt_top .winfo {width:36%; }
+#rstimg_detail .ri_dt_top .rinfo {width:24%;}
+#rstimg_detail .ri_dt_top .like {width:20%;}
+#rstimg_detail .ri_dt_top .J_unlike {color:#aaa;border-right:none;}
+#rstimg_detail .ri_dt_top .report {width:20%;}
+#rstimg_detail .ri_dt_top .fa {font-size:16px;}
+#rstimg_detail .ri_dt_top .winfo.fa {font-size:13px;}
+#rstimg_detail .ri_dt_top .tipops > .pressed {color:#ff5a00;}
+
+#rstimg_detail .ri_dt_top h1{font-size:16px;}
+#rstimg_detail .ri_dt_top h1 .J_like_n {font-size:14px; position:relative;bottom:3px; font-weight:normal;}
+#rstimg_detail .ri_dt_top p {height:18px; margin-top:-2px; font-size:12px;}
+#rstimg_detail .ri_dt {width:100%;padding:10px; line-height: 22px; overflow:hidden;}
+#rstimg_detail .ri_dt .pubinfo {min-height:60px; margin: 5px 0 15px 0; position:relative;}
+#rstimg_detail .ri_dt .pubinfo .intro {margin-top:20px; padding:5px 5px;border-radius:3px;background:#f2f2f2;font-size:14px;color:#666;}
+#rstimg_detail .ri_dt .pubinfo .avatar {height:48px;width:48px; position:absolute;}
+#rstimg_detail .ri_dt .pubinfo > div {width:100%;padding-left:56px;min-height: 50px;} 
+#rstimg_detail .ri_dt .pubinfo .uname {margin:-3px 0 5px 0;}
+#rstimg_detail .ri_dt .pubinfo .uname i {display: inline-block; max-width:125px;}
+#rstimg_detail .ri_dt .pubinfo .uname .time {float:right; font-size:10px;}
+#rstimg_detail .ri_dt .pubinfo .follow_u { height: 22px; line-height: 24px; padding: 0 5px; font-size: 12px; color: #fff; margin-top: 3px; }
+#rstimg_detail .ri_dt .pubinfo .time {margin-left:10px; font-size:14px; color:#aaa;}
+#rstimg_detail .ri_dt .pubinfo .allrstimg {margin-top:3px;font-size:14px; float:right;}
+#rstimg_detail .ri_dt .pubinfo .allrstimg a {color:#00b000;}
+#rstimg_detail .ri_dt .pubinfo .allrstimg a.pressed, #rstimg_detail .ri_dt .pubinfo .allrstimg a.pressed *{color:#ff5a00;}
+#rstimg_detail .ri_dt .pubinfo .allrstimg .fa {position:relative;top:2px; margin-left:3px;}
+
+#rstimg_detail .ulist .lo_grid:nth-child(3n) {margin-right:0;}
+#rstimg_detail .ulist .lo_pabs {position:absolute;top:0;bottom:0;left:0;}
+#rstimg_detail .ulist .lo_pabs img {width:100%;height:100%;border-radius:100%;}
+#rstimg_detail .ulist .lo_pabs span {display:block;width: 100%;height:20px;line-height:20px;position:absolute;bottom:-20px;color:#ff5a00;text-align:center;font-size:12px;}
+
+#afui.ios8 #rstimg_detail .ri_dt_top .tipops > * {border-width: 0.5px;}
+</style>
+
+<div class="ri_dt_top prel">
+    <img id="J_rstimg_dt_bimg" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==">
+    <div class="tipops cfx" id="J_rstimg_dt_ops">
+        <div class="winfo fl vv-pressed">
+            <h1><i class="fa fa-copy"></i>餐馆附图</h1>
+            <p id="J_rstimg_dt_rciName" class="ofh">&nbsp;</p>
+        </div>
+        <a id="J_rstimg_dt_toRstrnt" href="#rstrnt_detail/0" class="rinfo fl vv-pressed">
+            <h1>
+                <i class="fa fa-home"></i>
+            </h1>
+            <p>查看餐馆</p>
+        </a>
+        <div class="like fl J_like vv-pressed" outdel="n" itype="rstimg" data-id="80">
+            <h1>
+                <i class="fa fa-heart-add"></i><span class="J_like_n">&nbsp;</span>
+            </h1>
+            <p>
+                <span class="ltip">喜欢</span>
+            </p>
+        </div>
+        <a id="J_rstimgBadReport" class="report fl vv-pressed">
+            <h1>
+                <i class="fa fa-flag2"></i>
+            </h1>
+            <p>举报</p>
+        </a>
+    </div>
+</div>
+<div class="ri_dt">
+    <div class="pubinfo ckjbox prel cfx" id="J_rstimg_dt_meta">
+    </div>
+    
+    <div class="ckjbox sumcmts">
+        <ul id="J_rstimg_dt_cmts">
+        </ul>
+        <a class="J_tocmt" tourl="#comment_book/rstrnt/0" data-pressed="true">查看所有<i
+            class="num">&nbsp;</i>评论
+        </a>
+    </div>
+</div>

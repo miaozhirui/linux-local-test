@@ -1,0 +1,65 @@
+<style type="text/css">
+#afui #J_shoprcd_wall_wrap {z-index:-1;top:40px;bottom:48px;}
+#shop_book .typetabs {padding:0 25%;}
+
+#shop_book .shop_rcd{width:100%;padding:5px 10px 5px 0; height:50px; border-bottom:1px solid #e8e8e8;background:#fff;}
+#afui.fandroid #shop_book .shop_rcd {border-bottom: 1px solid #ededed; margin: -1px 0;}
+#shop_book .shop_rcd > *{height:100%; font-size:13px; text-align:center;}
+#shop_book .shop_rcd .bstat{width:34px;position:relative;}
+#shop_book .shop_rcd .bstat .cbox {width:14px;height:14px;border:1px solid #00b000;border-radius:2px;
+line-height:normal;color:#00b000;}
+#shop_book .shop_rcd .name{padding-right:5px;font-size:14px;text-align:left;border-right:1px solid #f2f2f2;}
+#shop_book .shop_rcd .amount{padding-left:5px;width:80px;color:#aaa;}
+
+#shop_book .sops {position:absolute; bottom:0; width:100%; padding: 0 3%;  height:45px; 
+border-top: 1px solid #00b000; background: #fffdf5;}
+#shop_book .sops .op{display:block; width:28%; height:33px; line-height:33px; text-align:center; margin-right: 8%;
+border-radius:3px; background:#fff; color:#333; border:1px solid #f2f2f2;}
+#shop_book .sops .op:last-child{margin:0;}
+#shop_book .sops .op.pressed{background:#00b000; color:#fff;}
+
+#afui .popBottom>DIV { margin: 20px 10px 10px 10px; }
+#afui #J_add_shoprcd_pop {padding:0 10px;}
+#afui #J_add_shoprcd_pop > div {height: 26px; margin-bottom:15px;}
+#afui #J_add_shoprcd_pop .h {font-size:15px;}
+#afui #J_add_shoprcd_pop .v {position:relative; bottom:6px;}
+
+#afui.ios #shop_book .sops {height:48px; border-color:#aaa;}
+
+#afui.ios8 #shop_book .sops {border-width: 0.5px;} 
+#afui.ios8 #shop_book .shop_rcd { border-width:0.5px; border-color:#ccc; }
+#afui.ios8 #shop_book .shop_rcd .name { border-width:0.5px; border-color:#ddd}  
+</style>
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">预购清单</h1>
+</header>
+
+<div class="typetabs shoptypes f-f f-vc">
+	<div id="J_shoprcd_types" class="f-al f-f f-vc">
+		<a t="1" class="cur f-al">食材清单</a>
+        <a t="2" class="f-al">食品清单</a>
+	</div>
+</div>
+
+<div id="J_shoprcd_wall_wrap" class="scroll_wrap">
+    <ul id="J_shoprcd_wall" class="waterfall_wall" dataUri="" triggerBar='#J_shoprcd_wall_triggerBar' pageBar ="#J_shoprcd_wall_pageBar"  
+         relWrap='#J_shoprcd_wall_wrap' feedRcd='shop_rcd' wallData='$.shoprcdBook.wallData'  
+         renderFunc='$.shopBook.renderShop' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" 
+         dataSrcFunc="$.shopBook.dbShop"
+    >
+    </ul> 
+    <div id="J_shoprcd_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_shoprcd_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="sops f-f f-vc">
+    <a id="J_add_shoprcd" class="op" data-pressed="true">新增食材</a>
+    <a id="J_hide_shoprcd_buyed" class="op" data-pressed="true">隐藏已买</a>
+    <a id="J_del_shoprcd_buyed" class="op" data-pressed="true">删除已买</a>
+</div>

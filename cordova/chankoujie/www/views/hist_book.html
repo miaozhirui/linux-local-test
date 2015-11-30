@@ -1,0 +1,64 @@
+<style type="text/css">
+#hist_book #J_histrcd_wall_wrap {top:36px;bottom:0;}
+#hist_book .cate_wrap {width:80%;}
+#hist_book .J_delhist{width:20%;}
+#hist_book .J_delhist a {font-size:13px;}
+#hist_book .J_delhist .fa {font-size:15px; margin-right:2px;}
+#hist_book .histrcd_wall > a.f-f {height:56px;padding-right:8px;border-bottom:1px solid #e8e8e8;background: #fff;}
+#afui.fandroid #hist_book .histrcd_wall > a.f-f {border-bottom: 1px solid #ededed; height:55px; /*1px small than original height(chromium width issue)*/}
+#hist_book .histrcd_wall > a.f-f.pressed {background:#f8f8f8;}
+#hist_book .histrcd_wall > a.f-f .fa{display:block;width:28px;height:56px;line-height:56px;padding-left:8px;text-align:center;font-size: 16px;}
+#hist_book .histrcd_wall > a.f-f .type {display:block;height:56px;line-height:56px;padding:0 8px 0 3px;font-weight:bold;}
+#hist_book .histrcd_wall > a.f-f .title {display:block; max-height:33px; overflow:hidden; padding:0 6px;}
+#hist_book .histrcd_wall > a.f-f .time {display:block;width:80px; padding-left:6px; font-size:12px; color:#ccc;}
+
+#afui.ios #hist_book .histrcd_wall > a.f-f .title {max-height:34px;}
+#afui.ios8 #hist_book .histrcd_wall > a.f-f {border-width:0.5px; border-color:#ccc;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">浏览记录</h1>
+</header>
+
+<div class="navorder_block">
+    <div class="J_block_wrap cate_wrap cfx" init_height="35px">
+        <div id="J_histrcd_type">
+            <a rtype="all" class="active">全部</a>
+            <a rtype="1">菜谱</a>
+            <a rtype="2">菜单</a>
+            <a rtype="3">作品</a>
+            <a rtype="4">食材</a>
+            <a rtype="5">食品</a>
+            <a rtype="6">吃柜</a>
+            <a rtype="7">好吃店</a>
+            <a rtype="8">品牌</a>
+            <a rtype="9">餐馆</a>
+            <!--<a rtype="10">餐馆图片</a>-->
+            <a rtype="11">吃群</a>
+            <a rtype="12">主题</a>
+            <a rtype="13">美食问题</a>
+            <a rtype="14">日记</a>
+            <a rtype="15">街友</a>
+        </div>
+        <span class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="totop J_delhist"><a data-dpressed="true"><i class="fa fa-trash-o prt2"></i>清空</a></div>
+</div>
+
+<div id="J_histrcd_wall_wrap" class="scroll_wrap">
+    <div id="J_histrcd_wall" class="waterfall_wall histrcd_wall cfx" dataUri="" triggerBar='#J_histrcd_wall_triggerBar' pageBar ="#J_histrcd_wall_pageBar"  
+         relWrap='#J_histrcd_wall_wrap' feedRcd='hist_rcd' wallData=''  
+         renderFunc='$.histBook.renderHist' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" rType="all"
+         dataSrcFunc="$.histBook.dbHist" noDataMsg="<i class='fa fa-smile-o'></i>暂无浏览历史"
+    >
+      
+    </div> 
+    <div id="J_histrcd_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_histrcd_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

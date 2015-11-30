@@ -1,0 +1,54 @@
+<style type="text/css">
+#search .sch_mod {height:50px; padding: 0 10px; background:#fffdf5;box-shadow: 0 1px 1px #ddd;}
+#search .sch_mod > a{ border-top: 1px solid #dfdfdf; background:#fcfcfc; border-radius: 3px 0 0 3px;
+box-shadow: 1px 1px 1px #efefef inset;  -webkit-box-shadow: 1px 1px 1px #efefef inset;-ms-box-shadow: 1px 1px 1px #efefef inset;}
+#search #J_search_key { position: relative; margin-bottom:0; height: 100%; width: 85%; padding: 0; border: none;}
+#search #J_search_key:focus { border:none; }
+#afui #search .sch_mod > .btn{ width:60px; height:32px; line-height:30px; margin-left:-1px; padding:0; font-size:15px;
+border-radius:0 3px 3px 0!important; color:#fff; text-align:center; background:#00b000; }
+#afui #search .sch_mod .btn.pressed{ background:#00b000; color:#fff; }
+
+#afui #search .sch_mod > .btn.pressed {background: #ff5a00;}
+
+#afui #J_search_hist_wrap {top:50px;z-index:100;background:#fff;}
+#afui #J_search_wall_wrap {top:50px;}
+#afui #J_search_wall[feedrcd=subject_rcd], #afui #J_search_wall[feedrcd=wall_faq]{background:#fff;}
+.search_hist{ width: 100%;}
+.search_hist li{height: 50px;line-height:50px; border-bottom:1px solid #e8e8e8; padding-left:20px; font-size:16px;}
+.search_hist li.clearhist { height:80px; line-height:80px; text-align:center; color:#aaa; font-size:18px; border:none;}
+.search_hist li.pressed {background:#fafafa;}
+#search .triggerbar {display:none;}
+
+#afui.ios #search .sch_mod > a {border-radius: 20px 0 0 20px;}
+#afui.ios #search .sch_mod > .btn {border-radius: 0 20px 20px 0 !important;}
+#afui.ios8 .search_hist li {border-width: 0.5px; border-color:#ddd;}
+</style>
+
+<div class="sch_mod f-f f-vc">
+    <a class="f-al f-f f-vc">
+        <i class="fa fa-search"></i>
+        <input class="f-al" id="J_search_key" type="search" placeholder="请输入关键字..." class="">
+    </a>
+    <span class="btn hover" id="J_search_btn" data-pressed="true">搜索</span>
+</div>
+
+<div id="J_search_wall_wrap" class="scroll_wrap">
+    <div id="J_search_wall" class="waterfall_wall list_wall cfx" dataUri="" triggerBar='#J_search_wall_triggerBar' pageBar ="#J_search_wall_pageBar"  
+         relWrap='#J_search_wall_wrap' feedRcd='wall_item' renderFunc='$.ckj.renderRecipes' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n"
+         sort="collects"
+    >
+    </div>
+    <div id="J_search_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_search_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div id="J_search_hist_wrap" class="scroll_wrap" >
+    <ul id="J_search_hist" class="search_hist" >
+    </ul>
+</div>

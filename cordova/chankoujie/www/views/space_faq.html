@@ -1,0 +1,40 @@
+<style type="text/css">
+#space_faq .colans_rcd {padding:15px 10px; overflow: hidden;border-bottom:1px solid #dfdfdf;height: 110px; background: #fff;}
+#space_faq .colans_rcd .ftitle{color:#00b000;font-size:16px; font-weight:bold; }
+#space_faq .colans_rcd .acnt{margin-top:5px;font-size:14px;text-indent:1em;line-height:18px;color:#333;}
+#space_faq .colans_rcd .acnt .fa{color:#ff5a00; margin-right:3px;}
+#space_faq .colans_rcd .go {position:absolute;top:0;bottom:0;left:0;right:0;}
+
+#afui.ios8 #space_faq .colans_rcd {border-width: 0.5px; border-color:#ccc;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">问答</h1>
+</header>
+
+<div class="hrz_slide_wrap">
+    <ul class="hrz_slide" id="J_sp_faq_tabs">
+        <li type="pubfaq" class="on"><i class="who">我</i>的提问</li>
+        <li type="flwfaq"><i class="who">我</i>关注的</li>
+        <li type="ansfaq"><i class="who">我</i>回答的</li>
+        <li type="atfaq">@邀请<i class="who">我</i>的</li>
+        <li type="colans"><i class="who">我</i>收藏的答案</li>
+    </ul>
+</div>
+
+<div id="J_sp_faq_wall_wrap" class="scroll_wrap">
+    <ul id="J_sp_faq_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_sp_faq_wall_triggerBar' pageBar ="#J_sp_faq_wall_pageBar"  
+         relWrap='#J_sp_faq_wall_wrap' feedRcd='wall_faq' renderFunc='$.ckj.renderFaqs' 
+         allLoaded="n" isLoading='n' page="1" spage="0" even-height="true"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n"
+         sort="collects"
+    >
+    </ul>
+    <div id="J_sp_faq_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_sp_faq_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

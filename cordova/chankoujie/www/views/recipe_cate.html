@@ -1,0 +1,57 @@
+<style type="text/css">
+	.recipe_cate{ position: absolute; z-index:1; top: 45px; bottom: 0; width: 100%; overflow: hidden; }
+	.recipe_cate .parent{ position:relative; padding-top:23px; height:100%; overflow:hidden; width:35%; 
+	        border-right: 1px solid #f2f2f2; text-align:center; background:#fffdf5; }
+	.recipe_cate .parent li{ width:100%; height:32px; line-height:32px; margin:auto; margin-bottom:12px; font-size:15px; }
+	.recipe_cate .parent li .fa{   display: inline-block;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-right: 5px;
+        position:relative;
+        top:-1px;
+        font-size: 12px;
+        color: #fff;
+        background: #9f9f9f;
+        border-radius: 10px;
+    }
+	.recipe_cate .parent .rank, .recipe_cate .parent .rank .fa { color:#00b000;}
+	#afui .recipe_cate .parent li.on { border-radius:0; border-right:none;border-left:none; background:transparent; 
+	                                   font-weight:bold; color:#00a000; border:none;}
+	#afui .recipe_cate .parent li.on .fa {background: #00b000;}
+	.recipe_cate .son_wrap { position:relative; width:65%; height:100%; overflow-y:auto; overflow-x:hidden; background:#fff; }
+	.recipe_cate .son {padding:18px 5px 0 5px;}
+	.recipe_cate .son a{ float:left; display:inline-block; padding:2px 10px 0 10px; line-height:24px; margin:0 5px 15px 5px;
+	                   border:1px solid #f6f6f6; border-radius: 15px; font-size:13px; color:#00b000; }
+	.recipe_cate .son a.pressed {background: #00b000; color:#fff; border:1px solid #00b000;}
+	.slowdev .recipe_cate .son a{border-radius:0;font-size:14px;border:none;}
+	
+	#afui.ios .recipe_cate .son a {padding-bottom:2px;}
+	#afui.ios8 .recipe_cate .parent, #afui.ios8 .recipe_cate .son a { border-width:0.5px; border-color:#ddd; }
+</style>
+
+<div class="sch_mod">
+    <div class="inner_wrap">
+        <a href="#search/recipe" data-pressed="true" data-transition="slide"><i class="fa fa-search"></i>自己动手，健康好胃口<i class="fa fa-smile-o prt1"></i></a>
+    </div>
+</div>
+<div class="recipe_cate cfx">
+    <div id="J_recipe_c_p_wrap" class="parent fl">
+        <ul id="J_recipe_c_p" class="cate_tlist">
+            <li t="series"><i class="fa fa-flag-checkered"></i>经典菜系</li>
+            <li class="on" t="style"><i class="fa fa-sitemap"></i>花样菜式</li>
+            <li t="scene"><i class="fa fa-group"></i>人群场景</li>
+            <li t="func"><i class="fa fa-tint"></i>养生保健</li>
+            <li t="tech"><i class="fa fa-compass"></i>烹饪方法</li>
+            <li t="taste"><i class="fa fa-coffee"></i>菜品口味</li>
+            <li t="time"><i class="fa fa-calendar"></i>时令季节</li>
+            <li t="tool"><i class="fa fa-wrench"></i>烹饪工具</li>
+        </ul>
+    </div>
+ 
+    <div id="J_recipe_c_s_wrap" class="son_wrap fl">
+        <div id="J_recipe_c_s" class="son cfx">
+        </div>
+    </div>
+</div>

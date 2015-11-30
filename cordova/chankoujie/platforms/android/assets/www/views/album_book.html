@@ -1,0 +1,41 @@
+<style type="text/css">
+#J_album_wall_wrap {top: 36px;}
+#J_album_wall{width: 100%;}
+#afui #album_book .cate_wrap {width:68%;}
+#afui #album_book .order_wrap{width:20%;}
+#afui #album_book .totop{width:12%;}
+</style>
+
+<div id="J_album_wall_wrap" class="scroll_wrap">
+    <div id="J_album_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_album_wall_triggerBar' pageBar ="#J_album_wall_pageBar"  
+         relWrap='#J_album_wall_wrap' feedRcd='wall_album' renderFunc='$.ckj.renderAlbums' wallData='$.albumBook.wallData' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" sort="collects"
+         noDataMsg="<i class='fa fa-smile-o'></i>暂无吃柜" 
+    >
+    </div>
+    <div id="J_album_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_album_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="navorder_block cfx">
+    <div class="J_block_wrap cate_wrap" init_height="35px">
+        <div id="J_album_b_c">
+            <a cid="1">全部 </a>
+        </div>
+        <span class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="J_block_wrap order_wrap" init_height="35px">
+        <div id="J_album_orderrank" relTri="#J_album_orderrank_tri">
+            <a sort="follows">收藏</a>
+            <a sort="comments">评论</a>
+            <a sort="id">最新</a>
+        </div>
+        <span id="J_album_orderrank_tri" class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="totop tosch"><a href="#search/album" class="fa fa-search" data-pressed="true" data-transition="slide"></a></div>
+</div>

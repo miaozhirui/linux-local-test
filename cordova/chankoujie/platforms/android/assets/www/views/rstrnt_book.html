@@ -1,0 +1,132 @@
+<style type="text/css">
+#rstrnt_book .rstbook_optabs {height:36px; background:#fffdf5; border-bottom:1px solid #00b000;}
+.rstbook_optabs li {float:left; height:35px; line-height:35px; border-right:1px solid #efefef; font-size:16px; text-align:center;}
+#J_rstbook_addr {width:45%;}
+#J_rstbook_order {width:35%;}
+#J_rstbook_disp {width:20%;}
+#J_rstbook_disp .fa {font-size: 18px; font-weight:bold; color:#333;}
+.rstbook_optabs li.tapped {background:#f2f2f2}
+.rstbook_optabs li span { max-width: 70%; white-space: nowrap; overflow: hidden; }
+.rstbook_optabs li:last-child {border:none;}
+.rstbook_optabs li .fa{ position:relative; bottom:-2px; margin-left:3px;color:#aaa; transition: all 200ms ease;}
+.rstbook_ops {display:none;width:100%;z-index:100; background:rgba(0,0,0,0.3); top:35px; bottom:45px;}
+.rstbook_ops li {line-height:40px; padding-left:20px; border-bottom:2px solid #fff; font-size:16px;background:#f2f2f2;}
+.rstbook_ops li i{width:16px; margin-right:3px; color:#aaa;}
+.rstbook_ops li i.fa-check{color:#f2f2f2; margin-left:20px;}
+.rstbook_ops li.cur {color:#00b000; background:#fff;}
+.rstbook_ops li.cur .fa {color:#00b000;}
+
+/*rstrnt book addrs3/4 level*/
+.rstbook_addrs {width:40%; height:100%;}
+.rstbook_addrs li {border-left:5px solid #f2f2f2; padding:0; text-align:center;}
+.rstbook_addrs:last-child {width:60%;}
+.rstbook_addrs:last-child li {border-left:none; background:#fff; border:none;}
+.rstbook_addrs:last-child li .fa-check{color:#fff;}
+.rstbook_addrs:first-child {background:#fff;}
+.rstbook_addrs:first-child li.cur, .rstbook_addrs:first-child li.cur .fa {border-left:5px solid #00b000;color:#00b000; background:#fff;}
+.rstbook_addrs:last-child li.cur, .rstbook_addrs:last-child li.cur .fa {color:#00b000; }
+#afui #J_rstrnt_wall_wrap {top:36px; bottom:45px;}
+
+.rstbook_addr {width:100%; height:45px; position:absolute;left:0; right:0; bottom:0;
+background:#fff; border-top:1px solid #00b000; font-size:14px;}
+.rstbook_addr > * {display:block;}
+#J_rstbook_curcity {width:55px;height:100%;padding:2px 5px;background:#00b000; color:#fff;}
+#J_rstbook_curcity span{text-align:center;display:block;}
+#J_rstbook_curcity .fa {display:block;width:14px;text-align:right;font-size:16px;margin-top: 6px;}
+#afui #J_rstbook_gpsaddr {padding:3px 5px; font-size:12px;line-height:16px; color:#333;}
+#J_rstbook_gpsaddr .fa {margin-right:3px; font-size:12px; color:#00b000;}
+#J_rstbook_search{width:44px;height:100%;line-height:44px;text-align:center;background:#00b000; color:#fff;}
+#J_rstbook_curcity.pressed, #J_rstbook_search.pressed {background: #00a000; color:#fff;}
+#J_rstbook_search .fa{font-size:18px; margin-top:12px; }
+
+/*rstbook in map*/
+#rstrnt_book .rstinmap_box{ position: absolute; z-index: 1; left: 0; right: 0; top: 35px; bottom:80px; background: #f2f2f2; }
+#rstrnt_book #J_rstinmap{height:100%;width:100%;}
+#rstrnt_book .rstinmap_nav { position: absolute; z-index: 1; left: 0; right: 0; bottom: 36px;
+height: 40px; line-height: 40px; background: #fffdf5; border-top: 1px solid #f2f2f2; }
+#rstrnt_book .rstinmap_nav {position:absolute; z-index:1;left:0;right:0;bottom:45px;height:40px;line-height:40px;background:#fffdf5;border-top:1px solid #f2f2f2;}
+#rstrnt_book .rstinmap_nav p.fl{width:40%;text-align:center;}
+#rstrnt_book .rstinmap_nav p .fa {height:40px; line-height:40px; padding:0 15px; font-size:22px; color:#00b000;}
+#rstrnt_book .rstinmap_nav p .gray{color:#ccc;}
+#rstrnt_book .rstinmap_nav p .fa.pressed {background:#e8e8e8;}
+#rstrnt_book .rstinmap_nav p.fr{width:50%;text-align:center;}
+#rstrnt_book .rstinmap_nav p.fr span{display:inline-block; min-width:50px;font-size:14px; position:relative; bottom:5px;}
+
+#rstrnt_book .map_rstrcd {position:relative;padding:5px;background:#fff;color:#666;border:none;}
+#rstrnt_book .map_rstrcd .title {display:block;color:#00b000; font-size:14px; font-weight:bold;}
+#rstrnt_book .map_rstrcd .other{margin-top:2px;color:#ff5a00; font-size:12px;}
+#rstrnt_book .map_rstrcd .other span .fa{margin-right:2px;}
+#rstrnt_book .map_rstrcd .other span {margin-right:10px;}
+#rstrnt_book .map_rstrcd .other span:last-child{margin:0;}
+#rstrnt_book .map_rstrcd .cost {color:#ccc;}
+#rstrnt_book .map_rstrcd .bottom{padding-top:2px; border-top:1px dotted #efefef;}
+#rstrnt_book .map_rstrcd .bottom p{font-size:12px; margin-bottom:2px;}
+#afui #rstrnt_book .map_rstrcd .bottom .head {color:#ccc;}
+
+#afui.ios8 #rstrnt_book .rstbook_optabs, #afui.ios8 #rstrnt_book .rstbook_addr {border-width: 0.5px;}
+#afui.ios8 .rstbook_ops li, #afui.ios8 .rstbook_optabs li {border-width: 0.5px; border-color: #e8e8e8;} 
+</style>
+
+<ul id="J_rstbook_optabs" class="rstbook_optabs cfx">
+    <li id="J_rstbook_addr"><span>东莞</span> <i class="fa fa-arrow-circle-o-right fa-rotate-90"></i></li>
+    <li id="J_rstbook_order"><span>排序</span><i class="fa fa-arrow-circle-o-right fa-rotate-90"></i></li>
+    <li id="J_rstbook_disp" mapshowed="n"><a href="#rstrnt_mapmod"><i class="fa fa-map"></i></a></li>
+</ul>
+
+<div id="J_rstbook_addr_ops" class="rstbook_ops pabs cfx J_op_panel">
+	<div id="J_rstbook_addrs3wrap" class="rstbook_addrs fl" >
+	    <ul id="J_rstbook_addrs3">
+	    </ul>
+	</div>
+	
+	<div id="J_rstbook_addrs4wrap" class="rstbook_addrs fl">
+	    <ul id="J_rstbook_addrs4">
+	    </ul>
+	</div>
+</div>
+
+<ul id="J_rstbook_order_ops" class="rstbook_ops pabs J_op_panel">
+    <li sort="likes"><i class="fa fa-heart-o"></i>最被喜欢<i class="fa fa-check"></i></li>
+    <li sort="comments" ><i class="fa fa-comment-o"></i>评论最多<i class="fa fa-check"></i></li>
+    <li sort="dist" class="hide"><i class="fa fa-compress"></i>距离最近<i class="fa fa-check"></i></li>
+</ul>
+
+<div id="J_rstrnt_wall_wrap" class="scroll_wrap pabs">
+    <div id="J_rstrnt_wall" class="waterfall_wall" dataUri="" triggerBar='#J_rstrnt_wall_triggerBar' pageBar ="#J_rstrnt_wall_pageBar"  
+         relWrap='#J_rstrnt_wall_wrap' feedRcd='wall_rstrnt' wallData='$.rstBook.wallData'  
+         renderFunc='$.ckj.renderRstrnts' allLoaded="n" isLoading='n' page="1" spage="0"
+		 masonry="y" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" noDataMsg="<i class='fa fa-smile-o'></i>该地区暂无餐馆" 
+    >
+    </div>
+    
+    <div id="J_rstrnt_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_rstrnt_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<!--rstbook in map{{{-->
+<div id="J_rstinmap_box" class="rstinmap_box" style="display: none;">
+    <div id="J_rstinmap">
+            百度地图
+    </div>
+</div>
+<div id="J_rstinmap_nav" class="rstinmap_nav cfx" style="display: none;">
+    <p class="fl"><i id="J_locate_mine" class="fa fa-target" data-pressed="true"></i> <i id="J_refresh_map" class="fa fa-rotate-left" data-pressed="true"></i></p>
+    <p class="fr">
+        <i id="J_mapLastPage" class="fa fa-chevron-right fa-flip-horizontal" data-pressed="tree"></i>
+        <span id="J_curRcds">1/20</span>
+        <i id="J_mapNextPage" class="fa fa-chevron-right" data-pressed="tree"></i>
+    </p>
+</div>
+<!-- rstbook in map}}} -->
+
+<div id="J_rstbook_curcity_wrap" class="rstbook_addr f-f f-vc" >
+	<a id="J_rstbook_curcity" class="f-f f-vc vv-pressed" href="#rstrnt_addr" data-transition="slide">
+	   <span class="f-al f-hc f-vc" >&nbsp;&nbsp;</span><i class="fa fa-angle-right fa-rotate-270"></i>
+	</a>
+	<p class="f-al" id="J_rstbook_gpsaddr"><i class="fa fa-map-marker">:</i>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+	<a id="J_rstbook_search" class="fa fa-search vv-pressed" href="#search/rstrnt" data-transition="slide"></a>
+</div>

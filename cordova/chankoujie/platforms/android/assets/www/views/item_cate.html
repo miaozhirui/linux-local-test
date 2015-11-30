@@ -1,0 +1,56 @@
+<style type="text/css">
+.item_cate { position: absolute; top: 45px; bottom: 0; width: 100%; overflow: hidden; z-index: 1; }
+.item_cate .parent { position:relative; padding:30px 0 15px 0; height:100%; overflow:hidden; width:33%; 
+                     border-right: 1px solid #dfdfdf; text-align:center; background:#fffdf5; }
+.item_cate .parent li { width:80px; height:30px; line-height:28px; margin:auto; margin-bottom:15px; font-size:16px }
+.item_cate .parent .fa{ position:relative; top:1px; width:16px; font-size:16px; color:#ccc;}
+.item_cate .parent .rank, .item_cate .parent .rank .fa {color:#00b000;}
+.item_cate .parent li.on * {color:#fff;}
+.item_cate .parent .on .fa {color:#fff;}
+
+.item_cate .cson, .item_cate .hson, .item_cate .nson { position:relative; width:67%; height:100%;overflow-y:auto; 
+overflow-x:hidden; background:#fff; }
+.item_cate .cson ul, .item_cate .hson ul, .item_cate .nson ul{padding:25px 6% 0 6%;font-size:0;}
+.item_cate .cson li{ float:left; position: relative; width:29%; margin-right:6.5%; margin-bottom:30px; }
+.item_cate .cson li .dummy {display:block;padding-bottom:100%;}
+#afui .item_cate .cson li a { display:block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+#afui .item_cate .cson li img { width:100%; height:100%; border-radius:5px;-wekbit-border-radius:5px;-o-border-radius:5px; }
+#afui.slowdev .item_cate .cson li img {border-radius:0;}
+#afui .item_cate .cson li .cname{position:absolute; width:100%; height: 20px; overflow: hidden;bottom:-20px;margin:0; text-align:center; font-size:12px;} 
+.item_cate .cson li:nth-child(3n), .item_cate .hson li:nth-child(3n), .item_cate .nson li:nth-child(3n){ margin-right: 0; }
+
+.item_cate .hson li, .item_cate .nson li{ float:left; position: relative; width:31%; height:60px;padding:8px 0 12px 0; 
+text-align:center; margin:0 3.5% 15px 0; }
+#afui .item_cate .hson li a, #afui .item_cate .nson li a{ display:block; width:100%; height:100%; font-size:16px; }
+#afui .item_cate .hson li { border: 5px dotted #fff; background:#ffebe0; color:#00b000; }
+#afui .item_cate .nson li { border: 2px solid #ddd; background:#D7FFEE; }
+
+#afui.ios .item_cate .parent li {line-height:28px;}
+#afui.ios .item_cate .hson li, #afui.ios .item_cate .nson li{border-radius: 30px;}
+#afui.ios8 .item_cate .parent {border-width: 0.5px; border-color:#ddd;}
+</style>
+
+
+<div class="sch_mod">
+    <div class="inner_wrap">
+    	<a href="#search/item" data-pressed="true" data-transition="slide"><i class="fa fa-search"></i>找点好吃的, 找点好心情 <i class="fa fa-smile-o prt1"></i></a>
+    </div>
+</div>
+<div class="item_cate cfx">
+    <div id="J_item_c_p_wrap" class="parent fl">
+        <ul id="J_item_c_p" class="cate_tlist">
+            <li class="on" t="item_cate"><i class="fa fa-hdd-o"></i> 食品</li>
+            <li t="func"><i class="fa fa-tint"></i> 滋补</li>
+            <li t="spec"><i class="fa fa-map-marker"></i> 特产</li>
+            <li t="gift"><i class="fa fa-gift"></i> 礼品</li>
+            <li t="import"><i class="fa fa-plane"></i> 进口</li>
+            <li t="hot" class="rank"><i class="fa fa-fire"></i> 最热</li>
+            <li t="new" class="rank"><i class="fa fa-alarm"></i> 最新</li>
+        </ul>
+    </div>
+ 
+    <div id="J_item_c_s_wrap" class="prel cson fl">
+        <ul id="J_item_c_s" class="cfx">
+        </ul>
+    </div>
+</div>

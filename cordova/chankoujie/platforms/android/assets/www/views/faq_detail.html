@@ -1,0 +1,94 @@
+<style type="text/css">
+#afui  #faq_detail > div:first-child {background: #fff;}
+#afui.ios #faq_detail {background:#fff;}
+#faq_detail .meta{padding:15px 10px;}
+#faq_detail .norecords {padding:0;}
+#faq_detail .tags {padding:5px;border-bottom:1px dotted #dfdfdf;}
+#faq_detail .tags a{display:inline-block; float:none; padding:5px 6px; margin:5px; background:#e8f3e8; color:#00b000; font-size:14px;}
+#faq_detail .tags a:hover{background:#00b000; color:#fff;}
+
+#faq_detail .meta {border-bottom:1px solid #dfdfdf; }
+#faq_detail .qtitle {font-size:18px; font-weight:bold; color:#333;}
+
+#faq_detail .supple {padding:8px 10px; line-height: 20px; white-space: pre-wrap; word-break: break-word; clear: both; font-size:14px; color:#888;}
+#faq_detail .supple img {max-width:100%;vertical-align:middle; margin: 5px 0;}
+#faq_detail .supple img[src*="/static/images/expr"]{
+    display:inline!important;float:none; height:15px; width:15px; margin:0 2px; vertical-align:middle; position:relative;bottom:1px;}
+#faq_detail .supple a, .faqs li .qdesc a {color:#00b000;}
+#faq_detail .rwd {font-size:12px; color:orange;}
+#faq_detail .rwd .fa {position:relative;top:1px;font-size:14px;margin-right:0px;}
+
+#faq_detail .hitcmt {height:41px; line-height:41px; padding:0 10px;  }
+#faq_detail .hitcmt a {display:inline-block;padding-right:15px; color:#aaa;}
+#faq_detail .hitcmt .fa {margin-right:3px;position:relative;top:1px;}
+#faq_detail .hitcmt .fa-eye{font-size:16px;}
+
+#faq_detail .fops {height:45px;line-height:45px;border-bottom:1px solid #dfdfdf;text-align:center;background:#efefef;}
+#faq_detail .fops a {display:block; float:left; width:50%; border-right:1px solid #dfdfdf;color:#888;}
+#faq_detail .fops a.pressed {background:#dfdfdf;}
+#faq_detail .fops a:last-child{border:none;}
+#faq_detail .fops a .fa{margin-right:5px;}
+
+#faq_detail .answs li {position:relative;padding:15px 10px 8px 10px; border-bottom:1px solid #e8e8e8;}
+#faq_detail .answs li .agrees {display:block;position:absolute;top:15px; left:10px; z-index: 10; width:35px;background:#ffebe0;text-align:center;padding:3px 0; color:#00b000;}
+#faq_detail .answs li .agrees .J_n {font-size:12px;}
+#faq_detail .answs li .agrees .fa, #faq_detail .answs li .lhead .disagrees .fa{display:block;padding-left:1px;}
+#faq_detail .answs li .agrees:hover, #faq_detail .answs li .lhead .disagrees:hover {background:#00b000; color:#fff;}
+#faq_detail .answs li .agrees:hover *, #faq_detail .answs li .lhead .disagrees:hover *{color:#fff;}
+#faq_detail .answs li .plw {padding-left:40px;}
+#faq_detail .answs li .auser {position:relative;font-size:14px; font-weight:bold; color:#00b000;}
+#faq_detail .answs li .ainf *, #faq_detail .answs li .ainf {color:#aaa;}
+#faq_detail .answs li .ainf a:hover {color:#00b000;}
+#faq_detail .answs li .aname {position:relative;font-size:14px; font-weight:bold;}
+#faq_detail .answs li .aname .n {color:#666;}
+#faq_detail .answs li .aname img {width:20px; height:20px;position:absolute; right:0; top:-2px;}
+#faq_detail .answs li .answer {margin:8px 0; white-space: pre-wrap; word-break: break-word; clear: both; font-size:14px; line-height:18px; color:#888;} 
+#faq_detail .answs li .answer img {max-width:100%;vertical-align:middle;margin-right:2px;}
+#faq_detail .answs li .atime {margin-top:6px;font-size:12px;color:#ccc;}
+#faq_detail .answs li .atime .fa {font-size:14px; position:relative;top:1px; margin-right:2px;}
+#faq_detail .answs li .atime a{margin:0;color:#aaa;}
+#faq_detail .answs li .goto {position:absolute;top:0;bottom:0;left:0;right:0;}
+#faq_detail .answs li .goto.pressed {background: rgba(0,0,0,0.1);}
+
+#afui.ios #faq_detail .hitcmt {border-bottom: 1px solid #e8e8e8;}
+#afui.ios #faq_detail .answs li .agrees {border-radius: 3px; }
+#afui.ios #faq_detail .answs li .aname img {border-radius: 12px;}
+
+#afui.ios8 #faq_detail .hitcmt{border-width: 0.5px;}
+#afui.ios8 #faq_detail .answs li, #afui.ios8 #faq_detail .hitcmt, 
+#afui.ios8 #faq_detail .fops a, #afui.ios8 #J_faqdtl_cnt {border-width:0.5px; border-color:#ccc;}
+</style>
+
+<div id="J_faqdtl_tags" class="tags cfx">
+   <a href="#faq_book/?q=%E8%A5%BF%E7%BA%A2%E6%9F%BF">&nbsp;</a>
+</div>
+  
+<div id="J_faqdtl_cnt" class="meta">
+    <div class="qtitle">&nbsp;</div>
+    <div class="supple"> <strong class="label">问题补充：</strong> </div>
+    <div class="rwd"><i class="fa fa-moneybag"></i>悬赏<i class="num">&nbsp;</i>颗馋豆</div>
+</div>
+ 
+<div id="J_faqdtl_meta" class="hitcmt prel">
+	<a class="" href="javascript:void 0;"><i class="fa fa-eye"></i>&nbsp;</a>
+	<a class="cmt J_faqcmt" href="javascript:void 0;"><i class="fa fa-comments1"></i><i class="J_faqcmt_n">&nbsp;</i></a>
+</div>
+
+<div id="J_faqdtl_ops" class="fops cfx" data-fid="23">
+   <a id="J_answer" data-pressed="true"><i class="fa fa-key"></i>我来回答</a>
+   <a class="J_follow_faq" data-pressed="true"><i class="fa fa-plus"></i>关注问题</a>
+</div>
+
+<ul id="J_faqans_wall" class="answs waterfall_wall" dataUri="" triggerBar='#J_faqans_wall_triggerBar' pageBar ="#J_faqans_wall_pageBar"  
+     relWrap='#faq_detail' feedRcd='J_ans' renderFunc='$.faqDtl.renderFaqAns' wallData='$.faqDtl.wallData'
+     popTip="1" masonry="n" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" even-height="y"
+     allLoaded="n" isLoading='n' type="allfaq" q="" page="1" spage="0" 
+	 noDataMsg="<i class='fa fa-smile-o'></i>暂无人回答, 抢个沙发吧!" 
+>
+</ul>
+<div id="J_faqans_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+<div id="J_faqans_wall_pageBar" class="pagebar">
+    <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <a class="curpage">0</a>
+    <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+</div>

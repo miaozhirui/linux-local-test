@@ -1,0 +1,88 @@
+<style type="text/css">
+#J_rst_hotcity_wrap {background:#ffebe0;}
+#J_rst_hotcity { line-height: 40px; word-break: keep-all; white-space: nowrap; overflow-x: auto; overflow-y: hidden; }
+#J_rst_hotcity .fa {width:20px; text-align:center; color:#ff5a00;}
+#J_rst_hotcity  a {color:#333; padding:0 5px; font-size:16px; border-right:1px solid #fff;}
+#J_rst_hotcity  a.cur {font-weight:bold;color:#ff5a00;}
+#J_rst_hotcity  a:last-child{border:none;}
+
+#J_rst_allcity_header {position:relative; z-index:10;padding-left:5px; line-height:35px; background:#fff;color:#aaa;}
+#J_rst_gps_city {color:#aaa; float:right;}
+#J_rst_gps_city .fa {margin-right:3px;}
+#J_rst_gps_city span {margin-right:5px;}
+#J_rst_gps_city span * {color:#00b000;}
+
+#rstaddr_wrap {position:absolute; top:75px; bottom:0;}
+#rstaddr_wrap1 {width:55%; height:100%; padding:10px 15px 0 15px; background:#fff; float:left; box-shadow: 1px -1px 1px 1px #ddd;}
+#rstaddr_wrap2 {width:44%; height:100%; padding-top:10px; margin-left:1%; background:#f2f2f2; float:left;}
+#J_rstaddr1 i{display:block; float:left; width:50%; line-height:30px; margin:3px 0; font-size:16px; text-align:center; font-style:normal;}
+#J_rstaddr1 i.cur {background:#00b000; color:#fff;}
+#J_rstaddr2 {width:100%;}
+#J_rstaddr2 a{display:block; width:100%; height:42px; line-height:42px; border-bottom:1px solid #fff; font-size:16px; color:#333; text-align:center;}
+#J_rstaddr2 a.pressed {background:#00b000; color:#fff;}
+#J_rstaddr2 a.cur {color:#00b000;}
+#J_rstaddr2 a .fa{margin-left:5px; color:#ddd;}
+
+#rstrnt_addr .rstaddr_wrap .cur {background:#00b000; color:#fff;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">切换城市</h1>
+</header>
+
+<div id="J_rst_hotcity_wrap">
+	<div id="J_rst_hotcity">
+		<i class="fa fa-fire"></i>
+        <a nm="北京">北京</a>
+        <a nm="上海">上海</a>
+        <a nm="重庆">重庆</a>
+        <a nm="天津">天津</a>
+        <a nm="香港" class="cur">香港</a>
+        <a nm="澳门">澳门</a>
+        <a pnm="广东" nm="广州">广州</a>
+        <a pnm="广东" nm="深圳">深圳</a>
+        <a pnm="四川" nm="成都">成都</a>
+        <a pnm="江苏" nm="南京">南京</a>
+        <a pnm="浙江" nm="杭州">杭州</a>
+        <a pnm="江苏" nm="苏州">苏州</a>
+	</div>
+</div>
+<div id="J_rst_allcity_header">切换城市：<a id="J_rst_gps_city">当前定位城市: <span><i class="fa fa-map-marker prt1"></i><e>未知</e></span></a></div>
+<div id="rstaddr_wrap" class="cfx">
+    <div id="rstaddr_wrap1">
+    	<div id="J_rstaddr1" class="cfx">
+	        <i aid="484" nm="河北" class="cur">河北</i>
+	        <i aid="812" nm="内蒙古">内蒙古</i>
+	        <i aid="682" nm="山西">山西</i>
+	        <i aid="915" nm="黑龙江">黑龙江</i>
+	        <i aid="1076" nm="吉林">吉林</i>
+	        <i aid="1175" nm="辽宁">辽宁</i>
+	        <i aid="1337" nm="山东">山东</i>
+	        <i aid="1636" nm="江苏">江苏</i>
+	        <i aid="2037" nm="浙江">浙江</i>
+	        <i aid="2340" nm="安徽">安徽</i>
+	        <i aid="2510" nm="福建">福建</i>
+	        <i aid="2647" nm="河南">河南</i>
+	        <i aid="2845" nm="湖北">湖北</i>
+	        <i aid="3009" nm="湖南">湖南</i>
+	        <i aid="3194" nm="江西">江西</i>
+	        <i aid="3325" nm="四川">四川</i>
+	        <i aid="3517" nm="云南">云南</i>
+	        <i aid="3687" nm="贵州">贵州</i>
+	        <i aid="3787" nm="西藏">西藏</i>
+	        <i aid="3857" nm="宁夏">宁夏</i>
+	        <i aid="3896" nm="新疆">新疆</i>
+	        <i aid="3970" nm="青海">青海</i>
+	        <i aid="4017" nm="陕西">陕西</i>
+	        <i aid="4170" nm="甘肃">甘肃</i>
+	        <i aid="4296" nm="广东">广东</i>
+	        <i aid="4631" nm="广西">广西</i>
+	        <i aid="4759" nm="海南">海南</i>
+	    </div>
+    </div>
+    <div id="rstaddr_wrap2">
+	    <div id="J_rstaddr2" class="fl">
+	    </div>
+	</div>
+</div>

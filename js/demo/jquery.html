@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery/jquery-1.7.0/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	$.ajax('/ajax/test.json', {
+		type: 'POST',
+		dataType: 'json',
+		success: function(){
+
+		},
+		error: function(xhr,text,a){
+			console.log(JSON.stringify(xhr));
+			console.log(text)
+			console.log(a)
+		}
+	})
+	</script>
+</body>
+</html>

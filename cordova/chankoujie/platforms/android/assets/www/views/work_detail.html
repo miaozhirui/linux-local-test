@@ -1,0 +1,90 @@
+<style type="text/css">
+#afui .wk_dt_top{width:100%; text-align:center; font-size:0;}
+#afui .wk_dt_top img{max-width:100%; margin:auto;}
+
+#afui .wk_dt_top .tipops {border-top:1px solid #dfdfdf;border-bottom:5px dotted #fff; background:#ffebe0; padding:8px 0; text-align:center; font-size:14px;}
+#afui .wk_dt_top .tipops > * {display:inline-block; border-right:1px solid #dfdfdf; overflow:hidden; color:#333;}
+#afui .wk_dt_top .winfo {width:40%; }
+#afui .wk_dt_top .like {width:20%; color:#ff5a00;}
+#afui .wk_dt_top .J_unlike {color:#aaa;}
+#afui .wk_dt_top .rinfo {width:20%;}
+#afui .wk_dt_top .moreOps {width:20%; padding-top:10px; border-right:none;}
+#afui .wk_dt_top .fa {font-size:16px;}
+#afui .wk_dt_top .share .fa, #afui .wk_dt_top .winfo.fa {font-size:13px;}
+#afui .wk_dt_top .tipops > .pressed {color:#ff5a00;}
+
+#afui .wk_dt_top h1{font-size:16px;}
+#afui .wk_dt_top h1 .J_like_n {font-size:14px; position:relative;bottom:3px; font-weight:normal;}
+#afui .wk_dt_top p {height:18px; margin-top:-2px; font-size:12px;}
+#afui .wk_dt {width:100%;padding:10px; line-height: 22px; overflow:hidden;}
+#afui .wk_dt .pubinfo {min-height:60px;margin-top:5px; position:relative;}
+#afui .wk_dt .pubinfo a:first-child { position:absolute; display: block; height:48px;width:48px; overflow: hidden;}
+#afui .wk_dt .pubinfo .avatar {width:48px;min-height:48px;}
+#afui .wk_dt .pubinfo .intro {margin-top:15px; padding:5px 5px;border-radius:3px;background:#f2f2f2;font-size:14px;color:#666;}
+#afui .wk_dt .pubinfo > div {width:100%;padding-left:56px;min-height: 50px;}
+#afui .wk_dt .pubinfo .follow_u {float:right; height:24px; line-height:25px; padding: 0 8px; font-size:12px;}
+#afui .wk_dt .pubinfo .uname {margin:0 0 4px 0; font-size:14px;}
+#afui .wk_dt .pubinfo .allwork {margin-top:6px;font-size:14px; }
+#afui .wk_dt .pubinfo .allwork .time {display: inline-block; max-width:125px; font-size: 13px; color: #aaa;}
+#afui .wk_dt .pubinfo .allwork a {color:#00b000; float:right;}
+#afui .wk_dt .pubinfo .allwork a.pressed {color:#ff5a00;}
+#afui .wk_dt .pubinfo .allwork .fa {position:relative;top:2px; margin-left:3px;}
+#afui .wk_dt .likers {display:block; font-size:0}
+#afui .wk_dt .likers a {float:left;width:19%; margin-right:1%;}
+#afui .wk_dt .likers a img {width:100%;height: 48px;}
+
+#afui .ulist .lo_grid:nth-child(3n) {margin-right:0;}
+#afui .ulist .lo_pabs {position:absolute;top:0;bottom:0;left:0;}
+#afui .ulist .lo_pabs img {width:100%;height:100%;border-radius:100%;}
+#afui .ulist .lo_pabs span {display:block;width: 100%;height:20px;line-height:20px;position:absolute;bottom:-20px;color:#ff5a00;text-align:center;font-size:12px;}
+
+#afui.ios8 .wk_dt_top .tipops > * {border-width: 0.5px;}
+</style>
+
+<div class="wk_dt_top prel J_wk_dt_top">
+    <img id="J_work_dt_bimg" src="data/default/1_1.jpg" onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, $.vv.cfg.cWidth, false);">
+    <div class="tipops cfx" id="J_work_dt_ops">
+        <div class="winfo fl vv-pressed">
+            <h1><i class="fa fa-copy"></i>作品</h1>
+            <p id="J_work_dt_rciName" class="ofh">&nbsp;</p>
+        </div>
+        <div class="like fl J_like vv-pressed" outdel="n" itype="work" data-id="80">
+            <h1>
+                <i class="fa fa-heart-add"></i><span class="J_like_n">1</span>
+            </h1>
+            <p>
+                <span class="ltip">喜欢</span>
+            </p>
+        </div>
+        
+        <a id="J_work_dt_toRecipe" href="#recipe/0" class="rinfo fl vv-pressed">
+            <h1>
+                <i class="fa fa-file-text"></i>
+            </h1>
+            <p>做法</p>
+        </a>
+        <div class="J_moreOps moreOps fl vv-pressed">
+            <p>
+                <span class="ltip">• • •</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="wk_dt">
+    <div class="pubinfo ckjbox prel cfx" id="J_work_dt_meta">
+    </div>
+    
+    <div id="J_work_dt_likers" class="ckjbox hide">
+        <h1 class="title users_tit">喜欢该作品的街友 <a href="">全部 <i class="fa fa-chevron-right"></i></a></h1>
+        <div class="likers cfx">
+           
+        </div>
+    </div>
+    
+    <div class="ckjbox sumcmts">
+	    <ul id="J_work_dt_cmts">
+	    </ul>
+	    <a class="J_tocmt" tourl="#comment_book/recipe/233003" data-pressed="true">查看所有<i class="num">0</i>评论
+	    </a>
+	</div>
+</div>

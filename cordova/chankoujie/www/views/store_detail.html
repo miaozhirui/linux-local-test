@@ -1,0 +1,98 @@
+<style type="text/css">
+#store_detail .store_cover{font-size:0;width:100%;overflow:hidden;border-bottom: 1px solid #fafafa;}
+#store_detail .store_cover .banner{width:150%;min-height: 80px;max-height:120px;}
+
+#store_detail .storeop {position:relative; width:100%; height:50px; border-bottom:1px solid #ddd; background:#fff;}
+#store_detail .storeop > a {display:block; float:left; width:25%; height:100%; border-left:1px solid #f8f8f8; text-align:center; font-size:14px;}
+#store_detail .storeop > a:first-child {width:50%; padding-left:40px; border-left:none;}
+#store_detail .storeop > a .fa { display:block; margin:8px 0 3px 0;}
+#store_detail .storeop > a span {font-size:12px;}
+#store_detail .storeop > a span e{padding-left:2px; font-size:10px; }
+#store_detail .storeop > .goshop {color:#ff5a00;}
+#store_detail .storeop > .J_unfollow {color:#aaa;}
+#store_detail .storeop > a:hover {background: #f8f8f8;}
+
+#store_detail .storeop .logo{position:absolute; z-index:100; width:60px; height:60px; left:10px; top:-30px; padding:4px; border-radius:3px;
+border:1px solid #dfdfdf;background:#fff;}
+#store_detail .storeop .logo img {width:50px;height:50px;border-radius:3px;font-size:0;}
+
+#store_detail .store_info {padding:15px 10px 10px 10px;}
+#store_detail .store_info h1 {margin-top:30px;}
+#store_detail .store_info .ckjbox > h1:first-child {margin-top:0;}
+#store_detail .store_info .intro {text-indent:1em; font-size:13px;}
+#store_detail .store_info .intro strong{padding:2px;font-size:18px; color:#ccc;}
+#store_detail .store_info .basic li {line-height:26px; }
+#store_detail .store_info .basic .head {color:#ccc;}
+
+#store_detail .store_info h1.title { margin:30px 0 10px 0; padding-bottom:4px; background: url(./css/images/mgsep.png) repeat-x 0 -20px; font-size:16px; color:#333; }
+
+#afui #J_store_dt_info_wrap, #afui #J_store_dt_items_wall_wrap, #afui #J_store_dt_cmts_wrap{top:0; bottom:45px;}
+#afui #J_store_dt_info_wrap {padding:0;}
+#J_store_dt_cmts_wrap{padding-top:20px;}
+
+#afui.ios #J_store_dt_info_wrap, #afui.ios #J_store_dt_items_wall_wrap, #afui.ios #J_store_dt_cmts_wrap{bottom:48px;}
+#afui.ios8 #store_detail .store_cover, #afui.ios8 #store_detail .storeop > a {border-width: 0.5px; border-color: #eee;}
+#afui.ios8 #store_detail .storeop .logo {border-width: 0.5px; }
+</style>
+
+<div id="J_store_dt_info_wrap" class="J_tab_panel scroll_wrap scroll_nobar" style="display:nne;">
+    <div  class="store_cover">
+        <img id="J_store_dt_cover" class="banner"  errimg="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="   onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);">
+    </div>
+    <div id="J_store_dt_storeop" class="storeop cfx">
+            <a href="" class="goshop J_goout">
+                <i class="fa fa-hand-o-right"></i>
+                <span class="ltip">进店看看</span>
+            </a>
+            <a class="J_follow" itype="store" data-id="0">
+                <i class="fa fa-star"></i>
+                <span class="ltip">收藏</span>
+            </a>
+            <a class="J_tocmt tocmt">
+                <i class="fa fa-comments1"></i>
+                <span class="ltip">评论<e>&nbsp;</e></span>
+            </a>
+            <p class="logo"><img src="data/slogo/default.jpg"></p>
+    </div>
+    
+    <div id="J_store_dt_info" class="store_info cfx">        
+        <div class="ckjbox">
+            <div id="J_store_dt_intro">
+                <div class="intro"></div>
+            </div>
+            
+            <h1 class="title">基本信息</h1> 
+            <ul class="basic cfx">
+                <li><i class="head">喜　欢：</i><i id="J_store_dt_likes" class="val">&nbsp;</i></li>
+                <li><i class="head">收　藏：</i><i id="J_store_dt_follows" class="val">&nbsp;</i></li>
+                <li><i class="head">食　品：</i><i id="J_store_dt_items" class="val">&nbsp;</i></li>
+                <li><i class="head">所在地：</i><i id="J_store_dt_address" class="val">&nbsp;</i></li>
+            </ul>
+            
+            <div id="J_store_dt_recwhy">
+                <h1 class="title">推荐理由</h1> 
+                <div class="recwhy">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="J_store_dt_items_wall_wrap" class="J_tab_panel scroll_wrap" style="display:none;">
+    <div id="J_store_dt_items_wall" class="waterfall_wall" dataUri="" triggerBar='#J_store_dt_items_wall_triggerBar' pageBar ="#J_store_dt_items_wall_pageBar"  
+         relWrap='#J_store_dt_items_wall_wrap' feedRcd='wall_item' renderFunc='$.ckj.renderItems' wallData='$.storeDtl.wallData' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" sizeUnit=".pic" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" wImgWd="0" oImgWd="210" wRate="0" 
+    >
+    </div>
+    <div id="J_store_dt_items_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_store_dt_items_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="angle_tabs f-f f-vc">
+    <a class="f-al" t='info'>好吃店封面</a>
+    <a class="f-al" t='item'>本店所有食品</a>
+</div>

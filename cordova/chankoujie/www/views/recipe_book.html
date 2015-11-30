@@ -1,0 +1,59 @@
+<style type="text/css">
+#afui #J_recipe_wall_wrap { top: 0; bottom: 45px; }
+#afui #recipe_book .navorder_head .order_rank {width:30%;}
+#afui #recipe_book .navorder_head .list_mode {width:30%;}
+#afui #recipe_book .navorder_head .topub {width:20%;}
+#afui #recipe_book .navorder_head .totop{width:20%;}
+
+#afui #J_recipe_orderrank.showed {
+    transform: translate3d(0, -131px, 0); 
+    -webkit-transform: translate3d(0, -131px, 0); 
+    -ms-transform: translate3d(0, -131px, 0);
+    -o-transform: translate3d(0, -131px, 0);
+}
+#afui #J_recipe_listmode.showed {
+    transform: translate3d(0, -91px, 0); 
+    -webkit-transform: translate3d(0, -91px, 0); 
+    -ms-transform: translate3d(0, -91px, 0);
+    -o-transform: translate3d(0, -91px, 0);
+}
+
+#afui.ios #J_recipe_wall_wrap {bottom:48px;}
+</style>
+
+<div id="J_recipe_wall_wrap" class="scroll_wrap">
+    <div id="J_recipe_wall" class="waterfall_wall" dataUri="" triggerBar='#J_recipe_wall_triggerBar' pageBar ="#J_recipe_wall_pageBar"  
+         relWrap='#J_recipe_wall_wrap' feedRcd='wall_recipe' renderFunc='$.ckj.renderRecipes' wallData='$.recipeBook.wallData' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" sizeUnit=".pic" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wImgWd="0" oImgWd="226" wRate="0" 
+         sort="likes"
+         noDataMsg="<i class='fa fa-smile-o'></i>暂无相关菜谱" 
+    >
+    </div>
+    <div id="J_recipe_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_recipe_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="order_rank" id="J_recipe_orderrank_tri" reltgt="#J_recipe_orderrank"><span>喜欢</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="list_mode" id="J_recipe_listmode_tri" reltgt="#J_recipe_listmode">模式<i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="topub" ><a data-pressed="true" data-transition="slide" class="fa fa-plus" href="#recipe_share"></a></li>
+        <li class="totop tosch" ><a data-pressed="true" data-transition="slide" class="fa fa-search" href="#search/recipe"></a></li>
+    </ul>
+    <div id="J_recipe_b_c" relTri="#J_recipe_b_c_tri" class="son_cate" style="display: none;">
+    </div>
+    <div id="J_recipe_orderrank" relTri="#J_recipe_orderrank_tri" class="listbtn" trans3d="true">
+        <a class="active" sort="likes">喜欢</a>
+        <a sort="comments">评论</a>
+        <a sort="id">最新</a>
+    </div>
+    <div id="J_recipe_listmode" relTri="#J_recipe_listmode_tri" class="listbtn" trans3d="true">
+        <a mode="masonry">瀑布浏览模式</a>
+        <a mode="list">列表浏览模式</a>
+    </div>
+</div>

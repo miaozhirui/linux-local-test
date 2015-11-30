@@ -1,0 +1,122 @@
+<style type="text/css">
+#afui #setting_index {background:#F2F3E3; padding-bottom: 15px;}
+#afui .lb_box {position: relative; height: 46px; line-height:46px; background: #fff;}
+#afui .lb_box.bd_bt {border-top:1px solid #e8e8e8;} #afui .lb_box.bd_bb {border-bottom:1px solid #e8e8e8;}
+#afui .lb_box .go {position: absolute; top:0; right:0; bottom: 0; left:0;}
+#afui .lb_box .go.pressed {background: rgba(0, 0, 0, 0.1);}
+#afui .lb_box > .lb_head {display:block; width: 46px; height:46px;  line-height:44px; text-align: center; font-size:18px; }
+#afui.fandroid .lb_box > .lb_head {line-height: 46px; }
+#afui .lb_box > .fa-user2 {line-height:42px; font-size: 17px; color:#8DD88D;} 
+#afui .lb_box > .fa-locked {line-height:41px; color: #00b000;}
+#afui .lb_box > .fa-profile{color:#DD5555;}
+#afui .lb_box > .fa-trash-o {font-size: 20px; color:#505050;}
+#afui .lb_box > .fa-edit {font-size: 20px; color:#FEAC1B;} #afui.fandroid .lb_box > .fa-edit {line-height: 47px;}
+#afui .lb_box > .fa-th-large {font-size: 16px; color:#00f;} #afui.fandroid .lb_box > .fa-th-large {line-height: 46px; }
+#afui .lb_box > .fa-user-add-o {color:#C70000;}
+#afui .lb_box > .fa-info-circle {color:#ff5a00;} #afui.fandroid .lb_box > .fa-info-circle {line-height: 46px;} 
+#afui .lb_box > .fa-phone {color:#B4A256;}
+#afui .lb_box > .fa-file-text {color:#A52AF7;}
+#afui .lb_box > .fa-pencil {color:#1EB0E9;}
+#afui .lb_box .lb_body {position: relative; height:100%; border-bottom: 1px solid #e8e8e8;}
+#afui.fandroid .lb_box .lb_body {border-bottom: 1px solid #ededed;}
+#afui .lb_box .lb_body.bd_none {border-bottom: none;}
+#afui .lb_box .lb_body .fa-angle-right {position: absolute; right:0;  width:24px; height:46px; line-height:44px; font-size: 20px; color:#dfdfdf; }
+#afui .lb_box .lb_body .title{font-size:15px;}
+#afui .lb_box .lb_body .ext{position: absolute; right:34px; height:46px; line-height:46px; font-size: 12px; color:#f00;}
+
+#setting_index .logout {height:46px; line-height: 46px; text-align: center; font-size:16px; background: #f00; color:#fff;}
+#setting_index .logout.pressed {background: #c70000;}
+
+#afui .lb_box.lb_ios {display: none;}
+#afui.ios8 .lb_box .lb_body, #afui.ios8 .lb_box.bd_bt, #afui.ios8 .lb_box.bd_bb {border-width: 0.5px; border-color:#ccc;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">个人设置</h1>
+</header>
+
+<div class="lb_box bd_bt f-f f-vc">
+    <i class="lb_head fa fa-user2"></i>
+    <div class="lb_body f-f f-vc f-al">
+        <p class="title">个人资料</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#setting_basic" data-transition="slide" data-dpressed="true"></a>
+</div>
+<div class="lb_box f-f f-vc">
+    <i class="lb_head fa fa-locked"></i>
+    <div class="lb_body f-f f-vc f-al">
+        <p class="title">重设密码</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#setting_password" data-transition="slide" data-dpressed="true"></a>
+</div>
+<div class="lb_box bd_bb f-f f-vc">
+    <i class="lb_head fa fa-profile"></i>
+    <div class="lb_body bd_none f-f f-vc f-al">
+        <p class="title">个人封面</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#setting_cover" data-transition="slide"  data-dpressed="true"></a>
+</div>
+
+<div class="lb_box bd_bt bd_bb mt15 f-f f-vc">
+    <i class="lb_head fa fa-trash-o"></i>
+    <div class="lb_body bd_none f-f f-vc f-al">
+        <p class="title">清理缓存</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" id="JclearDataCache" data-dpressed="true"></a>
+</div>
+
+<!--
+<div class="lb_box f-f f-vc">
+    <i class="lb_head fa fa-user-add-o"></i>
+    <div class="lb_body f-f f-vc f-al">
+        <p class="title">推荐给好友</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#load_page/invite_friend" data-transition="slide" data-dpressed="true"></a>
+</div>
+<div class="lb_box bd_bb f-f f-vc">
+    <i class="lb_head fa fa-th-large"></i>
+    <div class="lb_body bd_none f-f f-vc f-al">
+        <p class="title">应用推荐</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#load_page/appbook" data-transition="slide" data-dpressed="true"></a>
+</div>
+-->
+<div class="lb_box bd_bt f-f f-vc" style="margin-top:16px;">
+    <i class="lb_head fa fa-info-circle"></i>
+    <div class="lb_body f-f f-vc f-al">
+        <p class="title">关于我们</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#load_page/aboutus" data-transition="slide" data-dpressed="true"></a>
+</div>
+<div class="lb_box f-f f-vc">
+    <i class="lb_head fa fa-phone fa-flip-horizontal"></i>
+    <div class="lb_body f-f f-vc f-al">
+        <p class="title">联系我们</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#load_page/contactus" data-transition="slide" data-dpressed="true"></a>
+</div>
+<div class="lb_box  f-f f-vc">
+    <i class="lb_head fa fa-file-text"></i>
+    <div class="lb_body f-f f-vc f-al">
+        <p class="title">用户协议</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#load_page/protocal" data-transition="slide" data-dpressed="true"></a>
+</div>
+<div class="lb_box bd_bb f-f f-vc">
+    <i class="lb_head fa fa-edit"></i>
+    <div class="lb_body bd_none f-f f-vc f-al">
+        <p class="title">意见反馈</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" href="#subject_detail/10" data-transition="slide" data-dpressed="true"></a>
+</div>
+
+<div class="lb_box lb_ios bd_bt bd_bb f-f f-vc" style="margin-top:16px; ">
+    <i class="lb_head fa fa-pencil"></i>
+    <div class="lb_body bd_none f-f f-vc f-al">
+        <p class="title">前往App Store点评一下</p><p class="ext"></p><i class="fa fa-angle-right"></i>             
+    </div>
+    <a class="go" data-dpressed="true"></a>
+</div>
+
+<div class="logout mt15 J_user_logout" data-pressed="true">退出登陆</div>

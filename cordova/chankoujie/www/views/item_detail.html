@@ -1,0 +1,117 @@
+<style type="text/css">
+#item_detail .it_dt_top{position: relative; z-index: 100;width:100%;text-align:center;
+box-shadow: 1px 1px 1px #ccc;overflow:hidden;background: #f8f8f8;font-size: 0;}
+#item_detail .it_dt_top img{max-width:100%; min-height:150px; margin:auto;}
+#item_detail .ckjbox {padding-bottom:0;}
+
+#item_detail .item_metaops {padding:15px 10px; background:#fff;}
+#item_detail .ops { width:61px; background: #fafafa; border:1px solid #ccc; margin:0 0 0 1px; }
+#item_detail .ops li{ width:100%; height:44px; padding:3px 0 3px 0; text-align:center; border-bottom:1px inset #ccc; font-size:16px; }
+#item_detail .ops .J_unlike * {color:#aaa;}
+#item_detail .ops li.pressed {background:#ffebe0;}
+#item_detail .ops li p{font-size:11px;}
+#item_detail .ops [class*="fa-"] {position:relative;top:2px;font-size:14px; margin-right:3px;}
+#item_detail .ops .fa-comments1, #item_detail .ops .fa-archive, #item_detail .ops .fa-share2 {font-size:13px;}
+#item_detail .ops li:last-child {border:none; }
+#item_detail .ops li:last-child p {height:38px;line-height: 38px; font-size:13px;}
+#item_detail .ops li .num {font-size:12px;}
+#item_detail .ops li .J_like_n {position:relative; top:-2px; padding-left:2px;}
+#item_detail .ops li.pressed {background:#00b000;}
+#item_detail .ops li.pressed * {color:#fff;}
+
+#item_detail .itemmeta {margin-left:70px;}
+
+#item_detail .itemmeta .user {margin-top:3px;}
+#item_detail .itemmeta .avatar{display:block; height:40px; width:40px;
+padding:0;border-radius:2px;}
+#item_detail .itemmeta .avatar img {height:36px; width:36px; }
+#afui.ios #item_detail .itemmeta .avatar img {border-radius:2px;}
+
+#item_detail .itemmeta .uname {display: inline-block; max-width:125px; color:#ff5a00;}
+#item_detail .itemmeta .follow_u {position:absolute; right:0; top:0; height:30px; line-height:32px; padding:0 10px; margin-top:3px; font-size:14px;}
+#item_detail .itemmeta .atime {color:#aaa; padding-bottom:5px; font-size:10px; }
+#item_detail .itemmeta .intro {background:#f8f8f8; padding:10px 5px ; margin-top:5px;  border-radius:2px; line-height: 22px;} 
+
+#item_detail .itemmeta .buy_info {margin-top:15px;}
+#item_detail .itemmeta .buy_info a {display:block; padding:10px 0; font-size:20px; text-align:center;background:#00b000; }
+#afui.ios #item_detail .itemmeta .buy_info a {border-radius:2px;}
+#item_detail .itemmeta .buy_info a.pressed {background: #ff5a00; color:#fff;}
+#item_detail .itemmeta .buy_info a.pressed * {color: #fff;}
+#item_detail .itemmeta .buy_info .price {padding-right:10px; border-right: 1px solid #fff;}
+#item_detail .itemmeta .buy_info .gobuy {padding-left:10px;}
+#item_detail .itemmeta .buy_info e{font-weight:bold; color:#fff; }
+
+#item_detail h1.title { margin: 20px 0 10px 0; padding-bottom: 4px; background: url(./css/images/mgsep.png) repeat-x 0 -19px; font-size: 16px; color: #333; }
+
+#afui .it_dt{width:100%;padding:15px 10px 10px 10px; line-height: 22px; overflow:hidden;}
+#item_detail #J_item_dt_attr h1.title, #item_detail .morepics h1.title {margin-top:5px;}
+
+#item_detail .it_dt .attr i {float:left;text-align:left;}
+#afui .it_dt .attr i.nm {width:30%;color:#ccc; margin-right:5px;}
+
+#item_detail .it_dt .albums > a{display:block; line-height:26px; color:#333;}
+#item_detail .it_dt .albums > a .fa-archive {font-size:16px; position:relative; top:1px; color:#ff5a00;}
+
+#item_detail .it_dt .store > div{margin-bottom:5px;  min-height: 22px;}
+#afui .it_dt .store .head {display:block;position:absolute; width:50px;}
+#item_detail .it_dt .store .value {display:block;margin-left:50px; }
+#item_detail .it_dt .store .foods img{float:left;font-size:0; width:32%; margin-right:2%;}
+#item_detail .it_dt .store .foods img:last-child{margin-right:0;}
+
+#item_detail .morepics .itempics {padding:10px 5px 0 5px;}
+#item_detail .morepics .itempics img {clear:both; margin-bottom:20px; width:100%; min-height:200px;}
+
+/*join album/album dialog*/
+#afui #join_album select, #afui #join_album input, #afui #join_album textarea {border-color:#dfdfdf; -webkit-appearance: none;}
+#afui.ios8 #join_album select, #afui.ios8 #join_album input, #afui.ios8 #join_album textarea {border-color:#bbb;}
+#afui .dialog_join_album .join_item{width:26px; height:26px;}
+#afui .dialog_join_album .join_item img{width:100%; height:100%; border-radius:2px;}
+#afui .dialog_join_album .select_album {padding-left:35px;}
+#afui .dialog_join_album .join_content{padding:10px 10px;}
+#afui .dialog_join_album .join_title{min-width:98%;min-height:60px;color:#666; }
+#afui #join_album textarea {padding:5px; height: 30px; margin-bottom:0px; border-radius:2px; }
+#afui #join_album select {width: 50%; }
+#afui #join_album select.qc_cate {width:100%;}
+#afui #join_album .album_intro {margin-top: 15px; width: 100%; height: 61px; vertical-align:bottom; border-radius:2px;}
+/*select album/album dialog*/
+#afui .select_album .qcreate{display:none; padding:0 6px;}
+#afui .dialog_fetch_item .select_album .qcreate{width:325px;}
+#afui .select_album .qc_btn{height:26px;line-height:24px;padding:0 10px; margin:15px 0 0 0;}
+#afui .dialog_join_album .select_album .J_qcreate_btn {font-size:16px;}
+
+#afui.ios8 #item_detail .ops, #afui.ios8 #item_detail .ops li{border-width:0.5px; border-color:#ccc;}
+#afui.ios8 #join_album select, #afui.ios8 #join_album textarea {border-width: 0.5px;}
+</style>
+
+<div class="it_dt_top"><img id="J_item_dt_bimg" src="" onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);"/></div>
+
+<div class="item_metaops prel cfx J_item_metaops">
+    <ul id="J_item_dt_ops" class="ops fl">
+        
+	</ul>
+    
+    <div id="J_item_dt_meta"  class="itemmeta">
+    </div>
+</div>
+
+<div class="it_dt">
+	<div class="ckjbox">
+		<div id="J_item_dt_attr" class="hide">
+	    </div>
+	    
+	    <div id="J_item_dt_jalbums" class="hide">
+	    </div>
+	    
+	    <div id="J_item_dt_store" class="hide">
+	    </div>
+	</div>
+
+    <div class="ckjbox sumcmts">
+        <ul id="J_item_dt_cmts" class="hide">
+        </ul>
+        <a class="J_tocmt" data-pressed="true" tourl="#comments/recipe/1234">查看所有<i class="num">&nbsp;</i>评论</a>
+    </div>
+    
+    <div id="J_item_dt_morepics" class="ckjbox morepics hide">
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<style type="text/css">
+#brand_detail .brand_cover{font-size:0;width:100%;overflow:hidden;border-bottom:1px dotted #f8f8f8;border-bottom: 1px solid #ccc;
+box-shadow: 1px 1px 1px #eee;-webkit-box-shadow: 1px 1px 1px #eee; -o-box-shadow: 1px 1px 1px #eee;}
+#brand_detail .brand_cover .banner{width:100%;min-height: 80px;max-height:120px;}
+
+#brand_detail .brandsum {min-height:60px; padding:0 10px 5px 10px;}
+#brand_detail .brandsum .logo_wrap {position:relative;z-index:1;width:60px; height:60px; padding:4px; margin: 0 auto;
+margin-top:-30px; border:1px solid #efefef; border-radius:100px; background:#fff;}
+#brand_detail .brandsum img {width:50px; height:50px; border-radius:100px;}
+#brand_detail .brandsum .nmcoll{margin-top:-20px;}
+#brand_detail .brandsum .nmcoll .fa {margin-right:3px;}
+#brand_detail .brandsum .name{font-size:18px; margin-top:5px;}
+#brand_detail .brandsum .name .fa {position:relative; top:2px;}
+#brand_detail .brandsum .coll {height:30px; line-height:30px; color:#fff; background:#ff5a00;border-radius:2px; padding:0 10px;}
+#brand_detail .brandsum .J_follow:hover {background:#ff3a00;}
+#brand_detail .brandsum .J_unfollow:hover {background:#ccc;}
+#brand_detail .brandsum .J_unfollow {background:#dfdfdf;}
+
+#brand_detail .brandsum .title {margin-top:15px;text-indent:1em; font-size:13px;}
+#brand_detail .brandsum .title strong{padding:2px;font-size:18px; color:#ccc;}
+
+#brand_detail .brand_info {padding:15px 10px 10px 10px;}
+#brand_detail .brand_info h1 {margin-top:30px;}
+#brand_detail .brand_info .ckjbox > h1:first-child {margin-top:0;}
+#brand_detail .brand_info .basic li {line-height:26px; }
+#brand_detail .brand_info .basic .head {color:#ccc;}
+#brand_detail .brand_info .basic li.J_tocmt e {padding-left:10px; font-size:12px; color:#00b000;}
+
+#brand_detail .brand_info .story{ font-size: 14px; line-height: 24px; white-space: pre-wrap; }
+#brand_detail .brand_info h1.title { margin:30px 0 10px 0; padding-bottom:4px;
+background: url(./css/images/mgsep.png) repeat-x 0 -20px; font-size:16px; color:#333; } 
+#afui #J_brand_dt_info_wrap, #afui #J_brand_dt_items_wall_wrap, #afui #J_brand_dt_cmts_wrap{top:0; bottom:45px;}
+#afui #J_brand_dt_info_wrap {padding:0;}
+#J_brand_dt_cmts_wrap{padding-top:20px;}
+
+#afui.ios #J_brand_dt_info_wrap, #afui.ios #J_brand_dt_items_wall_wrap, #afui.ios #J_brand_dt_cmts_wrap{bottom:48px;}
+</style>
+
+<div id="J_brand_dt_info_wrap" class="J_tab_panel scroll_wrap scroll_nobar" style="display:nne;">
+    <div  class="brand_cover">
+        <img id="J_brand_dt_cover" class="banner" errimg="data/brand/default_banner.jpg" onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);">
+    </div>
+    <div class="brandsum prel cfx" id="J_brand_dt_sum">
+        <div class="logo_wrap">
+            <img class="logo" src="data/blogo/default.jpg">
+        </div>
+        <div class="nmcoll cfx">
+            <div class="name pink fl"><i class="fa fa-flag"></i>&nbsp;</div>
+        </div>
+        <p class="title"></p>
+    </div>
+    <div id="J_brand_dt_info" class="brand_info cfx">        
+        <div class="ckjbox">
+            <h1 class="title">基本信息</h1> 
+            <ul class="basic cfx">
+                <li><i class="head">喜欢：</i><i id="J_brand_dt_likes" class="val">&nbsp;</i></li>
+                <li><i class="head">收藏：</i><i id="J_brand_dt_follows" class="val">&nbsp;</i></li>
+                <li><i class="head">食品：</i><i id="J_brand_dt_items" class="val">&nbsp;</i></li>
+                <li><i class="head">来自：</i><i id="J_brand_dt_address" class="val">&nbsp;</i></li>
+                <li class="J_tocmt"><i class="head">评论：</i><i id="J_brand_dt_comments" class="val">&nbsp;</i><e>查看…</e></li>
+            </ul>
+        </div>
+            
+        <div id="J_brand_dt_story" class="ckjbox">
+            <h1 class="title">品牌故事</h1> 
+            <div class="story"></div>
+        </div>
+    </div>
+</div>
+
+<div id="J_brand_dt_items_wall_wrap" class="J_tab_panel scroll_wrap" style="display:none;">
+    <div id="J_brand_dt_items_wall" class="waterfall_wall" dataUri="" triggerBar='#J_brand_dt_items_wall_triggerBar' pageBar ="#J_brand_dt_items_wall_pageBar"  
+         relWrap='#J_brand_dt_items_wall_wrap' feedRcd='wall_item' renderFunc='$.ckj.renderItems' wallData='$.brandDtl.wallData'  
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" sizeUnit=".pic" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" wImgWd="0" oImgWd="210" wRate="0" 
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无相关食品" 	
+    >
+    </div>
+    <div id="J_brand_dt_items_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_brand_dt_items_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="angle_tabs f-f f-vc">
+    <a class="f-al" t='info'>品牌封面</a>
+    <a class="f-al" t='item'>品牌食品</a>
+    <a class="f-al J_tocmt" t='cmt'>品牌评论</a>
+</div>

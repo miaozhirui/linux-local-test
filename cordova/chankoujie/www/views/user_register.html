@@ -1,0 +1,49 @@
+<style type="text/css">
+#user_register .agree a {float:right; margin:-3px 0 0 5px; font-size:22px; color:#33b5e5;}
+#user_register .agree a i.pressed{color:#ff5a00;}
+#afui #user_register input[type="checkbox"] + label {
+  width: auto;
+  float: none;
+}
+</style>
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1>注册馋口街</h1>
+</header>
+
+<div class="pgFrmBox">
+    <fieldset>
+        <form id="J_reg_form" method="post" action="/?m=user&a=register">
+            <input type="hidden" name="refid" value=""/>
+            <div class="frm_i">
+                <input id="J_reg_email" name="email" type="email" placeholder="邮箱">
+            </div>
+            <div class="frm_i">
+                <input id="J_reg_username" name="username" type="text" placeholder="昵称">
+            </div>
+            <div class="frm_i">
+                <input id="J_reg_password" name="password" type="password" placeholder="密码"> 
+            </div>
+            <div class="frm_i checkBox">
+                <input id="J_reg_captcha" name="captcha" rule_check='y' type="text" maxlength="4" placeholder="验证码">
+                <div class="checkImage">
+                    <span>
+                        <img id="J_reg_captcha_img" class="J_captcha_img" width="90" height="30">
+                    </span>
+                    <span class="J_captcha_change" relImg="#J_reg_captcha_img"  class="pink">换一张</span>
+                </div>
+            </div>
+            <div class="errorMsgs"></div>
+            <div class="submitBox">
+                <input class="button left_f" type="submit" value="提交注册" data-pressed="true">
+            </div>
+            <div name="agreement" class="agree cfx">
+                <input type="checkbox" checked="checked" id="J_reg_agreement" name="agreement">
+                <label for="J_reg_agreement">同意馋口街网络服务协议
+                    <a href="#load_page/protocal" data-transition="slide"><i class="fa fa-hand-o-right" data-pressed="true"></i></a>
+                </label>
+            </div>
+            <input type="hidden" name="type" value="reg"/>
+        </form>
+    </fieldset>
+</div>

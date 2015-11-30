@@ -1,0 +1,105 @@
+1.插入数据(insert)
+
+	db.persons.insert({name:'miaozhirui'})  往数据库中插入记录
+	db.course.save({name: 'maiozhirui1'})
+
+
+2.删除数据(remove)
+	db.course.remove();
+	db.course.remove({name: 'node'});
+	
+	db.person.remove({name:"miaozhirui"});
+	删除集合里面具体的某个数据，里面的参数就是删除的范围
+
+	db.person.drop();
+	删除具体的某个集合
+
+	db.dropDatabase();
+	删除某个数据库
+
+3.更新数据库(update)
+	db.persons.update({name: 'miaozhirui'},{$set:{age:2}});
+	对象里面的第一个参数指定的是更新的是谁，第二个参数指定的是要设置的值，可以更新已经存在的键值，也可以添加新的值
+
+
+4.创建数据库 和查询(find)
+	use dbs    创建数据库,如果已经有了的话就是使用
+	
+	show collections 显示数据库中的集合
+	db.system.indexed.find()
+	db.persons.find();查询persons记录中的记录中的数据，默认的是查询所有的数据
+	db.persons.fineOne();查询persons记录中的第一条数据
+
+
+常用的命令
+	db.getName();查看当前在哪个库下面
+	db.help();产看db级别的常用的命令
+	mongodb的shell环境就是js的一个引擎，可以直接在里面写js代码
+	db就是代表着当前数据库
+	db.course.save()如果插入的值已经有的话就update,如果没有的话就插入
+	db.course.insert()如果插入的简直已经有的话就会报错
+	db.system.indexes.find();查找索引
+
+
+#基本语法
+##批量插入
+	1.db.person.insert([{name:1},{name:2},{name:3}])
+	2.for(var i=0; i<100; i++){ db.persons.insert({name:"miaozhirui"+i, age:i}); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

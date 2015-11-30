@@ -1,0 +1,80 @@
+<style type="text/css">
+#afui .header .leftscore { 
+  height: 45px;
+  line-height: 45px;
+  padding-right:10px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+#afui .header .leftscore e {color:#ff5a00; font-size:18px; }
+  
+#afui #J_scorelog_wall_wrap {top:38px; bottom:45px;}
+
+#score_logs .navorder_head .timesec, #score_logs .navorder_head .howscore {width:50%;}
+#score_logs .navorder_head .howscore, #score_logs .navorder_head .howscore * {color:#00b000;}
+#afui .navorder_head li.howscore .fa-angle-right {margin-left:3px; color:#00b000;}
+#score_logs .navorder_head .howscore.pressed * {color:#ff5a00!important;}
+
+#score_logs .shead {height:37px; text-align:center; font-weight:bold; background:#fffdf5; box-shadow: 0 1px 1px #eee;}
+#score_logs .scorelog {height:50px;text-align:center;border-bottom: 1px solid #e8e8e8; padding:0; background: #fff;}
+#afui.fandroid #score_logs .scorelog {border-bottom:1px solid #ededed;}
+#score_logs .scorelog .action, #score_logs .shead .action {width:35%;border-right:1px solid #f2f2f2;}
+#score_logs .scorelog .score, #score_logs .shead .score {width:20%;font-weight:bold;border-right:1px solid #f2f2f2;}
+#score_logs .scorelog .time, #score_logs .shead .time {width:45%;}
+#score_logs .scorelog .score, #score_logs .scorelog .time{font-size:12px; color:#ccc;}
+#score_logs .scorelog .score {font-weight:bold;}
+#score_logs .scorelog .score.income{color:#00b000;}
+#score_logs .scorelog .score.outpay{color:#ff5a00;}
+
+#afui #J_scorelog_timesec.showed {
+    transform: translate3d(0, -171px, 0); 
+    -webkit-transform: translate3d(0, -171px, 0); 
+    -ms-transform: translate3d(0, -171px, 0);
+    -o-transform: translate3d(0, -171px, 0);
+}
+
+#afui.ios8 #score_logs .scorelog {border-width: 0.5px; border-color:#ccc;}
+#afui.ios8 #score_logs .scorelog .action, #afui.ios8 #score_logs .shead .action {border-width: 0.5px;}
+</style>    
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">馋豆记录</h1>
+    <span id="JleftScore" class="leftscore fr">剩余:<e>&nbsp;</e></span>
+</header>
+
+<div class="shead f-f f-vc">
+	<p class="action">操作</p>
+	<p class="score">馋豆</p>
+	<p class="time">时间</p>
+</div>
+<div id="J_scorelog_wall_wrap" class="scroll_wrap">
+    <ul id="J_scorelog_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_scorelog_wall_triggerBar' pageBar ="#J_scorelog_wall_pageBar"  
+         relWrap='#J_scorelog_wall_wrap' feedRcd='scorelog' renderFunc='$.scoreLogs.renderScoreLogs'
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" 
+    >
+    </ul>
+    
+    <div id="J_scorelog_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_scorelog_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="timesec" id="J_scorelog_timesec_tri" reltgt="#J_scorelog_timesec"><span>全部</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="totop howscore vv-pressed"><a href="#subject_detail/7">馋豆奖励规则<i class="fa fa-angle-right"></i></a></li>
+    </ul>
+    <div id="J_scorelog_timesec" relTri="#J_scorelog_timesec_tri" class="listbtn" trans3d="true">
+        <a period="week">最近一周</a>
+        <a period="month">最近一个月</a>
+        <a period="month6">最近半年</a>
+        <a class="active" period="all">全部</a>
+    </div>
+</div>

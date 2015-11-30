@@ -1,0 +1,29 @@
+<style type="text/css">
+#afui #subject_share > .afScrollPanel{padding-bottom:15px;}
+#afui #subject_share .form_text {height:46px; background: #fff; border:none; border-bottom:1px solid  #dfdfdf; position: relative;}
+#afui #subject_share .form_text[name=cost] {padding-right:30px;}
+#afui #subject_share .form_text[name=cost]:before {}
+
+#subject_share .ipt_box {position:relative; height:46px; padding:12px 0; overflow:hidden; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#subject_share .ipt_box.area {height:auto;}
+#afui.fandroid #subject_share .ipt_box {border-bottom:1px solid #ededed; }
+#subject_share .ipt_box .name{ width:45px; text-align:center; padding:0 6px; color:#777;}
+#afui.fandroid #subject_share .ipt_box .ipt{border-bottom: none;}
+#subject_share .ipt_box .ipt{position:relative; height:auto; padding:0 0 0 6px; border:none; 
+border-left:1px solid #ededed; color:#000; background: transparent; overflow: hidden;}
+
+#afui #subject_share textarea[name=cnt] {height:250px; overflow: hidden; line-height: 20px;}
+
+#afui.ios #subject_share .ipt_box .ipt{border-radius:0;}
+#afui.ios8 #subject_share .ipt_box {border-width:0.5px; border-color:#ccc;}
+#afui.ios8 #subject_share .ipt_box .ipt {border-width:0.5px; border-color:#ddd;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">发布主题</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JsubjectShareform"></a>
+</header>
+
+<form id="JsubjectShareform" name="subjectform" action="/?m=subject&a=share" method="post" enctype="multipart/form-data">
+</form>

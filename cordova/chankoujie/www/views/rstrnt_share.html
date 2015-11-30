@@ -1,0 +1,108 @@
+<style type="text/css" media="screen">
+
+#afui #rstrnt_share > .afScrollPanel{padding-bottom:15px;}
+#afui #rstrnt_share .form_text {height:46px; background: #fff; border:none; border-bottom:1px solid  #dfdfdf; position: relative;}
+#afui #rstrnt_share .form_text[name=cost] {padding-right:30px;}
+#afui #rstrnt_share .form_text[name=cost]:before {}
+
+#rstrnt_share .rst_attr {position:relative; height:46px; padding:12px 0; overflow:hidden; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#rstrnt_share .rst_attr.area {height:auto;}
+#afui.fandroid #rstrnt_share .rst_attr {border-bottom:1px solid #ededed; }
+#rstrnt_share .rst_attr .name{ width:45px; text-align:center; padding:0 6px; color:#777;}
+#afui.fandroid #rstrnt_share .rst_attr .ipt{border-bottom: none;}
+#rstrnt_share .rst_attr .ipt{position:relative; height:auto; padding:0 0 0 6px; border:none; 
+border-left:1px solid #ededed; color:#000; background: transparent; overflow: hidden; border-radius:0;}
+#rstrnt_share .rst_attr.cost:before {content: '￥'; display:block; position:absolute; top:14px; right:10px; font-size:16px; color:#ff5a00;}
+
+
+#rstrnt_share .attachs li {position:relative;height:90px; width:100%;}
+#afui #rstrnt_share .attachs .form_text {height:90px; padding-right: 24px; overflow: hidden;}
+#rstrnt_share .up_img_wrap{ position: absolute; left:0;top:0; width:90px; height: 90px; overflow:hidden; margin-right:0px; background: #C6B6A6; }
+#rstrnt_share .preview{width:90px;height:90px; line-height:90px; text-align:center; background:#C6B6A6;}
+#rstrnt_share .preview img {width:120px; margin-left:-15px;}
+#rstrnt_share .up_img_abs{width:90px; height:90px; position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#rstrnt_share .up_img_renew{width:26px; height:26px;  position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#rstrnt_share .up_img_renew .up_img_tip{width:100%; height:100%; line-height:29px; font-size:20px;font-weight:normal; 
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#55000000',endColorstr='#55000000'); background: rgba(0, 0, 0, 0.5);
+}
+#rstrnt_share .up_img_tip{ position: relative; width: 90px; height: 90px;line-height: 90px; text-align:center;
+font-weight:bold; font-size:16px; background: #C6B6A6;  overflow: hidden; cursor:pointer; }
+#rstrnt_share .up_img_tip.pressed{background: rgba(0,0,0,0.2);}
+#rstrnt_share .up_img_tip span{color:#fff;}
+
+#rstrnt_share .nimg .picintro { display:block; height:90px; padding-left:90px; width: 100%; overflow: hidden;}
+#rstrnt_share .imgtext { width: 100%; height:100%;line-height: 150%; padding: 5px; border-left: none;  border-radius: 0;}
+#rstrnt_share .nimg .ops { position:absolute; right:1px; bottom:1px; display:block; width: 20px; height:20px;
+line-height:20px; text-align: center; font-weight:bold; margin-top:0; }
+#rstrnt_share .nimg .ops a{ display: block; width:20px; height:20px; line-height:20px; text-align:center; background: #ccc; color: #FFF;}
+
+/*cover img*/
+#rstrnt_share .rst_cover {width:100%; height:200px; margin:0;}
+#rstrnt_share .rst_cover .up_img_wrap {position:relative; width:100%; height:100%;}
+#rstrnt_share .rst_cover .preview{width:100%; height:100%; line-height:200px; overflow: hidden;}
+#rstrnt_share .rst_cover .preview img {width:100%;margin:0;}
+#rstrnt_share .rst_cover .up_img_abs{width:100%; height:100%;}
+#rstrnt_share .rst_cover .up_img_renew{height:40px; width:40px;}
+#rstrnt_share .rst_cover .up_img_tip{width:100%; height:100%; line-height: 200px; font-size:22px;}
+#rstrnt_share .rst_cover .up_img_renew .up_img_tip{line-height:46px;}
+
+#afui #rstrnt_share textarea[name=intro] {overflow: hidden; line-height: 20px;}
+
+#rstrnt_share .addr_list {padding:6px 5px; background:#ffebe0;}
+#rstrnt_share .addr_list select {
+    position: relative;
+    display: inline-block;
+    width:82px;
+    height:20px;
+    padding:0 10px 0 0;
+    margin: 6px 4px 6px 0;
+    color: #666;
+    border:none;
+    -webkit-appearance: none;
+    background:url(css/images/addr_angle.png) no-repeat right 4px;
+}
+#rstrnt_share .addr_list select.pressed {background:#fff;}
+#rstrnt_share .addr_list select:last-child{
+    margin-right:0;
+    border-right:none;
+    background: none;
+}
+
+#rstrnt_share .more_attachs {display: block; margin-top:10px; text-align: right; color:#00b000;} 
+#rstrnt_share .more_attachs.pressed {color:#ff5a00;}
+
+#afui.ios8 #rstrnt_share .form_text, #afui.ios8 #rstrnt_share .rst_attr, 
+#afui.ios8 #rstrnt_share .rst_attr .ipt{border-width:0.5px; border-color:#ccc; }
+#afui.ios8 #rstrnt_share .rst_attr .ipt {border-color: #ddd;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">发布餐馆</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JrstrntShareForm"></a>
+</header>
+
+<form id="JrstrntShareForm" name="rstrntform" action="/?m=rstrnt&a=share" method="post" enctype="multipart/form-data">
+    
+</form>
+
+
+<ul id="JshareRstrntAttachCopy" style="display:none;">
+    <li class="J_attach nimg mt10 cfx">
+        <div class="J_upImgWrap up_img_wrap">
+            <div class="J_preview preview">
+            </div>
+            <div class="J_shareRstrntImg_abs up_img_abs">
+                <div id="J_shareRstrntAttach_x" class="J_shareRstrntAttach up_img_tip vv-pressed">
+                    <span>+餐馆附图</span>
+                </div>
+                <input type="hidden" id="J_shareRstrntAttachIpt_x" name="attachimg[]" value="">
+            </div>
+        </div>
+        <span class="picintro">
+            <textarea onclick="" name="attachstate[]" class="form_text imgtext" placeholder="说明"></textarea></span>
+        <span class="ops">
+            <a href="javascript:void 0;" class="adddel fa fa-plus JaddDelAttach" data-pressed="true"></a>
+        </span>
+    </li>
+</ul>

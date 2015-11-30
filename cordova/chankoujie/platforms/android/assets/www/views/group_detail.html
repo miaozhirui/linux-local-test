@@ -1,0 +1,142 @@
+<style type="text/css">
+/*group detail */
+#group_detail .grp_dt_top {width:100%; overflow:hidden; background:#ffebe0; font-size:0;}
+#group_detail .grp_dt_top .cover{min-height:80px; max-height:120px; min-width:100%; max-width:120%;}
+#group_detail .grp_dt_top .topbox { min-height:50px;padding:5px; top:30%;left:10px; background:rgba(0,0,0,.3); font-size:12px; color:#fff;}
+#group_detail .grp_dt_top .topbox img { width:40px; height:40px; }
+#group_detail .grp_dt_top .info { margin-left:45px; }
+#group_detail .grp_dt_top .info .time{ margin-top:7px; font-size:12px;}
+
+#group_detail .grpmeta {padding:5px 0 10px 0;}
+#group_detail .grpmeta p {display:inline-block;font-size:12px; margin-right:10px;}
+#group_detail .grpmeta .label {color:#aaa;} .grpmeta .val {color:#00b000;}
+#group_detail .grpmeta .jgroup {float:right;margin: -3px 0 0 0;padding:3px 10px; background:#00b000; border-radius:2px;}
+#group_detail .grpmeta .jgroup:active {background: #ff3a00;}
+#group_detail .grpmeta .jgroup * {color:#fff;}
+#group_detail .grpmeta .jgroup_ck {margin-top:-3px;float:right; color:#ff5a00; font-size:12px;}
+#group_detail .grpmeta .jgroup_ck .fa {font-size:14px;top:2px;right:2px;}
+#group_detail .grpintro {white-space: pre-wrap; line-height:24px;}
+#group_detail .grpintro img{max-width:100%;}
+
+#group_detail #J_grp_dt_home { padding:10px 10px 10px 10px; }
+#group_detail #J_grp_dt_home_wrap, #group_detail #J_grp_dt_subs_wrap, #group_detail #J_grp_dt_mems_wrap  {top:0;bottom:45px;padding:0;} 
+
+/*group subs*/
+#group_detail .subject_rcd .arrow { line-height:40px; color:#dfdfdf;}
+#group_detail .subject_rcd {position:relative;height:58px;overflow:hidden;}
+#afui.fandroid #group_detail .subject_rcd {height:57.3px; margin:0;}
+#group_detail .subject_rcd .submeta {padding: 3px 0 0 20px; font-size:12px; color:#aaa;}
+#group_detail .subject_rcd .submeta i{color:#00b000;}
+#group_detail #J_grp_dt_subs_wall, #group_detail #J_grp_dt_mems_wall {background:#fff;}
+
+/*group members*/
+#group_detail .user_list a .role {margin-left:10px;font-size:12px;color:#ff5a00;}
+#group_detail .user_list a .role .fa {margin-right:3px; position:relative; top:1px;}
+
+#afui.ios #group_detail #J_grp_dt_home_wrap, #afui.ios #group_detail #J_grp_dt_subs_wrap, 
+#afui.ios #group_detail #J_grp_dt_mems_wrap  {bottom:48px;} 
+</style>
+
+<div id="J_grp_dt_home_wrap" class="scroll_wrap scroll_nobar J_tab_panel">
+	<div class="grp_dt_top prel">
+	    <img class="cover" errimg="data/default/gcover_600.jpg"/>
+	    <div class="topbox pabs">
+	        <img class="logo pabs" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="/>
+	        <div class="info">
+	            <span class="title">&nbsp;</span>
+	            <div class="time">&nbsp;</div>
+	        </div>
+	    </div>
+	</div>
+	
+	<div id="J_grp_dt_home" style="display:nne;">
+	    <div class="ckjbox">
+	        <div id="J_grp_dt_meta" class="grpmeta">
+	           
+	        </div>
+	        
+	        <div id="J_grp_dt_intro" class="grpintro">&nbsp;</div>
+	        
+	        <div id="J_grp_dt_pubsub" class="cfx pr10 mt15">
+	        </div>
+	    </div>
+	    
+	    <div id="J_grp_dt_relgrps" class="ckjbox hide">
+	        <h1 class="title mt20">这个群的人也喜欢：</h1>
+	        <ul class="like_list">
+	            <li class="sgroup_rcd">
+	                <a href="/group/home/?id=0"> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==" >
+	                </a>
+	                <p>
+	                    <a href="">&nbsp;</a>
+	                </p>
+	            </li>
+	        </ul>
+	    </div>
+	</div>
+</div>
+
+<div id="J_grp_dt_subs_wrap" class="scroll_wrap J_tab_panel" style="display:none;">
+    <div class="grp_dt_top prel">
+        <img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="/>
+        <div class="topbox pabs">
+            <img class="logo pabs" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="/>
+            <div class="info">
+                <span class="title">&nbsp;</span>
+                <div class="time">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    	
+    <ul id="J_grp_dt_subs_wall"  class="waterfall_wall cfx" dataUri="" triggerBar='#J_grp_dt_subs_wall_triggerBar' pageBar ="#J_grp_dt_subs_wall_pageBar"  
+        relWrap='#J_grp_dt_subs_wrap' feedRcd='subject_rcd' renderFunc='$.ckj.renderGrpSubs' allLoaded="n" isLoading='n' page="1" spage="0"  
+        sort="collects" noDataMsg="<i class='fa fa-smile-o'></i>该群暂无主题" 
+    >
+        <li class="subject_rcd">
+            <div class="arrow"><i class="fa fa-arrow-circle-o-right"></i></div>
+            <div class="sub_title">&nbsp;</div>
+            <div class="submeta">阅读:<i>&nbsp;</i>　回应:<i>&nbsp;</i></div>
+            <a href="#subject_detail" class="go"></a>
+        </li>
+    </ul>
+    <div id="J_grp_dt_subs_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_grp_dt_subs_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+	
+<div id="J_grp_dt_mems_wrap" class="scroll_wrap J_tab_panel" style="display:none;">
+    <div class="grp_dt_top prel">
+        <img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="/>
+        <div class="topbox pabs">
+            <img class="logo pabs" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="/>
+            <div class="info">
+                <span class="title">&nbsp;</span>
+                <div class="time">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+	    
+    <div id="J_grp_dt_mems_wall" class="waterfall_wall user_list cfx" dataUri="" triggerBar='#J_grp_dt_mems_wall_triggerBar' pageBar ="#J_grp_dt_mems_wall_pageBar"  
+	    relWrap='#J_grp_dt_mems_wrap' feedRcd='grp_mem' renderFunc='$.ckj.renderGrpMems' allLoaded="n" isLoading='n' page="1" spage="0"  
+	    sort="collects"  noDataMsg="<i class='fa fa-smile-o'></i>暂无群成员" 
+    >
+        <a href="#space_index" class="grp_mem cfx">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==" /><span class="uname ofh">&nbsp;</span>
+        </a>
+    </div>
+    <div id="J_grp_dt_mems_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_grp_dt_mems_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div id="J_grp_dt_tabs" class="angle_tabs f-f f-vc">
+    <a class="f-al cur" t='home'>群首页</a>
+    <a class="f-al" t='grpsub'>群主题</a>
+    <a class="f-al" t='grpmem'>群成员</a>
+</div>

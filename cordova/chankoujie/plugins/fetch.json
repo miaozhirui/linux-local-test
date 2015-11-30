@@ -1,0 +1,42 @@
+{
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "at.modalog.cordova.plugin.cache": {
+        "source": {
+            "type": "local",
+            "path": "plugins/cordova-plugin-cache"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.spout.phonegap.plugins.baidulocation": {
+        "source": {
+            "type": "local",
+            "path": "plugins/phonegap_baidu_sdk_location"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

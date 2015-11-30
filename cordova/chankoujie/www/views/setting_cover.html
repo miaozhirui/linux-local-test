@@ -1,0 +1,36 @@
+<style type="text/css">
+#afui #setting_cover {background:#fff;}
+
+#setting_cover .user_cover {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+}
+#setting_cover .up_img_wrap{ position: absolute; left:0;top:0; width:100%; height: 150px; overflow:hidden; margin-right:0px; background: #C6B6A6; }
+#setting_cover .preview{width:100%;height:150px; line-height:150px; text-align:center; background:#C6B6A6;}
+#setting_cover .preview img {width:100%;}
+#setting_cover .up_img_abs{width:100%; height:150px; position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#setting_cover .up_img_renew{width:36px; height:36px;  position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#setting_cover .up_img_renew .up_img_tip{width:100%; height:100%; line-height:42px; font-size:20px;font-weight:normal; 
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#55000000',endColorstr='#55000000'); background: rgba(0, 0, 0, 0.5);
+}
+#setting_cover .up_img_tip{ position: relative;width:100%; height: 150px;line-height: 150px; text-align:center;
+font-weight:bold; font-size:16px; background: #C6B6A6;  overflow: hidden; cursor:pointer; }
+#setting_cover .up_img_tip.pressed{background: rgba(0,0,0,0.2);}
+#setting_cover .up_img_tip span{color:#fff;}
+#setting_cover .cover_tip {padding:0 15px; font-size:12px; color:#aaa;}
+</style>
+
+<div class="user_cover">
+    <div class="J_upImgWrap up_img_wrap">
+        <div class="J_preview preview"></div>
+        <div class="JuserCoverUpAbs  up_img_abs ">
+            <div id="JuserCoverUpBox" class="JuserCoverUpBox up_img_tip" data-pressed="true">
+                <span class=""> +上传个人封面</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="cancel_cover btn gbtn mt20 ml15" data-pressed="true"><i class="fa fa-times"></i>取消封面</a>   
+<p class="cover_tip mt10">尽可能选择大图片，太小的图片可能会显得模糊。最佳尺寸960x300(电脑版)。</p>

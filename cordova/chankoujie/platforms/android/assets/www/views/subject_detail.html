@@ -1,0 +1,116 @@
+<style type="text/css">
+/*subject detail*/
+#afui .sub_dt_top {min-height:81px;padding:10px;line-height:22px;border-bottom:1px solid #dfdfdf; background:#f8f8f8;}
+#afui .sub_dt_top .submeta{padding-bottom:10px;}
+#afui .sub_dt_top .title {font-weight:bold;font-size:16px; font-weight:bold;}
+#afui .sub_dt_top .title .fgroup{font-size:12px; color:#ccc;}
+#afui .sub_dt_top .title .fgroup .fa {font-size:10px; margin-right:2px;}    
+
+#afui .sub_dt_top .sinfo {padding-bottom:0px;}
+#afui .sub_dt_top .sinfo img{height:20px; width:20px; margin-right:1px;}
+#afui .sub_dt_top .sinfo .uname{font-size:13px; color:#ff5a00;position:relative;top:-3px;}
+#afui .sub_dt_top .sinfo .follow_u {position:absolute;right:0;top:0;height:24px;line-height:26px; background:#e8f3e8; color:#666; padding:0 8px; font-size:12px; }
+
+#afui .sub_dt_topsep {padding-bottom: 5px; background: url(./css/images/mgsep.png) repeat-x 0 -40px; border-bottom: 1px dotted #dfdfdf; }
+
+#subject_detail .ops { margin: 0 auto; }
+#subject_detail .ops li{ width:25%; float:left; text-align:center; font-size:16px; }
+#subject_detail .ops .J_unlike div{ color:#aaa; }
+#subject_detail .ops li div {width:52px; height:52px; margin:0 auto; padding-top:11px;
+background: url(./css/images/ops_bg.png) no-repeat 1px 1px;}
+#subject_detail .ops li div.pressed {background: url(./css/images/ops_bg.png) no-repeat 1px -64px; color:#fff;}
+#subject_detail .ops li div.pressed * {color:#fff;}
+#subject_detail .ops li > p{font-size:10px; color:#ccc; height:17px;}
+#subject_detail .ops li div p {margin-top: -5px; font-size: 12px;}
+#subject_detail .ops .fa {position:relative;font-size:16px;}
+#subject_detail .ops li.share .fa {top:6px;}
+
+#afui .sub_dt {padding:10px;}
+#subject_detail .sub_dt_misc {padding:5px 10px; font-size:12px; color:#aaa!important; border-bottom: 1px dotted #e8e8e8;}
+#subject_detail .sub_dt_misc .hits {font-size:14px;}
+#subject_detail .sub_dt_misc .hits .fa {margin-right:3px; position: relative; top: 2px; }
+#subject_detail .sub_dt_misc .atime {float:right;}
+#subject_detail .sub_cnt { padding: 10px 0 0 0; margin-bottom:20px; line-height: 25px; white-space: pre-wrap; font-size:14px; clear: both; overflow:hidden; word-break: break-word;}
+#subject_detail .sub_cnt img {max-width:100%;}
+#subject_detail .sub_cnt img[src*="images/expr"] {width:18px; height:18px; vertical-align:middle;}
+#subject_detail .sub_cnt a {color:#00b000;} #subject_detail .sub_cnt a.pressed {color:#ff5a00;}
+
+/*rel stuff*/
+#J_sub_dt_swipes {visibility: hidden;}
+#subject_detail .subject_rcd .arrow { line-height:40px; color:#dfdfdf;}
+#subject_detail .subject_rcd {padding:10px 10px; border-bottom:1px dotted #efefef;}
+#subject_detail .subject_rcd .submeta {padding: 3px 0 0 20px; font-size:12px; color:#aaa;}
+#subject_detail .subject_rcd .submeta i{color:#00b000;}
+#subject_detail .subject_rcd:last-child {border:none;}
+
+#subject_detail .relfaqs li {padding: 8px 10px; font-size:14px;}
+#subject_detail .relfaqs li .fa{float:left; margin-right:3px; color:#aaa;}
+#subject_detail .relfaqs li .mid {display:inline-block; width:80%;}
+#subject_detail .relfaqs li .last{float:right;font-size:11px; color:#ccc;}
+
+</style>
+
+<div id="J_sub_dt_top" class="sub_dt_top">
+    <div  class="submeta">
+    </div>
+</div>
+    
+<div class="sub_dt">
+    <div class="ckjbox">
+        <div id="J_sub_dt_misc" class="sub_dt_misc"></div>
+		<div id="J_sub_dt_cnt" class="sub_cnt ">&nbsp;</div>
+	    
+	    <ul id="J_sub_dt_ops" class="ops cfx" >
+            <li class="cmt green J_tocmt" tourl="#comment_book/recipe/0">
+                <div class="vv-pressed">
+                    <i class="fa fa-comment-o"></i>
+                    <p class="num">&nbsp;</p>
+                </div>
+                <p>回应</p>
+            </li>
+            <li class="jfollow green J_follow" itype="subject" data-id="0">
+                <div class="vv-pressed">
+                    <i class="fa fa-star"></i>
+                    <p class="num">&nbsp;</p>
+                </div>
+                <p class="ltip">收藏</p>
+            </li>
+            <li class="share green J_sharesub" data-id="121303">
+                <div class="vv-pressed">
+                    <i class="fa fa-share2"></i>
+                </div>
+                <p>分享给...</p>
+            </li>
+            <li id="J_subjectBadReport" class="share green" >
+                <div class="vv-pressed">
+                    <i class="fa fa-flag2"></i>
+                </div>
+                <p>举报...</p>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="ckjbox sumcmts">
+        <ul id="J_sub_dt_cmts">
+        </ul>
+        <a class="J_tocmt" data-pressed="true" tourl="#comment_book/recipe/233003">查看所有<i class="num">&nbsp;</i>回应
+        </a>
+    </div>
+    
+    <!--
+    <div class="J_boxswipes">
+	    <ul id="J_sub_dt_swipetabs" class="swipetabs f-f">
+	        <li class="active f-al">类似主题</li> 
+	        <li class="f-al">类似问题</li>
+	    </ul>
+	    
+	    <div id="J_sub_dt_swipes" class="swipepanels">
+	        <ul id="J_sub_dt_relsubs" class="relsubs">
+	        </ul>
+	        
+	        <ul id="J_sub_dt_relfaqs" class="relfaqs">
+	        </ul>
+	    </div>
+	</div>
+	-->
+</div>

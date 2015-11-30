@@ -1,0 +1,34 @@
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">登陆馋口街</h1>
+    <a href="#user_register" class="to-reg" data-pressed="true" data-transition="slide">注册</a>
+</header>
+
+<div class="pgFrmBox">
+    <fieldset>
+        <form id="J_login_form" method="post" action="/?m=user&a=login">
+            <div class="frm_i">
+                <input id="J_login_username" type="text" name="username" placeholder="注册时使用的昵称">
+                <!-- <p id="usernameAppendErrorMsg" class="errorMsg">你还没有填写密码哦。</p> -->
+            </div>
+            <div class="frm_i">
+                <input id="J_login_password" name="password" type="password" placeholder="密码">
+                <!-- <p id="passwordAppendErrorMsg" class="errorMsg">你还没有填写密码哦。</p> -->
+            </div>
+            <div id="J_login_captcha_wrap" class="frm_i checkBox" style="display:none;">
+                <input id="J_login_captcha" name="captcha" rule_check='n' type="text" maxlength="4" placeholder="验证码">
+                <div class="checkImage">
+                    <span>
+                        <img id="J_login_captcha_img" class="J_captcha_img" width="90" height="34">
+                    </span>
+                    <span class="J_captcha_change" relImg="#J_login_captcha_img" class="pink">换一张</span>
+                </div>
+                <!-- <p id="captchaAppendErrorMsg" class="errorMsg">验证码填写不对。</p> -->
+            </div>
+            <div class="errorMsgs"></div>
+            <div class="submitBox">
+                <input class="loginBtn button" type="submit" value="登&nbsp;&nbsp;&nbsp;录" data-pressed="true">
+            </div>
+        </form>
+    </fieldset>
+</div>

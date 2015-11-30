@@ -1,0 +1,46 @@
+<style type="text/css">
+/*score item deatil*/
+#sitem_detail > div:first-child {min-height:100%;background: #fff;}
+#sitem_detail .si_img {padding:20px; background:#dfdfdf; text-align: center;}
+#sitem_detail .si_img img{width:100%;min-height:100px;}
+#sitem_detail .si_attr h3{ color: #ff5a00; font-size:20px;margin-bottom:8px;}
+#sitem_detail .si_attr .attr_row{color: #343434; font-weight:bold;}
+#sitem_detail .si_attr .attr_row span{color: #343434; font-weight:normal;}
+
+#sitem_detail .swipepanels .spanel {padding:15px;}
+#afui .J_boxswipes {border-bottom:none;}
+
+#afui #sitem_detail #J_num_2{width:50px;border:1px solid #dfdfdf;}
+#afui #sitem_detail .exchintro {display:block; margin-top:20px; text-align:right; font-size:16px; font-weight:bold; color:#00b000;}
+#afui #sitem_detail .exchintro.pressed {color:#ff5a00;}
+#afui #sitem_detail .siintro {word-break: break-all; word-wrap: break-word;word-break: normal;}
+#afui #sitem_detail input {width:50px; border:1px solid #dfdfdf; border-radius:2px; -webkit-appearance: none; vertical-align: middle;}
+</style>
+    
+<div class="si_info cfx">
+    <div class="si_img">
+        <img id="J_sitemdtl_img" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==">
+    </div>
+</div>
+
+<div class="J_boxswipes">
+    <ul id="J_sitemdt_swipetabs" class="swipetabs f-f">
+        <li class="active f-al">兑换宝贝</li> 
+        <li class="f-al">宝贝详情</li>
+    </ul>
+
+    <div id="J_sitemdt_swipes" class="swipepanels">
+        <div class="si_attr spanel">
+            <h3 id="J_sitemdtl_title" class="ft14">手机话费</h3>
+            <p class="attr_row mb5">剩余库存：<span id="J_sitemdtl_stock" class="ft14"></span></p>
+            <p class="attr_row mb5">已兑数量：<span id="J_sitemdtl_buy_num" class="ft14"></span></p>
+            <p class="attr_row mb5">每人限兑：<span id="J_sitemdtl_user_num" class="ft14"></span></p>
+            <p class="attr_row mb5">所需馋豆：<span id="J_sitemdtl_score" class="dgreen ft18"></span></p>
+            <p class="attr_row mb15">兑换数量：<input type="text" id="J_sitemdtl_exchnum" class="gray_text r2" value="1" size="4"></p>
+            <a id="J_sitemdtl_ecbtn"  class="btn gbtn ft14" data-pressed="true">立即兑换</a>
+            
+            <a href="#subject_detail/13" class="exchintro" data-pressed="true">兑换说明<i class="fa fa-angle-right"></i></a>
+        </div>
+        <div id="J_sitemdtl_intro" class="siintro spanel">&nbsp</div>
+    </div>
+</div>

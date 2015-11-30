@@ -1,0 +1,21 @@
+{
+  "name": "linux-local-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miaozhirui/linux-local-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miaozhirui/linux-local-test/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

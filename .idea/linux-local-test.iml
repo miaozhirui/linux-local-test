@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/cordova/HowOldAndroidWrapper/HowOldAreYou/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/cordova/HowOldAndroidWrapper/test/howOldAreYou/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/cordova/chankoujie/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/ionic/myApp/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/ionic/myApp1/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/js/reactjs/demo/bower_components/miaozhirui-lab/node_modules/grunt-contrib-jshint/node_modules/jshint/src/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/change_detection/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/change_detection/parser/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/annotations/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/compiler/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/compiler/pipeline/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/compiler/shadow_dom/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/events/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/core/zone/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/di/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/directives/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/dom/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/facade/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/forms/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/mock/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/reflection/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/services/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/test_lib/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/bind_generator/basic_bind_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/bind_generator/basic_bind_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/bind_generator/duplicate_bind_name_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/bind_generator/duplicate_bind_name_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/bind_generator/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/common/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/directive_processor/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/directive_processor/parameter_metadata/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/directive_processor/parameter_metadata/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/chained_deps_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/chained_deps_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/list_of_types_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/list_of_types_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/simple_annotation_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/simple_annotation_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/synthetic_ctor_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/synthetic_ctor_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/two_annotations_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/two_annotations_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/two_deps_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/integration/two_deps_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/reflection_remover/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/reflection_remover/reflection_remover_files/expected/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/angular2/test/transform/reflection_remover/reflection_remover_files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/benchpress/test/metric/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/benchpress/test/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/benchpress/test/reporter/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/benchpress/test/validator/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/benchpress/test/webdriver/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/examples/test/benchpress/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/source_code/angular/angular-2.0.0-alpha.13/modules/examples/test/packages" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

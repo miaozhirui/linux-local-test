@@ -1,0 +1,27 @@
+<style type="text/css">
+#afui #gift_exchange {background: #fff;}
+#gift_exchange .pgFrmBox {padding: 10px 10px 20px 10px;}
+#gift_exchange {padding: 0 10px 20px 10px;}
+#gift_exchange .address_list li{ margin-bottom:10px; }
+#gift_exchange .address_list li input {display:block; width:26px; height:26px; margin-right:5px; border-radius:20px;}
+#gift_exchange .address_list li span {display:block;}
+#gift_exchange .address_list .old span{ line-height: 26px; font-size:16px; font-weight:bold; color: #00b000;}
+#gift_exchange .address_list .new span { line-height: 26px; font-size:16px; font-weight:bold; color: #ff5a00;}
+#gift_exchange .newaddr {padding-left:15px; }
+#gift_exchange .newaddr textarea {width:100%;min-height:35px; height:auto; margin:25px 0 10px 0;}
+#gift_exchange input[type=submit] {margin-left:15px; padding:0 15px;}
+
+#gift_exchange label { float: none; width: 100%; font-weight: normal; font-size: 14px; color: inherit; text-align: left; padding:0;}
+#gift_exchange input[type="radio"]:after, #gift_exchange input[type="checkbox"]:after {}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">兑换礼品</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JgiftExchangeForm"></a>
+</header>
+
+<div class="pgFrmBox cfx">
+    <form id="JgiftExchangeForm" action="/?m=exchange&a=ec" method="post">
+    </form>
+</div>

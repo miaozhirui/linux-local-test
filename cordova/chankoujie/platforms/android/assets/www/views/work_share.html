@@ -1,0 +1,66 @@
+<style type="text/css">
+#work_share > div:first-child { min-height: 100%; background: #F2F3E3;}
+#work_share .shareworks li {position:relative;height:90px; width:100%;}
+#work_share .shareworks {padding:10px 10px;}
+#work_share .shareworks .form_text { border: 1px solid #dfdfdf; } 
+#work_share .shareworks .form_text:focus { border: 1px solid #00b000; } 
+#work_share .shareworks .imgs .upimgpic_wrap{ position: absolute; left:0;top:0; width:90px; height: 90px; overflow:hidden; margin-right:0px; background: #C6B6A6; }
+#work_share .shareworks .imgs .preview{width:90px;height:90px; line-height:90px; text-align:center; background:#C6B6A6;}
+#work_share .shareworks .imgs .preview img {width:100%; height:100%;}
+#work_share .shareworks .imgs .upimgpic_abs{width:90px; height:90px; position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#work_share .shareworks .imgs .upimgpic_renew{width:26px; height:26px;  position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#work_share .shareworks .imgs .upimgpic_renew .upimgpic{width:100%; height:100%; line-height:29px; font-size:20px;font-weight:normal; 
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#55000000',endColorstr='#55000000'); background: rgba(0, 0, 0, 0.5);
+}
+#work_share .shareworks .imgs .upimgpic{ position: relative; width: 90px; height: 90px;line-height: 90px; text-align:center;
+font-weight:bold; font-size:16px; background: #C6B6A6;  overflow: hidden; cursor:pointer; }
+#work_share .shareworks .imgs .upimgpic.pressed{background: rgba(0,0,0,0.2);}
+#work_share .shareworks .imgs .upimgpic span{color:#fff;}
+#work_share .shareworks .imgs .nimg .picintro { display:block; height:90px; padding-left:90px; width: 100%; overflow: hidden;}
+#work_share .shareworks .imgs .imgtext { -webkit-appearance:none; width: 100%; height:100%;line-height: 150%; 
+padding: 5px; border-left: none;  border-radius: 0;}
+#work_share .shareworks .imgs .nimg .ops { position:absolute; right:1px; bottom:1px; display:block; width: 20px; height:20px;
+line-height:20px; text-align: center; font-weight:bold; }
+#work_share .shareworks .imgs .nimg .ops a{ display: block; width:100%; height:100%; padding-top:1px; background: #ccc; margin-bottom: 3px; color: #FFF; }
+#work_share .shareworks .imgs .nimg .ops a.pressed {background: #aaa;}
+#work_share .shareworks .imgs .ayibu { width: 100%; text-align: right; }
+
+#work_share .shareworks .btn { display: inline-block; height: 30px; padding: 0 20px; }
+#afui.ios8 #work_share .shareworks .imgs .imgtext{border-width: 0.5px; border-color:#ccc;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">发布菜谱作品</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#J_sharework_form"></a>
+</header>
+
+<div class="shareworks cfx">
+    <form id="J_sharework_form" action="/?m=work&a=share" method="post">
+        <ul nextidx=1 class="J_imgs imgs">
+        </ul>
+        <input type="hidden" name="rid" value="0"/>
+        <input type="hidden" name="_token" value=""/>
+        <a href="javascript:;" class="btn pbtn J_addimg" data-pressed="true">+增加作品</a>
+    </form>
+</div>
+
+<ul id="J_sharework_copy" style="display:none;">
+    <li class="J_img nimg mb10 cfx">
+        <div class="J_upwrap upimgpic_wrap">
+            <div class="J_preview preview">
+            </div>
+            <div class="J_sharework_abs upimgpic_abs">
+                <div id="<?='J_sharework_'.$i?>" class="J_sharework upimgpic vv-pressed">
+                    <span>+上传作品</span>
+                </div>
+                <input type="hidden" id="<?='J_sharework_ipt_'.$i?>" name="imgimg[]" value="">
+            </div>
+        </div>
+        <span class="picintro">
+            <textarea onclick="" name="imgstate[]" class="form_text imgtext" placeholder="作品点评"></textarea></span>
+        <span class="ops">
+            <a title="删除" href="javascript:void 0;" class="J_delimg del" data-pressed="true">╳</a>
+        </span>
+    </li>
+</ul>

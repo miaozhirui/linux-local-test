@@ -1,0 +1,168 @@
+#afui #space_index {background: #fff;}
+#space_index .top {position:relative;background:#FFEBE0;}
+#space_index .top > div.prel {float:left; text-align:center;}
+#space_index .top .sendmsg, #space_index .top .follow_u, #space_index .top .signin, #space_index .top .setcover{display:block;
+position:absolute; left:8px; top:8px; min-width: 64px; height:28px; line-height:28px; padding:0 5px;
+font-size:12px; text-align:center; background:#ffebe0; color:#00b000;
+border-top:1px solid #F7E1F1; border-left:1px solid #F7E1F1;
+box-shadow:-1px -1px 0px #ECD3E5 inset;  -webkit-box-shadow:-1px -1px 0px #ECD3E5 inset; -ms-box-shadow:-1px -1px 0px #ECD3E5 inset;}
+#space_index .top .sendmsg.pressed , #space_index .top .follow_u.pressed, 
+#space_index .top .signin.pressed , #space_index .top .setcover.pressed {background:#ffddfd;}
+#space_index .top .follow_u,  #space_index .top .setcover{left:auto; right:8px;}
+#space_index .top .follow_u .tip {position:static; top:auto;}
+#space_index .top .sendmsg .fa, #space_index .top .signin .fa, #space_index .top .setcover .fa{margin-right:3px; font-size:13px; position:relative; top:1px; }
+#space_index .top .fans, #space_index .top .follows {width:25%; height:0;padding-bottom:50%;}
+#space_index .top .logo {width:50%;}
+#space_index .top .fans .dummy, #space_index .top .follows .dummy, #space_index .top .logo .dummy {display:block;width:100%;padding-bottom:100%;}
+#space_index .top .fans .inner, #space_index .top .follows .inner, #space_index .top .logo .pic{ display:block; position: absolute;
+										top: 0; bottom: 0; left: 0; right: 0; }
+#space_index .top .logo .pic a{ display:block; margin:15% auto; width:70%; height:70%; background: #fff; padding: 5px; border-radius: 500px; }
+#space_index .top .logo .pic img{ display:block; margin: auto; width: 100%; height: 100%; border-radius: 500px;
+   /* -webkit-box-shadow: 1px 1px 1px #333, -1px -1px 1px #333;*/ /*anti android radius sawtooth*/ }
+#space_index .top .logo .pic .fa-camera { position: absolute; bottom: 0; left: 65%; width: 30px; height: 30px;
+	line-height: 31px; text-align: center; border-radius: 30px; background: #00b000; font-size: 20px; color: #fff;
+	/*-webkit-box-shadow: 1px 1px 1px #00b000, -1px -1px 1px #00b000;*/ }
+#space_index .top .tbl { height:100%; width:100%; display:table; }
+#space_index .top .tbl_cell{ display:table-cell; width:100%; vertical-align:middle; }
+#space_index .top .fans .tbl_cell {padding-left:20px;}
+#space_index .top .follows .tbl_cell {padding-right:20px;}
+#space_index .top .tbl_cell > span {display:block; line-height:16px; color:#00b000;}
+#space_index .top .tbl_cell > .val {font-size:18px;}
+#space_index .top .tbl_cell > .label {font-size:12px;}
+
+#space_index .intro{ display:block; padding:0 10px; background:#00b000;color:#fff;}
+#space_index .intro span {line-height:36px; display:block; max-width:95%;font-weight:bold;}
+#space_index .intro i.fa {line-height:36px; }
+
+#space_index .modules { padding:0; overflow:hidden;}
+#space_index .modules a { display:block; position:relative; float:left; width:25%; padding-bottom:25%;
+	margin-right:0; border-bottom:1px solid #e8e8e8; border-right:1px solid #dfdfdf; color:#333; }
+#space_index .modules a > span.pressed{background:#ffebe0;}
+#space_index .modules a .box {position:absolute;top:0;right:0;bottom:0;left:0;text-align:center;}
+#space_index .modules a .fa { position:relative;top:-3px; width:40px; height:40px; line-height:40px; text-align:center;
+	background:#f2f2f2; font-size:20px; color:#666; border-radius:10px; }
+#afui.slowdev #space_index .modules a .fa {border-radius:0;}
+#space_index .modules a .box span{display:block;}
+#space_index .modules a .box_inner span {position:relative; top:3px; font-size:12px; color:#777;}
+#space_index .modules a.pink {backgroun:#ffebe0;}
+#space_index .modules a.green {background:#e8f3e8;}
+
+#space_index .daren_info .title {display:block; line-height:36px; padding:0 10px; background:#00b000; font-weight:bold; color:#fff;}
+#space_index .daren_info .title span{font-weight:normal; }
+#space_index .darens {padding:10px 10px 0 10px; color:#ccc;}
+#space_index .darens li{height:70px;float:left; width:20%;}
+#space_index .darens li .fa{display:table;width:42px; height:42px; line-height:42px; margin: 0 auto;background:#f2f2f2;font-size:30px;
+border-radius:30px; text-align:center;}
+#space_index .darens li p{text-align:center;font-size:10px;}
+/*#FF0000 #FF7D00 #FFFF00  #00FF00 #0000FF #00FFFF  #FF00FF*/
+#afui .daren.user .fa {background:#;color:#00b000;} #afui .daren.user p {color:#;} 
+#afui .daren.recipe .fa {background:#;color:#00b000;} #afui .daren.recipe p {color:#;} 
+#afui .daren.item .fa {background:#;color:#00b000;} #afui .daren.item p {color:#;} 
+#afui .daren.rstrnt .fa {background:#;color:#00b000;} #afui .daren.rstrnt p {color:#;} 
+#afui .daren.group .fa {background:#;color:#00b000;} #afui .daren.group p {color:#;} 
+#afui .daren.faq .fa {background:#;color:#00b000;} #afui .daren.faq p {color:#;} 
+#afui .daren.diary .fa {background:#;color:#00b000;} #afui .daren.diary p {color:#;} 
+
+#space_index .daren_info .comeon{display:block; width:100%; padding:0 10px; line-height:36px;
+text-align:center; font-size: 14px; color:#ccc;}
+
+/*space user info */
+#afui #space_uinfo {background: #fff;}
+#afui.android #space_uinfo > div:first-child {min-height:100%;}
+#space_uinfo .top {background:#dfdfdf; padding:10px;box-shadow:0 1px 1px #ccc;-webkit-box-shadow:0 1px 1px #ccc;}
+#space_uinfo .top img {height:50px; width:50px; top:10px; left: 10px; border-radius: 100%;}
+#space_uinfo .top > div {min-height:50px; margin-left:55px;}
+#space_uinfo .top .uname {margin-bottom:5px;font-size:16px; color:#00b000; font-weight:bold;}
+#space_uinfo .top .uname a{display: block; padding: 3px; position:relative;top:-3px;
+border: 1px solid #ccc;border:1px solid #ccc; border-radius:2px; -webkit-radius:2px; font-weight:normal; font-size:14px;}
+#space_uinfo .top .uname a .fa {font-size:16px;}
+#space_uinfo .top .intro {line-height:20px; font-size:12px;}
+#space_uinfo .uinfo {margin-top:10px;padding:10px;}
+#space_uinfo .uinfo li {padding:5px 0;}
+#space_uinfo .h {width:25%; text-align:right; color:#aaa;}
+#space_uinfo .v {text-align:left;}
+
+/*space feed*/
+/*space talk feeds*/
+#space_feed #J_sp_feed_wall_wrap {z-index:-1;}
+
+#afui .talk_f {padding: 15px 10px 0 10px; background: #fff; border-bottom:1px solid #e8e8e8; }
+#afui .talk_f.pressed {background: #ededed;}
+#afui.fandroid .talk_f {border-bottom: 1px solid #ededed;}
+#afui .talk_f a {color:#00b000;}
+#afui .talk_f .n {font-size: 15px;font-weight:bold; padding-right: 3px; color:#333;}
+#afui .talk_f .avatar {position: absolute; width:30px; height:30px;}
+#afui .talk_f .tk {padding-left: 35px;}
+#afui .talk_f .sms {margin: 5px 0; font-size: 14px; color:#666;}
+#afui .talk_f .imgs {height:70px; overflow:hidden;}
+#afui .talk_f .imgs img {width:30%; margin-right:1%; vertical-align: top;}
+#afui .talk_f .imgs img:last-child {margin-right:0;}
+#afui .talk_f .ops {overflow: hidden; margin-top: 3px;}
+
+/*forward topic dialog*/
+#afui .dlg_fwdtpc {padding:6px 16px;}
+#afui .dlg_fwdtpc .fw_root {line-height: 160%;}
+#afui .dlg_fwdtpc .fw_content {border: 1px solid #C8C8C8; min-height: 60px; margin-top:10px;overflow: hidden;
+padding:5px;width: 100%; border-radius:3px; font-size:13px; color:#666;}
+#afui .dlg_fwdtpc .fw_submit_box { padding: 10px 0 10px;}
+#afui .dlg_fwdtpc .fwd_tip{font-size:14px; color:#ccc;}
+
+/*quoted info deleted*/
+#afui .talk_f .src_del { width:160px; height: 30px; line-height: 30px; padding:0 20px; margin-bottom:5px; border: 1px solid #DADADA; background:#fff; text-align: center; text-decoration: line-through; color:#ccc;}
+/*feed forwarded*/
+#afui .talk_f .q_h {height:24px; font-size:24px;padding-left:10px;color:#f2f2f2;}
+#afui .talk_f .q_b {margin-top:-12px;background-color: #f2f2f2; padding: 5px 10px 5px 10px;}
+#afui .talk_f .q .sms {font-size: 13px;}
+/*feed operation*/
+#afui .talk_f .ops > * {display:inline-block; padding:10px; margin-right:5px; color:#00b000;}
+#afui .talk_f .ops .fa {margin-right:2px; color:#e8e8e8; font-size:14px;}
+#afui .talk_f .ops > *.pressed{background:#ededed;}
+#afui .talk_f .ops > .time {padding-left:0; font-size:12px; color:#ccc;}
+#afui .note_f .ops .fa {color:#ccc; }
+
+/*cmtme/atme feeds (note feeds)*/
+#atme_book #J_atme_wall_wrap, #cmtme_book #J_cmtme_wall_wrap {top:0;}
+#afui .note_f {position:relative; border-bottom:1px solid #e8e8e8; padding:15px 10px 10px 10px; background: #fff;}
+#afui.fandroid .note_f {border-bottom: 1px solid #ededed; margin: -1px 0;}
+#afui .note_f .avt { position:absolute; width:30px; height:30px; font-size:0;}
+#afui .note_f .cm_info { position:relative; min-height:36px; padding-left:38px;}
+#afui .note_f .cm_info .dosum {margin-top:5px; font-size:13px; color:#ccc; }
+#afui .note_f .cm_info .msg > p:first-child {line-height:22px;}
+#afui .note_f .cm_info .msg .u_g {font-weight: bold;color: #ff5a00;}
+#afui .note_f .cm_info .msg strong { font-size: font-family: arial; font-weight: bold; padding: 0px 2px; } 
+#afui .note_f .cm_info .ops > * {padding:8px 15px; color:#ccc;}
+
+#space_rmenu #J_sprmenu_wall_wrap, #space_album #J_spalbum_wall_wrap {top:40px; z-index:-1;}
+#space_like #J_like_wall_wrap, #space_share #J_share_wall_wrap {top:40px;}
+#space_grpsub #J_sp_grpsub_wall_wrap {top:40px;}
+#space_faq #J_sp_faq_wall_wrap {top:40px;} 
+#space_diary #J_sp_diary_wall_wrap {top:40px; z-index:-1;} #afui #J_sp_diary_wall_wrap > div:first-child {background: #fff;}
+
+/*reply cmtme dialog*/
+#afui .dlg_rplycmtme {padding:6px 16px;}
+#afui .dlg_rplycmtme .fw_root {line-height: 160%;}
+#afui .dlg_rplycmtme .fw_content {border: 1px solid #C8C8C8; min-height: 60px; margin-top:10px;overflow: hidden;
+padding:5px;width: 100%; border-radius:3px; font-size:13px; color:#666;}
+#afui .dlg_rplycmtme .fw_submit_box { padding: 10px 0 10px;}
+
+.wall_diary {padding:15px 10px 10px 10px; overflow:hidden; border-bottom:1px solid #e8e8e8;}
+.fandroid .wall_diary {border-bottom: #e8e8e8;}
+.wall_diary .ltime {width:55px;padding-top:8px;text-align:center; background:url(./images/calend.png) no-repeat 0 0;}
+#afui .wall_diary .ltime > .year {font-weight:bold; color:#fff;}
+#afui .wall_diary .ltime > .mday {margin-top:5px;font-size:15px; font-weight:bold; color:#666;}
+#afui .wall_diary .ltime > .hmin {font-size:12px; color:#888;}
+.wall_diary .info {padding-left:10px;}
+.wall_diary .title {display: block; font-size:15px; margin-bottom:3px; font-weight:bold; color:#00b000;}
+.wall_diary .sum {margin-bottom:6px; line-height:19px; color:#333;}
+.wall_diary .sum img {margin:0 2px; width:20px; vertical-align:middle;}
+.wall_diary .imgs {display: block; height:50px; overflow:hidden; margin-bottom: 6px; font-size:0; }
+.wall_diary .imgs img {width:32%; margin-right:2%;vertical-align:top;}
+.wall_diary .imgs img:last-child {margin-right:0;}
+.wall_diary .meta {font-size:12px; color:#aaa;}
+.wall_diary .meta i{color:#ff5a00; margin:0 8px 0 2px;}
+.wall_diary .go{position:absolute; left:0; right:0; top:0; bottom:0;}
+
+#afui.ios .note_f .avt{border-radius: 15px;}
+#afui.ios .talk_f .avatar {border-radius: 3px;}
+#afui.ios .wall_diary .ltime > .mday  {margin-top:2px; line-height:16px;}
+#afui.ios8 #space_index .modules a, #afui.ios8 .wall_diary, #afui.ios8 .talk_f, #afui.ios8 .note_f {border-width: 0.5px; border-color:#ccc;}

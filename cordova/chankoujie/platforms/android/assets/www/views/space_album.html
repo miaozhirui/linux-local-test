@@ -1,0 +1,27 @@
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">吃柜</h1>
+</header>
+
+<div class="typetabs f-f f-vc">
+    <div id="J_spalbum_tabs" class="f-al f-f f-vc">
+        <a t="pub" class="cur f-al">我发表的</a>
+        <a t="followed" class="f-al">我收藏的</a>
+    </div>
+</div>
+
+<div id="J_spalbum_wall_wrap" class="scroll_wrap">
+    <div id="J_spalbum_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_spalbum_wall_triggerBar' pageBar ="#J_spalbum_wall_pageBar"  
+         relWrap='#J_spalbum_wall_wrap' feedRcd='wall_album' renderFunc='$.ckj.renderAlbums' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n"
+         sort="collects"
+    >
+    </div>
+    <div id="J_spalbum_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_spalbum_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

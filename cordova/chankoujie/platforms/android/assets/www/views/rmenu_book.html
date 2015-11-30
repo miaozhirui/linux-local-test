@@ -1,0 +1,42 @@
+<style type="text/css">
+#afui #J_rmenu_wall_wrap {top: 36px; padding:0;}
+#J_rmenu_wall{width: 100%;}
+#afui #rmenu_book .cate_wrap {width:68%;}
+#afui #rmenu_book .order_wrap{width:20%;}
+#afui #rmenu_book .totop{width:12%;}
+</style>
+
+<div id="J_rmenu_wall_wrap" class="scroll_wrap">
+    <div id="J_rmenu_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_rmenu_wall_triggerBar' pageBar ="#J_rmenu_wall_pageBar"  
+         relWrap='#J_rmenu_wall_wrap' feedRcd='wall_rmenu' renderFunc='$.ckj.renderRmenus' 
+         wallData='$.rmenuBook.wallData' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n"
+         sort="collects" noDataMsg="<i class='fa fa-smile-o'></i>暂无菜单"
+    >
+    </div>
+    <div id="J_rmenu_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_rmenu_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="navorder_block cfx">
+    <div class="J_block_wrap cate_wrap" init_height="35px">
+        <div id="J_rmenu_b_c">
+            <a cid="1">全部 </a>
+        </div>
+        <span class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="J_block_wrap order_wrap" init_height="35px"
+        >
+        <div id="J_rmenu_orderrank" relTri="#J_rmenu_orderrank_tri">
+            <a sort="follows">收藏</a>
+            <a sort="comments">评论</a>
+            <a sort="id">最新</a>
+        </div>
+        <span id="J_rmenu_orderrank_tri" class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="totop tosch"><a href="#search/rmenu" class="fa fa-search" data-pressed="true" data-transition="slide"></a></div>
+</div>

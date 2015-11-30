@@ -1,0 +1,103 @@
+<style type="text/css">
+#stuff_detail .stuff_top {display:block;position:relative;min-height:130px;width:100%; overflow:hidden; 
+    padding:10px 5px 5px 5px; margin-bottom:10px; background:#fff; color:#333;}
+
+#stuff_detail .imgops { display:block; float:left; margin-top:5px; width:120px; overflow:hidden; }
+#stuff_detail .imgops img {width:100%;}
+#stuff_detail .imgops .ops { width:100%; overflow:hidden; background: #fafafa; border:1px solid #ccc; }
+#stuff_detail .imgops .ops li{ width:59px; float:left; padding:8px 0 6px 0; text-align:center; border-right:1px inset #ccc; font-size:16px; }
+#stuff_detail .imgops .ops .J_unlike {color:#aaa;}
+#stuff_detail .imgops .ops li.pressed {background:#dfdfdf;}
+#stuff_detail .imgops .ops li p{margin-top:1px;font-size:12px; color:#888;}
+#stuff_detail .imgops .ops li .num {position:relative;top:-2px;font-size:12px;}
+#stuff_detail .imgops .ops [class^="fa-"] {position:relative;top:2px;font-size:18px; margin-right:3px;}
+#stuff_detail .imgops .ops li:last-child {border:none;}
+#stuff_detail .imgops .ops .share .fa {font-size:14px;}
+
+#stuff_detail .stuff_top .info {margin-left:130px;margin-top:5px;}
+#stuff_detail .stuff_top .info .top {color:#ff5a00;}
+#stuff_detail .stuff_top .info .top .title{display:inline-block; width:70%;font-size:18px;color:#ff5a00;overflow:hidden;}
+#stuff_detail .stuff_top .info .alias, .stuff_top .info .cates {margin:3px 0; font-size:12px; width:100%;}
+#stuff_detail .stuff_top .info .alias .label, .stuff_top .info .cates .label {color:#aaa;}
+#stuff_detail .stuff_top .info .alias .val, .stuff_top .info .cates .val {margin-left:5px; color: #00b000; font-size: 14px;}
+#stuff_detail .stuff_top .info .cates a{color:#00b000;}
+#stuff_detail .stuff_top .info .intro {height:auto; margin-top:5px; padding-top:5px; line-height:20px; border-top:1px dotted #dfdfdf; overflow:hidden; font-size:13px;}
+#stuff_detail .stuff_top .goto {display:block; width:100%; position:absolute;top:0;bottom:0;}
+#stuff_detail .stuff_top {border:none; padding-top:10px;}
+
+#stuff_detail .stuffinfo {padding:0 10px 10px 10px;}
+#stuff_detail .cnt {line-height:24px;color:#666; white-space: pre-wrap;}
+#stuff_detail .stf_nutri {font-size:12px; color:#aaa; }
+#stuff_detail .stf_nutri .head {float:left;margin-bottom:5px;display:inline-block;width:34%; overflow:hidden; }
+#stuff_detail .stf_nutri .val {float:left;margin-bottom:5px;display:inline-block;width:14%; overflow:hidden;color:#666;}
+#stuff_detail .stf_nutri i:nth-child(4n+2){margin-right:4%;}
+
+#afui #J_stuff_dt_info_wrap, #afui #J_stuff_dt_recipes_wall_wrap, #afui #J_stuff_dt_cmts_wrap{top:0; bottom:45px;}
+#afui #J_stuff_dt_info_wrap {padding:0;}
+#J_stuff_dt_cmts_wrap{padding-top:20px;}
+
+#afui.ios #J_stuff_dt_info_wrap, #afui.ios #J_stuff_dt_recipes_wall_wrap, #afui.ios #J_stuff_dt_cmts_wrap{bottom:48px;}
+#afui.ios8 #stuff_detail .imgops .ops, #afui.ios8 #stuff_detail .imgops .ops li {border-width: 0.5px;}
+
+</style>
+
+<div id="J_stuff_dt_info_wrap" class="J_tab_panel scroll_wrap scroll_nobar" style="display:nne;">
+    <div class="stuff_top">
+	    <div id="J_stuff_dt_imgops" class="imgops">
+	       <img class="blike" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==" 
+	            onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);">
+	       <ul class="ops cfx">
+	            <li class="likes pink J_like" outdel="n" itype="item">
+	                <i class="fa fa-heart-add"></i><span class="num J_like_n">0</span>
+	                <p class="ltip">喜欢</p>
+	            </li>
+	            <li class="share green J_socialShareStuff">
+	                <i class="fa fa-share2"></i>
+	                <p>分享给...</p>
+	            </li>
+	        </ul>
+	    </div>
+	    
+	    <div id="J_stuff_dt_meta" class="info">
+	        <div class="top"><span class="title">&nbsp;</span></div>
+	        <div class="alias"><i class="label fl">别名:</i><i class="val">&nbsp;</i></div>
+	        <div class="cates"><i class="label fl">分类:</i> <i class="val"> &nbsp; </i></div>
+	        <div class="intro">&nbsp;</div>
+	    </div>
+	</div>
+    
+    <div id="J_stuff_dt_func" class="stuffinfo">
+        <div class="ckjbox">
+        	<h1 class="title">营养成分</h1>
+	        <div class="stf_nutri cfx">
+			</div>
+        </div>
+        
+        <div class="ckjbox">
+        	<h1 class="title">营养价值</h1>
+	        <div class="cnt">
+
+	        </div>
+        </div>
+    </div>
+</div>
+
+<div id="J_stuff_dt_recipes_wall_wrap" class="J_tab_panel scroll_wrap" style="display:none;">
+    <div id="J_stuff_dt_recipes_wall" class="waterfall_wall" dataUri="" triggerBar='#J_stuff_dt_recipes_wall_triggerBar' pageBar ="#J_stuff_dt_recipes_wall_pageBar"  
+         relWrap='#J_stuff_dt_recipes_wall_wrap' feedRcd='wall_recipe' wallData='$.stuffDtl.wallData' 
+         renderFunc='$.ckj.renderRecipes' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" noDataMsg="<i class='fa fa-smile-o'></i>暂无相关菜谱" 
+    >
+    </div>
+    <div id="J_stuff_dt_recipes_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_stuff_dt_recipes_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="angle_tabs f-f f-vc">
+    <a class="f-al" t='info'>营养功能搭配</a>
+    <a class="f-al" t='recipe'>食材相关菜谱</a>
+</div>

@@ -1,0 +1,163 @@
+<style type="text/css">
+#rstrnt_detail #J_rstdt_wrap {position:absolute; top:0; bottom:45px; width:100%;}
+#afui.android #rstrnt_detail #J_rstdt_wrap > div:first-child {min-height:100%;}
+#rstrnt_detail .rst_top {background:#fff;}
+#rstrnt_detail .imginfo {width:100%; padding:10px 10px 8px 10px; margin-bottom:8px;}
+#rstrnt_detail .imginfo .palbum {position:relative;display:block;width:100px;height:100px;line-height:0;overflow:hidden;background: #f2f2f2;}
+#rstrnt_detail .imginfo .palbum.pressed {box-shadow: 1px 1px 2px #8dd88d, -1px -1px 2px #8dd88d;}
+#rstrnt_detail .imginfo .palbum img {max-width:120px;}
+#rstrnt_detail .imginfo .palbum .fa {position:absolute; z-index:100; right:0px; bottom:0px; border-radius:20px; font-size:16px; color:#aaa;}
+#rstrnt_detail .imginfo .meta {padding-left:8px;}
+#rstrnt_detail .imginfo .meta h1 {margin-bottom:5px;font-size:18px; color:#00b000;}
+#rstrnt_detail .imginfo .meta div {margin-bottom:3px; }
+#rstrnt_detail .imginfo .meta div .h {color:#aaa;}
+#rstrnt_detail .imginfo .meta .uinfo {position:relative;margin-top:5px; }
+#rstrnt_detail .imginfo .meta .uinfo a {display:block; color:#ff5a00;}
+#rstrnt_detail .imginfo .meta .uinfo a span {margin-left:2px;color:#ccc;}
+#rstrnt_detail .imginfo .meta .uinfo img{width:20px; height:20px; position:relative; top:2px; margin-right:3px;}
+#rstrnt_detail .imginfo .meta .uinfo .follow_u {position:absolute; top:0; right:10px; height:24px; line-height:23px; font-size:12px; padding:0 6px;}
+#rstrnt_detail .imginfo .meta .uinfo .follow_u:hover {background: #ff3a00;}
+
+#rstrnt_detail .sheadbox {min-height:50px; padding:0 10px; border-bottom:1px solid #f2f2f2;}
+#rstrnt_detail .sheadbox.pressed {background:#f8f8f8;}
+#rstrnt_detail .sheadbox .head{width:20px; margin-right:5px; text-align:center; font-size:20px; color:#00b000; }
+#rstrnt_detail .sheadbox .go {display:block;width:20px;text-align:right;font-size:18px;color:#ccc;}
+#rstrnt_detail .sheadbox .cnt {display:block;font-size: 16px;}
+#rstrnt_detail .sheadbox.addr .near{display:block;margin-top:3px;font-size:12px; color:#aaa;}
+#rstrnt_detail .sheadbox .phones a {display:inline-block;margin-right:5px;}
+
+#rstrnt_detail .minfo {margin-top:20px;padding:10px; background:#fff;}
+#rstrnt_detail .bheadbox {position:relative;padding:6px 0;}
+#rstrnt_detail .bheadbox .head{position:absolute; left:0; width:75px; font-weight:bold;color:#00b000;}
+#rstrnt_detail .bheadbox .cnt {padding-left:75px; line-height:22px;}
+
+#rstrnt_detail .rstbox {margin-top:20px; padding: 0 10px 10px 10px; background:#fff;}
+#rstrnt_detail .rstbox .title {height:50px; line-height:50px; padding-top:10px; color:#00b000;}
+#rstrnt_detail .rstbox .title p{display:inline-block;font-size:16px; font-weight:bold;}
+#rstrnt_detail .rstbox .title a {float:right; width:60px; text-align:right;color:#00b000;}
+#rstrnt_detail .rstbox .title a.pressed *, #rstrnt_detail .rstbox .title a.pressed {color:#ff5a00;}
+#rstrnt_detail .rstbox .title a .fa {position:relative;top:1px;margin-left:2px;}
+#rstrnt_detail .rstbox .uimgs {display:block; height:50px; width:100%;overflow:hidden;font-size: 0;}
+#rstrnt_detail .rstbox .uimgs > img {width:25%;min-height:50px;padding:0 1px;vertical-align:top;font-size: 0;}
+#rstrnt_detail .rstbox .rimgs {display:block;height:70px;width:100%;overflow:hidden;font-size: 0;}
+#rstrnt_detail .rstbox .rimgs > img {width:33.33%; min-height:70px; padding:0 1px; vertical-align:top;font-size: 0;}
+#rstrnt_detail .rstbox .rimgs > img:last-child {width:33.34%;}
+
+#rstrnt_detail .ckjbox {margin: 20px 10px 0 10px;}
+
+#rstrnt_detail .rstops {position:absolute;bottom:0;left:0;right:0;height:45px; line-height:45px;border-top:1px solid #00b000;background:#fffdf5;}
+#rstrnt_detail .rstops > a{float:left; dispaly:block; height:100%; width: 20%; text-align:center;color:#9f9f9f;}
+#rstrnt_detail .rstops > a.pressed {background:#00b000; color:#fff;}
+#rstrnt_detail .rstops > a .fa { display: table; margin: 0 auto; position: relative; top: 7px; font-size:14px; }
+#rstrnt_detail .rstops > a *[class*=fa-heart], #rstrnt_detail .rstops > a *[class*=fa-comments1] {font-size:18px;}
+#rstrnt_detail .rstops > a span{font-size: 10px; position: relative; bottom: 7px; }
+#rstrnt_detail .rstops > a:last-child span
+{
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    bottom: 0!important;
+    font-size: 13px;
+}
+#afui.ios #rstrnt_detail .rstops {border-color: #aaa; background: #fff;}
+#afui.ios #rstrnt_detail .rstops > a.pressed {background:transparent; color:#333;}
+#afui.ios #rstrnt_detail .imginfo .meta .uinfo img {border-radius: 25px;}
+#afui.ios8 #rstrnt_detail .rstops {border-width:0.5px;}
+</style>
+
+<div id="J_rstdt_wrap">
+    <div class="rst_top">
+    	<div class="imginfo f-f">
+    		<a class="palbum">
+	            <img src="./data/rstrnt/default.jpg"/>
+	            <i class="fa fa-camera"></i>
+	        </a>
+	        
+	        <div class="meta f-al">
+	            <h1>&nbsp;</h1>
+	            <div><span class="h">别名：</span><span class="val">&nbsp;</span></div>
+	            <div class="cost"><span class="h">人均：</span><span class="val">&nbsp;</span></div>
+	            <a><img src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=="/>&nbsp;<span>分享</span></a>
+	        </div>
+    	</div>
+    	
+    	<a class="sheadbox addr f-f f-vc">
+	        <i class="head fa fa-map-marker"></i>
+	        <span class="cnt f-al">
+	           <i>&nbsp;</i><i>靠近: &nbsp;</i>
+	        </span>
+	        <i class="go fa fa-chevron-right"></i>
+	    </a>
+	    
+	    <div class="sheadbox f-f f-vc">
+	        <i class="head fa fa-phone"></i>
+	        <div class="cnt phones f-al">
+	           <a href="tel:13922897782">&nbsp;</a>
+	           <a href="tel:15017028670">&nbsp;</a>
+	        </div>
+	        <i class="go fa fa-chevron-right"></i>
+	    </div>
+	    
+	    <div class="sheadbox f-f f-vc">
+            <i class="head fa fa-alarm"></i>
+            <a class="cnt f-al">&nbsp;</a>
+        </div>
+    </div>
+    
+    <div class="minfo">
+    	<div class="bheadbox">
+	        <p class="head">餐馆介绍：</p>
+	        <p class="cnt">&nbsp;</p>
+	    </div>
+	    <div class="bheadbox">
+	        <p class="head">特色菜肴：</p>
+	        <p class="cnt">&nbsp;</p>
+	    </div>
+	    
+	    <div class="bheadbox">
+	        <p class="head">餐馆适合：</p>
+	        <p class="cnt">&nbsp;</p>
+	    </div>
+	    
+	    <div class="bheadbox">
+	        <p class="head">额外服务：</p>
+	        <p class="cnt">&nbsp;</p>
+	    </div>
+    </div>
+    
+    <div class="rstbox">
+        <div class="title"><p>去过该餐馆的街友</p><a>全部<i class="fa fa-chevron-right"></i></a></div>
+        <a class="uimgs">
+        </a>
+        
+        <div class="title"><p>去过该餐馆的街友</p><a>全部<i class="fa fa-chevron-right"></i></a></div>
+        <a class="uimgs">
+        </a>
+        
+        <div class="title"><p>餐馆附图</p><a href="#rstimg_book/882541">全部<i class="fa fa-chevron-right"></i></a></div>
+        <a href="#rstimg_book/882541" class="rimgs">
+        </a>
+    </div>
+    
+    <div class="ckjbox sumcmts">
+	    <ul>
+	        <li><a class="uname" href="#space_index/0">&nbsp;</a>&nbsp;<span
+	            class="atime">&nbsp;</span></li>
+	        <li class=""><a class="uname" href="#space_index/99435">&nbsp;</a>
+	            &nbsp;<span class="atime">&nbsp;</span></li>
+	        <li><a class="uname" href="#space_index/99435">&nbsp;&nbsp;:</a> &nbsp;<span
+	            class="atime">&nbsp;</span></li>
+	    </ul>
+	    <a class="J_tocmt" tourl="#comment_book/recipe/233003">查看全部<i
+	        class="num">&nbsp;</i>个评论
+	    </a>
+	</div>
+</div>
+
+<div id="J_rstdt_ops" class="rstops cfx">
+    <a class="J_want" data-id="0" data-pressed="true"><i class="fa fa-xxx">想去</i><span class="J_n">&nbsp;</span></a>
+    <a class="J_went" data-id="0" data-pressed="true"><i class="fa fa-xxx">去过</i><span class="J_n">&nbsp;</span></a>
+    <a class="J_like" outdel="n" itype="rstrnt" data-id="0"  data-pressed="true"><i class="fa fa-heart-add"></i><span class="J_like_n">&nbsp;</span></a>
+    <a class="J_tocmt" data-id="0" data-pressed="true"><i class="fa fa-comments1"></i><span class="J_n">&nbsp;</span></a>
+    <a class="J_moreOps" data-id="0" data-pressed="true"><span>• • •</span></a>
+</div>

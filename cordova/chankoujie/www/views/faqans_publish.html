@@ -1,0 +1,28 @@
+<style type="text/css">
+#afui #faqans_publish > .afScrollPanel{padding-bottom:15px;}
+#afui #faqans_publish .form_text {height:46px; background: #fff; border:none; border-bottom:1px solid  #dfdfdf; position: relative;}
+#afui #faqans_publish .form_text[name=cost] {padding-right:30px;}
+#afui #faqans_publish .form_text[name=cost]:before {}
+
+#faqans_publish .ipt_box {position:relative; height:46px; padding:12px 0; overflow:hidden; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#faqans_publish .ipt_box.area {height:auto;}
+#afui.fandroid #faqans_publish .ipt_box {border-bottom:1px solid #ededed; }
+#faqans_publish .ipt_box .name{ width:45px; text-align:center; padding:0 6px; color:#777;}
+#afui.fandroid #faqans_publish .ipt_box .ipt{border-bottom: none;}
+#faqans_publish .ipt_box .ipt{position:relative; height:auto; padding:0 0 0 6px; border:none; 
+border-left:1px solid #ededed; color:#000; background: transparent; overflow: hidden;}
+
+#afui #faqans_publish textarea[name=info] {height:250px; overflow: hidden; line-height: 20px;}
+
+#afui.ios #faqans_publish .form_text {border-radius:0;}
+#afui.ios8 #faqans_publish .form_text {border-width:0.5px;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">回答问题</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JfaqansPublishForm"></a>
+</header>
+
+<form id="JfaqansPublishForm" name="faqansform" action="/?m=faq&a=answer" method="post" enctype="multipart/form-data">
+</form>

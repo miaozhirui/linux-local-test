@@ -1,0 +1,55 @@
+<style type="text/css">
+#afui #J_sitem_wall_wrap {top: 0; bottom:40px;}
+/*exchange_index*/
+#sitem_book .wall_sitem {width:47.5%; float:left; padding:10px; margin-right:5%; margin-bottom:20px; background: #fff;font-size:12px;}
+#sitem_book .wall_sitem:nth-child(2n) {margin-right:0 !important;}
+#sitem_book .wall_sitem a {display:block;}
+#sitem_book .wall_sitem .pic {display: block;width: 100%;height: 100px;}
+#sitem_book .wall_sitem .intro {padding:5px 0;}
+#sitem_book .wall_sitem .einfo {overflow: hidden;}
+#sitem_book .wall_sitem .einfo > * {display:inline-block;line-height:22px;}
+#sitem_book .wall_sitem .einfo .exch { padding:0 8px; background:#00b000;color:#fff;}
+#sitem_book .wall_sitem .einfo .exch.pressed {background: #000;}
+#sitem_book .wall_sitem .einfo .exch .fa {position:relative;top:2px;margin-left:2px;}
+#sitem_book .navorder_head .son_c, #sitem_book .navorder_head .order_rank {width: 50%;}
+
+#afui #J_sitem_orderrank.showed {
+    transform: translate3d(0, -91px, 0); 
+    -webkit-transform: translate3d(0, -91px, 0); 
+    -ms-transform: translate3d(0, -91px, 0);
+    -o-transform: translate3d(0, -91px, 0);
+}
+
+</style>
+
+<div id="J_sitem_wall_wrap" class="scroll_wrap">
+    <div id="J_sitem_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_sitem_wall_triggerBar' pageBar ="#J_sitem_wall_pageBar"  
+         relWrap='#J_sitem_wall_wrap' feedRcd='wall_sitem' renderFunc='$.sitemBook.renderSitems'
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="2" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0"
+         sort="likes" minPrice=0 maxPrice=0
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无可兑换礼品" 
+    >
+    </div>
+    
+    <div id="J_sitem_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_sitem_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="son_c" id="J_sitem_b_c_tri" reltgt="#J_sitem_b_c"><span>全部</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="order_rank" id="J_sitem_orderrank_tri" reltgt="#J_sitem_orderrank"><span>喜欢</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+    </ul>
+    <div id="J_sitem_b_c" relTri="#J_sitem_b_c_tri" class="son_cate" trans3d="true">
+        <a class="active" cid="1">全部 </a>
+        <a cid=2>巧克力</a>
+    </div>
+    <div id="J_sitem_orderrank" relTri="#J_sitem_orderrank_tri" class="listbtn" trans3d="true">
+        <a sort="hot">最热</a>
+        <a sort="new">最新</a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+1.需求分析
+2.项目依赖初始化
+3.入口文件编码
+4.创建视图
+5.测试前端流程
+6.样式开发，伪造模板数据
+7.设计数据库模型
+8.开发后端逻辑
+9.配置依赖文件，网站开发结束
+
+npm install express
+npm install jade
+npm install mongoose
+npm install bower -g
+bower install bootstrap
+
+测试前端流程
+localhost:3000/
+localhost:3000/movie/1
+localhost:3000/admin/movie
+localhost:3000/admin/list
+
+node v4.1.0+ npm v2.14.3
+

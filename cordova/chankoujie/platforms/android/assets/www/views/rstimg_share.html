@@ -1,0 +1,69 @@
+<style type="text/css">
+#rstimg_share > div:first-child { min-height: 100%; background: #F2F3E3;}
+#rstimg_share .sharerstimgs li {position:relative;height:90px; width:100%;}
+#rstimg_share .sharerstimgs {padding:10px 10px;}
+#rstimg_share .sharerstimgs .form_text { border: 2px solid #dfdfdf; } 
+#rstimg_share .sharerstimgs .form_text:focus { border: 2px solid #00b000; } 
+#rstimg_share .sharerstimgs .imgs .upimgpic_wrap{ position: absolute; left:0;top:0; width:90px; height: 90px; overflow:hidden; margin-right:0px; background: #C6B6A6; }
+#rstimg_share .sharerstimgs .imgs .preview{width:90px;height:90px; line-height:90px; text-align:center; background:#C6B6A6;}
+#rstimg_share .sharerstimgs .imgs .preview img {width:100%; height:100%;}
+#rstimg_share .sharerstimgs .imgs .upimgpic_abs{width:90px; height:90px; position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#rstimg_share .sharerstimgs .imgs .upimgpic_renew{width:26px; height:26px;  position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#rstimg_share .sharerstimgs .imgs .upimgpic_renew .upimgpic{width:100%; height:100%; line-height:29px; font-size:20px;font-weight:normal; 
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#55000000',endColorstr='#55000000'); background: rgba(0, 0, 0, 0.5);
+}
+#rstimg_share .sharerstimgs .imgs .upimgpic{ position: relative; width: 90px; height: 90px;line-height: 90px; text-align:center;
+font-weight:bold; font-size:16px; background: #C6B6A6;  overflow: hidden; cursor:pointer; }
+#rstimg_share .sharerstimgs .imgs .upimgpic.pressed{background: rgba(0,0,0, 0.2);}
+#rstimg_share .sharerstimgs .imgs .upimgpic span{color:#fff;}
+#rstimg_share .sharerstimgs .imgs .nimg .picintro { display:block; height:90px; padding-left:90px; width: 100%; overflow: hidden;}
+#rstimg_share .sharerstimgs .imgs .imgtext { width: 100%; height:100%;line-height: 150%; padding: 5px; border-left: none; 
+border-radius: 0; -webkit-appearance: none;}
+#rstimg_share .sharerstimgs .imgs .nimg .ops { position:absolute; right:2px; bottom:2px; display:block; width: 20px; height:20px;
+line-height:20px; text-align: center; font-weight:bold; }
+#rstimg_share .sharerstimgs .imgs .nimg .ops a{ display: block; width:100%; height:100%; padding-top:1px; background: #ccc; margin-bottom: 3px; color: #FFF; }
+#rstimg_share .sharerstimgs .imgs .nimg .ops a.pressed {background: #aaa;}
+#rstimg_share .sharerstimgs .imgs .ayibu { width: 100%; text-align: right; }
+
+#rstimg_share .sharerstimgs .btn { display: inline-block; height: 30px; padding: 0 20px; }
+
+#afui.ios8 #rstimg_share .sharerstimgs .imgs .nimg .ops {right:1px;}
+#afui.ios8 #rstimg_share .sharerstimgs .imgs .nimg .ops a {margin-bottom:1px;}
+#afui.ios8 #rstimg_share .sharerstimgs .imgs .imgtext {border-width: 0.5px; border-color:#ccc;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">发布餐馆图片</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#J_sharerstimg_form"></a>
+</header>
+
+<div class="sharerstimgs cfx">
+    <form id="J_sharerstimg_form" action="/?m=rstimg&a=share" method="post">
+        <ul nextidx=1 class="J_imgs imgs">
+        </ul>
+        <input type="hidden" name="rid" value="0"/>
+        <input type="hidden" name="_token" value=""/>
+        <a href="javascript:;" class="btn pbtn J_addimg" data-pressed="true">+增加图片</a>
+    </form>
+</div>
+
+<ul id="J_sharerstimg_copy" style="display:none;">
+    <li class="J_img nimg mb10 cfx">
+        <div class="J_upwrap upimgpic_wrap">
+            <div class="J_preview preview">
+            </div>
+            <div class="J_sharerstimg_abs upimgpic_abs">
+                <div id="<?='J_sharerstimg_'.$i?>" class="J_sharerstimg upimgpic vv-pressed">
+                    <span>+上传图片</span>
+                </div>
+                <input type="hidden" id="<?='J_sharerstimg_ipt_'.$i?>" name="imgimg[]" value="">
+            </div>
+        </div>
+        <span class="picintro">
+            <textarea onclick="" name="imgstate[]" class="form_text imgtext" placeholder="餐馆图片点评"></textarea></span>
+        <span class="ops">
+            <a title="删除" href="javascript:void 0;" class="J_delimg del" data-pressed="true">╳</a>
+        </span>
+    </li>
+</ul>

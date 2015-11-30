@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+    <head>
+        <title>馋口街</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="afwk/css/af.ui.css" />
+        <link rel="stylesheet" type="text/css" href="css/fa.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/global.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/space.css" />
+        
+        <!-- dot Templates -->
+        <script id="JdotTplComments" type="text/x-dot-template">
+        {{~ it.rlist :rcd }}
+            <li class="comment_rcd" data-id="{{=rcd.id}}">
+                <a class="aw" href="#space_index/{{=rcd.uid}}"><img class="avatar" src="{{=rcd.avatar}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);" ></a>
+                <div class="cmt">
+                    <p class="umrply">
+                        <a class="uname">{{=rcd.uname}}</a>
+                        <i class="fa fa-share reply J_cmt_reply" data-pressed="true"></i>
+                        <i class="fa fa-flag2 reply J_cmt_report" data-pressed="true"></i>
+                    </p>
+                    <p class="J_expr info">{{=rcd.info}}</p>
+                    <p class="time">{{=rcd.add_time}}</p>
+                </div>
+            </li>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplItems" type="text/x-dot-template">
+        {{var imgWd = parseFloat(it.wall.attr('wRcdWd')), rate = parseFloat(it.wall.attr('wRate')), curDiv = $.ui.activeDiv.id;}}
+        {{~ it.rlist :rcd }}
+            {{ var imgHt = rcd.imght * rate; }}
+            <div {{? !(curDiv != 'space_like' && curDiv != 'space_share')}} did="{{=rcd.id}}" {{?}} class="wall_item">
+                <a {{? curDiv != 'space_like' && curDiv != 'space_share'}} href="#item_detail/{{=rcd.id}}" {{?}}>
+                    <img width="{{=imgWd}}" height="{{=imgHt}}" class="pic" src="{{=rcd.img}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);" />
+                </a>
+                <div class="intro">{{=rcd.intro}}</div>
+                <div class="info cfx">
+                    <span class="price fr"><i>￥</i>{{=rcd.price}}</span> <span class="likes fl">喜欢  {{=rcd.likes}}</span>
+                </div>
+            </div>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplAlbums" type="text/x-dot-template">
+        {{var aW = parseFloat(it.wall.attr('wRcdWd')), ulW= aW-2, ulH = ulW/2, liW=ulH, 
+              liH=liW, imgW=liH-20, imgH=imgW, rcdH=ulH+53, curDiv = $.ui.activeDiv.id;
+        }}
+        {{~ it.rlist :rcd }}
+            <div {{? curDiv == 'space_album'}} did="{{=rcd.id}}" {{?}} class="J_album wall_album" style="height:{{=rcdH}}px">
+                <div class="title">{{=rcd.title}}</div>
+                <div class="info cfx">
+                    <span class="gray fl">食品 {{=rcd.items}}</span>
+                    <span class="pink fr">收藏 {{=rcd.follows}}</span>
+                </div>
+                <ul class="simgs" style="height:{{=ulH}}px">
+                {{? rcd.simgs.length > 0 }}
+                    {{~ rcd.simgs :img }}
+                        <li style="width:{{=liW}}px; height:{{=liH}}px">
+                            <img style="width:{{=imgW}}px; height:{{=imgH}}px" src="{{=img}}" 
+                                 onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);" />
+                        </li>
+                    {{~}}
+                    {{? rcd.simgs.length < 2 }}
+                        {{ var left = 2 - rcd.simgs.length; }}
+                        {{ for(; left != 0; left--){ }}
+                        <li style="width:{{=liW}}px;height:{{=liH}}px"><span style="width:{{=imgW}}px; height:{{=imgH}}px"></span></li>
+                        {{ } }}
+                    {{?}}
+                {{?}}
+                </ul>
+                {{? curDiv != 'space_album'}}
+                <a href="#album_detail/{{=rcd.id}}" class="golink"></a>
+                {{?}}
+            </div>
+        {{~}}
+        </script>
+               
+        <script id="JdotTplStores" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id; }}
+        {{~ it.rlist :rcd }}
+            <div {{? !(curDiv != 'space_like' && curDiv != 'space_share') }} did="{{=rcd.id}}" {{?}} class="wall_store">
+            <div class="pics">
+            {{~ rcd.simgs :img}}
+                <img src="{{=img}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);"/>
+            {{~}}
+            {{? rcd.simgs.length < 4 }}
+                {{ var left = 4 - rcd.simgs.length;}}
+                {{ for(; left != 0; left--){ }}
+                <span>&nbsp;</span>
+                {{ } }}
+            {{?}}
+            </div>
+            <div class="info">
+                <p class="top ofh">{{=rcd.name}}</p>
+                <p class="middle">{{=rcd.rec_why}}</p>
+                <p class="bottom">
+                    <span class="coll"><i>收藏</i>{{=rcd.follows}}</span>
+                    <span class="foods"><i>食品</i>{{=rcd.items}}</span>
+                    <span class="address fr"><i class="fa fa-map-marker prt2"></i>{{=rcd.address}}</span>
+                </p>
+            </div>
+            {{? curDiv != 'space_like' && curDiv != 'space_share' }}
+            <a class="goto" data-dpressed="true" href="#store_detail/{{=rcd.id}}" ></a>
+            {{?}}
+            </div>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplBrands" type="text/x-dot-template">
+        {{ var bw = parseFloat(it.wall.attr('wRcdWd')), curDiv = $.ui.activeDiv.id, imgH = (bw-20)*0.32; }}
+        {{~ it.rlist :rcd }}
+        <div {{? !(curDiv != 'space_like' && curDiv != 'space_share') }} did="{{=rcd.id}}" {{?}} class="wall_brand">
+            <div class="top">
+                <span class="name ofh">{{=rcd.name}}</span>
+                {{? rcd.addr }}
+                <span class="address fr"><i>来自:</i>{{=rcd.address}}</span>
+                {{?}}
+                <span class="cmt fr">评论 {{=rcd.comments }}</span>
+                <span class="coll fr">收藏 {{=rcd.follows }}</span>
+            </div>
+            <div class="pics cfx">
+            {{~ rcd.simgs :img}}
+                <img style="height:{{=imgH}}px" src="{{=img}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);"/>
+            {{~}}
+            {{? rcd.simgs.length < 3 }}
+                {{ var left = 3 - rcd.simgs.length;}}
+                {{ for(; left != 0; left--){ }}
+                <span style="height:{{=imgH}}px">&nbsp;</span>
+                {{ } }}
+            {{?}}
+            </div>
+            <div class="intro">{{=rcd.intro}}</div>
+            {{? curDiv != 'space_like' && curDiv != 'space_share' }}
+            <a class="goto" data-dpressed="true" href="#brand_detail/{{=rcd.id}}" ></a>
+            {{?}}
+        </div>
+        {{~}}
+        </script>
+                
+        <script id="JdotTplRecipes" type="text/x-dot-template">
+        {{ var imgWd = parseFloat(it.wall.attr('wRcdWd')), rate = parseFloat(it.wall.attr('wRate')), 
+               masonry = it.wall.attr('cols') == 1 ? false : true, curDiv = $.ui.activeDiv.id;
+        }}
+        {{~ it.rlist :rcd }}
+            {{ var imgHt = rcd.imght * rate, mstuffDiv = '', mstuff = '', unameDiv=''; }}
+            {{? masonry }}
+                <div {{? !(curDiv != 'space_like' && curDiv != 'space_share') }} did="{{=rcd.id}}" {{?}} class="wall_recipe">
+                    <a {{? curDiv != 'space_like' && curDiv != 'space_share' }} href="#recipe_detail/{{=rcd.id}}" {{?}} >
+                        <img width="{{=imgWd}}" height="{{=imgHt}}" class="pic" src="{{=rcd.img}}" 
+                             onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);"/>
+                    </a>
+                    <div class="intro">{{=rcd.name}}</div>
+                    <div class="info cfx">
+                        <span class="fr">评论 {{=rcd.comments}}</span>
+                        <span class="fl">喜欢 {{=rcd.likes}}</span>
+                    </div>
+                </div>
+            {{??}}
+                <div {{? !(curDiv != 'space_like' && curDiv != 'space_share')}} did="{{=rcd.id}}" {{?}} class="wall_recipe">
+                    <p><img onload="$.ckj.centerImg(this, 90);" onerror="$.ckj.onImgError(this);" class="pic" src="{{=rcd.img}}" /></p>
+                    <div class="intro">{{=rcd.name}}</div>
+                    {{? rcd.name}}
+                        <div class="uname">{{=rcd.uname}}</div>
+                    {{?}}
+                    
+                    {{? rcd.mstuff && rcd.mstuff.length > 0 }}
+                        <div class="stuff">
+                        {{~ rcd.mstuff: s }}
+                            {{=s}}&nbsp;
+                        {{~}}
+                        </div>
+                    {{?}}
+                    
+                    <div class="info cfx"><span class="fr">评论 {{=rcd.comments}}</span><span class="fl">喜欢 {{=rcd.likes}}</span></div>
+                    {{? curDiv != 'space_like' && curDiv != 'space_share' }}
+                        <a data-dpressed="true" href="#recipe_detail/{{=rcd.id}}"></a>
+                    {{?}}
+                </div>
+            {{?}}
+        {{~}}
+        </script>
+        
+        <script id="JdotTplRmenus" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id; }}
+        {{~ it.rlist :rcd }}
+            <div {{? curDiv == 'space_rmenu' }} did="{{=rcd.id}}" {{?}} class="wall_rmenu">
+                <div class="title ofh">{{=rcd.title}}</div>
+                <div class="info cfx">
+                    <span class="fl">菜谱 {{=rcd.recipes}}</span>
+                    <span class="fr">收藏 {{=rcd.follows}}</span>
+                </div>
+                <ul>
+                {{? rcd.covers.length > 0 }}
+                    {{~ rcd.covers: cr: idx}}
+                        <li>
+                            <img src="{{=cr.img}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);">
+                            <span>{{=cr.name}}........................</span>
+                        </li>
+                        {{ if(idx > 0 && !$.os.ios) break; }}
+                    {{~}}
+                {{?}}
+                </ul>
+                <div class="rmenu_desc">{{=rcd.intro}}</div>
+                {{? curDiv != 'space_rmenu' }}
+                    <a href="#rmenu_detail/{{=rcd.id}}" class="golink"></a>
+                {{?}}
+            </div>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplWorks" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id, atHome = (it.wall.attr('uid') == $.ckj.user.id) && (curDiv == 'space_like' || curDiv != 'space_share'); }}
+        {{~ it.rlist :rcd }}
+        <div {{? !(curDiv != 'space_like' && curDiv != 'space_share') }} did="{{=rcd.id}}" {{?}} class="wall_work">
+            <div class="bimg">
+            {{? curDiv != 'space_like' && curDiv != 'space_share' }}
+                <a class="togo" href="#work_detail/{{=rcd.id}}"></a>
+            {{?}}
+                <img src="{{=rcd.img}}"  onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);">
+            {{? !atHome }}
+                <span class="likes J_like" outdel="n" itype="work" data-id={{=rcd.id}}>
+                    <i class="fa fa-heart-add"></i><e class="J_like_n">{{=rcd.likes}}</e>
+                </span>
+            {{?}}
+            </div>
+            <div class="rname">
+                <a href="#recipe_detail/{{=rcd.recipe_id}}">{{=rcd.recipe_name}}</a>
+            </div>
+            <a class="uinfo">
+                <span class="uname">{{=rcd.uname}}</span>
+                <span class="time">{{=rcd.add_time.split(' ')[0]}} 上传</span>
+            </a>
+        </div>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplStuffs" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id; }}
+        {{~ it.rlist :rcd }}
+        <li {{? !(curDiv != 'space_like' && curDiv != 'space_share') }} did="{{=rcd.id}}" {{?}} class="wall_stuff">
+            <p><img onload="$.ckj.centerImg(this, 80, 90);" onerror="$.ckj.onImgError(this);" src="{{=rcd.img}}"/></p>
+            <div class="info">
+                <div class="top">
+                    <span class="title ofh">{{=rcd.name}}</span>
+                    <span class="fr">喜欢 {{=rcd.likes}}</span>
+                </div> 
+                {{? rcd.alias }}
+                <div class="alias ofh"> <i class="label">别名:</i><i class="val">{{=rcd.alias}}</i></div>
+                {{?}}
+                <div class="intro">{{=rcd.intro}}</div>
+            </div>
+            {{? curDiv != 'space_like' && curDiv != 'space_share' }}
+            <a href="#stuff_detail/{{=rcd.id}}" class="goto" data-dpressed="true"></a>
+            {{?}}
+        </li>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplRstrnts" type="text/x-dot-template">
+        {{ var near=parseInt(it.wall.attr('near')), dist = '', bdPoint=null, curDiv = $.ui.activeDiv.id; }}
+        {{~ it.rlist :rcd }}
+        <div {{? !(curDiv != 'space_like' && curDiv != 'space_share') }} did="{{=rcd.id}}" {{?}} class="wall_rstrnt">
+            <p><img onload="$.ckj.centerImg(this, 70, 90);" onerror="$.ckj.onImgError(this);" src="{{=rcd.img}}"/></p>
+            <div class="info">
+                <p class="name ofh">{{=rcd.name}}{{? rcd.branch }} ({{=rcd.branch}}) {{?}}</p>
+                <p class="misc">
+                    <span><i class="head">喜欢:</i>{{=rcd.likes}}</span>
+                    <span><i class="head">评论:</i>{{=rcd.comments}}</span>
+                    <span class="cost"><i class="head">人均:</i><i class="val">{{? rcd.cost > 0 }} (￥{{=rcd.cost}}) {{??}} -- {{?}}</i></span>
+                </p>
+                <div class="addr f-f J_rstaddr">
+                    <p class="f-al ofh">{{=rcd.street_addr}}</p>
+                    <!-- cal dist between two gps point -->
+                    {{? near > 1}}
+                    {{
+                        bdPoint = $.geoCord.mars2baidu(rcd.lng/1000000, rcd.lat/1000000);
+                        dist = parseInt($.geoCord.lngLatDist($.ckj.cfg.gpsPos.lat, $.ckj.cfg.gpsPos.lng, bdPoint[1], bdPoint[0])) + 'm';
+                    }}
+                    <p class="dist">{{=dist}}</p>
+                    {{?}}
+                </div>
+            </div>
+            {{? curDiv != 'space_like' && curDiv != 'space_share' }}
+            <a href="#rstrnt_detail/{{=rcd.id}}" class="go" data-dpressed="true"></a>
+            {{?}}
+        </div>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplRstimgs" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id, rW = parseFloat(it.wall.attr('wRcdWd')), maxImgW = rW*1.1; }}
+        {{~ it.rlist :rcd }}
+        <a {{? curDiv != 'space_like' && curDiv != 'space_share' }} href="#rstimg_detail/{{=rcd.id}}" {{??}} did="{{=rcd.id}}" {{?}} class="wall_rstimg" style="width:{{=rW}}px; height:{{=rW}}px">
+            <img style="max-width:{{=maxImgW}}px;" src="{{=rcd.img}}" 
+                 onload="$.ckj.centerImg(this, {{=rW}}, {{=rW}})" onerror="$.ckj.onImgError(this);"/>
+            {{? rcd.state }}
+            <i class="info">{{=rcd.state}}</i>
+            {{?}}}
+         </a>
+        {{~}}
+        </script>
+  
+        <script id="JdotTplGroups" type="text/x-dot-template">
+        {{ var gw = parseFloat(it.wall.attr('wRcdWd')), imgW = gw-40, imgH=imgW, idx=0; }}
+        {{~ it.rlist :rcd:idx }}
+        <div class="group_rcd" {{? idx%2 == 1 }} style="border-right:none;" {{?}}>
+            <img style="height:{{=imgW}}px;width:{{=imgH}}px;display:block;" src="{{=rcd.avatar}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);" />
+            <div class="title">{{=rcd.name}}</div>
+            <div class="cinfo">
+               <i class="label">成员:</i><i class="val mr10">{{=rcd.members}}</i>
+               <i class="label">主题:</i><i class="val">{{=rcd.subjects}}</i>
+            </div>
+            <a class="goto" data-dpressed="true" href="#group_detail/{{=rcd.id}}"></a>
+        </div>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplSGroups" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id; }}
+        {{~ it.rlist :rcd }}
+        <li {{? !(curDiv != 'space_grpsub') }} did="{{=rcd.id}}" {{?}} class="sgroup_rcd">
+            <a {{? curDiv != 'space_grpsub' }} href="#group_detail/{{=rcd.id}}" {{?}}>
+                <img src="{{=rcd.avatar}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);">
+            </a>
+            <p>
+                <a href="#group_detail/{{=rcd.id}}">{{=rcd.name}}</a>
+            </p>
+        </li>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplSubjects" type="text/x-dot-template">
+        {{ var curDiv = $.ui.activeDiv.id, 
+               noAngle = curDiv == 'space_grpsub' && it.wall.attr('curType') == 'mypub' && $.ckj.user.id && it.wall.attr('uid') == $.ckj.user.id;
+        }}
+        {{~ it.rlist :rcd }}
+        <li {{? !(curDiv != 'space_grpsub') }} did="{{=rcd.id}}" {{?}} class="subject_rcd">
+            {{? !noAngle}}
+            <div class="arrow"><i class="fa fa-angle-right"></i></div>
+            {{?}}
+            <div class="sub_title ofh">{{=rcd.title}}</div>
+            <div class="binfo">阅读:<i>{{=rcd.hits}}</i>　回应:<i>{{=rcd.replys}}</i></div>
+            <div class="from">来自群: {{=rcd.group_name}}</div>
+            {{? curDiv != 'space_grpsub' }}
+            <a href="#subject_detail/{{=rcd.id}}" class="go" data-dpressed="true"></a>
+            {{?}}
+        </li>
+        {{~}}
+        </script>
+
+        <script id="JdotTplGrpsubs" type="text/x-dot-template">
+        {{~ it.rlist :rcd }}
+        <li class="subject_rcd">
+            <div class="arrow"><i class="fa fa-angle-right"></i></div>
+            <div class="sub_title ofh">{{=rcd.title}}</div>
+            <div class="submeta">阅读:<i>{{=rcd.hits}}</i>　回应:<i>{{=rcd.replys}}</i></div>
+            <a href="#subject_detail/{{=rcd.id}}" class="go" data-dpressed="true"></a>
+        </li>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplGrpmems" type="text/x-dot-template">
+        {{~ it.rlist :rcd }}
+        <a href="#space_index/{{=rcd.uid}}" class="grp_mem cfx" data-dpressed="true">
+            <img src="{{=rcd.avatar}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);" /><span class="uname ofh">{{=rcd.uname}}</span>
+            {{? rcd.role }}
+            <span class="role"><i class="fa fa-user2"></i>{{=rcd.role}}</span>
+            {{?}}
+        </a>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplUsers" type="text/x-dot-template">
+        {{var rW = it.wall.attr('wRcdWd'), imW = rW, imH=rW;}}
+        {{~ it.rlist :rcd }}
+        <a style="width:{{=rW}}px;" class="block_user" href="#space_index/{{=rcd.id}}" >
+            <img width="{{=imW}}" height="{{=imH}}" src="{{=rcd.avatar}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);" />
+            <span class="ofh">{{=rcd.name}}</span>
+        </a>
+        {{~}}
+        </script>
+        
+        <script id="JdotTplFaqs" type="text/x-dot-template">
+        {{ var userHtml, curDiv = $.ui.activeDiv.id; }}
+        
+        {{~ it.rlist :rcd }}
+        {{ userHtml = ''; }}
+        <li {{? !(curDiv != 'space_faq') }} did="{{=rcd.id}}" {{?}} class="wall_faq f-f">
+            <div class="lhead">
+                <a href="#space_index/{{=rcd.uid}}">
+                    <img src="{{=rcd.uavatar}}" onload="$.ckj.onImgLoad(this)" onerror="$.ckj.onImgError(this);">
+                </a>
+                <a class="agrees">{{=rcd.agrees}}</a>
+            </div>
+            <div class="infbox f-al">
+                <div class="ainf cfx">
+                {{? rcd.ans > 0 && rcd.usr_cache }}
+                    {{ for(var prop in rcd.usr_cache ) userHtml += rcd.usr_cache[prop]+',&nbsp;'; }}
+                    <span>{{=userHtml.substr(0, userHtml.length-7)}}</span> 等回答了问题
+                {{??}}
+                '等待回答中...'
+                {{?}}
+                </div>
+                <div class="atitle J_highKeys">{{=rcd.title}}</div>
+                {{? 0 && rcd.ans_cache }}
+                    {{ var tAns = rcd.ans_cache.info.replace(/<\s*img\s*[^>]*>/g, '').trim(); }}
+                    {{? tAns }}
+                        <div class="qdesc plw cfx">{{=$.vv.util.equalSubStr(tAns, 48)}}</div>
+                    {{?}}
+                {{?? rcd.desc.trim() }}
+                    {{var tDesc = rcd.desc.replace(/<\s*img\s*[^>]*>/g, '').trim();}}
+                    {{? tDesc }}
+                        <div class="qdesc plw cfx">{{=$.vv.util.equalSubStr(tDesc, 48)}}</div>
+                    {{?}}
+                {{?}}
+            </div>
+            {{? curDiv != 'space_faq' }}
+            <a href="#faq_detail/{{=rcd.id}}" class="goto"></a>
+            {{?}}
+        </li>
+        {{~}}
+        </script>
+        
+        <script id="JdotShareRecipe" type="text/x-dot-template">
+            {{ var recipe = it.recipe || {}, steps = it.steps, mStuffs = it.m_stuffs, sStuffs = it.s_stuffs; }}
+            <input type="hidden" name="id" value="{{=recipe.id||0}}">
+            <input name="name" type="text" maxlength="32" class="rci_nm form_text" placeholder="菜谱名称(必填：最多32个字)" value="{{=recipe.name||''}}">
+        
+            <div class="rci_cover">
+                <div class="J_upImgWrap up_img_wrap">
+                    <div class="J_preview preview">
+                        {{? recipe.img }}<img src="{{=recipe.img_url}}">{{?}}
+                    </div>
+                    <div class="J_shareRecipeImg_abs {{? recipe.img }} up_img_renew {{??}} up_img_abs {{?}}">
+                        <div id="J_shareRecipeCover" class="J_shareRecipeCover up_img_tip vv-pressed">
+                            <span class="">
+                                {{? recipe.img }} <i class="fa fa-rotate-left pink"></i> {{??}} +成品图  {{?}}
+                            </span>
+                        </div>
+                        <input type="hidden" id="J_shareRecipeCoverIpt" name="img" value="{{=recipe.img||''}}">
+                    </div>
+                </div>
+            </div>
+            
+            <textarea name="intro" class="form_text" placeholder="说说这道菜背后的故事撒(选填)~" {{? recipe.intro }} style="height:auto;" {{?}}
+                onpropertychange="if(this.scrollHeight > 45) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 45) this.style.height=this.scrollHeight + 'px';">{{=recipe.intro||''}}</textarea>
+            
+            <ul class="stuffs m_stuffs mt10">
+            {{? mStuffs }}    
+                {{~ mStuffs :s}}
+                <li class="stuff f-f f-vc">                               
+                    <p class="name f-al">
+                        <input type="text" class="J_stuff form_text stufftxt" name="m_stuff[]" value="{{=s.name}}" placeholder="主料">
+                    </p>                              
+                    <p class="amount">
+                        <input type="text" class="form_text amounttxt" name="m_stuff_amount[]" value="{{=s.amount||''}}" placeholder="适量">
+                    </p>                               
+                    <p class="action"><i class="fa fa-times JaddDelStuff" data-pressed="true"></i></p>                         
+                </li>
+                {{~}}
+            {{??}}
+                <li class="stuff f-f f-vc">                               
+                    <p class="name f-al"><input type="text" class="J_stuff form_text stufftxt" name="m_stuff[]" value="" placeholder="主料"></p>                              
+                    <p class="amount"><input type="text" class="form_text amounttxt" name="m_stuff_amount[]" value="" placeholder="适量"></p>                               
+                    <p class="action"><i class="fa fa-times JaddDelStuff" data-pressed="true"></i></p>                         
+                </li>
+            {{?}}
+                <li class="stuff f-f f-vc">                               
+                    <p class="name f-al"><input type="text" class="J_stuff form_text stufftxt" name="m_stuff[]" value="" placeholder="主料"></p>                              
+                    <p class="amount"><input type="text" class="form_text amounttxt" name="m_stuff_amount[]" value="" placeholder="适量"></p>                               
+                    <p class="action"><i class="fa fa-plus JaddDelStuff" data-pressed="true"></i></p>                         
+                </li>
+            </ul>
+            
+            <ul class="stuffs s_stuffs mt10">
+            {{? sStuffs }}    
+                {{~ sStuffs :s}}
+                <li class="stuff f-f f-vc">                               
+                    <p class="name f-al">
+                        <input type="text" class="J_stuff form_text stufftxt" name="s_stuff[]" value="{{=s.name}}" placeholder="辅料">
+                    </p>                              
+                    <p class="amount">
+                        <input type="text" class="form_text amounttxt" name="s_stuff_amount[]" value="{{=s.amount||''}}" placeholder="适量">
+                    </p>                               
+                    <p class="action"><i class="fa fa-times JaddDelStuff" data-pressed="true"></i></p>                         
+                </li>
+                {{~}}
+            {{??}}
+                <li class="stuff f-f f-vc">                               
+                    <p class="name f-al"><input type="text" class="J_stuff form_text stufftxt" name="s_stuff[]" value="" placeholder="辅料"></p>                              
+                    <p class="amount"><input type="text" class="form_text amounttxt" name="s_stuff_amount[]" value="" placeholder="适量"></p>                               
+                    <p class="action"><i class="fa fa-times JaddDelStuff" data-pressed="true"></i></p>                         
+                </li>
+            {{?}}
+                <li class="stuff f-f f-vc">                               
+                    <p class="name f-al"><input type="text" class="J_stuff form_text stufftxt" name="s_stuff[]" value="" placeholder="辅料"></p>                              
+                    <p class="amount"><input type="text" class="form_text amounttxt" name="s_stuff_amount[]" value="" placeholder="适量"></p>                               
+                    <p class="action"><i class="fa fa-plus JaddDelStuff" data-pressed="true"></i></p>                         
+                </li>
+            </ul>
+            
+            <ul class="rci_attrs mt10">
+               <li class="rci_attr f-f f-vc">                               
+                   <p class="name">菜品口味</p>                              
+                   <p class="ipt f-al">{{? recipe.recipe_taste_id}} {{=$.recipeShare.rciAttr['taste'][recipe.recipe_taste_id] || ''}} {{?}}</p>
+                   <input type="hidden" name="taste" value="{{= recipe.recipe_taste_id || ''}}"/>                                                     
+               </li>
+               <li class="rci_attr f-f f-vc">                               
+                   <p class="name">烹饪难度</p>                              
+                   <p class="ipt f-al">{{? recipe.difficulty}} {{=$.recipeShare.rciAttr['difficulty'][recipe.difficulty] || ''}} {{?}}</p>
+                   <input type="hidden" name="difficulty" value="{{= recipe.difficulty || ''}}"/>
+               </li>
+               <li class="rci_attr f-f f-vc">                               
+                   <p class="name">烹饪时间</p>                              
+                   <p class="ipt f-al">{{? recipe.cook_time}} {{=$.recipeShare.rciAttr['cook_time'][recipe.cook_time] || ''}} {{?}}</p>
+                   <input type="hidden" name="cook_time" value="{{= recipe.cook_time || ''}}"/>                                                               
+               </li>
+               <li class="rci_attr f-f f-vc">                               
+                   <p class="name">烹饪方法</p>                              
+                   <p class="ipt f-al">{{? recipe.recipe_tech_id}} {{=$.recipeShare.rciAttr['tech'][recipe.recipe_tech_id] || ''}} {{?}}</p>
+                   <input type="hidden" name="tech" value="{{= recipe.recipe_tech_id || ''}}"/>                                                               
+               </li>
+               <li class="rci_attr f-f f-vc">                               
+                   <p class="name">烹饪工具</p>                              
+                   <p class="ipt f-al ofh">
+                       {{
+                           if(recipe.tools){
+                               var toolArr = recipe.tools.split(','), toolStr='', mapTool = $.recipeShare.rciAttr['tools'];
+                               $.each(toolArr, function(i, t){
+                                   toolStr += mapTool[t]+',';
+                               });
+                               toolStr = toolStr.substring(0, toolStr.lastIndexOf(','));
+                        }}
+                        {{=toolStr||''}}
+                        {{?}}
+                   </p>
+                   <input type="hidden" name="tools" value="{{= recipe.tools || ''}}"/>                                                              
+               </li>
+            </ul>
+            
+            <ul nextidx="3" class="J_steps steps mt10" id="JrecipeStepsList">
+                {{? steps}}
+                    {{~ steps :s}}
+                        <li class="J_step nimg mt10 cfx">
+                            <div class="J_upImgWrap up_img_wrap">
+                                <div class="J_preview preview">
+                                    {{? s.img }}<img src="{{=s.img_url}}">{{?}}
+                                </div>
+                                <div class="J_shareRecipeImg_abs {{? s.img}}up_img_renew{{??}}up_img_abs{{?}}">
+                                    <div id="J_shareRecipeStep_1" class="J_shareRecipeStep up_img_tip vv-pressed">
+                                        <span class="">{{? s.img }} <i class="fa fa-rotate-left pink"></i> {{??}} +成品图  {{?}}</span>
+                                    </div>
+                                    <input type="hidden" id="J_shareRecipeStepIpt_1" name="stepimg[]" value="{{=s.img || ''}}">
+                                </div>
+                            </div>
+                            <span class="picintro">
+                                <textarea onclick="" name="stepstate[]" class="form_text imgtext" placeholder="步骤解说">{{=s.state||''}}</textarea></span>
+                            <span class="ops">
+                                <a class="J_stepup up fa-angle-right fa-rotate-270" data-pressed="true"></a>
+                                <a class="J_stepdown down fa-angle-right fa-rotate-90" data-pressed="true"></a>
+                                <a href="javascript:void 0;" class="adddel fa fa-times JaddDelStep" data-pressed="true"></a>
+                            </span>
+                        </li>
+                    {{~}}
+                {{??}}
+                    <li class="J_step nimg mt10 cfx">
+                        <div class="J_upImgWrap up_img_wrap">
+                            <div class="J_preview preview">
+                            </div>
+                            <div class="J_shareRecipeImg_abs up_img_abs">
+                                <div id="J_shareRecipeStep_1" class="J_shareRecipeStep up_img_tip vv-pressed">
+                                    <span class="">+步骤图</span>
+                                </div>
+                                <input type="hidden" id="J_shareRecipeStepIpt_1" name="stepimg[]" value="">
+                            </div>
+                        </div>
+                        <span class="picintro">
+                            <textarea onclick="" name="stepstate[]" class="form_text imgtext" placeholder="步骤解说"></textarea></span>
+                        <span class="ops">
+                            <a class="J_stepup up fa-angle-right fa-rotate-270" data-pressed="true"></a>
+                            <a class="J_stepdown down fa-angle-right fa-rotate-90" data-pressed="true"></a>
+                            <a href="javascript:void 0;" class="adddel fa fa-times JaddDelStep" data-pressed="true"></a>
+                        </span>
+                    </li>
+                {{?}}
+                <li class="J_step nimg mt10 cfx">
+                    <div class="J_upImgWrap up_img_wrap">
+                        <div class="J_preview preview">
+                        </div>
+                        <div class="J_shareRecipeImg_abs up_img_abs">
+                            <div id="J_shareRecipeStep_2" class="J_shareRecipeStep up_img_tip vv-pressed">
+                                <span>+步骤图</span>
+                            </div>
+                            <input type="hidden" id="J_shareRecipeStepIpt_2" name="stepimg[]" value="">
+                        </div>
+                    </div>
+                    <span class="picintro">
+                        <textarea onclick="" name="stepstate[]" class="form_text imgtext" placeholder="步骤解说"></textarea></span>
+                    <span class="ops">
+                        <a class="J_stepup up fa-angle-right fa-rotate-270" data-pressed="true"></a>
+                        <a class="J_stepdown down fa-angle-right fa-rotate-90" data-pressed="true"></a>
+                        <a href="javascript:void 0;" class="adddel fa fa-plus JaddDelStep" data-pressed="true"></a>
+                    </span>
+                </li>
+            </ul>
+            
+            <textarea name="tips" class="form_text mt10" placeholder="小贴士" {{? recipe.tips }} style="height:auto;" {{?}}
+                        onpropertychange="if(this.scrollHeight > 45) this.style.height=this.scrollHeight + 'px';" 
+                        oninput="if(this.scrollHeight > 45) this.style.height=this.scrollHeight + 'px';">{{? recipe.tips }}{{=recipe.tips}}{{?}}</textarea>
+            
+            <input name="tags" type="text" maxlength="64" class="form_text mt10" placeholder="标签(逗号分隔)" value="{{=recipe.tags||''}}">
+        </script>
+        
+        <script id="JdotShareRstrnt" type="text/x-dot-template">
+            {{ var rst = it.rstrnt || {}, attachs = it.imgs;}}
+            <input type="hidden" name="id" value="{{=rst.id||''}}">
+            <div class="rst_cover">
+                <div class="J_upImgWrap up_img_wrap">
+                    <div class="J_preview preview">{{? rst.img }}<img src="{{=rst.img_url}}">{{?}}</div>
+                    <div class="J_shareRstrntImg_abs {{? rst.img }} up_img_renew {{??}} up_img_abs {{?}}">
+                        <div id="J_shareRstrntCover" class="J_shareRstrntCover up_img_tip vv-pressed">
+                            <span class=""> {{? rst.img }} <i class="fa fa-rotate-left pink"></i> {{??}} +餐馆封面图  {{?}}</span>
+                        </div>
+                        <input type="hidden" id="J_shareRstrntCoverIpt" name="img" value="{{=rst.img || ''}}">
+                    </div>
+                </div>
+            </div>
+            <textarea name="intro" class="form_text" placeholder="餐馆简介~" {{? rst.intro }} style="height:auto;" {{?}}
+                onpropertychange="if(this.scrollHeight > 45) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 45) this.style.height=this.scrollHeight + 'px';">{{=rst.intro||''}}</textarea>
+
+            {{? attachs > 0 }}
+            <a class="more_attachs" href="#rstimg_book/rstrnt/{{=rst.id}}" data-pressed="true">已上传餐馆图片  <i class="fa fa-angle-right"></i></a>
+            {{?}}
+            <ul nextidx="3" class="J_attachs attachs" id="JrstrntAttachsList">
+                <li class="J_attach nimg mt10 cfx">
+                    <div class="J_upImgWrap up_img_wrap">
+                        <div class="J_preview preview"></div>
+                        <div class="J_shareRstrntImg_abs up_img_abs">
+                            <div id="J_shareRstrntAttach_1" class="J_shareRstrntAttach up_img_tip vv-pressed">
+                                <span class="">+餐馆附图</span>
+                            </div>
+                            <input type="hidden" id="J_shareRstrntAttachIpt_1" name="attachimg[]" value="">
+                        </div>
+                    </div>
+                    <span class="picintro">                 
+                        <textarea onclick="" name="attachstate[]" class="form_text imgtext" placeholder="说明"></textarea>
+                    </span>
+                    <span class="ops"><a href="javascript:void 0;" class="adddel fa fa-times JaddDelAttach" data-pressed="true"></a> </span>
+                </li>
+                <li class="J_attach nimg mt10 cfx">
+                    <div class="J_upImgWrap up_img_wrap">
+                        <div class="J_preview preview"></div>
+                        <div class="J_shareRstrntImg_abs up_img_abs">
+                            <div id="J_shareRstrntAttach_2" class="J_shareRstrntAttach up_img_tip vv-pressed">
+                                <span>+餐馆附图</span>
+                            </div>
+                            <input type="hidden" id="J_shareRstrntAttachIpt_2" name="attachimg[]" value="">
+                        </div>
+                    </div>
+                    <span class="picintro">                 
+                        <textarea onclick="" name="attachstate[]" class="form_text imgtext" placeholder="说明"></textarea>
+                    </span>
+                    <span class="ops"><a href="javascript:void 0;" class="adddel fa fa-plus JaddDelAttach" data-pressed="true"></a></span>
+                </li>
+            </ul>
+            
+            <div class="rst_attr f-f f-vc" style="margin-top:11px;">
+                <p class="name">名称</p>
+                <input class="ipt f-al" name="name" type="text" maxlength="32" placeholder="餐馆正式名(*必填)" value="{{=rst.name||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">分店</p>
+                <input class="ipt f-al" name="branch" type="text" maxlength="32" placeholder="分店名(如：天安门分店)" value="{{=rst.branch||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">别名</p>
+                <input class="ipt f-al" name="alias" type="text" maxlength="32" placeholder="其它为人熟知名称" value="{{=rst.alias||''}}">
+            </div>
+        
+            <div class="addr_list cfx" style="margin-top:16px;">
+                <div class="JshareRstrntCateSelects cfx" id="JshareRstrntCateSelects">
+                    <select name="cate_id_1" class="J_cate_select" 
+                            data-pid="0" data-uri="{{=it.ajaxAddrsUrl}}" data-selected="{{=it.addrids}}" data-pressed="true">
+                    </select>
+                </div>
+                <input type="hidden" id="JshareRstrntCateId" name="addr_id" value="">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">地址</p>
+                <input class="ipt f-al" name="street_addr" type="text" maxlength="64" placeholder="街道地址(不包含上面的省市和地区)" value="{{=rst.street_addr||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">靠近</p>
+                <input class="ipt f-al" name="near" type="text" maxlength="64" placeholder="如：天安门东站地铁口A口" value="{{=rst.near||''}}">
+            </div>
+            <div class="rst_attr area f-f f-vc">
+                <p class="name">公交</p>
+                <textarea class="ipt f-al" name="bus_info" maxlength="255" rows="3" placeholder="公交地铁等信息" value="">{{=rst.bus_info || ''}}</textarea>
+            </div>
+            
+            <div class="rst_attr f-f f-vc mt10 cost">
+                <p class="name">消费</p>
+                <input class="ipt f-al" name="cost" type="text" placeholder="人均消费" value="{{=rst.cost||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">电话</p>
+                <input class="ipt f-al" name="phone" type="text" placeholder="多个电话用逗号隔开" value="{{=rst.phone||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">营业</p>
+                <input class="ipt f-al" name="opentime" type="text" placeholder="营业时间" value="{{=rst.opentime||''}}">
+            </div>
+            
+            <div class="rst_attr f-f f-vc mt10">
+                <p class="name">特色</p>
+                <input class="ipt f-al" name="features" type="text" placeholder="特色菜肴(川菜，湘菜 ...)逗号分隔" value="{{=rst.features||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc">
+                <p class="name">适合</p>
+                <input class="ipt f-al" name="suits" type="text" placeholder="餐馆适合(约会，宴请，聚会 ...)逗号分隔" value="{{=rst.suits||''}}">
+            </div>
+            <div class="rst_attr f-f f-vc mb10">
+                <p class="name">其它</p>
+                <input class="ipt f-al" name="extsrvs" type="text" placeholder="额外服务(可刷卡，可上网 ...)逗号分隔" value="{{=rst.extsrvs||''}}">
+            </div>
+        </script>
+        
+        <script id="JdotShareSubject" type="text/x-dot-template">
+            {{ var sub = it.subject || {}; }}
+            <input type="hidden" name="gid" value="{{=it.grpId || ''}}">
+            <input type="hidden" name="sid" value="{{=it.subId || ''}}">
+            <div class="ipt_box f-f f-vc">
+                <p class="name">标题 </p>
+                <input class="ipt f-al" name="title" type="text" maxlength="32" placeholder="文章标题(*必填)" value="{{= sub.title||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">标签</p>
+                <input class="ipt f-al" name="tags" type="text" maxlength="32" placeholder="标签(空格分隔)" value="{{= sub.tags||''}}">
+            </div>
+            <textarea name="cnt" class="form_text" placeholder="正文内容(好吃的，好玩的，有用的都可以分享啦~)" 
+                onpropertychange="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';">{{= sub.src_cnt||''}}</textarea>
+        </script>
+        
+        <script id="JdotPublishFaq" type="text/x-dot-template">
+            {{ var faq = it.faq || {}; }}
+            <input type="hidden" name="id" value="{{=faq.id || ''}}">
+            <div class="ipt_box f-f f-vc">
+                <p class="name">标题 </p>
+                <input class="ipt f-al" name="title" type="text" maxlength="32" placeholder="问题标题(*必填)" value="{{= faq.title||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">标签 </p>
+                <input class="ipt f-al" name="tags" type="text" maxlength="32" placeholder="问题关键字(*空格分隔)" value="{{= faq.title||''}}">
+            </div>
+            <textarea name="desc" class="form_text" placeholder="问题描述(*可选)" 
+                onpropertychange="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';">{{= faq.src_desc||''}}</textarea>
+            <div class="rewards fr">
+                <i class="fa fa-moneybag"></i>悬赏<input name="rewards" class="gray_text input_txt" type="text" size="5" placeholder="0" value="{{= faq.rewards||''}}">颗馋豆
+            </div>
+        </script>
+        
+        <script id="JdotPublishFaqans" type="text/x-dot-template">
+            {{ var ans = it.ans || {}; }}
+            <input type="hidden" name="fid" value="{{=it.fid || ''}}">
+            <input type="hidden" name="aid" value="{{=it.aid || ''}}">
+            <textarea name="info" class="form_text" placeholder="请输入你的答案(*必填)" 
+                onpropertychange="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';">{{= ans.src_info||''}}</textarea>
+        </script>
+        
+        <script id="JdotPublishDiary" type="text/x-dot-template">
+            {{ var diary = it.diary || {}; }}
+            <input type="hidden" name="did" value="{{=diary.id || ''}}">
+            <div class="ipt_box f-f f-vc">
+                <p class="name">标题 </p>
+                <input class="ipt f-al" name="title" type="text" maxlength="32" placeholder="日记标题(*必填)" value="{{= diary.title||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">标签</p>
+                <input class="ipt f-al" name="tags" type="text" maxlength="32" placeholder="标签(空格分隔)" value="{{= diary.tags||''}}">
+            </div>
+            <textarea name="cnt" class="form_text" placeholder="日记内容（追踪你的饮食习惯！）" 
+                onpropertychange="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 250) this.style.height=this.scrollHeight + 'px';">{{= diary.src_cnt||''}}</textarea>
+        </script>
+        
+        <script id="JdotSettingBasic" type="text/x-dot-template">
+            {{ var u=it; }}
+            <div class="setting_avatar prel cfx">
+                <div class="avatar_wrap prel" id="JuserSetAvatar">
+                    <img src="{{=u.avatar||'data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw=='}}"/>
+                    <a class="btn pabs"><i class="fa fa-camera"></i>修改头像</a>
+                </div>
+                <p class="tips">大于200x200的图片，太小会展示不清哦~</p>
+            </div>
+            
+            <div class="ipt_box f-f f-vc">
+                <p class="name">昵称</p> <input class="ipt f-al gray" name="xxx" type="text" readonly maxlength="32" value="{{=u.username||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">邮箱</p><input class="ipt f-al gray" name="xxx" type="text" readonly maxlength="32"  value="{{=u.email||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">性别</p> 
+                <p class="f-al ml5">
+                    <input id="JuserSetGender" type="checkbox" name="gender" {{? u.gender == 0 }} checked {{?}} class="toggle">
+                    <label for="JuserSetGender" data-on="女" data-off="男"><span></span></label>
+                </p>
+            </div>
+            
+            <div class="addr_list cfx" style="margin-top:16px;"> 
+                <div class="JshareRstrntCateSelects cfx">
+                    <span class="label">现居地：</span> 
+                    <select id="JuserSetProv" name="province"></select> <select id="JuserSetCity" name="city"></select>
+                </div>
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">血型</p>
+                <p class="ipt_angle f-al">
+                    <select name="blood">
+                        <option value="" {{= (u.blood == '' ? 'selected="selected"' : '')}}></option>
+                        <option value="A" {{= (u.blood == 'A' ? 'selected="selected"' : '')}}>A型</option>
+                        <option value="B" {{= (u.blood == 'B' ? 'selected="selected"' : '')}}>B型</option>
+                        <option value="AB" {{= (u.blood == 'AB' ? 'selected="selected"' : '')}}>AB型</option>
+                        <option value="O" {{= (u.blood == 'O' ? 'selected="selected"' : '')}}>O型</option>
+                    </select>
+                </p>
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">星座</p>
+                <p class="ipt_angle f-al">
+                    <select name="constel" class="">
+                        <option value="" {{= (u.constel == '' ? 'selected="selected"' : '')}}></option>
+                        <option value="水瓶" {{= (u.constel == '水瓶' ? 'selected="selected"' : '')}}>水瓶座</option>
+                        <option value="双鱼" {{= (u.constel == '双鱼' ? 'selected="selected"' : '')}}>双鱼座</option>
+                        <option value="白羊" {{= (u.constel == '白羊' ? 'selected="selected"' : '')}}>白羊座</option>
+                        <option value="金牛" {{= (u.constel == '金牛' ? 'selected="selected"' : '')}}>金牛座</option>
+                        <option value="双子" {{= (u.constel == '双子' ? 'selected="selected"' : '')}}>双子座</option>
+                        <option value="巨蟹" {{= (u.constel == '巨蟹' ? 'selected="selected"' : '')}}>巨蟹座</option>
+                        <option value="狮子" {{= (u.constel == '狮子' ? 'selected="selected"' : '')}}>狮子座</option>
+                        <option value="处女" {{= (u.constel == '处女' ? 'selected="selected"' : '')}}>处女座</option>
+                        <option value="天秤" {{= (u.constel == '天秤' ? 'selected="selected"' : '')}}>天秤座</option>
+                        <option value="天蝎" {{= (u.constel == '天蝎' ? 'selected="selected"' : '')}}>天蝎座</option>
+                        <option value="射手" {{= (u.constel == '射手' ? 'selected="selected"' : '')}}>射手座</option>
+                        <option value="摩羯" {{= (u.constel == '摩羯' ? 'selected="selected"' : '')}}>摩羯座</option>
+                    </select>
+                </p>
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">生日</p>
+                <p class="ipt_angle f-al">
+                    <input class="ipt f-al"  type="date" name="birthday" value="{{? u.byear>1900}}{{=u.byear}}-{{=(u.bmonth.length>1 ? u.bmonth: '0'+u.bmonth)}}-{{=(u.bday.length>1 ? u.bday: '0'+u.bday)}}{{??}}{{?}}">
+                </p>
+            </div>
+            
+            <div class="ipt_box f-f f-vc" style="margin-top: 16px;">
+                <p class="name">职业</p> <input class="ipt f-al" name="career" type="text" maxlength="32" placeholder="职业信息" value="{{=u.career||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">大学</p> <input class="ipt f-al" name="college" type="text" maxlength="32" placeholder="如北京大学" value="{{=u.college||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">院系</p> <input class="ipt f-al" name="colldepart" type="text" maxlength="32" placeholder="如外语学院" value="{{=u.colldepart||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name">博客</p> <input class="ipt f-al" name="blog" type="text" maxlength="32" placeholder="http://www.chankoujie.com" value="{{=u.blog||''}}">
+            </div>
+            
+            <div class="ipt_box f-f f-vc" style="margin-top: 16px;">
+                <p class="name name4">喜欢吃啥</p> <input class="ipt f-al" name="loves" type="text" maxlength="32" placeholder="空格分隔（给你推荐好吃的哦）" value="{{=u.loves||''}}">
+            </div>
+            <div class="ipt_box f-f f-vc">
+                <p class="name name4">个人标签</p> <input class="ipt f-al" name="tags" type="text" maxlength="32" placeholder="个性标签（空格分隔）" value="{{=u.tags||''}}">
+            </div>
+            
+            <textarea name="intro" class="form_text" placeholder="自我介绍" onpropertychange="if(this.scrollHeight > 80) this.style.height=this.scrollHeight + 'px';" oninput="if(this.scrollHeight > 80) this.style.height=this.scrollHeight + 'px';">{{=u.intro||''}}</textarea>
+        </script>
+        
+        <script id="JdotGiftExchange" type="text/x-dot-template">
+            {{ var addrs = it; }}
+            <ul class="address_list">
+                {{? addrs.length > 0 }}
+                <li class="old"><label class="f-f"><input type="radio" name="address_id" value="0" style="visibility: hidden;"><span class="f-al">选择送货地址:</span></label></li>
+                {{?}}
+                {{~ addrs :a}}
+                <li>
+                    <label class="f-f">
+                        <input type="radio" name="address_id" value="{{=a.id}}">
+                        <span class="f-al">{{=a.consignee}}({{=a.mobile}}) - {{=a.address}} {{=a.zip}}</span>
+                    </label>
+                </li>
+                {{~}}
+                <li class="new"><label class="f-f"><input type="radio" name="address_id" value="0"><span class="f-al">使用新地址:</span></label></li>
+            </ul>
+            <div class="newaddr">
+                <div class="frm_i">
+                    <input type="text" class="gray_text" name="consignee" placeholder="收货人">
+                    <!-- <p id="usernameAppendErrorMsg" class="errorMsg">错误信息。</p> -->
+                </div>
+                <div class="frm_i">
+                    <input type="text" class="gray_text" name="mobile" placeholder="手机号码">
+                </div>
+                 <div class="frm_i">
+                    <input type="text" class="gray_text" name="zip" size="8" placeholder="邮编">
+                </div> 
+                <div class="frm_i">
+                    <textarea type="text" rows="6" class="gray_text" name="address" size="50" placeholder="详细地址"></textarea>
+                </div>
+            </div>
+            
+            <input type="hidden" name="id" value="{{=$.giftExchange.cfg.id}}">
+            <input type="hidden" name="num" value="{{=$.giftExchange.cfg.num}}">
+            
+            <input type="submit" class="gbtn btn" value="提交订单" data-pressed="true">
+        </script>
+    </head>
+
+    <body>
+        <div id="afui" data-intel="y">
+            <!--<a id='menubadge' class='menuButton fa fa-list' data-pressed="true"></a>-->
+            <div id="header"><a id="toMyHome" class="fa fa-user2" href="#space_index" data-pressed="true" data-resetHistory="true"></a></div>
+            <div id="content">
+            </div>
+            <!-- top fast sch box(not used now) -->
+            <div id="J_fsch_box" class="fsch_box hide">
+			    <form id="J_fsch_frm" action="/">
+			        <div class="flat_iptbox f-f">
+			            <div class="left"></div>
+			            <input class="f-al" id="J_fsch_key" type="search" name="fsch_key" placeholder='请输入问题'/>
+			            <div class="right"></div>
+			            <i class="fa">X</i>
+			        </div>
+			    </form>
+			</div>
+            
+            <!-- ------left slide menu------------->
+            <!--
+            <nav>
+                <ul class="list">
+                    <li class="divider">学做菜</li>
+                        <li><a data-dpressed="true" href="#recipe_cate" data-resetHistory="true"><i class="fa fa-file-text"></i>看菜谱<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#rmenu_book" data-resetHistory="true"><i class="fa fa-clipboard"></i>翻菜单<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#work_book" data-resetHistory="true"><i class="fa fa-copy"></i>赏作品<i class="fa fa-angle-right"></i></a></li>
+                        <li class="bd_none"><a data-dpressed="true" href="#stuff_cate" data-resetHistory="true"><i class="fa fa-banana"></i>挑食材<i class="fa fa-angle-right"></i></a></li>
+                    <li class="divider">找吃的</li>
+                        <li><a data-dpressed="true" href="#item_cate" data-resetHistory="true"><i class="fa fa-hdd-o"></i>找食品<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#album_book" data-resetHistory="true"><i class="fa fa-archive"></i>翻吃柜<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#store_book" data-resetHistory="true"><i class="fa fa-home"></i>好吃店<i class="fa fa-angle-right"></i></a></li>
+                        <li class="bd_none"><a data-dpressed="true" href="#brand_book" data-resetHistory="true"><i class="fa fa-flag"></i>品牌<i class="fa fa-angle-right"></i></a></li>
+                    <li class="divider" data-dpressed="true" href="#rstrnt_addr">去哪吃</li>
+                        <li class="bd_none"><a data-dpressed="true" href="#rstrnt_book" data-resetHistory="true"><i class="fa fa-cutlery"></i>找餐馆<i class="fa fa-angle-right"></i></a></li>
+                    <li class="divider">逛社区</li>
+                        <li><a data-dpressed="true" href="#group_book" data-resetHistory="true"><i class="fa fa-group"></i>泡吃群<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#subject_book" data-resetHistory="true"><i class="fa fa-tags"></i>吃群主题<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#faq_book" data-resetHistory="true"><i class="fa fa-question-circle"></i>美食问答<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#daren_book" data-resetHistory="true"><i class="fa fa-crown"></i>达人秀<i class="fa fa-angle-right"></i></a></li>
+                        <li class="bd_none"><a data-dpressed="true" href="#sitem_book" data-resetHistory="true"><i class="fa fa-gift"></i>礼品兑换<i class="fa fa-angle-right"></i></a></li>
+                    <li class="divider">我</li>
+                        <li><a data-dpressed="true" href="#space_index" data-resetHistory="true"><i class="fa fa-user2"></i>我的美食家园<i class="fa fa-angle-right"></i></a></li>
+                        <li><a data-dpressed="true" href="#setting_index" data-resetHistory="true"><i class="fa fa-gear"></i>我的设置<i class="fa fa-angle-right"></i></a></li>
+                        <li id="J_side_user_login"><a data-dpressed="true" href="#user_login" data-resetHistory="true"><i class="fa fa-login"></i>登陆<i class="fa fa-angle-right"></i></a></li>
+                        <li class="J_user_logout"><a data-dpressed="true" ><i class="fa fa-logout"></i>退出</a></li>
+                        <li class="bd_none" id="J_exit_app"><a data-dpressed="true"><i class="fa fa-power-off"></i>关闭应用</a></li>
+                </ul>
+            </nav>
+            -->
+            
+            <!-- nav bar footer -->
+            <footer id='ft_recipe'>
+                <a href="#recipe_cate" id='tab_recipebook' data-resetHistory="true" ><i class="fa fa-file-text"></i>看菜谱</a>
+                <a href="#rmenu_book" id='tab_rmenuindex' data-resetHistory="true" ><i class="fa fa-clipboard"></i>翻菜单</a>
+                <a href="#work_book" id='tab_workbook' data-resetHistory="true" ><i class="fa fa-copy"></i>赏作品</a>
+                <a href="#stuff_cate" id='tab_stuffcate' class="last" data-resetHistory="true" ><i class="fa fa-banana"></i>挑食材</a>
+            </footer>
+            
+            <footer id='ft_item'>
+                <a href="#item_cate" id='tab_itemcate' data-resetHistory="true"><i class="fa fa-hdd-o"></i>找食品</a>
+                <a href="#album_book" id='tab_albumbook' data-resetHistory="true"><i class="fa fa-archive"></i>翻吃柜</a>
+                <a href="#store_book" id='tab_storebook' data-resetHistory="true"><i class="fa fa-home"></i>好吃店</a>
+                <a href="#brand_book" id='tab_brandbook' class='last' data-resetHistory="true"><i class="fa fa-flag"></i>品牌</a>
+            </footer>
+            
+            <footer id='ft_me'>
+                <a href="#space_index" id='tab_spaceindex' data-resetHistory="true"><i class="fa fa-user"></i>个人中心</a>
+                <a href="#setting_index" id='tab_setting_index' class="last" data-resetHistory="true"><i class="fa fa-gear"></i>个人设置</a>
+            </footer>
+            
+            <div id="Jtrans3dBlock" class="trans_blk hide">
+            </div>
+        </div>
+        
+        <!-- boot UI first -->
+        <script type="text/javascript" charset="utf-8" src="./afwk/appframework.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./afwk/ui/appframework.ui.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./afwk/plugins/af.swipe.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/lib/ruleCache.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/lib/fileuploader.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/lib/doT.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/core/vv.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/core/feed.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/core/project.js"></script>        
+        <script type="text/javascript" charset="utf-8" src="./js/user.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/comop.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<style type="text/css">
+#afui #faq_publish > .afScrollPanel{padding-bottom:15px;}
+#afui #faq_publish .form_text {height:46px; background: #fff; border:none; border-bottom:1px solid  #dfdfdf; position: relative;}
+#afui #faq_publish .form_text[name=cost] {padding-right:30px;}
+#afui #faq_publish .form_text[name=cost]:before {}
+
+#faq_publish .ipt_box {position:relative; height:46px; padding:12px 0; overflow:hidden; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#faq_publish .ipt_box.area {height:auto;}
+#afui.fandroid #faq_publish .ipt_box {border-bottom:1px solid #ededed; }
+#faq_publish .ipt_box .name{ width:45px; text-align:center; padding:0 6px; color:#777;}
+#afui.fandroid #faq_publish .ipt_box .ipt{border-bottom: none;}
+#faq_publish .ipt_box .ipt{position:relative; height:auto; padding:0 0 0 6px; border:none; 
+border-left:1px solid #ededed; color:#000; background: transparent; overflow: hidden; border-radius:0;}
+
+#afui #faq_publish textarea[name=desc] {height:250px; overflow: hidden; line-height: 20px;}
+
+#faq_publish .rewards { color: #aaa; }
+#faq_publish .rewards .fa {
+  position: relative;
+  bottom: -1px;
+  font-size: 16px;
+  color: orange;
+}
+#faq_publish .rewards input {
+  width: 30px;
+  height: 20px;
+  line-height: 12px;
+  padding: 2px;
+  margin: 0 5px 0 3px;
+  border: 1px solid orange;
+  border-radius: 3px;
+}
+
+#afui.ios8 #faq_publish .ipt_box {border-width:0.5px; border-color:#ccc;}
+#afui.ios8 #faq_publish .ipt_box .ipt {border-width:0.5px; border-color:#ddd;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">发布问题</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JfaqPublishForm"></a>
+</header>
+
+<form id="JfaqPublishForm" name="faqform" action="/?m=faq&a=publish" method="post" enctype="multipart/form-data">
+</form>

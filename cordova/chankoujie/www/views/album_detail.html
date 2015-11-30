@@ -1,0 +1,90 @@
+<style type="text/css">
+#album_detail .album_cover { font-size: 0; width: 100%; overflow: hidden; position: relative; }
+#album_detail .album_cover img { width: 140%; min-height: 90px; max-height: 120px; }
+#album_detail .album_cover .rname { position: absolute; z-index: 100; left: 0; bottom: 20px; height: 25px; line-height: 25px;
+padding: 0 10px; border-radius: 0 2px 2px 0; background: rgba(0,0,0,0.3); font-size: 14px; color: #fff; }
+#album_detail .album_info {padding:10px 10px 10px 10px;}
+#album_detail .follow_u {background:#ff5a00;}
+
+#afui .album_meta {padding:5px 0;min-height:50px;margin:10px 0 20px 0;}
+#afui .album_meta img {height:50px; width:50px; border-radius:2px;}
+#afui .album_meta .uname {margin-left:56px;color:#ff5a00;}
+#afui .album_meta .follow_u {height:24px; line-height:26px; font-size:12px; padding:0 6px; margin:10px 0 0 56px; border-radius:2px;}
+#afui .album_meta .coll {position:absolute; right:5px; bottom:2px; height:30px; line-height:31px; padding:0 10px; border-radius:2px; background:#ff5a00; color:#fff; }
+#afui .album_meta .J_unfollow {background:#aaa;}
+
+#album_detail .album_info h1 {margin-top:30px;}
+#album_detail .album_info .ckjbox > h1:first-child {margin-top:0;}
+#album_detail .album_info .basic li {line-height:26px; width:50%; float:right;}
+#album_detail .album_info .basic .head {color:#ccc;}
+
+#album_detail .album_info .more_albums a {display:block; width:80%; line-height:35px; padding:0 10px; 
+margin-bottom:15px; border:1px solid #efefef; border-radius:3px; color:#666;}
+#album_detail .album_info h1.title {margin:30px 0 10px 0; padding-bottom:4px;
+background: url(./css/images/mgsep.png) repeat-x 0 -20px; font-size:16px; color:#333; }
+#album_detail .album_info .more_albums a span{float:right; color:#aaa;}
+#album_detail .album_info .more_albums a span i{color:#666;}
+
+#afui #J_album_dt_info_wrap, #afui #J_album_dt_items_wall_wrap, #afui #J_album_dt_cmts_wrap{top:0; bottom:45px;}
+#afui #J_album_dt_info_wrap .ckjbox{padding:0;}
+#afui #J_album_dt_info_wrap > div:first-child{background:#fff;}
+
+#afui.ios #J_album_dt_info_wrap {background: #fff;}
+#afui.ios #J_album_dt_info_wrap, #afui.ios #J_album_dt_items_wall_wrap, #afui.ios #J_album_dt_cmts_wrap{bottom:48px;}
+</style>
+
+<div id="J_album_dt_info_wrap" class="J_tab_panel scroll_wrap scroll_nobar" style="display:nne;">
+    <div class="album_cover">
+        <img id="J_album_dt_cover" src="data/album/default_cover.jpg" onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);">
+        <div id="J_album_dt_name" class="rname"></div>
+    </div>
+    <div id="J_album_dt_info" class="album_info cfx">
+        <div id="J_album_dt_meta" class="album_meta prel">
+            <img class="pabs" src="">
+            <div class="uname prel">&nbsp;</div>
+        </div>
+        
+        <div class="ckjbox">
+        	<h1 class="title">基本信息</h1> 
+	        <ul class="basic cfx">
+	            <li><i class="head">食品：</i><i id="J_album_dt_items" class="val">&nbsp;</i></li>
+	            <li><i class="head">评论：</i><i id="J_album_dt_comments" class="val">&nbsp;</i></li>
+	            <li><i class="head">喜欢：</i><i id="J_album_dt_likes" class="val">&nbsp;</i></li>
+	            <li><i class="head">收藏：</i><i id="J_album_dt_follows" class="val">&nbsp;</i></li>
+	        </ul>
+        
+	        <div id="J_album_dt_intro" class="hide">
+	            <h1 class="title">介绍</h1> 
+	            <div class="intro">&nbsp;</div>
+	        </div>
+	        
+	        <div id="J_album_dt_malbums" class="hide">
+	            <h1 class="title">Ta的更多吃柜</h1> 
+	            <div class="more_albums">
+	            </div>
+	        </div>
+        </div>
+    </div>
+</div>
+
+<div id="J_album_dt_items_wall_wrap" class="J_tab_panel scroll_wrap" style="display:none;">
+    <div id="J_album_dt_items_wall" class="waterfall_wall" dataUri="" triggerBar='#J_album_dt_items_wall_triggerBar' pageBar ="#J_album_dt_items_wall_pageBar"  
+         relWrap='#J_album_dt_items_wall_wrap' feedRcd='wall_item' renderFunc='$.ckj.renderItems' wallData='$.albumDtl.wallData' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" sizeUnit=".pic" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wImgWd="0" oImgWd="210" wRate="0" 
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无食品" 	
+    >
+    </div>
+    <div id="J_album_dt_items_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_album_dt_items_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="angle_tabs f-f f-vc">
+    <a class="f-al" t='info'>吃柜信息</a>
+    <a class="f-al" t='item'>吃柜食品</a>
+    <a class="f-al J_tocmt" t='cmt'>吃柜评论</a>
+</div>

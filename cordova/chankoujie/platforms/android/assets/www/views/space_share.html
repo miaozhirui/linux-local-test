@@ -1,0 +1,30 @@
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">分享</h1>
+</header>
+
+<div class="hrz_slide_wrap">
+    <ul class="hrz_slide" id="J_share_tabs">
+        <li type="recipe" class="on">菜谱</li>
+        <li type="item">食品</li>
+        <li type="work">菜谱作品</li>
+        <li type="rstrnt">餐馆</li>
+        <li type="rstimg">餐馆附图</li>
+    </ul>
+</div>
+
+<div id="J_share_wall_wrap" class="scroll_wrap">
+    <div id="J_share_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_share_wall_triggerBar' pageBar ="#J_share_wall_pageBar"  
+         relWrap='#J_share_wall_wrap' feedRcd='wall_item' renderFunc='$.ckj.renderRecipes' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n"
+         sort="collects"
+    >
+    </div>
+    <div id="J_share_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_share_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<style>
+    #J_user_wall_wrap {top: 0;}
+    #J_user_wall{padding:10px 5% 0 5%; width: 100%;}
+</style>
+
+<div id="J_user_wall_wrap" class="scroll_wrap">
+    <div id="J_user_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_user_wall_triggerBar' pageBar ="#J_user_wall_pageBar"  
+         relWrap='#J_user_wall_wrap' feedRcd='block_user' renderFunc='$.ckj.renderBookUsers' allLoaded="n" isLoading='n' page="1" spage="0"
+         wallData='$.userBook.wallData' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="3" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n"
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无相关街友" 
+    >
+         
+    </div> 
+    <div id="J_user_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_user_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

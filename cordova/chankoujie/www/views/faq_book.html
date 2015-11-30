@@ -1,0 +1,50 @@
+<style type="text/css">
+#afui #J_faq_wall_wrap { top: 0; bottom: 45px; }
+#afui #faq_book .navorder_head .son_c {width:30%;}
+#afui #faq_book .navorder_head .order_rank {width:30%;}
+#afui #faq_book .navorder_head .faqsch, #afui #faq_book .navorder_head .faqpub {width:20%;}
+
+#afui #J_faq_keys {top:1px;}
+
+#afui #J_faq_type.showed {
+    transform: translate3d(0, -171px, 0); 
+    -webkit-transform: translate3d(0, -171px, 0); 
+    -ms-transform: translate3d(0, -171px, 0);
+    -o-transform: translate3d(0, -171px, 0);
+}
+
+#afui.ios #J_faq_wall_wrap {bottom:48px;}
+</style>
+    
+<div id="J_faq_wall_wrap" class="scroll_wrap">
+    <ul id="J_faq_wall" class="waterfall_wall" dataUri="" triggerBar='#J_faq_wall_triggerBar' pageBar ="#J_faq_wall_pageBar"  
+         relWrap='#J_faq_wall_wrap' feedRcd='wall_faq' renderFunc='$.ckj.renderFaqs' wallData='$.faqBook.wallData'
+         masonry="y" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0"
+         allLoaded="n" isLoading='n' type="allfaq" q="" page="1" spage="0" even-height="true"
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无问题"
+    >
+    </ul>
+    <div id="J_faq_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_faq_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="son_c" id="J_faq_keys_tri" reltgt="#J_faq_keys"><span>热门话题</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="order_rank" id="J_faq_type_tri" reltgt="#J_faq_type"><span>所有问题</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="faqpub J_faqPub"><a href="#faq_publish" class="fa fa-plus" data-pressed="true"></a></li>
+        <li class="faqsch J_faqSearch" relScroller="#J_faq_wall_wrap"><a href="#search/faq" class="fa fa-search" data-pressed="true" data-transition="slide"></a></li>
+    </ul>
+    <div id="J_faq_keys" relTri="#J_faq_keys_tri" class="son_cate" trans3d="true">
+    </div>
+    <div id="J_faq_type" relTri="#J_faq_type_tri" class="listbtn" trans3d="true">
+        <a class="active" type="allfaq">所有问题</a>
+        <a type="noans">待回答</a>
+        <a type="ansed">已回答</a>
+        <a type="elite">精华问题</a>
+    </div>
+</div>

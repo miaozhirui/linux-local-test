@@ -1,0 +1,35 @@
+<style type="text/css">
+#J_daren_wall_wrap {top:40px;}
+.wall_daren {display:block;}
+.wall_daren .pwr {margin:0;padding:0; font-size:0; overflow:hidden;background:#fffdf5;}
+.wall_daren .pwr img{width:100%; height:100%;}
+.wall_daren .f-f {height:30px;background:#fffdf5; padding:0 5px; font-size:12px; color:#ff5a00;}
+.wall_daren .f-f i{font-size:13px; color:#00b000;}
+</style>
+
+<div class="hrz_slide_wrap">
+    <ul id="J_dr_tabs" class="hrz_slide">
+        <li type="recipe" class="on">做菜达人</li>
+        <li type="item">食品达人</li>
+        <li type="rstrnt">餐馆达人</li>
+        <li type="group">吃群达人</li>
+        <li type="faq">答题达人</li>
+        <li type="diary">日记达人</li>
+    </ul>
+</div>
+
+<div id="J_daren_wall_wrap" class="scroll_wrap">    
+    <div id="J_daren_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_daren_wall_triggerBar' pageBar ="#J_daren_wall_pageBar"  
+         relWrap='#J_daren_wall_wrap' feedRcd='wall_daren' renderFunc='$.darenBook.renderDaren' allLoaded="n" isLoading='n' page="1" spage="0"  
+         wallData='$.darenBook.wallData' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wRate="0" delta="n" noDataMsg="<i class='fa fa-smile-o'></i>暂无相关达人" 
+    >
+    </div>
+    
+    <div id="J_daren_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_daren_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

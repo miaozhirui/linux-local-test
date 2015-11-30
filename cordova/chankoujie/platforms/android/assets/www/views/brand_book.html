@@ -1,0 +1,41 @@
+<style type="text/css">
+#afui #J_brand_wall_wrap {top: 36px; padding:0;}
+#J_brand_wall {width: 100%;}
+#afui #brand_book .cate_wrap {width:68%;}
+#afui #brand_book .order_wrap {width:21%;}
+#afui #brand_book .totop {width:11%;}
+</style>
+
+<div id="J_brand_wall_wrap" class="scroll_wrap">
+    <div id="J_brand_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_brand_wall_triggerBar' pageBar ="#J_brand_wall_pageBar"  
+         relWrap='#J_brand_wall_wrap' feedRcd='wall_brand' renderFunc='$.ckj.renderBrands' wallData='$.brandBook.wallData'  
+         allLoaded="n" isLoading='n' page="1" spage="0"  
+         masonry="y" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" sort="collects"
+		noDataMsg="<i class='fa fa-smile-o'></i>暂无品牌" 
+    >
+    </div>
+    <div id="J_brand_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_brand_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="navorder_block cfx">
+    <div class="J_block_wrap cate_wrap" init_height="35px">
+        <div id="J_brand_b_c">
+        </div>
+        <span class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="J_block_wrap order_wrap" init_height="35px"
+        >
+        <div id="J_brand_orderrank" relTri="#J_brand_orderrank_tri">
+            <a sort="follows">收藏</a>
+            <a sort="comments">评论</a>
+            <a sort="id">最新</a>
+        </div>
+        <span id="J_brand_orderrank_tri" class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="totop tosch"><a href="#search/brand" class="fa fa-search" data-pressed="true" data-transition="slide"></a></div>
+</div>

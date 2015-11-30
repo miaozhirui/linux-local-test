@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../dist/sea-debug.js"></script>
+	<script type="text/javascript">
+	// var obj = {
+	// 	1:'a',
+	// 	2:'b',
+	// 	2:'c',
+	// 	3:'d'
+	// }
+	// console.log(Object.keys(obj));
+
+	// 数组去重
+	var arr = [1,2,3,4,5,6,3,4,5,2,1,2,3,2,3,2,1,2,8];
+	var o = {};
+	var ret = [];
+	arr.forEach(function(item){
+		o[item]=1;
+	})
+
+	var endArr = Object.keys(o);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

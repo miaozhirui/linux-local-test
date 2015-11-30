@@ -1,0 +1,59 @@
+<style type="text/css">
+#afui #J_privmsg_wall_wrap { top: 0; bottom:45px;}
+#afui #J_privmsg_wall_wrap > div:first-child {padding:10px 0;}
+
+#privmsg_talk .pub_wrap {position:absolute; left:0; right:0; bottom:0; padding:5px 5px; border-top:1px solid #efefef;background:#f6f6f6;}
+#privmsg_talk .pub_wrap .cnt_wrap {margin:0 5px 0 0; font-size:0;}
+#privmsg_talk .pub_wrap textarea{height:34px; width:100%; padding:5px 5px;background:#fafafa; font-size:13px;
+border: 1px solid #dfdfdf; border-right: none; -webkit-appearance: none; appearance: none;
+box-shadow: 1px 1px 1px #ededed inset, -1px 0 1px #ededed inset;
+-webkit-box-shadow: 1px 1px 1px #ededed inset, -1px 0 1px #ededed inset;
+-ms-box-shadow: 1px 1px 1px #ededed inset, -1px 0 1px #ededed inset;}
+#afui.fandroid #privmsg_talk .pub_wrap textarea {height:34px;}
+#afui #privmsg_talk .pub_wrap .btn{display:block; height:34px!important; line-height:34px; padding:0 12px; font-size:15px;}
+
+#privmsg_talk .privmsg {padding:10px 10px 10px 46px; }
+#privmsg_talk .privmsg.oppsi {padding:10px 46px 10px 10px;}
+#privmsg_talk .privmsg a {display:block; width:36px; height:36px; background: #888; overflow: hidden;}
+#privmsg_talk .privmsg a img {width:36px;} 
+#privmsg_talk .privmsg .msgcnt {padding:10px 5px 5px 5px; background:#D3E0C0; font-size:15px; color:#333;}
+#privmsg_talk .privmsg.oppsi .msgcnt {background:#fffdf5; color:#333;}
+#privmsg_talk .privmsg .msgcnt .utime {margin-top:5px; font-size:10px; color:#bfbfbf;}
+#privmsg_talk .privmsg.oppsi .msgcnt .utime {text-align:right;}
+
+#privmsg_talk .triggerbar, #privmsg_talk .pagebar{background:transparent;padding:0;}
+#privmsg_talk .pagebar .prev, #privmsg_talk .pagebar .next {width:40px;border:none;padding:0;}
+#privmsg_talk .pagebar .curpage {padding:0; min-width:initial;}
+
+#afui.ios #privmsg_talk .privmsg .msgcnt {
+    margin:0 10px; 
+    border-radius: 6px;
+}
+#afui.ios #privmsg_talk .privmsg a { border-radius: 18px; }
+</style>
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">私信对话</h1>
+</header>
+
+<div id="J_privmsg_wall_wrap" class="scroll_wrap">
+    <div id="J_privmsg_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+    <ul id="J_privmsg_wall" class="waterfall_wall" dataUri="" triggerBar='#J_privmsg_wall_triggerBar' pageBar ="#J_privmsg_wall_pageBar"  
+         relWrap='#J_privmsg_wall_wrap' feedRcd='privmsg' renderFunc='$.privmsgTalk.renderPrivmsg' finishFunc="$.privmsgTalk.finishLoadFunc"
+         allLoaded="n" isLoading='n' page="1" spage="0" minMsgId=0 insert="prepend"
+         masonry="n" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" noTriggerBar="y"
+    >
+    </ul>
+</div>
+
+<div class="pub_wrap f-f f-vc">
+    <div class="cnt_wrap f-al">
+        <textarea class="r2" id="JprivMsgCnt" onpropertychange="if(this.scrollHeight > 34) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 34) this.style.height=this.scrollHeight + 'px';"></textarea>
+    </div>
+    <a id="JprivMsgSend" class="gbtn btn r2" data-pressed="true">发送</a>
+</div>

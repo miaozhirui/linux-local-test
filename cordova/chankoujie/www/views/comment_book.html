@@ -1,0 +1,59 @@
+<style type="text/css">
+#afui #J_comment_wall_wrap {top: 0; bottom:45px; padding:0;}
+#J_comment_wall{padding:0 4% 0 4%; width: 100%;}
+
+/*comments*/
+#afui #comment_book {background: #fff;}
+#afui .comments {padding:0 15px; }
+#afui .comments li{position:relative; padding:20px 0 10px 0; border-bottom: 1px solid #e8e8e8;}
+#afui.fandroid .comments li {border-bottom: 1px solid #efefef; margin: -1px 0;}
+#afui .comments li .aw{position:absolute; display: block; width:32PX; height:32px; overflow: hidden;}
+#afui .comments li .avatar{width:32PX; min-height: 32px;}
+#afui .comments .cmt {margin-left:40px;}
+#afui .comments .umrply {margin-bottom:5px;font-size:16px;}
+#afui .comments .umrply .uname { line-height: 20px; margin-top:-3px; color:#00b000;}
+#afui .comments .reply { display:inline-block; padding:10px; margin:-3px 0 0 5px;  font-size:14px; color:#dfdfdf;}
+#afui .comments .reply.pressed {color:#888;}
+#afui .comments .info {line-height:20px;color:#666; font-size:14px; word-break: break-word;}
+#afui .comments .info a {color:#00b000;}
+#afui .comments p img { height:16px; vertical-align:middle; position:relative;top:-2px;}
+#afui .comments .time{text-align:right;color:#ccc;font-size:13px;margin-top:3px;}
+
+#comment_book .pub_wrap {position:absolute; left:0; right:0; bottom:0; padding:5px 5px; border-top:1px solid #efefef;background:#f6f6f6;}
+#comment_book .pub_wrap .cnt_wrap {margin:0 5px 0 0; font-size:0;}
+#comment_book .pub_wrap textarea{height:34px; width:100%; padding:5px 5px;background:#fafafa; font-size:13px;
+border: 1px solid #dfdfdf; border-right: none; -webkit-appearance: none; appearance: none;
+box-shadow: 1px 1px 1px #ededed inset, -1px 0 1px #ededed inset;
+-webkit-box-shadow: 1px 1px 1px #ededed inset, -1px 0 1px #ededed inset;
+-ms-box-shadow: 1px 1px 1px #ededed inset, -1px 0 1px #ededed inset;}
+#afui.fandroid #comment_book .pub_wrap textarea {height:34px;}
+#afui #comment_book .pub_wrap .btn{display:block; height:34px!important; line-height:34px; padding:0 12px; font-size:15px;}
+
+#afui.ios .comments li .avatar {border-radius: 16px;}
+#afui.ios8 .comments li{border-width: 0.5px; border-color:#ccc;}
+#afui.ios8 .cmt_tri{border-width: 0.5px;} 
+#afui.ios8 .comment_publish .pub_box .pub_content {border-width: 0.5px; border-color: #bbb;}
+</style>
+
+<div id="J_comment_wall_wrap" class="scroll_wrap">
+    <ul id="J_comment_wall" class="waterfall_wall comments" dataUri="" triggerBar='#J_comment_wall_triggerBar' 
+        pageBar ="#J_comment_wall_pageBar" relWrap='#J_comment_wall_wrap' feedRcd='comment_rcd' renderFunc='$.ckj.renderComments'
+        type='' id='' cid='' allLoaded="n"  isLoading='n' page="1" spage="0" even-height="true"
+        noDataMsg="<i class='fa fa-smile-o'></i>暂无评论"
+    >
+    </ul> 
+    <div id="J_comment_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_comment_wall_triggerAll" class="triggerAll hide">查看全部评论</div>
+    <div id="J_comment_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+<div class="pub_wrap f-f f-vc">
+    <div class="cnt_wrap f-al">
+        <textarea class="r2" id="JcmtMsgCnt" onpropertychange="if(this.scrollHeight > 34) this.style.height=this.scrollHeight + 'px';" 
+                oninput="if(this.scrollHeight > 34) this.style.height=this.scrollHeight + 'px';"></textarea>
+    </div>
+    <a id="JcmtMsgSend" class="gbtn btn r2" data-pressed="true">发布</a>
+</div>

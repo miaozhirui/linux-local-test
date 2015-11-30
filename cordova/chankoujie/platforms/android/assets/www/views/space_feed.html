@@ -1,0 +1,25 @@
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">动态</h1>
+</header>
+
+<div id="J_sp_feed_tabs" class="typetabs f-f f-vc">
+    <div class="f-al f-f f-vc">
+        <a t="alltpc" class="cur f-al">全部动态</a>
+        <a t="whotpc" class="f-al">我的动态</a>
+    </div>
+</div>
+
+<div id="J_sp_feed_wall_wrap" class="scroll_wrap">
+    <ul id="J_sp_feed_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_sp_feed_wall_triggerBar' pageBar ="#J_sp_feed_wall_pageBar"  
+         relWrap='#J_sp_feed_wall_wrap' feedRcd='wall_feed' renderFunc='$.spaceFeed.renderFeeds' allLoaded="n" isLoading='n' page="1" spage="0"  
+         sort="id" even-height="true"
+    >
+    </ul>
+    <div id="J_sp_feed_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_sp_feed_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

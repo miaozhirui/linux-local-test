@@ -1,0 +1,77 @@
+<style type="text/css">
+#diary_detail #J_diary_wrap {position:absolute;top:0;bottom:45px;left:0;right:0;}
+#diary_detail #J_diary_wrap> div:first-child {padding-bottom:10px;background: #fff;}
+
+/*diary detail page*/
+#diary_detail .top {margin-bottom:10px;padding:10px;background:#fafafa;box-shadow:0 1px 1px #dfdfdf;}
+#diary_detail .top .ltime {width:53px;padding-top:8px;text-align:center; background:url(css/images/calend.png) no-repeat 0 0;}
+#diary_detail .top .ltime > .year {font-weight:bold; color:#fff;}
+#diary_detail .top .ltime > .mday {margin-top:5px;font-size:15px; font-weight:bold; color:#666;}
+#diary_detail .top .ltime > .hmin {font-size:12px; color:#888;}
+
+#afui.ios #diary_detail .ltime > .mday { margin-top: 2px; line-height: 16px;}
+
+#diary_detail .meta {position:relative;padding-left:8px;}
+#diary_detail .meta .title {font-size:15px; font-weight:bold;}
+#diary_detail .meta .follow_u{ position: absolute; right: 0; bottom:0; height:26px;
+line-height: 28px;background: #e8f3e8;color: #666;padding: 0 8px;font-size: 12px;}
+
+#diary_detail .avatar {display:block;margin-top:6px;color:#00b000;}
+#diary_detail .avatar img{width:16px; height:16px; margin-right:2px; vertical-align:middle;}
+#diary_detail .metainfo {margin-top:5px; color:#aaa;}
+#diary_detail .metainfo {font-size:12px; }
+#diary_detail .metainfo .fr{color:#00b000; margin-right:8px;}
+
+#diary_detail .drydtl{margin:0 10px;padding:10px; background:#efefef;}
+#diary_detail .detail_intro {line-height: 22px; font-size: 14px; font-family: 'Microsoft YaHei'; color:#333; white-space: pre-wrap; clear: both; word-break: break-word;}
+#diary_detail .detail_intro a { color: #00b000; white-space: normal; }
+#diary_detail .detail_intro a.pressed { color: #ff5a00;}
+#diary_detail .detail_intro img[src*="/static/images/expr"], #diary_detail .detail_intro img[src*="loading"]{display:inline!important;float:none; width:18px; margin:0 2px; vertical-align:middle; position:relative;bottom:1px;}
+#diary_detail .detail_intro img {max-width:100%;}
+
+#diary_detail .ckjbox {padding:10px; margin:15px 10px; background:#efefef;}
+#diary_detail .sumcmts .J_tocmt {background:#fff;}
+
+#diary_detail .dryops {position:absolute;bottom:0;left:0;right:0;height:45px; line-height:45px;background:#fffdf5;border-top:1px solid #00b000;}
+#diary_detail .dryops a{display:block;float:left;height:100%;width:25%;text-align:center;color: #9f9f9f;}
+#diary_detail .dryops a.pressed *{color:#333;}
+#diary_detail .dryops a .fa { display: block; font-size:18px; position:relative; top: 7px; }
+#diary_detail .dryops a .fa e{font-size:12px;padding-left:1px; position:relative; bottom:3px; }
+#diary_detail .dryops a span{ display: block; position:relative; bottom: 8px;  font-size: 10px; }
+
+#afui.ios #diary_detail .dryops {height:48px; line-height:48px; border-top: 1px solid #aaa;}
+#afui.ios #diary_detail .rciops a .fa { font-size: 18px; }
+#afui.ios #recipe_detail .rciops a span { bottom: 8px;}
+#afui.ios8 #diary_detail .dryops {border-width:0.5px;}
+</style>
+
+<div id="J_diary_wrap">
+    <div id="J_diary_top" class="top f-f">
+    	<div class="ltime">
+            <div class="year"> </div>
+            <div class="mday"> </div>
+            <div class="hmin"> </div>
+    	</div>
+    	<div class="meta f-al">
+    		<p class="title"> </p>
+            <div class="metainfo cfx">浏览:<i class="pink"> </i></div>
+            <a class="avatar" >
+               <img class="pic r3" src="data:image/gif;base64,R0lGODlhAQABAIAAAPLy8gAAACH5BAAAAAAALAAAAAABAAEAQAICRAEAOw==">
+            </a>
+    	</div>
+    </div>
+
+    <div id="J_diary_dtl" class="drydtl">
+        <pre class="detail_intro"></pre>
+    </div>
+    
+    <div class="ckjbox sumcmts">
+        <ul id="J_diary_dt_cmts">
+        </ul>
+        <a class="J_tocmt" data-pressed="true" tourl="#comment_book/recipe/233003">查看所有<i class="J_n num">&nbsp;</i>回应
+        </a>
+    </div>
+</div>
+    
+<div id="J_diary_ops" class="dryops cfx">
+</div>

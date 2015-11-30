@@ -1,0 +1,47 @@
+<style type="text/css">
+/*setting box*/
+#afui #setting_basic {background:#F2F3E32}
+#afui #setting_basic input.toggle + label {left:0;}
+#setting_basic .setting_box{padding:10px 0; background: #fff; }
+#setting_basic .settings_title {height:36px; line-height:36px; padding-left: 10px;}
+#setting_basic .settings_title span {color: #00b000;font-size:16px;font-weight: bold;height: 30px;line-height: 30px;}
+/*basic setting*/
+#setting_basic .setting_avatar{min-height:130px; padding:15px;background:#f8f8f8;} 
+#setting_basic .setting_avatar .avatar_wrap {width:100px; height:100px; margin:auto; border:5px solid #ffebe0;border-radius:5px; font-size:0;}
+#setting_basic .setting_avatar img{ width: 100%; height: 100%; border-radius:2px; }
+#afui #setting_basic .setting_avatar .btn{left:0;bottom:0;height:26px; width:100%;padding:0;border:none;border-radius:0;
+text-align:center;background:rgba(0,0,0,.3);font-size:14px;font-weight:bold;color:#fff; line-height: 26px;}
+#setting_basic .setting_avatar .btn .fa{color:#ff5a00;margin-right:1px;}
+#setting_basic .setting_avatar .tips {color: #aaa; margin-top: 6px; text-align:center; font-size:13px;}
+
+#setting_basic .ipt_box {position:relative; height:46px; overflow:hidden; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#afui.fandroid #setting_basic .ipt_box {border-bottom:1px solid #ededed; }
+#setting_basic .ipt_box.area {height:auto;}
+#setting_basic .ipt_box .name{ width:46px; height:20px; line-height:20px; text-align:center; padding:0 6px; color:#777; border-right:1px solid #ededed; }
+#setting_basic .ipt_box .name4{width:72px;}
+#setting_basic .ipt_box .ipt{position:relative; height:46px; padding:0 0 0 6px; border:none; 
+color:#000; background: transparent; overflow: hidden; -webkit-appearance: none; appearance: none;}
+#setting_basic .ipt_box select{height:46px; border-bottom:none; -webkit-appearance: none; appearance: none;}
+#setting_basic .ipt_box .ipt_angle{position: relative; padding-right:30px;}
+#setting_basic .ipt_box .ipt_angle:before { position: absolute; right: 10px; top: 12px; content: "\f105"; font-family: "fa"; color: #ededed; font-size: 22px; }
+#setting_basic .addr_list {padding:6px 5px; background:#ffebe0;}
+#setting_basic .addr_list .label {color:#ff5a00;}
+#setting_basic .addr_list select { position: relative; display: inline-block; width:82px; height:20px; padding:0 10px 0 0;
+    margin: 6px 4px 6px 0; color: #666; border:none; -webkit-appearance: none; background:url(css/images/addr_angle.png) no-repeat right 4px; }
+#setting_basic .addr_list select.pressed {background:#fff;}
+#setting_basic .addr_list select:last-child{ width:100px; margin-right:0; border-right:none; background: none; } 
+#afui #setting_basic .form_text { height: 46px; background: #fff; border: none; border-bottom: 1px solid #dfdfdf; position: relative; }
+#afui #setting_basic textarea[name=intro] { height: 80px; overflow: hidden; line-height: 20px; } 
+
+#afui.ios8 #setting_basic .ipt_box {border-width: 0.5px; border-color:#ccc;}
+#afui.ios8 #setting_basic .ipt_box .name {border-width: 0.5px;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">个人资料设置</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JsettingBasicForm"></a>
+</header>
+
+<form id="JsettingBasicForm" action="/?m=user&a=index" method="post">
+</form>

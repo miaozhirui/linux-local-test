@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video.js | HTML5 Video Player</title>
+
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <!-- Default URLs assume the examples folder is included alongside video.js -->
+  <link href="http://vjs.zencdn.net/5.0/video-js.css" rel="stylesheet" type="text/css">
+
+  <!-- Include ES5 shim, sham and html5 shiv for ie8 support  -->
+  <!-- Exclude this if you don't need ie8 support -->
+  <!-- // <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script> -->
+
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="http://vjs.zencdn.net/5.0/video.js"></script>
+
+</head>
+<body>
+  <style>
+      .video-js .vjs-big-play-button {
+        top:50%;
+        left:50%;
+        margin-left: -1.5em;
+        margin-top: -0.75em;
+      }
+  </style>
+  
+  <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="320" height="264"
+      poster="http://video-js.zencoder.com/oceans-clip.png"
+      data-setup="{}">
+    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+  </video>
+
+</body>
+</html>

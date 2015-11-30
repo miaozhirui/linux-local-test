@@ -1,0 +1,222 @@
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">美食家园</h1>
+    <a href="#setting_index" class="fa fa-gear"  data-pressed="true" data-transition="slide"></a>
+</header>
+
+<div id="J_spaceidx_top" class="top cfx">
+    <div class="fans prel">
+        <div class="dummy"></div>
+        <div class="inner">
+            <div class="tbl">
+                <a href="#space_fans/0" data-transition="slide" class="tbl_cell J_href_uid">
+                    <span id="J_spidx_fans" class="val J_setval" f="fans">0</span>
+                    <span class="label">粉丝</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="logo prel">
+        <div class="dummy"></div>
+        <div class="pic">
+            <a class="prel JgoSetting" data-transition="slide">
+                <img id="J_spaceidx_avatar"  src="./data/avatar/default.jpg" class="src" onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);"/>
+                <i class="fa fa-camera hide J_athome_show"></i>
+            </a>
+        </div>
+    </div>
+    <div class="follows prel">
+        <div class="dummy"></div>
+        <div class="inner">
+            <div class="tbl">
+                <a href="#space_follows/'+u.id+'" data-transition="slide" class="tbl_cell J_href_uid">
+                    <span id="J_spaceidx_follows" class="val J_setval" f="follows">0</span>
+                    <span class="label">关注</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a class="sendmsg r2 J_athome_hide JsendPrivMsg" href="#privmsg_talk/0" data-pressed="true" data-transition="slide"><i class="fa fa-envelope-o"></i>发私信</a>
+    <a id="J_spaceidx_signin" class="signin r2 J_athome_show" data-pressed="true"><i class="fa fa-edit"></i>签到</a>
+    <a class="setcover r2 J_athome_show" href="#setting_cover" data-pressed="true" data-transition="slide"><i class="fa fa-profile"></i>设封面</a>
+</div>
+
+<a href="#space_uinfo" data-transition="slide" class="intro cfx">
+    <span id="J_spaceidx_intro" class="ofh fl">&nbsp;</span> <i class="fa fa-angle-right fr"></i>
+</a>
+
+<div id="J_spaceidx_mods" class="modules cfx">
+    <a class="J_athome_show" href="#hist_book">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-eye pre"></i>
+                <span>浏览记录</span>
+            </span>
+        </span>
+    </a>
+    
+    <a class="J_href_uid" href="#space_feed/0" >
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-bullhorn pre"></i>
+                <span><i class="J_wt">我</i>的动态</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_rmenu/'+u.id+'">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-clipboard pre"></i>
+                <span><i class="J_wt">我</i>的菜单</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_album/'+u.id+'" >
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-archive pre"></i>
+                <span><i class="J_wt">我</i>的吃柜</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_like/'+u.id+'">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-heart pre"></i>
+                <span><i class="J_wt">我</i>的喜欢</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_share/'+u.id+'" >
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-share pre"></i>
+                <span><i class="J_wt">我</i>的分享</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_grpsub/'+u.id+'" >
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-group pre"></i>
+                <span><i class="J_wt">我</i>的吃群</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_faq/'+u.id+'">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-question-circle pre"></i>
+                <span><i class="J_wt">我</i>的问答</span>
+            </span>
+        </span>
+    </a>
+    
+    <a class="J_athome_show" href="#shop_book">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-cart pre"></i>
+                <span>预购清单</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_athome_show" href="#score_orders">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-list-ordered pre"></i>
+                <span>馋豆订单</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_athome_show" href="#score_logs">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-moneybag pre"></i>
+                <span>馋豆记录</span>
+            </span>
+        </span>
+    </a>
+    <a class="J_href_uid" href="#space_diary/'+u.id+'" >
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-book-alt pre"></i>
+                <span><i class="J_wt">我</i>的日记</span>
+            </span>
+        </span>
+    </a>
+    <a id="J_spidx_atme" class="J_athome_show"  href="#atme_book">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-at bold pre"></i>
+                <span>@我的</span>
+            </span>
+        </span>
+    </a>
+    <a id="J_spidx_cmtme" class="J_athome_show" href="#cmtme_book">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-comments-o pre"></i>
+                <span>回应我的</span>
+            </span>
+        </span>
+    </a>
+    <a id="J_spidx_privmsg" class="J_athome_show" href="#privmsgsum_book">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-envelope-o prtl pre"></i>
+                <span>我的私信</span>
+            </span>
+        </span>
+    </a>
+    <a id="J_spidx_system" class="J_athome_show" href="#sysmsg_book">
+        <span class="box f-f f-vc f-hc" data-dpressed="true">
+            <span class="box_inner">
+                <i class="fa fa-exclamation-circle prtl pre"></i>
+                <span>系统消息</span>
+            </span>
+        </span>
+    </a>
+</div>
+
+<div id="J_spaceidx_daren" class="daren_info">
+    <a href="#subject_detail/67" class="title"><i class="J_wt">我</i>的达人勋章  <span class="fr">如何获得勋章<i class="fa fa-angle-right"></i></span></a>
+    <ul class="darens cfx">
+        <li tp="recipe" class="daren f-f f-vc f-hc">
+            <div class="wrap">
+                <i class="fa fa-badge"></i>
+                <p>菜谱达人</p>
+            </div>
+        </li>
+        <li tp="item" class="daren f-f f-vc f-hc">
+            <div class="wrap">
+                <i class="fa fa-badge3"></i>
+                <p>食品达人</p>
+            </div>
+        </li>
+        <li tp="rstrnt" class="daren f-f f-vc f-hc">
+            <div class="wrap">
+                <i class="fa fa-badge2"></i>
+                <p>餐馆达人</p>
+            </div>
+        </li>
+        <li tp="group" class="daren f-f f-vc f-hc">
+            <div class="wrap">
+                <i class="fa fa-medal"></i>
+                <p>吃群达人</p>
+            </div>
+        </li>
+        <li tp="faq" class="daren f-f f-vc f-hc">
+            <div class="wrap">
+                <i class="fa fa-davidstar"></i>
+                <p>问答达人</p>
+            </div>
+        </li>
+        <li tp="diary" class="daren f-f f-vc f-hc">
+            <div class="wrap">
+                <i class="fa fa-medal2"></i>
+                <p>日记达人</p>
+            </div>
+        </li>
+   </ul>
+   <a class="comeon">我要把每颗勋章都点亮~</a>
+</div>

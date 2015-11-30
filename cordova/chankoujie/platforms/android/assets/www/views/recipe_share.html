@@ -1,0 +1,116 @@
+<style type="text/css" media="screen">
+
+#afui #recipe_share > .afScrollPanel{padding-bottom:15px;}
+#afui #recipe_share .form_text {height:46px; background: #fff; border:none; border-bottom:1px solid  #dfdfdf;}
+#afui #recipe_share .form_text.rci_nm {height:45px;}
+
+#recipe_share .steps li {position:relative;height:90px; width:100%;}
+#afui #recipe_share .steps .form_text {height:90px; padding-right: 24px; overflow: hidden;}
+#recipe_share .up_img_wrap{ position: absolute; left:0;top:0; width:90px; height: 90px; overflow:hidden; margin-right:0px; background: #C6B6A6; }
+#recipe_share .preview{width:90px;height:90px; line-height:90px; text-align:center; background:#C6B6A6;}
+#recipe_share .preview img {width:120px; margin-left:-15px;}
+#recipe_share .up_img_abs{width:90px; height:90px; position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#recipe_share .up_img_renew{width:26px; height:26px;  position:absolute;z-index:10;top:0;left:0;overflow:hidden;}
+#recipe_share .up_img_renew .up_img_tip{width:100%; height:100%; line-height:29px; font-size:20px;font-weight:normal; 
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#55000000',endColorstr='#55000000'); background: rgba(0, 0, 0, 0.5);
+}
+#recipe_share .up_img_tip.pressed{background: rgba(0,0,0,0.2);}
+#recipe_share .up_img_tip span{color:#fff;}
+#recipe_share .nimg .picintro { display:block; height:90px; padding-left:90px; width: 100%; overflow: hidden;}
+#recipe_share .imgtext { width: 100%; height:100%;line-height: 150%; padding: 5px; border-left: none;  border-radius: 0;}
+#recipe_share .nimg .ops { position:absolute; right:2px; top:0; bottom:0; display:block; width: 20px;
+line-height:20px; text-align: center; font-weight:bold; margin-top:0; }
+#recipe_share .nimg .ops a{ display: block; width:20px; height:20px; line-height:20px; text-align:center; margin-top:14px; background: #ccc; color: #FFF; }
+#recipe_share .nimg .ops a:first-child {margin-top:0; }
+#recipe_share .nimg .ops a.up {top:0;}
+#recipe_share .nimg .ops a.pressed {background: #aaa;}
+
+#recipe_share .up_img_tip{ position: relative; width: 90px; height: 90px;line-height: 90px; text-align:center;
+font-weight:bold; font-size:16px; background: #C6B6A6;  overflow: hidden; cursor:pointer; }
+#recipe_share .up_img_tip.pressed{background: rgba(0,0,0,0.2);}
+#recipe_share .up_img_tip span{color:#fff;}
+
+/*cover img*/
+#recipe_share .rci_cover {width:86%; height:200px; margin:16px auto;}
+#recipe_share .rci_cover .up_img_wrap {position:relative; width:100%; height:100%;}
+#recipe_share .rci_cover .preview{width:100%; height:100%; line-height:200px; overflow: hidden;}
+#recipe_share .rci_cover .preview img {width:100%;margin:0;}
+#recipe_share .rci_cover .up_img_abs{width:100%; height:100%;}
+#recipe_share .rci_cover .up_img_renew{height:40px; width:40px;}
+#recipe_share .rci_cover .up_img_tip{width:100%; height:100%; line-height: 200px; font-size:22px;}
+#recipe_share .rci_cover .up_img_renew .up_img_tip{line-height:46px;}
+
+#afui #recipe_share textarea[name=intro], #afui #recipe_share textarea[name=tips] {overflow: hidden; line-height: 20px;}
+
+#recipe_share .stuff {height:46px; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#recipe_share .stuff > p{height:22px; border-right: 1px solid #efefef;}
+#recipe_share .stuff > p:last-child {border-right: none;}
+#afui #recipe_share .stuff .form_text {height:22px; border-bottom:none; }
+#afui.fandroid #recipe_share .stuff {border-bottom:1px solid #ededed; }
+#recipe_share .stuff .amount{ width:100px;}
+#recipe_share .stuff .action{ width:46px; text-align: center; height:46px; line-height: 46px;}
+#recipe_share .stuff .action .fa{ width:46px; height:46px; line-height:46px; color:#dfdfdf;}
+#recipe_share .stuff .action .fa.pressed {color:#000;}
+
+#recipe_share .rci_attr {height:46px; text-align:left; border-bottom: 1px solid #dfdfdf; background: #fff;}
+#recipe_share .rci_attr > p{height:24px; line-height: 24px; border-right: 1px solid #efefef;}
+#afui #recipe_share .rci_attr .form_text {height:22px; border-bottom:none; border-right: 1px solid #efefef;}
+#afui.fandroid #recipe_share .rci_attr {border-bottom:1px solid #ededed; }
+#recipe_share .rci_attr .name{ width:80px; text-align:center; padding:0 10px;}
+#recipe_share .rci_attr .ipt{position:relative; height:46px; line-height:46px; padding:0 46px 0 10px; border-right: none;} 
+#recipe_share .rci_attr .ipt:before {position: absolute; right:10px; top:0px;  content: "\f105"; font-family:"fa"; color:#ededed; font-size: 22px; }
+
+#afui.ios #subject_share .ipt_box .ipt{border-radius:0;}
+#afui.ios8 #recipe_share .form_text, #afui.ios8 #recipe_share .stuff, #afui.ios8 #recipe_share .rci_attr,
+#afui.ios8 #recipe_share .stuff > p, #afui.ios8 #recipe_share .rci_attr > p{border-width:0.5px; border-color:#ccc;}
+#afui.ios8 #recipe_share .stuff > p, #afui.ios8 #recipe_share .rci_attr > p {border-color: #ddd;}
+</style>
+
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">发布菜谱</h1>
+    <a class="fa fa-check JvvComSubmitBtn" data-pressed="true" vv-form="#JrecipeShareform"></a>
+</header>
+
+<form action="/?m=recipe&a=share" method="post" name="recipeform" id="JrecipeShareform" enctype="multipart/form-data">
+
+</form>
+
+
+<ul id="JshareRecipeStepCopy" style="display:none;">
+    <li class="J_step nimg mt10 cfx">
+        <div class="J_upImgWrap up_img_wrap">
+            <div class="J_preview preview">
+            </div>
+            <div class="J_shareRecipeImg_abs up_img_abs">
+                <div id="J_shareRecipeStep_x" class="J_shareRecipeStep up_img_tip vv-pressed">
+                    <span>+步骤图</span>
+                </div>
+                <input type="hidden" id="J_shareRecipeStepIpt_x" name="stepimg[]" value="">
+            </div>
+        </div>
+        <span class="picintro">
+            <textarea onclick="" name="stepstate[]" class="form_text imgtext" placeholder="步骤解说"></textarea></span>
+        <span class="ops">
+            <a class="J_stepup up fa-angle-right fa-rotate-270" data-pressed="true"></a>
+            <a class="J_stepdown down fa-angle-right fa-rotate-90" data-pressed="true"></a>
+            <a href="javascript:void 0;" class="adddel fa fa-plus JaddDelStep" data-pressed="true"></a>
+        </span>
+    </li>
+</ul>
+
+<ul id="JmainStuffCopy" class="stuffs m_stuffs mt10" style="display:none;">
+   <li class="stuff f-f f-vc">                               
+       <p class="name f-al"><input type="text" class="J_stuff form_text stufftxt" name="m_stuff[]" value="" placeholder="主料"></p>                              
+       <p class="amount"><input type="text" class="form_text amounttxt" name="m_stuff_amount[]" value="" placeholder="适量"></p>                               
+       <p class="action"><i class="fa fa-plus JaddDelStuff" data-pressed="true"></i></p>                         
+   </li>
+</ul>
+
+<ul id="JsubStuffCopy" class="stuffs s_stuffs mt10" style="display:none;">
+   <li class="stuff f-f f-vc">                               
+       <p class="name f-al"><input type="text" class="J_stuff form_text stufftxt" name="s_stuff[]" value="" placeholder="辅料"></p>                              
+       <p class="amount"><input type="text" class="form_text amounttxt" name="s_stuff_amount[]" value="" placeholder="适量"></p>                               
+       <p class="action"><i class="fa fa-plus JaddDelStuff" data-pressed="true"></i></p>                         
+   </li>
+</ul>

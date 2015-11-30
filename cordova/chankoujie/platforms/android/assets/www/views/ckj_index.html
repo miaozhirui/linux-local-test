@@ -1,0 +1,151 @@
+<style type="text/css">
+    #afui #ckj_index {visibility:hidden;}
+    #ckj_index #JckjIndexScroll { top: 0; bottom: 44px; }
+    
+    #ckj_index .top_hot_rec{display:block; width:100%; height:150px; overflow: hidden;}
+    #ckj_index .top_hot_rec img {width: 100%;}
+    
+    #ckj_index .big_blks {margin-top:5px; overflow: hidden; }
+    #ckj_index .big_blks .blk { float:left; position:relative; margin:10px 0 0 10px; background: #fff; color:#333;}
+    #afui.ios #ckj_index .big_blks .blk {border-radius: 2px;}
+    #ckj_index .big_blks .blk .logo {margin-top:3px; width:100%; text-align: center;}
+    #ckj_index .big_blks .blk .title {margin-top:3px; width: 100%; text-align: center; font-size:14px; color:#666;}
+    #ckj_index .big_blks .blk a {position: absolute; top:0; left:0; right:0; bottom:0;}
+    #ckj_index .big_blks .blk a.pressed {background: #000; opacity: 0.1;}
+    
+    #ckj_index .big_blks .blk .fa {width:52px; height:52px; text-align:center; line-height:52px; font-size:24px; color:#fff;}
+    #afui #ckj_index .big_blks .blk .fa { border-radius: 100%} 
+    #ckj_index .big_blks .blk1 .fa{background: #ff5d00;} #ckj_index .big_blks .blk2 .fa{background: #00c000; font-size: 30px; }
+    #ckj_index .big_blks .blk3 .fa{background: #83AAFF;} #ckj_index .big_blks .blk4 .fa{background: #ccd545;}
+    #ckj_index .big_blks .blk5 .fa{background: #ff89fe;} #ckj_index .big_blks .blk6 .fa{background: #ffae00; font-size:28px;}
+    
+    #ckj_index .dtl_list {padding:5px 0 15px 0;}
+    #ckj_index .dtl_list li{ padding: 12px 0 0 0; overflow: hidden;}
+    #ckj_index .dtl_list li a {display:block; float:left; text-align:center; width:25%; order-right: 1px solid #dfdfdf;}
+    #afui.fandroid #ckj_index .dtl_list li a { order-right: 1px solid #ededed;}
+    #ckj_index .dtl_list li a .fa {position: relative; top:2px; right:2px; color:#00b000; }
+    #ckj_index .dtl_list li a:last-child {border-right: none;}
+    #ckj_index .dtl_list li a.pressed{color:#ff5a00;}
+    
+    #afui #ckj_index .navorder_head .laybtn { width: 38%; }
+    #afui #ckj_index .navorder_head .laybtn a{padding-top:5px; line-height:20px;  font-size:12px;}
+    #afui #ckj_index .navorder_head .laybtn a .fa {font-size:18px; display: block; }
+    #afui #ckj_index .navorder_head .topub { width: 24%; }
+    
+    #afui.android #ckj_index #JckjIndexPubTypes.showed {
+        transform: translate3d(0, -100%, 0); 
+        -webkit-transform: translate3d(0, -100%, 0); 
+        -ms-transform: translate3d(0, -100%, 0);
+        -o-transform: translate3d(0, -100%, 0);
+    }
+   
+    /*
+    #afui.ios #ckj_index #JckjIndexPubTypes a:nth-child(2){
+        display: none;
+    }
+    */
+    
+    #afui #ckj_index .navorder_head li.topub a {font-size:26px;}
+    #afui .navorder_head li.cur a[data-pressed]{color:#fff;}
+    
+    #afui.ios #ckj_index .navorder_head .laybtn a .fa {line-height: 20px; font-size: 22px; }
+    #afui.ios #ckj_index #JckjIndexScroll { bottom: 48px; }
+    #afui.ios8 #ckj_index .top_list li a, #afui.ios8 #ckj_index .dtl_list li a  { border-width:0.5px; border-color:#ccc; }
+</style>
+<header>
+    <a class="fa fa-gift" href="#sitem_book" data-pressed="true"></a>
+    <h1 class="pageTitle">馋口街</h1>
+    <a id="toMyHome" class="fa fa-user2" href="#space_index" data-pressed="true" data-resetHistory="true"></a>
+</header>
+<div id="JckjIndexScroll" class="scroll_wrap scroll_nobar">
+    <a class="top_hot_rec JtopHotRec" href="#load_page/good_rec" >
+        <img src="img/index_top_rec.jpg" errimg="img/index_top_rec.jpg" 
+             onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, $.vv.cfg.cWidth, false);"/>
+    </a>
+    <ul class="big_blks cfx">
+        <li class="blk blk1">
+            <div class="logo">
+                <i class="fa fa-lollipop"></i>
+            </div>
+            <p class="title">找吃的</p>    
+            <a class="go" href="#item_cate" data-dpressed="true" data-resetHistory="true"></a>
+        </li>
+        <li class="blk blk2">
+            <div class="logo">
+                <i class="fa fa-food"></i>
+            </div>
+            <p class="title">学做菜</p>    
+            <a class="go" href="#recipe_cate" data-dpressed="true" data-resetHistory="true"></a>
+        </li>
+        <li class="blk blk3">
+            <div class="logo">
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <p class="title">去哪吃</p>    
+            <a class="go" href="#rstrnt_book" data-dpressed="true" data-resetHistory="true"></a>
+        </li>
+        <li class="blk blk4">
+            <div class="logo">
+                <i class="fa fa-group"></i>
+            </div>
+            <p class="title">泡吃群</p>    
+            <a class="go" href="#group_book" data-dpressed="true" data-resetHistory="true"></a>
+        </li>
+        <li class="blk blk6">
+            <div class="logo">
+                <i class="fa fa-question-circle"></i>
+            </div>
+            <p class="title">美食问答</p>    
+            <a class="go" href="#faq_book" data-dpressed="true" data-resetHistory="true"></a>
+        </li>
+        <li class="blk blk5">
+            <div class="logo">
+                <i class="fa fa-crown"></i>
+            </div>
+            <p class="title">美食达人</p>    
+            <a class="go" href="#daren_book" data-dpressed="true" data-resetHistory="true"></a>
+        </li>
+    </ul>
+    <ul class="dtl_list">
+        <li>
+            <a href="#item_cate" data-pressed="true" data-resetHistory="true"><i class="fa fa-lollipop"></i>找吃的</a>
+            <a href="#album_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-archive"></i>翻吃柜</a>
+            <a href="#store_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-home"></i>好吃店</a>
+            <a href="#brand_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-flag"></i>品牌&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <li>
+            <a href="#recipe_cate" data-pressed="true" data-resetHistory="true"><i class="fa fa-file-text"></i>找菜谱</a>
+            <a href="#rmenu_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-clipboard"></i>翻菜单</a>
+            <a href="#work_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-copy"></i>赏作品</a>
+            <a href="#stuff_cate" data-pressed="true" data-resetHistory="true"><i class="fa fa-banana"></i>挑食材</a>
+        </li>
+        <li>
+            <a href="#rstrnt_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-cutlery"></i>找餐馆</a>
+            <a href="#group_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-group"></i>泡吃群</a>
+            <a href="#subject_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-tags"></i>群主题</a>
+            <a href="#faq_book" data-pressed="true" data-resetHistory="true"><i class="fa fa-question-circle"></i>问答&nbsp;&nbsp;&nbsp;</a>
+        </li>
+    </ul>
+</div>
+
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+                <li class="tohome laybtn">
+            <a data-pressed="true" href="#shop_book">
+                <i class="fa fa-add-shopping-cart"></i>预购清单
+            </a>
+        </li>
+        <li class="topub" id="JckjIndexPubTypes_tri" reltgt="#JckjIndexPubTypes"><a data-pressed="true" class="fa fa-square-plus"></a></li>
+        <li class="togift laybtn">
+            <a data-pressed="true" href="#hist_book">
+                <i class="fa fa-clock fa-flip-horizontal"></i>浏览历史
+            </a>
+        </li>
+    </ul>
+    <div id="JckjIndexPubTypes" relTri="#JckjIndexPubTypes_tri" reltri="#JckjIndexPubTypes_tri" class="listbtn" trans3d="true">
+        <a data-pressed="true" href="#recipe_share" data-transition="slide">分享菜谱</a>
+        <a style="display:none;" data-pressed="true" href="#load_page/item_share" data-transition="slide">分享食品</a>
+        <a data-pressed="true" href="#rstrnt_share"  data-transition="slide">发布餐馆</a>
+        <a data-pressed="true" href="#diary_publish"  data-transition="slide">发表日记</a>
+    </div>
+</div>

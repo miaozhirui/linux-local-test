@@ -1,0 +1,39 @@
+<style type="text/css">
+#afui #J_work_wall_wrap {top:0;bottom:45px; padding:0;}
+#J_work_wall{padding:20px; width: 100%;}
+#afui #work_book .navorder_head .totop{width:50%;}
+#afui #work_book .navorder_head .order_rank {width:50%;}
+
+#afui #J_work_orderrank.showed {
+    transform: translate3d(0, -131px, 0); 
+    -webkit-transform: translate3d(0, -131px, 0); 
+    -ms-transform: translate3d(0, -131px, 0);
+    -o-transform: translate3d(0, -131px, 0);
+}
+</style>
+<div id="J_work_wall_wrap" class="scroll_wrap">
+    <div id="J_work_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_work_wall_triggerBar' pageBar ="#J_work_wall_pageBar"  
+         relWrap='#J_work_wall_wrap' feedRcd='wall_work' renderFunc='$.ckj.renderWorks' allLoaded="n" isLoading='n' page="1" spage="0"  
+         sort="id"
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无作品" 	
+    >
+    </div>
+    <div id="J_work_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_work_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="order_rank" id="J_work_orderrank_tri" reltgt="#J_work_orderrank"><span>最新</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="J_returnToTop totop" relScroller="#J_work_wall_wrap"><a class="fa fa-arrow-up2" data-pressed="true"></a></li>
+    </ul>
+    <div id="J_work_orderrank" relTri="#J_work_orderrank_tri" class="listbtn" trans3d="true">
+        <a sort="id" class="active">最新</a>
+        <a sort="likes">喜欢</a>
+        <a sort="comments">评论</a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<style type="text/css">
+#afui #J_privmsgsum_wall_wrap {top: 0;bottom:0;}
+#afui .privmsgsum { position:relative; height:90px; overflow:hidden; padding:15px 10px 10px 10px;border-bottom:1px solid #e8e8e8; background: #fff;}
+#afui.fandroid .privmsgsum {border-bottom: 1px solid #ededed; margin: -1px 0;}
+#afui .privmsgsum .atime {float: right; font-size:12px; color:#ccc;}
+#afui .privmsgsum .pic { position: absolute; width: 48px;}
+#afui .privmsgsum .pic img {width:40px; height:40px;}
+#afui .privmsgsum .pic a {margin-left:10px;}
+#afui .privmsgsum .cnt { padding-left: 55px;}
+#afui .privmsgsum .cnt .tname { color: #ff5a00; font-size: 14px; font-weight: bold;}
+#afui .privmsgsum .cnt .c_box { overflow: hidden; padding-top: 8px;}
+#afui .privmsgsum .cnt .c_box p { color: #aaa; width: 100%;}
+#afui .privmsgsum .cnt .c_box p a { color: #555;font-size:15px;}
+#afui .privmsgsum.new .cnt .c_box p a {font-weight:bold;}
+#afui .privmsgsum .cnt .all {color: #00b000; float: right; font-size:14px;margin-top:3px;}
+#afui .privmsgsum .cnt .all .fa {position:relative; top:1px; font-size:14px;}
+#afui .privmsgsum .go {position:absolute;top:0;bottom:0;left:0;right:0;}
+
+#afui.ios8 .privmsgsum {border-width: 0.5px; border-color:#ccc;}
+</style>
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">我的私信</h1>
+</header>
+<div id="J_privmsgsum_wall_wrap" class="scroll_wrap">
+    <ul id="J_privmsgsum_wall" class="waterfall_wall" dataUri="" triggerBar='#J_privmsgsum_wall_triggerBar' pageBar ="#J_privmsgsum_wall_pageBar"  
+         relWrap='#J_privmsgsum_wall_wrap' feedRcd='privmsgsum' renderFunc='$.privmsgsumBook.renderPrivmsgsums'  
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="1" sizeUnit=".pic" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" wImgWd="0" oImgWd="210" wRate="0"  
+         sort="likes" minPrice=0 maxPrice=0 noDataMsg="<i class='fa fa-smile-o'></i>暂无私信对话"
+    >
+    </ul>
+    
+    <div id="J_privmsgsum_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_privmsgsum_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>

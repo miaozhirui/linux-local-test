@@ -1,0 +1,33 @@
+<style type="text/css">
+#afui #J_stuff_wall_wrap {top: 36px; padding:0;}
+#J_stuff_wall{width: 100%;}
+#afui #stuff_book .cate_wrap {width:85%;}
+#afui #stuff_book .totop{width:15%;}
+</style>
+
+<div id="J_stuff_wall_wrap" class="scroll_wrap">
+    <ul id="J_stuff_wall" class="waterfall_wall" dataUri="" triggerBar='#J_stuff_wall_triggerBar' pageBar ="#J_stuff_wall_pageBar"  
+         relWrap='#J_stuff_wall_wrap' feedRcd='wall_stuff' wallData='$.stuffBook.wallData'  
+         renderFunc='$.ckj.renderStuffs' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="1" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0"
+         sort="collects"  noDataMsg="<i class='fa fa-smile-o'></i>暂无相关食材" 
+    >
+       
+    </ul> 
+    <div id="J_stuff_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_stuff_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="navorder_block">
+    <div class="J_block_wrap cate_wrap cfx" init_height="35px">
+        <div id="J_stuff_b_c">
+            <a cid="1">全部 </a>
+        </div>
+        <span class="J_block_show" unfolded="n"><i class="fa fa-angle-right fa-rotate-90"></i></span>
+    </div>
+    <div class="totop"><a href="#search/stuff" class="fa fa-search" data-pressed="true" data-transition="slide"></a></div>
+</div>

@@ -1,0 +1,58 @@
+<style type="text/css">
+#afui #J_item_wall_wrap { top: 0; bottom:45px; }
+#afui #J_item_b_c {top:1px;}
+#afui #J_item_orderrank.showed {
+    transform: translate3d(0, -131px, 0); 
+    -webkit-transform: translate3d(0, -131px, 0); 
+    -ms-transform: translate3d(0, -131px, 0);
+    -o-transform: translate3d(0, -131px, 0);
+}
+
+#afui #J_item_order_price.showed {
+    transform: translate3d(0, -211px, 0); 
+    -webkit-transform: translate3d(0, -211px, 0); 
+    -ms-transform: translate3d(0, -211px, 0);
+    -o-transform: translate3d(0, -211px, 0);
+}
+</style>
+
+<div id="J_item_wall_wrap" class="scroll_wrap">
+    <div id="J_item_wall" class="waterfall_wall" dataUri="" triggerBar='#J_item_wall_triggerBar' pageBar ="#J_item_wall_pageBar"  
+         relWrap='#J_item_wall_wrap' feedRcd='wall_item' renderFunc='$.ckj.renderItems' wallData='$.itemBook.wallData'  
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" sizeUnit=".pic" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" wImgWd="0" oImgWd="210" wRate="0"  
+         sort="likes" minPrice=0 maxPrice=0
+         noDataMsg="<i class='fa fa-smile-o'></i>暂无相关食品" 
+    >
+    </div>
+    <div id="J_item_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_item_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+<div class="J_navorder_wrap navorder_wrap">
+    <ul class="J_navorder_head navorder_head cfx">
+        <li class="son_c" id="J_item_b_c_tri" reltgt="#J_item_b_c"><span>筛选</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="order_rank" id="J_item_orderrank_tri" reltgt="#J_item_orderrank"><span>喜欢</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="order_price" id="J_item_order_price_tri" reltgt="#J_item_order_price"><span>价格</span><i class="fa fa-angle-right fa-rotate-270"></i></li>
+        <li class="totop tosch"><a href="#search/item" class="fa fa-search" data-pressed="true" data-transition="slide"></a></li>
+    </ul>
+    <div id="J_item_b_c" relTri="#J_item_b_c_tri" class="son_cate" trans3d="true">
+        <a class="active" cid="1">全部 </a>
+        <a cid=2>巧克力</a>
+    </div>
+    <div id="J_item_orderrank" relTri="#J_item_orderrank_tri" class="listbtn" trans3d="true">
+        <a class="active" sort="likes">喜欢</a>
+        <a sort="comments">评论</a>
+        <a sort="id">最新</a>
+    </div>
+    <div id="J_item_order_price" relTri="#J_item_order_price_tri" class="listbtn" trans3d="true">
+        <a class="active" price="all">不限价格</a>
+        <a price="cheap">0-20元</a>
+        <a price="normal">20-50元</a>
+        <a price="expensive">50-100元</a>
+        <a price="luxry">更高</a>
+    </div>
+</div>

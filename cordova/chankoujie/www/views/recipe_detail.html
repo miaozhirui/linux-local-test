@@ -1,0 +1,144 @@
+<style type="text/css">
+#recipe_detail #J_rci_dt_wrap {position:absolute;top:0;bottom:45px;left:0;right:0;}
+#rci_dt_top {position:relative;}
+#rci_dt_top img {display:block;max-width:100%; margin:0 auto;}
+#rci_dt_top .share {position:absolute;width:100%;height:40px;bottom:0;padding:5px; background:rgba(0,0,0, 0.3);color:#fff; font-size:12px;}
+#rci_dt_top .share .avatar{position:absolute; left:5px; top:5px; height:30px;width:30px;}
+#rci_dt_top .share > p {margin-left:38px; font-size:12px; margin-top:-2px;}
+#rci_dt_top .share > p:last-child {font-size:10px; color:#f8f8f8}
+#rci_dt_top .share .follow_u { position: absolute; top: 5px; right: 5px; padding: 0 8px; }
+#rci_dt_top .share .follow_u .fa {margin-right:1px; font-size:18px;}
+
+#recipe_detail  .rci_mid {padding:5px 10px; overflow:hidden;}
+#recipe_detail .ckjbox .stuff h2:last-child {padding-top:3px;}
+#recipe_detail .basic {padding:10px; text-align:left;}
+
+#recipe_detail .basic li { height:24px; line-height:24px; overflow:hidden;}
+#recipe_detail .basic .head{display:inline-block;width:15%; color:#aaa;}
+#recipe_detail .basic .val{display:inline-block;width:35%;}
+#recipe_detail .basic li.tools .val {width:85%; }
+
+#recipe_detail #J_rci_dt_introtag {padding:15px 0;}
+
+#recipe_detail .intro {padding:0 10px; margin-top:10px; line-height:22px; word-break: break-word;}
+#recipe_detail .intro strong { font-size: 18px; color: #aaa; font-family: arial; font-weight: bold; padding: 0px 3px; }
+
+#recipe_detail .stuff ul li {width:100%; line-height:22px; font-size:13px;color:#aaa;}
+#recipe_detail .stuff .head{display:block;width:30.5%; overflow:hidden;}
+#recipe_detail .stuff .val{display:block;width:19%; padding-left:3px; overflow:hidden;color:#333;}
+#recipe_detail .sub_stuff ul{ margin-top:10px; padding-top:5px; border-top:1px dotted #dfdfdf;}
+
+#recipe_detail .step {position:relative; margin-bottom:20px; overflow: hidden; }
+#recipe_detail .step > div { margin-left:24px; min-height:30px;}
+#recipe_detail .step p {font-size:16px; word-break: break-word;}
+#recipe_detail .step img{width:90px; margin-left:3px; float:right;}
+#recipe_detail .step span {display:block; position:absolute; width:18px; font-size:18px; font-style:italic; color:#00b000;}
+#recipe_detail .tips {text-indent: 30px; font-size:13px; color: #aaa;}
+#recipe_detail .works {display:block; height: 80px; margin-bottom: 10px; overflow: hidden; font-size:0}
+#recipe_detail .works img {display:block; float:left;width:32%; margin-right:2%;}
+#recipe_detail .works img:last-child {margin-right:0;}
+#recipe_detail .up_work {display:block;width:100%; line-height:40px; font-size:24px; background:#ff5a00; color:#fff; text-align:center;}
+#recipe_detail .up_work.pressed {background: #ff3a00;}
+
+#J_rci_dt_rname {padding:15px 0; font-size:22px; font-weight:bold; color:#00b000;}
+
+/*join rmenu/rmenu dialog*/
+#afui #join_rmenu select, #afui #join_rmenu input, #afui #join_rmenu textarea {border-color:#dfdfdf; -webkit-appearance: none;}
+#afui.ios8 #join_rmenu select, #afui.ios8 #join_rmenu input, #afui.ios8 #join_rmenu textarea {border-color:#bbb;}
+#afui .dialog_join_rmenu .join_recipe{width:26px; height:26px;}
+#afui .dialog_join_rmenu .join_recipe img{width:100%; height:100%; border-radius:3px;}
+#afui .dialog_join_rmenu .select_rmenu {padding-left:35px;}
+#afui .dialog_join_rmenu .join_content{padding:10px 10px;}
+#afui .dialog_join_rmenu .join_title{min-width:98%;min-height:60px;color:#666;}
+#afui #join_rmenu textarea {padding:5px; height: 31px; margin-bottom:0px; border-radius:2px;   }
+#afui #join_rmenu select {width:55%;}
+#afui #join_rmenu select.qc_cate {width:100%;}
+#afui #join_rmenu .rmenu_intro {margin-top: 15px; width: 100%; height: 61px; vertical-align:bottom;  }
+/*select rmenu/rmenu dialog*/
+#afui .select_rmenu .qcreate{display:none; padding:0 6px;}
+#afui .dialog_fetch_recipe .select_rmenu .qcreate{width:325px;}
+#afui .select_rmenu .qc_btn{height:26px;line-height:24px;padding:0 10px; margin:10px 0 0 0;}
+
+#recipe_detail .rciops {position:absolute;bottom:0;left:0;right:0;height:45px; line-height:45px;background:#fffdf5; border-top: 1px solid #00b000;}
+#recipe_detail .rciops a {display:block;float:left;height:100%;width:20%;text-align:center; color:#9f9f9f; }
+#recipe_detail .rciops a.pressed {color:#333;}
+#recipe_detail .rciops a .fa { display: block; font-size:16px; position:relative; top: 7px; }
+#recipe_detail .rciops a .fa e{font-size:12px; padding-left:1px; position:relative; bottom:3px; }
+#recipe_detail .rciops a span{ display: block; position:relative; bottom: 6px;  font-size: 10px; }
+#recipe_detail .rciops a:last-child span{ height: 45px; line-height: 45px; position:relative; bottom: 0!important;  font-size: 13px; }
+#afui.ios #recipe_detail .rciops{height:48px;line-height: 48px;}
+#afui.ios #recipe_detail .rciops a .fa {font-size:18px;}
+#afui.ios #recipe_detail .rciops a span{bottom:8px;}
+#afui.ios #recipe_detail .up_work {border-radius: 2px;}
+#afui.ios #recipe_detail .rciops {border-color: #aaa;}
+
+#afui.ios8 #recipe_detail .rciops {border-width: 0.5px; background: #fff;}
+#afui.ios8 #join_rmenu select, #afui.ios8 #join_rmenu textarea {border-width: 0.5px;}
+</style>
+
+<div id="J_rci_dt_wrap">
+	<div id="rci_dt_top">
+	    <img id="J_rci_dt_bimg" src="data/default/1_1.jpg" onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);"/>
+	    <div id="J_rci_dt_author" class="share">
+	    </div>
+	</div>
+	
+	<div class="rci_mid">
+	    <div id="J_rci_dt_rname">&nbsp;</div>
+	    <ul id="J_rci_dt_ckinfo" class="ckjbox basic hide">
+	    </ul>
+	    <div id="J_rci_dt_introtag" class="ckjbox">
+	        <div id="J_rci_dt_tags" class="tags cfx hide">
+	        </div>
+	        <div id="J_rci_dt_intro" class="intro hide">&nbsp;</div>
+	    </div>
+	    
+	    <div id="J_rci_dt_stuff" class="ckjbox stuff">
+	        <h1>食材用料</h1>
+	        
+	        <h2>主料：</h2> 
+	        <ul>
+	            <li>
+	                <i class="head">&nbsp;</i><i class="val">&nbsp;</i>
+	            </li>
+	            <li>
+	                <i class="head">&nbsp;</i><i class="val">&nbsp;</i>
+	            </li>
+	        </ul>
+	        
+	        <h2>辅料：</h2>
+	        <ul>
+	            <li>
+	                <i class="head">&nbsp;</i><i class="val">&nbsp;</i>
+	            </li>
+	            <li>
+	                <i class="head">&nbsp;</i><i class="val">&nbsp;</i>
+	            </li>
+	        </ul>
+	    </div>    
+	    
+	    <div id="J_rci_dt_steps" class="ckjbox">
+	         <h1>做法步骤</h1> 
+	         <div class="step">
+             </div>
+	    </div>
+	    
+	    <div id="J_rci_dt_tips" class="ckjbox hide">
+	        <h1>小贴士</h1> 
+	        <div class="tips">&nbsp;</div>
+	    </div>
+	    
+	    <div id="J_rci_dt_works" class="ckjbox">
+	    </div>
+	    
+	    <div class="ckjbox sumcmts">
+	        <ul id="J_rci_dt_cmts" class="hide">
+	             <li><a class="uname">&nbsp;</a>&nbsp;<span class="atime">&nbsp;</span></li>
+	        </ul>
+	        <a class="J_tocmt" tourl="#comments/recipe/1234"  data-pressed="true" >查看全部<i class="num">&nbsp;</i>个评论</a>
+	    </div>
+	</div>
+</div>
+
+<div id="J_recipe_ops" class="rciops cfx">
+</div>

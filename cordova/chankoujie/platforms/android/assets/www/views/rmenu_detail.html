@@ -1,0 +1,87 @@
+<style type="text/css">
+#rmenu_detail .rmenu_cover { font-size: 0; width: 100%; overflow: hidden; position: relative; }
+#rmenu_detail .rmenu_cover img { width: 150%; min-height: 100px; max-height: 130px; }
+#rmenu_detail .rmenu_cover .rname { position: absolute; z-index: 100; left: 5px; bottom: 10px; height: 25px; line-height: 25px;
+padding: 0 10px; border-radius: 2px; background: rgba(0,0,0,0.3); font-size: 14px; color: #fff; }
+#rmenu_detail .rmenu_info {padding:10px 10px 10px 10px;}
+#rmenu_detail .follow_u {background:#ff5a00;}
+
+#afui .rmenu_meta {padding:5px 0;min-height:50px;margin:10px 0 0 0;}
+#afui .rmenu_meta img {height:50px; width:50px; border-radius:2px;}
+#afui .rmenu_meta .uname {margin-left:56px;color:#ff5a00;}
+#afui .rmenu_meta .follow_u {height:24px; line-height:26px; font-size:12px; padding:0 6px; margin:10px 0 0 56px; border-radius:2px;}
+#afui .rmenu_meta .coll {position:absolute; right:5px; bottom:2px; height:30px; line-height:31px; padding:0 10px; border-radius:2px; background:#ff5a00; color:#fff; }
+#afui .rmenu_meta .J_unfollow {background:#aaa;}
+
+#rmenu_detail .rmenu_info h1.title {margin:30px 0 10px 0; padding-bottom:4px;
+background: url(./css/images/mgsep.png) repeat-x 0 -20px; font-size:16px; color:#333; }
+#rmenu_detail .rmenu_info .basic li {line-height:26px; width:50%; float:right;}
+#rmenu_detail .rmenu_info .basic .head {color:#ccc;}
+
+#rmenu_detail .rmenu_info .more_rmenus a {display:block; width:80%; line-height:35px; padding:0 10px; border-radius:3px; margin-bottom:15px; background:#f2f2f2; color:#666;}
+#rmenu_detail .rmenu_info .more_rmenus a.pressed {background:#dfdfdf;}
+#rmenu_detail .rmenu_info .more_rmenus a span{float:right; color:#aaa;}
+#rmenu_detail .rmenu_info .more_rmenus a span i{color:#666;}
+
+#afui #J_rmenu_dt_info_wrap, #afui #J_rmenu_dt_recipes_wall_wrap, #afui #J_rmenu_dt_cmts_wrap{top:0; bottom:45px;}
+#afui #J_rmenu_dt_info_wrap > div:first-child {padding:0; background:#fff;}
+
+#rmenu_detail .follow_u:hover, #afui .rmenu_meta .coll:hover {background: #ff3a00;}
+
+#afui.ios #J_rmenu_dt_info_wrap {background: #fff;}
+#afui.ios #J_rmenu_dt_info_wrap, #afui.ios #J_rmenu_dt_recipes_wall_wrap, #afui.ios #J_rmenu_dt_cmts_wrap{bottom:48px;}
+</style>
+
+<div id="J_rmenu_dt_info_wrap" class="J_tab_panel scroll_wrap scroll_nobar" style="display:nne;">
+    <div class="rmenu_cover">
+        <img id="J_rmenu_dt_cover" src="data/rmenu/default_cover.jpg"  onload="$.ckj.onImgLoad(this, false);" onerror="$.ckj.onImgError(this, null, false);">
+        <div id="J_rmenu_dt_name" class="rname"></div>
+    </div>
+    <div id="J_rmenu_dt_info" class="rmenu_info cfx">
+        <div id="J_rmenu_dt_meta" class="rmenu_meta prel">
+            <img class="pabs">
+            <div class="uname prel">&nbsp;</div>
+        </div>
+        
+        <h1 class="title">基本信息</h1> 
+        <ul class="basic cfx">
+            <li><i class="head">菜谱：</i><i id="J_rmenu_dt_recipes" class="val">&nbsp;</i></li>
+            <li><i class="head">评论：</i><i id="J_rmenu_dt_comments" class="val">&nbsp;</i></li>
+            <li><i class="head">喜欢：</i><i id="J_rmenu_dt_likes" class="val">&nbsp;</i></li>
+            <li><i class="head">收藏：</i><i id="J_rmenu_dt_follows" class="val">&nbsp;</i></li>
+        </ul>
+        
+        <div id="J_rmenu_dt_intro" class="hide">
+            <h1 class="title">介绍</h1> 
+            <div class="intro">&nbsp;</div>
+        </div>
+        
+        <div id="J_rmenu_dt_mrmenus" class="hide">
+            <h1 class="title">Ta的更多菜单</h1> 
+            <div class="more_rmenus">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="J_rmenu_dt_recipes_wall_wrap" class="J_tab_panel scroll_wrap" style="display:none;">
+    <div id="J_rmenu_dt_recipes_wall" class="waterfall_wall" dataUri="" triggerBar='#J_rmenu_dt_recipes_wall_triggerBar' pageBar ="#J_rmenu_dt_recipes_wall_pageBar"  
+         relWrap='#J_rmenu_dt_recipes_wall_wrap' feedRcd='wall_recipe' wallData='$.rmenuDtl.wallData' 
+         renderFunc='$.ckj.renderRecipes' allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="y" cols="2" sizeUnit=".pic" wOffX="6" wOffY="6" wWallPad="6" wRcdWd="0" wImgWd="0" oImgWd="226" wRate="0" 
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无菜谱" 	
+    >
+    </div>
+    <div id="J_rmenu_dt_recipes_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_rmenu_dt_recipes_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
+
+<div class="angle_tabs f-f f-vc">
+    <a class="f-al" t='info'>菜单信息</a>
+    <a class="f-al" t='recipe'>菜单菜谱</a>
+    <a class="f-al" t='cmt'>菜单评论</a>
+</div>

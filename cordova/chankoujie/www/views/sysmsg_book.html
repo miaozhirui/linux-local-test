@@ -1,0 +1,27 @@
+<style type="text/css">
+#afui #J_sysmsg_wall_wrap {padding:10px 10px 0 10px ; top: 0; bottom:0; background:#fff; }
+
+#sysmsg_book .sysmsg {margin-bottom:10px; padding:8px; background:#FFF7D5; border-top:1px solid #efefef;}
+#sysmsg_book .sysmsg.new {font-weight:bold;}
+#sysmsg_book p.time{width:100%; text-align:right;font-size:12px; color:#ccc;}
+</style>
+<header>
+    <a class="backButton fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+    <h1 class="pageTitle">系统消息</h1>
+</header>
+<div id="J_sysmsg_wall_wrap" class="scroll_wrap">
+    <ul id="J_sysmsg_wall" class="waterfall_wall cfx" dataUri="" triggerBar='#J_sysmsg_wall_triggerBar' pageBar ="#J_sysmsg_wall_pageBar"  
+         relWrap='#J_sysmsg_wall_wrap' feedRcd='sysmsg' renderFunc='$.sysmsgBook.renderSysmsg' 
+         allLoaded="n" isLoading='n' page="1" spage="0"
+         masonry="n" cols="1" sizeUnit=".pic" wOffX="0" wOffY="0" wWallPad="0" wRcdWd="0" 
+		 noDataMsg="<i class='fa fa-smile-o'></i>暂无系统消息" 
+    >
+    </ul>
+    
+    <div id="J_sysmsg_wall_triggerBar" class="triggerbar" data-pressed="true">加载更多</div>
+    <div id="J_sysmsg_wall_pageBar" class="pagebar">
+        <a class="switchpage prev fa fa-angle-right fa-flip-horizontal" data-pressed="true"></a>
+        <a class="curpage">0</a>
+        <a class="switchpage next fa fa-angle-right" data-pressed="true"></a>
+    </div>
+</div>
