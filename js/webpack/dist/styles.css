@@ -1,0 +1,15 @@
+
+body{
+	color:red;
+}
+
+#box{
+	background-color: red;
+	width:10px;
+	height:100px;
+}
+.avatar{
+	box-shadow: 0 0;
+	width:46px;
+	height:43px;
+}
