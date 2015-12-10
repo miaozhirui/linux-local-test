@@ -10,5 +10,5 @@ echo "<br>";
 
 
 
-$href = "http://webapitest.ziseyiliao.com/zend-web/app/src/views/special-detail.html?UserId=".$userId."&AppId=DuDuDoctor&DeviceId=0f1262bd228645a37ec3e54948078352c25cf182&ClientOS=iOS&ChannelType=1&Page=1&auth=".$auth."&QuestionId=418884&DoctorId=918";
+$href = "http://webapitest.ziseyiliao.com/zend-web/app/src/views/service-introduction.html?UserId=".$userId."&AppId=DuDuDoctor&DeviceId=0f1262bd228645a37ec3e54948078352c25cf182&ClientOS=iOS&ChannelType=1&Page=1&auth=".$auth."&QuestionId=418884&DoctorId=918";
 echo "<a href='".$href."' target='_blank'>111</a>";

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+@@@@@@
+<button class="btn">点我吧</button>
+<div id="clock"></div>
+<script src="/menu.js"></script>
+<script>
+    setInterval(function(){
+        var xhr = new XMLHttpRequest();
+        console.log(xhr);
+        xhr.open('GET','/clock', true);
+        xhr.send();
+        xhr.onload = function(){
+            if(this.status==200){
+                document.querySelector('#clock').innerHTML=this.responseText;
+            }
+        }
+    },1000)
+</script>
+</body>
+</html>
