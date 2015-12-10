@@ -54,7 +54,7 @@
  * pid: 98904 程序的进程号
  * chdir: [Function: chdir]修改当前工作目录
  * cwd: [Function: cwd]当前工作目录
- * memoryUsage: [Function: memoryUsage]内存的占用量
+ * memoryUsage: [Function: memoryUsage]当前的程序的内存的占用量
  * stdout: [Getter],监听输出
  * stderr: [Getter],
  * stdin: [Getter],监听输入
@@ -83,11 +83,19 @@
 //process.stdin.on('data', function(data){
 //    process.stdout.write(data)
 //})
-console.log(__dirname)//当前文件所处的工作目录
-console.log(process.cwd())//当前所在的目录
-process.chdir('..');//这个命令可以修改当前所处的目录
-console.log(process.cwd())
+//console.log(__dirname)//当前文件所处的工作目录
+//console.log(process.cwd())//当前所在的目录
+//process.chdir('..');//这个命令可以修改当前所处的目录
+//console.log(process.cwd())
 
+/**
+ * {
+ *  rss: 20926464,
+  * heapTotal: 9275392,
+  * heapUsed: 3944768
+  * }
+ */
+console.log(process.memoryUsage())
 
 
 
