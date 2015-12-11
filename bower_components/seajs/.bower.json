@@ -1,15 +1,14 @@
 {
   "name": "seajs",
   "homepage": "https://github.com/seajs/seajs",
-  "version": "1.2.0",
-  "_release": "1.2.0",
+  "version": "0.8.0",
+  "_release": "0.8.0",
   "_resolution": {
     "type": "version",
-    "tag": "1.2.0",
-    "commit": "5844564b06d7a61c329f279e60e69a8f5f51a865"
+    "tag": "0.8.0",
+    "commit": "b6d7e185daae14d533c4dd64e2f04ef5b1d7e624"
   },
   "_source": "git://github.com/seajs/seajs.git",
-  "_target": "v1.2.0",
-  "_originalSource": "seajs",
-  "_direct": true
+  "_target": "0.8.0",
+  "_originalSource": "seajs"
 }

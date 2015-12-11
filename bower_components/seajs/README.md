@@ -1,17 +1,19 @@
-A Module Loader for the Web
-===
 
-SeaJS is a module loader for the web. It is designed to change the way that you
-organize JavaScript. With SeaJS, it is pleasure to build cool web applications.
-
-The official site: <http://seajs.org/>
+SeaJS is a javascript framework that makes it easy to build scalable web applications.
 
 
-## Questions?
+## Vision
 
-If you have any questions, please feel free to ask through [New Issue](https://github.com/seajs/seajs/issues/new).
+海纳百川，有容乃大。
+
+The sea can hold the water from thousands of rivers, it's big because of its capacity.
 
 
 ## License
 
-SeaJS is available under the terms of the [MIT License](http://seajs.org/LICENSE.md).
+SeaJS is available under either the terms of the [MIT license](https://github.com/tannhu/jsface/blob/master/MIT-LICENSE.txt).
+
+
+## Some more thing
+
+Question, comments, feedbacks please go to [SeaJS Group](http://groups.google.com/group/seajs).
