@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script>
-    /*
+    
     DOM: Document Object Model文档对象模型
     文档: html页面
     文档对象:html页面
@@ -18,8 +17,6 @@
     getElementByTagName
     document代表着整个文档
     document.body
-    */
-    </script>
 </head>
 <body>
     <div id="div1">
