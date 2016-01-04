@@ -1,3 +1,5 @@
 nodejs/node_modules
 js/node_modules
 .idea
+**/node_modules
+**/bower_components

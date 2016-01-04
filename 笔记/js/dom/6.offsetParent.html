@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			padding:40px 50px;
+		}
+		#id1{
+			background: red;
+		}
+		#id2{
+			background: blue;
+			position: relative;
+		}
+		#id3{
+			background: yellow;
+
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oDiv3 = document.getElementById('id3');
+		// parentNode: 父节点
+		// console.log(oDiv3.parentNode.id)
+
+		/*
+		元素.offsetParent: 只读 属性 离当前元素最近的有定位属性的父节点
+		如果没有定位父级,默认的是body
+
+		ie7以下，如果当前元素没有定位默认是body,如果有定位则是html
+		ie7以下，如果当前元素的某个父级触发了layout,那么OffsetParent就会指向到这个触发了layout特性的父节点上
+		*/
+		console.log(oDiv3.offsetParent.id)
+	}
+	</script>
+</head>
+<body id="body1">
+	<div id="id1">
+		<div id="id2">
+			<div id="id3"></div>
+		</div>
+	</div>
+</body>
+</html>

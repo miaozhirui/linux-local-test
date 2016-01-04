@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			padding:40px 50px;
+		}
+		#id1{
+			background: red;
+		}
+		#id2{
+			background: blue;
+			position: relative;
+		}
+		#id3{
+			background: yellow;
+
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oDiv3 = document.getElementById('id3');
+		
+		// alert(oDiv3.offsetLeft);
+		// console.log(oDiv3.offsetLeft)//如果现在她的父级是定位的，我们只能获取距离父级的距离，如果还想获取距离html的距离就不好弄了,只能用其他的方式了
+
+		// offsetLeft和offsetParent一起操作可以获得div3距离html的距离
+		// 元素的offsetParent,如果没有定位父级的话，就是body;body的offsetTop为0,body的offsetParent为Null
+
+		// 获取任何元素到页面中的左边和顶部的距离
+
+
+		var iTop = 0;
+		var obj = oDiv3;
+
+		while(obj){
+			iTop +=  obj.offsetLeft;
+			obj = obj.offsetParent;
+		}
+		// alert(iTop)
+
+		function getPos(obj){
+			var pos = {left:0,top:0}
+
+			while(obj){
+				pos.left += obj.offsetLeft;
+				pos.top += obj.offsetTop;
+				obj = obj.offsetParent;
+			}
+			return pos;
+		}
+
+		var pos = getPos(oDiv3);
+		console.log(pos)
+
+	}
+	</script>
+</head>
+<body id="body1">
+	<div id="id1">
+		<div id="id2">
+			<div id="id3"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oDiv = document.getElementById('div1');
+
+			/*
+				style.width:样式框
+				clientWidth:样式宽+padding(可视区域宽)
+				offsetWidth:样式宽+padding+border(占位宽)不包括margin
+			*/
+			console.log(oDiv.style.width);
+			console.log(oDiv.clientWidth);
+			console.log(oDiv.offsetWidth);
+			console.log(typeof oDiv.style.marginLeft)
+		}
+	</script>
+</head>
+<body>
+	<div id="div1" style="width:100px; height:100px; border:1px solid red; padding:10px;">111</div>
+</body>
+</html>

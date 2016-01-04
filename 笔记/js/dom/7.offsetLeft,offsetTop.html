@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		div{
+			padding:40px 50px;
+
+		}
+		#id1{background: red;}
+		#id2{background: green; position: relative;}
+		#id3{background: orange;}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oDiv3 = document.getElementById('id3');
+
+		/*
+		元素.offsetLeft[Top]: 只读 属性 当前元素到定位父级的距离
+
+			如果没有定位父级
+				offsetParent ->body
+				offsetLeft->html
+			
+			如果没有定位父级
+
+				ie7以下: 如果自己没有定位,那么OffsetLeft[Top]是到body得距离，如果自己有定位，那么就是到定位父级的距离
+				其他: 到定位父级的距离
+			到当前元素的offsetParent的距离
+		*/
+		console.log(oDiv3.offsetLeft);
+	}
+	</script>
+</head>
+<body>
+	<div id="id1">
+		<div id="id2">
+			<div id="id3"></div>
+		</div>
+	</div>
+</body>
+</html>
