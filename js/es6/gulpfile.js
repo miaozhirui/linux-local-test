@@ -15,6 +15,6 @@ gulp.task('webpack', function(){
 
 gulp.task('watch', function(){
 	watch('src/**/*.js', function(){
-		gulp.start(['webpack'])
+		gulp.start(['webpack']) 
 	})
 })

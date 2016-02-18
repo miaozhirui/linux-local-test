@@ -46,81 +46,13 @@
 
 	'use strict';
 
-	var _ = __webpack_require__(1);
-
-	var _2 = __webpack_require__(2);
-
-	var _3 = _interopRequireDefault(_2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//1. let var
-	// {
-	// 	let a = 1;
-	// 	var b = 2;
-	// }
-	// console.log(a,b)
-
-	// 2.for循环的计数器
-	// for(let i = 0; i<10; i++){
-	// 	console.log(i)
-	// }
-	// console.log(i)
-
-	// var a = []; 
-	// for(let i=0; i<10; i++){
-	// 	a[i] = function(){
-	// 		console.log(i)
-	// 	}
-	// } 
-	// a[6]() 
-
-	// 3.不存在变量提升
-	// console.log(foo);
-	// let foo =2;
-	// import * as person from './modules/1';
-	// // import {say} from './modules/2';  
-	// import action from './modules/2'; 
-	// console.log(action())
-	// console.log(person.firstName, person.lastName, person.year)  
-
-	// 4.模块的整体加载    
-	// 5.export default命令
-
-	(0, _3.default)();
-	console.log(_.firstName, _.lastName, _.year);
-	console.log();
+	__webpack_require__(1);
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var firstName = 'miao';
-	var lastName = 'zhirui';
-	var year = 1990;
-
-	exports.firstName = firstName;
-	exports.lastName = lastName;
-	exports.year = year;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
 	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.default = say;
-	function say() {
-		console.log(11);
-	}
 
 /***/ }
 /******/ ]);
