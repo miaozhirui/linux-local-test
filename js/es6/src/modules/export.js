@@ -49,10 +49,12 @@
 
 
 
-
-
-// 
-
+'use strict';
+var ReactNative = {
+	get ActivityIndicatorIOS() { },
+	get ActivityIndicator() { },
+}
+module.exports = ReactNative;
 
 
 

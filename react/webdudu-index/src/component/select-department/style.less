@@ -1,0 +1,139 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+ul,li{
+	list-style: none;
+}
+// 选择科室页面
+.select-department{
+	position: relative;
+	.select-title{
+		margin-top: 20px;
+		text-align: center;
+		color:#e75d3c
+	}
+	h3{
+		text-align: center;
+		margin: 8px 0;
+		color:#4a4a4a;
+		font-size: 14px;
+	}
+	ul{
+		width:272px;
+		margin: 0 auto;
+		height:100px;
+		li{
+			width:120px;
+			height:80px;
+			position: relative;
+			float: left;
+			margin-right: 5px;
+			margin-top: 16px;
+			p{
+				position: absolute;
+				bottom: 2px;
+				text-align: center;
+				width:100%;
+				font-size: 15px;
+				line-height:30px;
+                background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+			}
+            a{
+                color:#fff;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+		}
+        li:nth-of-type(2n){
+            float: right;
+        }
+	}
+	 .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 100;
+        background: #fff;
+        opacity: 0.95;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        .box {
+            width: 100%;
+            text-align: center;
+            display: box;
+            display: -webkit-box;
+            display: -moz-box;
+            //margin:0 auto;
+            overflow: hidden;
+            div {
+                height: 50px;
+            }
+            .icon {
+                width: 28px;
+                height: 24px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 5px;
+            }
+            .use-coupons {
+                //width:50%;
+                //float: left;
+                -webkit-box-flex: 1;
+                -moz-box-flex: 1;
+                box-flex: 1;
+                position: relative;
+                .icon {
+                    background: url(../../images/yhq.png) no-repeat center;
+                    background-size: contain;
+                }
+            }
+            .search-record {
+                -webkit-box-flex: 1;
+                -moz-box-flex: 1;
+                box-flex: 1;
+                position: relative;
+                .icon {
+                    background: url(../../images/z-record.png) no-repeat center;
+                    background-size: contain;
+                }
+                .line {
+                    display: block;
+                    right: 0px;
+                    top: 15px;
+                    height: 24px;
+                    border-right: 1px solid #d8d8d8;
+                    position: absolute;
+                }
+            }
+            .doctor-team {
+                //width:50%;
+                //float: right;
+                -webkit-box-flex: 1;
+                -moz-box-flex: 1;
+                box-flex: 1;
+                position: relative;
+                .icon {
+                    background: url(../../images/doctor-team.png) no-repeat center;
+                    background-size: contain;
+                }
+                .line {
+                    display: block;
+                    right: 0px;
+                    top: 15px;
+                    height: 24px;
+                    border-right: 1px solid #d8d8d8;
+                    position: absolute;
+                }
+            }
+            .desc {
+                display: block;
+                color: red;
+                font-size: 12px;
+                margin-top: 2px;
+            }
+        }
+    }
+}

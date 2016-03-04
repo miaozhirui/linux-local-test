@@ -42,8 +42,11 @@
  // console.log(firstName, lastName)
  
 
- // import './modules/export';
-
+ // import React ,{ActivityIndicatorIOS, ActivityIndicator} from './modules/export';
+ 
+ // console.log(React)
+ // console.log(ActivityIndicator)
+ // console.log(ActivityIndicatorIOS)
 // import * as action from './modules/export';
 // console.log(action.add(), action.del());
 
@@ -61,12 +64,16 @@
 import './modules/arrow';
 
 
+// 8.对象的扩展
+// import './modules/object';
 
 
 
 
 
 
+
+ 
 
 
 

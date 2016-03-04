@@ -1,0 +1,3 @@
+1.instanceof
+obj instanceof String 这句话的意思是判断obj是否是String的实例
+instanceof 就是用来判断某个实例是否属于某种类型
