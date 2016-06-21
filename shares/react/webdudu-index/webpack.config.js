@@ -11,8 +11,8 @@ var config = {
 	entry: './src/main.js',
 	output: {
 		// path: './build/',
-		filename: '[hash].build.js'
-		// filename: getDate() + '_build.js',
+		// filename: '[hash].build.js'
+		filename: getDate() + '_build.js',
 		// publicPath: debug ? '' : 'http://cdn.com'
 	},
 	devServer: {

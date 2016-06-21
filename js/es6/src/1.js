@@ -1,3 +1,11 @@
+ // es6里面的类
+ import './modules/class';
+
+
+ // 函数的扩展
+// import './modules/function';
+
+// 1.函数参数的默认值
  //1. let var 
  // {
  // 	let a = 1;
@@ -60,43 +68,14 @@
 // 6.let和const
 // import "./modules/let_and_const";
 
-// 7.箭头函数
-import './modules/arrow';
-
+// 7.函数的扩展
+// import './modules/arrow';
 
 // 8.对象的扩展
 // import './modules/object';
 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 9.Symbol
+	// import './modules/Symbol';
 
 
 

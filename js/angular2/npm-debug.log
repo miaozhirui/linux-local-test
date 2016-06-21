@@ -1,0 +1,75 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/iojs',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular2' ]
+2 info using npm@3.6.0
+3 info using node@v5.7.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData angular2
+8 silly fetchNamedPackageData angular2
+9 silly mapToRegistry name angular2
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npm.taobao.org/
+12 silly mapToRegistry uri https://registry.npm.taobao.org/angular2
+13 verbose request uri https://registry.npm.taobao.org/angular2
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 10:45:42
+16 verbose request id 6237ac42176e689a
+17 http request GET https://registry.npm.taobao.org/angular2
+18 http 200 https://registry.npm.taobao.org/angular2
+19 verbose headers { date: 'Tue, 05 Apr 2016 02:45:42 GMT',
+19 verbose headers   'content-type': 'application/json; charset=utf-8',
+19 verbose headers   'content-length': '105453',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   etag: '"19bed-rdtlvyh93s1EsCQr6WDTjA"',
+19 verbose headers   'x-readtime': '56' }
+20 silly get cb [ 200,
+20 silly get   { date: 'Tue, 05 Apr 2016 02:45:42 GMT',
+20 silly get     'content-type': 'application/json; charset=utf-8',
+20 silly get     'content-length': '105453',
+20 silly get     connection: 'keep-alive',
+20 silly get     etag: '"19bed-rdtlvyh93s1EsCQr6WDTjA"',
+20 silly get     'x-readtime': '56' } ]
+21 verbose get saving angular2 to /Users/mzr/.npm/registry.npm.taobao.org/angular2/.cache.json
+22 verbose correctMkdir /Users/mzr/.npm correctMkdir not in flight; initializing
+23 silly install normalizeTree
+24 silly loadCurrentTree Finishing
+25 silly loadIdealTree Starting
+26 silly install loadIdealTree
+27 silly cloneCurrentTree Starting
+28 silly install cloneCurrentTreeToIdealTree
+29 silly cloneCurrentTree Finishing
+30 silly loadShrinkwrap Starting
+31 silly install loadShrinkwrap
+32 silly loadShrinkwrap Finishing
+33 silly loadAllDepsIntoIdealTree Starting
+34 silly install loadAllDepsIntoIdealTree
+35 silly rollbackFailedOptional Starting
+36 silly rollbackFailedOptional Finishing
+37 silly runTopLevelLifecycles Starting
+38 silly runTopLevelLifecycles Finishing
+39 silly install printInstalled
+40 verbose stack Error: Refusing to install angular2 as a dependency of itself
+40 verbose stack     at checkSelf (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:53:14)
+40 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+40 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+40 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+40 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/validate-args.js:16:5
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:35
+40 verbose stack     at Array.forEach (native)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:11
+40 verbose stack     at Array.forEach (native)
+40 verbose stack     at asyncMap (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:51:8)
+41 verbose cwd /Users/mzr/miaozhirui/linux-local-test/js/angular2
+42 error Darwin 14.5.0
+43 error argv "/usr/local/bin/iojs" "/usr/local/bin/npm" "install" "angular2"
+44 error node v5.7.0
+45 error npm  v3.6.0
+46 error code ENOSELF
+47 error Refusing to install angular2 as a dependency of itself
+48 error If you need help, you may report this error at:
+48 error     <https://github.com/npm/npm/issues>
+49 verbose exit [ 1, true ]

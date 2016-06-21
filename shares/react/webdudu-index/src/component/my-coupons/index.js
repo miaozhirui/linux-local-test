@@ -1,9 +1,17 @@
 import React from 'react';
 
+var title = {
+	color:'red'
+}
+
 class MyCoupons extends React.Component{
 	render() {
 		return (
-			<h1>优惠券列表</h1>
+			<div style={title}>
+				<h1>优惠券列表</h1>
+				<h2>test</h2>
+			</div>
+			
 			)
 	}
 }

@@ -1,6 +1,6 @@
 var name = "Bob", time = "today";
 
-// import 'a.js';
+import 'a.js';
 // import 'b.js';
 // import 'c.js';
 

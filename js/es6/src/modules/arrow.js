@@ -56,14 +56,28 @@
 // const isEvent = n => n%2==0;
 // console.log(isEvent(2))
 
-var arr = [1,2,3];
-var arrs = arr.map(x => x*x);
-console.log(arrs)
+// var arr = [1,2,3];
+// var arrs = arr.map(x => x*x);
+// console.log(arrs)
 
 
+// function add(name='miaozhirui', age=123){
+
+// 	console.log(name,age)
+// }
+// add('张三',1);
 
 
+// function add(){
+// 	// var args = Array.prototype.slice.call(arguments);
+// 	// console.log(args);
+// 	// console.log(arguments);
 
+// 	var args = Array.from(arguments);
+// 	console.log(args);
+// }
+
+// add(1,2,3,4)
 
 
 

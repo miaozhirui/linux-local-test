@@ -9,9 +9,9 @@ const SelectDeparment = React.createClass({
 	render: function (){ 
 		var data = [  
 			{
-        "DepartmentName": "儿科",
-        "DepartmentId": "1",
-        "DepartmentImg": "./src/images/51.png"
+		        "DepartmentName": "儿科",
+		        "DepartmentId": "1",
+		        "DepartmentImg": "./src/images/51.png"
 		    }, {
 		        "DepartmentName": "妇产科",
 		        "DepartmentId": "2",
@@ -38,7 +38,7 @@ const SelectDeparment = React.createClass({
 		return (
 			<div className="select-department">
 				<div className="select-title">
-					<span>欢迎使用嘟嘟医生电话咨询</span>
+					<span>欢迎使用嘟嘟医生电话咨询!!!</span>
 				</div>
 				<h3>
 					<span>选科室，填病情，等待医生来电</span>
@@ -62,7 +62,9 @@ const DepartmentList = React.createClass({
 
 		return (
 			<ul>
+			{console.log(11)}
 				{list}	
+			
 			</ul>
 			)
 	}
@@ -74,6 +76,7 @@ const LiItem = React.createClass({
 
 		return (
 			<li>
+
 				<Link to="ask-question">
 				<img src={this.props.item.DepartmentImg}/>
 			     <p>

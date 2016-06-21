@@ -17,7 +17,8 @@ var config = {
 	},
 	devServer: {
 		port: 7777,
-		inline: true
+		inline: true,
+		historyApiFallback:true
 	},
 	devtool: 'source-map',
 

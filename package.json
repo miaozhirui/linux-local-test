@@ -16,6 +16,7 @@
     "url": "https://github.com/miaozhirui/linux-local-test/issues"
   },
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "mime": "^1.3.4"
   }
 }

@@ -4,9 +4,9 @@ import {Router, Route, Link, hashHistory, IndexRoute, browserHistory} from 'reac
 
 import routes from './config/routes.js';
 
-
-render(<Router history={hashHistory} routes={routes} />, document.getElementById('example'));
-
+//使用browserHistory webpack启动的时候
+//加一个参数 --history-api-fallback
+render(<Router history={browserHistory} routes={routes} />, document.getElementById('example'));
 
 
 // import	SelectDeparment from './component/select-department/index'

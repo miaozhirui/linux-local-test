@@ -1,23 +1,49 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/iojs', '/usr/local/bin/npm', 'run', 'dist' ]
-2 info using npm@3.3.12
-3 info using node@v5.1.0
-4 verbose stack Error: missing script: dist
-4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:147:19)
-4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:57:5
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
-4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
-4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
-4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:300:12
-4 verbose stack     at tryToString (evalmachine.<anonymous>:414:3)
-4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (evalmachine.<anonymous>:401:12)
-5 verbose cwd /Users/mzr/miaozhirui/linux-local-test
-6 error Darwin 14.5.0
-7 error argv "/usr/local/bin/iojs" "/usr/local/bin/npm" "run" "dist"
-8 error node v5.1.0
-9 error npm  v3.3.12
-10 error missing script: dist
-11 error If you need help, you may report this error at:
-11 error     <https://github.com/npm/npm/issues>
-12 verbose exit [ 1, true ]
+1 verbose cli [ '/usr/local/bin/iojs',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'search',
+1 verbose cli   'angular2' ]
+2 info using npm@3.6.0
+3 info using node@v5.7.0
+4 silly mapToRegistry name -/all
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npm.taobao.org/
+7 silly mapToRegistry uri https://registry.npm.taobao.org/-/all
+8 info updateIndex /Users/mzr/.npm/registry.npm.taobao.org/-/all/.cache.json
+9 verbose correctMkdir /Users/mzr/.npm correctMkdir not in flight; initializing
+10 warn Building the local index for the first time, please be patient
+11 silly update-index fetching https://registry.npm.taobao.org/-/all
+12 verbose request uri https://registry.npm.taobao.org/-/all
+13 verbose request no auth needed
+14 info attempt registry request try #1 at 10:44:22
+15 verbose request id 244f1c61e6a923ad
+16 http request GET https://registry.npm.taobao.org/-/all
+17 http 200 https://registry.npm.taobao.org/-/all
+18 verbose headers { date: 'Tue, 05 Apr 2016 02:44:26 GMT',
+18 verbose headers   'content-type': 'application/json; charset=utf-8',
+18 verbose headers   'content-length': '5828861',
+18 verbose headers   connection: 'keep-alive',
+18 verbose headers   etag: '"58f0fd-Y6+JGji4xbY0GO4LCjw1KQ"',
+18 verbose headers   'x-readtime': '3534' }
+19 verbose stack Error: true true: -/all
+19 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+19 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+19 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+19 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+19 verbose stack     at emitTwo (events.js:100:13)
+19 verbose stack     at Request.emit (events.js:185:7)
+19 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1035:10)
+19 verbose stack     at emitOne (events.js:95:20)
+19 verbose stack     at Request.emit (events.js:182:7)
+19 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:962:12)
+20 verbose statusCode 200
+21 verbose cwd /Users/mzr/miaozhirui/linux-local-test
+22 error Darwin 14.5.0
+23 error argv "/usr/local/bin/iojs" "/usr/local/bin/npm" "search" "angular2"
+24 error node v5.7.0
+25 error npm  v3.6.0
+26 error code E200
+27 error true true: -/all
+28 error If you need help, you may report this error at:
+28 error     <https://github.com/npm/npm/issues>
+29 verbose exit [ 1, true ]
